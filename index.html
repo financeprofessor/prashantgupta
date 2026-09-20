@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dr. Prashant Gupta | Finance Academic & Researcher</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #263238;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background: #102a43;
+            padding: 16px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero */
+        .hero {
+            background: #f0f4f8;
+            padding: 90px 8%;
+        }
+
+        .hero-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #102a43;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #486581;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #102a43;
+            color: white;
+            padding: 12px 22px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .button:hover {
+            background: #243b53;
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 32px;
+            color: #102a43;
+            margin-bottom: 25px;
+        }
+
+        section h3 {
+            color: #243b53;
+            margin-bottom: 10px;
+        }
+
+        .about-text {
+            font-size: 17px;
+            max-width: 900px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #f7f9fb;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #d9e2ec;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        /* Research */
+        .research-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-left: 4px solid #102a43;
+            background: #f7f9fb;
+        }
+
+        .research-item h3 {
+            margin-bottom: 8px;
+        }
+
+        /* Lists */
+        ul.content-list {
+            margin-left: 22px;
+            margin-top: 15px;
+        }
+
+        ul.content-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Contact */
+        .contact-box {
+            background: #f0f4f8;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .contact-box a {
+            color: #102a43;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #102a43;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 800px) {
+
+            nav .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                Dr. Prashant Gupta
+            </div>
+
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-container">
+
+            <h1>Dr. Prashant Gupta</h1>
+
+            <h2>
+                Assistant Professor – Finance
+            </h2>
+
+            <p>
+                School of Management, Mahindra University, Hyderabad
+            </p>
+
+            <p>
+                Finance academic and researcher with interests in corporate
+                governance, banking, financial technology, artificial
+                intelligence in finance, and Central Bank Digital Currencies.
+            </p>
+
+            <a href="#research" class="button">
+                View Research
+            </a>
+
+            <a href="#contact" class="button">
+                Contact Me
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <div class="section-container">
+
+            <h2>About Me</h2>
+
+            <p class="about-text">
+
+                I am an Assistant Professor of Finance at the School of
+                Management, Mahindra University, Hyderabad. I hold a PhD in
+                Management from IIT Delhi, with a research focus on finance,
+                corporate governance, and banking.
+
+                <br><br>
+
+                My academic interests span corporate finance, banking,
+                financial technology, artificial intelligence in finance,
+                Central Bank Digital Currencies (CBDCs), and financial
+                markets.
+
+                <br><br>
+
+                Alongside research and teaching, I contribute to academic
+                administration, student development, accreditation initiatives,
+                and institutional activities.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Research -->
+    <section id="research">
+
+        <div class="section-container">
+
+            <h2>Research</h2>
+
+            <p>
+                My research interests broadly focus on the intersection of
+                finance, technology, governance, and banking.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Corporate Governance</h3>
+                    <p>
+                        Corporate governance, firm-level decision making,
+                        and financial performance.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Banking & Finance</h3>
+                    <p>
+                        Banking sector performance, asset quality,
+                        financial stability, and related issues.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>AI in Finance</h3>
+                    <p>
+                        Applications and implications of artificial
+                        intelligence in financial decision making.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>CBDCs</h3>
+                    <p>
+                        Central Bank Digital Currencies, their design,
+                        adoption, financial inclusion, and implications
+                        for financial systems.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Financial Technology</h3>
+                    <p>
+                        Emerging technologies and their impact on financial
+                        institutions and markets.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Financial Markets</h3>
+                    <p>
+                        Research examining financial markets, institutions,
+                        and emerging developments in finance.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Publications -->
+    <section id="publications">
+
+        <div class="section-container">
+
+            <h2>Selected Publications</h2>
+
+            <p>
+                A detailed list of publications, research papers, conference
+                presentations, and ongoing research projects will be added
+                here.
+            </p>
+
+            <div class="research-item">
+
+                <h3>Research Publications</h3>
+
+                <p>
+                    Publications in international peer-reviewed journals
+                    covering areas of finance, corporate governance,
+                    banking, and related fields.
+                </p>
+
+            </div>
+
+            <div class="research-item">
+
+                <h3>Working Papers</h3>
+
+                <p>
+                    Current research projects and manuscripts under review
+                    or development.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Teaching -->
+    <section id="teaching">
+
+        <div class="section-container">
+
+            <h2>Teaching</h2>
+
+            <p>
+                My teaching focuses on connecting financial concepts with
+                practical business applications and real-world data.
+            </p>
+
+            <ul class="content-list">
+
+                <li>Financial Accounting</li>
+
+                <li>Management Accounting</li>
+
+                <li>Financial Management</li>
+
+                <li>Financial Modelling</li>
+
+                <li>Corporate Finance</li>
+
+                <li>Finance-related quantitative and analytical methods</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Academic Activities -->
+    <section id="activities">
+
+        <div class="section-container">
+
+            <h2>Academic & Institutional Activities</h2>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Academic Administration</h3>
+
+                    <p>
+                        Contribution to institutional committees,
+                        academic administration, quality assurance,
+                        and accreditation initiatives.
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Research Projects</h3>
+
+                    <p>
+                        Experience in undertaking funded research projects
+                        and collaborative academic research.
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Student Development</h3>
+
+                    <p>
+                        Involvement in mentoring, student development,
+                        workshops, and institutional activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <div class="section-container">
+
+            <h2>Contact</h2>
+
+            <div class="contact-box">
+
+                <p>
+                    <strong>Dr. Prashant Gupta</strong>
+                </p>
+
+                <p>
+                    Assistant Professor – Finance
+                </p>
+
+                <p>
+                    School of Management
+                </p>
+
+                <p>
+                    Mahindra University, Hyderabad
+                </p>
+
+                <br>
+
+                <p>
+                    Email:
+                    <a href="mailto:YOUR_EMAIL@example.com">
+                        YOUR_EMAIL@example.com
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Dr. Prashant Gupta. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
