@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dr. Prashant Gupta | Finance</title>
+    <title>Dr. Prashant Gupta | Accounting & Finance</title>
 
     <style>
-
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         html {
@@ -23,717 +19,456 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            color: #263238;
+            color: #222;
             line-height: 1.7;
             background: #ffffff;
         }
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
+        /* Navigation */
         nav {
-            background: #102a43;
+            background: #12355b;
+            color: white;
+            padding: 16px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 16px 7%;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         .logo {
-            color: white;
-            font-size: 20px;
+            font-size: 21px;
             font-weight: bold;
         }
 
-        nav ul {
-            list-style: none;
+        .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 25px;
+            list-style: none;
         }
 
-        nav ul li a {
+        .nav-links a {
             color: white;
-            text-decoration: none;
             font-size: 15px;
         }
 
-        nav ul li a:hover {
-            color: #d9e2ec;
+        .nav-links a:hover {
+            color: #d9e8f5;
         }
 
-
-        /* =========================
-           HERO SECTION
-        ========================= */
-
+        /* Hero */
         .hero {
-            background: #f0f4f8;
+            background: #f4f7fa;
             padding: 75px 7%;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 60px;
+            gap: 50px;
         }
 
         .hero-text {
-            flex: 1;
+            max-width: 720px;
         }
 
-        .hero-text h1 {
-            font-size: 52px;
-            line-height: 1.15;
-            color: #102a43;
-            margin-bottom: 12px;
+        .hero h1 {
+            font-size: 46px;
+            color: #12355b;
+            margin-bottom: 10px;
         }
 
-        .hero-text h2 {
-            font-size: 25px;
+        .hero h2 {
+            font-size: 23px;
             font-weight: normal;
-            color: #486581;
-            margin-bottom: 20px;
+            color: #444;
+            margin-bottom: 8px;
         }
 
-        .hero-text .university {
-            font-size: 18px;
+        .hero h3 {
+            font-size: 17px;
+            font-weight: normal;
+            color: #666;
             margin-bottom: 25px;
         }
 
-        .hero-text .description {
+        .hero p {
             font-size: 17px;
-            max-width: 700px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
-
-        /* =========================
-           PROFILE PHOTO
-        ========================= */
-
-        .hero-photo {
-            width: 310px;
-            flex-shrink: 0;
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
-
-        .hero-photo img {
-            width: 100%;
-            border-radius: 12px;
-            display: block;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-
-        /* =========================
-           BUTTONS
-        ========================= */
 
         .button {
             display: inline-block;
-            padding: 12px 22px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            background: #102a43;
-            color: white;
-            text-decoration: none;
+            padding: 11px 22px;
             border-radius: 5px;
+            background: #12355b;
+            color: white;
+            font-weight: bold;
         }
 
         .button:hover {
-            background: #243b53;
+            background: #0d2945;
         }
 
+        .button.secondary {
+            background: white;
+            color: #12355b;
+            border: 1px solid #12355b;
+        }
 
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
+        .profile-photo {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
 
+        /* Sections */
         section {
-            padding: 75px 7%;
+            padding: 65px 7%;
         }
 
-        .section-container {
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        section h2 {
+        .section-title {
+            text-align: center;
+            color: #12355b;
             font-size: 32px;
-            color: #102a43;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
         }
 
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-text {
+        .intro {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
             font-size: 17px;
-            max-width: 950px;
         }
 
-
-        /* =========================
-           RESEARCH CARDS
-        ========================= */
-
+        /* Cards */
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-            margin-top: 30px;
+            gap: 25px;
         }
 
         .card {
             background: #f7f9fb;
-            padding: 25px;
-            border: 1px solid #d9e2ec;
+            padding: 28px;
             border-radius: 8px;
+            border: 1px solid #e2e7ec;
         }
 
         .card h3 {
-            color: #243b53;
+            color: #12355b;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        /* Two-column section */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .two-column h3 {
+            color: #12355b;
+            margin-bottom: 15px;
+        }
+
+        .two-column ul {
+            padding-left: 20px;
+        }
+
+        /* Highlight */
+        .highlight {
+            background: #f4f7fa;
+        }
+
+        .highlight-box {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            padding: 35px;
+            border-left: 5px solid #12355b;
+            background: white;
+        }
+
+        .highlight-box h3 {
+            color: #12355b;
             margin-bottom: 10px;
         }
 
-
-        /* =========================
-           LISTS
-        ========================= */
-
-        ul.content-list {
-            margin-left: 22px;
-            margin-top: 15px;
-        }
-
-        ul.content-list li {
-            margin-bottom: 8px;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact-box {
-            background: #f0f4f8;
-            padding: 30px;
-            border-radius: 8px;
-        }
-
-        .contact-box a {
-            color: #102a43;
-            text-decoration: none;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #102a43;
+        /* Contact */
+        .contact {
+            background: #12355b;
             color: white;
             text-align: center;
-            padding: 25px;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            background: white;
+            color: #12355b;
+            padding: 9px 17px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d2945;
+            color: white;
+            text-align: center;
+            padding: 18px;
             font-size: 14px;
         }
 
-
-        /* =========================
-           MOBILE
-        ========================= */
-
+        /* Mobile */
         @media (max-width: 800px) {
 
-            .nav-container {
+            nav {
                 flex-direction: column;
-                gap: 15px;
+                gap: 12px;
             }
 
-            nav ul {
+            .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 15px;
+                gap: 14px;
             }
 
-            .hero-container {
+            .hero {
                 flex-direction: column-reverse;
                 text-align: center;
             }
 
-            .hero-text h1 {
-                font-size: 38px;
+            .hero h1 {
+                font-size: 36px;
             }
 
-            .hero-photo {
-                width: 240px;
+            .hero-buttons {
+                justify-content: center;
             }
 
             .cards {
                 grid-template-columns: 1fr;
             }
 
-            section {
-                padding: 55px 6%;
+            .two-column {
+                grid-template-columns: 1fr;
             }
 
+            .profile-photo {
+                width: 210px;
+                height: 210px;
+            }
         }
-
     </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
+<!-- Navigation -->
 <nav>
+    <div class="logo">Dr. Prashant Gupta</div>
 
-    <div class="nav-container">
-
-        <div class="logo">
-            Dr. Prashant Gupta
-        </div>
-
-        <ul>
-
-            <li>
-                <a href="#about">About</a>
-            </li>
-
-            <li>
-                <a href="#research">Research</a>
-            </li>
-
-            <li>
-                <a href="#teaching">Teaching</a>
-            </li>
-
-            <li>
-                <a href="#activities">Activities</a>
-            </li>
-
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-
-        </ul>
-
-    </div>
-
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
 
+<!-- Hero -->
+<section class="hero" id="home">
 
-<!-- =========================
-     HERO
-========================= -->
+    <div class="hero-text">
 
-<section class="hero">
+        <h1>Dr. Prashant Gupta</h1>
 
-    <div class="hero-container">
+        <h2>Assistant Professor – Accounting and Finance</h2>
 
-        <div class="hero-text">
-
-            <h1>
-                Dr. Prashant Gupta
-            </h1>
-
-            <h2>
-                Assistant Professor – Finance
-            </h2>
-
-            <p class="university">
-                School of Management, Mahindra University, Hyderabad
-            </p>
-
-            <p class="description">
-
-                I am a Finance academic and researcher with research
-                interests spanning corporate governance, banking,
-                financial technology, artificial intelligence in finance,
-                and Central Bank Digital Currencies.
-
-            </p>
-
-            <a href="#research" class="button">
-                Research
-            </a>
-
-            <a href="#contact" class="button">
-                Contact Me
-            </a>
-
-        </div>
-
-
-        <div class="hero-photo">
-
-            <img src="profile.jpeg"
-                 alt="Dr. Prashant Gupta">
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section id="about">
-
-    <div class="section-container">
-
-        <h2>
-            About Me
-        </h2>
-
-        <p class="about-text">
-
-            I am an Assistant Professor of Finance at the School of
-            Management, Mahindra University, Hyderabad. I hold a PhD
-            in Management from IIT Delhi, with a research focus on
-            finance, corporate governance, and banking.
-
-            <br><br>
-
-            My broader academic interests include corporate finance,
-            banking, financial technology, artificial intelligence in
-            finance, Central Bank Digital Currencies (CBDCs), and
-            financial markets.
-
-            <br><br>
-
-            In addition to teaching and research, I contribute to
-            academic administration, student development, accreditation
-            initiatives, and institutional activities.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     RESEARCH
-========================= -->
-
-<section id="research">
-
-    <div class="section-container">
-
-        <h2>
-            Research
-        </h2>
+        <h3>School of Management, Mahindra University, Hyderabad</h3>
 
         <p>
-
-            My research examines contemporary issues at the intersection
-            of finance, technology, governance, and banking.
-
+            I am an academic and educator with a strong interest in
+            Accounting, Finance, Banking, Corporate Governance, and
+            emerging financial technologies. My work combines research
+            and teaching with a focus on contemporary issues in finance
+            and financial institutions.
         </p>
 
-
-        <div class="cards">
-
-
-            <div class="card">
-
-                <h3>
-                    Corporate Governance
-                </h3>
-
-                <p>
-
-                    Corporate governance, firm-level decision making,
-                    and financial performance.
-
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    Banking & Finance
-                </h3>
-
-                <p>
-
-                    Banking sector performance, asset quality,
-                    financial stability, and related issues.
-
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    AI in Finance
-                </h3>
-
-                <p>
-
-                    Applications and implications of artificial
-                    intelligence in financial decision making.
-
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    Central Bank Digital Currencies
-                </h3>
-
-                <p>
-
-                    CBDC design, adoption, financial inclusion,
-                    financial stability, and implications for
-                    financial systems.
-
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    Financial Technology
-                </h3>
-
-                <p>
-
-                    Emerging technologies and their impact on
-                    financial institutions and markets.
-
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    Financial Markets
-                </h3>
-
-                <p>
-
-                    Research examining financial markets,
-                    institutions, and emerging developments
-                    in finance.
-
-                </p>
-
-            </div>
-
-
+        <div class="hero-buttons">
+            <a href="research.html" class="button">Research</a>
+            <a href="contact.html" class="button secondary">Contact Me</a>
         </div>
 
+    </div>
+
+    <img src="profile.jpeg"
+         alt="Dr. Prashant Gupta"
+         class="profile-photo">
+
+</section>
+
+
+<!-- Research -->
+<section>
+
+    <h2 class="section-title">Research</h2>
+
+    <p class="intro">
+        My research focuses on contemporary issues in finance and
+        financial institutions, with particular emphasis on corporate
+        governance, banking and asset quality, and Central Bank Digital
+        Currencies (CBDCs).
+    </p>
+
+    <br><br>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Corporate Governance</h3>
+            <p>
+                Research examining corporate governance mechanisms and
+                their implications for financial-sector outcomes.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Banking & Asset Quality</h3>
+            <p>
+                Research focusing on bank asset quality, non-performing
+                assets, governance, and related issues in the banking sector.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Central Bank Digital Currencies</h3>
+            <p>
+                Research examining the evolving CBDC landscape, including
+                CBDC development, systematic reviews, and differences
+                across economies.
+            </p>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <div style="text-align:center;">
+        <a href="research.html" class="button">Explore My Research →</a>
     </div>
 
 </section>
 
 
+<!-- Education -->
+<section class="highlight">
 
-<!-- =========================
-     TEACHING
-========================= -->
+    <h2 class="section-title">Education</h2>
 
-<section id="teaching">
+    <div class="highlight-box">
 
-    <div class="section-container">
-
-        <h2>
-            Teaching
-        </h2>
+        <h3>Ph.D. in Finance</h3>
 
         <p>
-
-            My teaching approach emphasizes practical applications,
-            analytical thinking, and connecting financial concepts
-            with real-world business situations.
-
+            Indian Institute of Technology Delhi
+            <br>
+            2022
         </p>
 
+        <br>
 
-        <ul class="content-list">
-
-            <li>
-                Financial Accounting
-            </li>
-
-            <li>
-                Management Accounting
-            </li>
-
-            <li>
-                Financial Management
-            </li>
-
-            <li>
-                Financial Modelling
-            </li>
-
-            <li>
-                Corporate Finance
-            </li>
-
-        </ul>
+        <a href="education.html" class="button">
+            View Education →
+        </a>
 
     </div>
 
 </section>
 
 
+<!-- Teaching -->
+<section>
 
-<!-- =========================
-     ACADEMIC ACTIVITIES
-========================= -->
+    <h2 class="section-title">Teaching</h2>
 
-<section id="activities">
+    <p class="intro">
+        I teach accounting and finance with an emphasis on conceptual
+        clarity, practical application, and connecting classroom learning
+        with real-world business situations. My teaching experience spans
+        undergraduate, postgraduate, and doctoral-level education.
+    </p>
 
-    <div class="section-container">
+    <br><br>
 
-        <h2>
-            Academic & Institutional Activities
-        </h2>
+    <div class="two-column">
 
+        <div>
+            <h3>Courses Taught</h3>
 
-        <div class="cards">
-
-
-            <div class="card">
-
-                <h3>
-                    Academic Administration
-                </h3>
-
-                <p>
-
-                    Contribution to academic administration,
-                    institutional committees, quality assurance,
-                    and accreditation initiatives.
-
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    Research Projects
-                </h3>
-
-                <p>
-
-                    Experience in undertaking funded research
-                    projects and collaborative academic research.
-
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    Student Development
-                </h3>
-
-                <p>
-
-                    Involvement in mentoring, workshops,
-                    student development, and institutional
-                    activities.
-
-                </p>
-
-            </div>
-
-
+            <ul>
+                <li>Financial Accounting</li>
+                <li>Management Accounting</li>
+                <li>Enterprise Risk Management</li>
+                <li>Financial Management</li>
+                <li>Advanced Financial Management</li>
+                <li>Cost & Management Accounting</li>
+            </ul>
         </div>
 
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section id="contact">
-
-    <div class="section-container">
-
-        <h2>
-            Contact
-        </h2>
-
-
-        <div class="contact-box">
+        <div>
+            <h3>Teaching Approach</h3>
 
             <p>
-                <strong>
-                    Dr. Prashant Gupta
-                </strong>
-            </p>
-
-            <p>
-                Assistant Professor – Finance
-            </p>
-
-            <p>
-                School of Management
-            </p>
-
-            <p>
-                Mahindra University, Hyderabad
+                My teaching approach focuses on building strong conceptual
+                foundations while connecting financial concepts with
+                practical business situations and real-world applications.
             </p>
 
             <br>
 
-            <p>
-                Email:
-                <a href="mailto:YOUR_EMAIL@example.com">
-                    YOUR_EMAIL@example.com
-                </a>
-            </p>
-
+            <a href="teaching.html" class="button">
+                View Teaching →
+            </a>
         </div>
 
     </div>
@@ -741,20 +476,111 @@
 </section>
 
 
+<!-- Academic Activities -->
+<section class="highlight">
 
-<!-- =========================
-     FOOTER
-========================= -->
+    <h2 class="section-title">
+        Academic & Institutional Activities
+    </h2>
 
-<footer>
-
-    <p>
-        © 2026 Dr. Prashant Gupta. All rights reserved.
+    <p class="intro">
+        Beyond teaching and research, I contribute to academic governance,
+        institutional development, accreditation, student development,
+        and campus administration at Mahindra University.
     </p>
 
+    <br><br>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Academic Governance</h3>
+            <p>
+                Chair, Ranking & Accreditation Committee; SPOC,
+                Internal Quality Assurance Cell; Member, PhD Selection
+                Committee and Internal Research Committee.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Student Development</h3>
+            <p>
+                Founding Officer In-Charge of the NCC Unit and Faculty
+                In-Charge of the Boys' Hostel at Mahindra University.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Leadership & Well-being</h3>
+            <p>
+                Associated with the Art of Living, facilitating leadership,
+                personal excellence, and well-being programmes for youth
+                and professionals.
+            </p>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <div style="text-align:center;">
+        <a href="activities.html" class="button">
+            View Activities & Engagement →
+        </a>
+    </div>
+
+</section>
+
+
+<!-- Contact -->
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Contact</h2>
+
+    <p><strong>Dr. Prashant Gupta</strong></p>
+
+    <p>Assistant Professor – Accounting and Finance</p>
+
+    <p>School of Management, Mahindra University, Hyderabad</p>
+
+    <br>
+
+    <p>
+        <strong>Academic Email:</strong>
+        prashant.gupta@mahindrauniversity.edu.in
+    </p>
+
+    <p>
+        <strong>Personal Email:</strong>
+        kumar.prashantgupta@gmail.com
+    </p>
+
+    <div class="social-links">
+
+        <a href="https://www.linkedin.com/in/kumar-prashantgupta/"
+           target="_blank">
+            LinkedIn
+        </a>
+
+        <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
+           target="_blank">
+            Google Scholar
+        </a>
+
+        <a href="https://orcid.org/0000-0002-6206-6158"
+           target="_blank">
+            ORCID
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+    © 2026 Dr. Prashant Gupta. All rights reserved.
 </footer>
 
-
 </body>
-
 </html>
