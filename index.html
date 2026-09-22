@@ -7,239 +7,651 @@
     <title>Dr. Prashant Gupta | Accounting & Finance</title>
 
     <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f5f8fc;
-            color: #263238;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f8f6f1;
+            color: #24313d;
             line-height: 1.7;
         }
 
-        /* Navigation */
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
         nav {
-            background: #0b1f3a;
-            padding: 18px 40px;
-            text-align: center;
+            background: #102a43;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 28px;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-            font-size: 15px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: 0.3s ease;
         }
 
         nav a:hover {
-            color: #b9d7f5;
+            color: #d8b36a;
         }
 
-        /* Hero Section */
+        /* =========================
+           HERO
+        ========================= */
+
         .hero {
-            background: white;
-            padding: 75px 25px;
+            min-height: 650px;
+            background:
+                linear-gradient(
+                    120deg,
+                    #102a43 0%,
+                    #163d5c 58%,
+                    #1d506d 100%
+                );
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50%;
+            right: -180px;
+            top: -150px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border: 1px solid rgba(216,179,106,0.20);
+            border-radius: 50%;
+            left: -180px;
+            bottom: -180px;
         }
 
         .hero-container {
-            max-width: 1100px;
+            max-width: 1180px;
             margin: auto;
-            display: flex;
+            padding: 90px 35px;
+            min-height: 650px;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
             align-items: center;
-            gap: 60px;
+            gap: 70px;
+            position: relative;
+            z-index: 2;
         }
 
-        .profile-image {
-            width: 240px;
-            height: 240px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 6px solid #e5edf6;
-            flex-shrink: 0;
+        .hero-content {
+            animation: fadeUp 0.9s ease;
         }
 
-        .hero-text h1 {
-            font-size: 48px;
-            color: #0b1f3a;
-            margin-bottom: 8px;
+        .small-heading {
+            color: #d8b36a;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
         }
 
-        .hero-text h2 {
-            font-size: 23px;
-            color: #164a7a;
+        .hero h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 64px;
+            line-height: 1.08;
             font-weight: 500;
-            margin-bottom: 6px;
-        }
-
-        .institution {
-            font-size: 17px;
-            color: #52606d;
-            margin-bottom: 25px;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            color: #455a64;
-            max-width: 720px;
-        }
-
-        /* General Sections */
-        .container {
-            max-width: 1050px;
-            margin: auto;
-            padding: 65px 25px;
-        }
-
-        .section-title {
-            font-size: 32px;
-            color: #0b1f3a;
             margin-bottom: 20px;
         }
 
-        .section-text {
-            font-size: 17px;
-            color: #52606d;
-            max-width: 900px;
+        .hero h2 {
+            font-size: 23px;
+            font-weight: 400;
+            color: #dce8f0;
+            margin-bottom: 8px;
         }
 
-        /* Research Cards */
+        .university {
+            color: #b9cbd8;
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            font-size: 17px;
+            color: #d9e3e9;
+            line-height: 1.9;
+        }
+
+        .hero-buttons {
+            margin-top: 32px;
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #d8b36a;
+            color: #102a43;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 700;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #efd28e;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.5);
+            color: white;
+            padding: 11px 24px;
+            border-radius: 4px;
+            transition: 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           PROFILE PHOTO
+        ========================= */
+
+        .photo-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1.1s ease;
+        }
+
+        .photo-frame {
+            width: 370px;
+            height: 440px;
+            padding: 12px;
+            border: 1px solid rgba(216,179,106,0.55);
+            position: relative;
+        }
+
+        .photo-frame::before {
+            content: "";
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            width: 80px;
+            height: 80px;
+            border-top: 3px solid #d8b36a;
+            border-right: 3px solid #d8b36a;
+        }
+
+        .photo-frame::after {
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            left: -12px;
+            width: 80px;
+            height: 80px;
+            border-bottom: 3px solid #d8b36a;
+            border-left: 3px solid #d8b36a;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* =========================
+           INTRO STRIP
+        ========================= */
+
+        .intro-strip {
+            background: white;
+            border-bottom: 1px solid #e7e1d8;
+        }
+
+        .intro-container {
+            max-width: 1180px;
+            margin: auto;
+            padding: 42px 35px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-container h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 30px;
+            color: #102a43;
+            font-weight: 500;
+        }
+
+        .intro-container p {
+            color: #667784;
+            font-size: 16px;
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 55px 35px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 38px;
+            color: #102a43;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #71808c;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        .section {
+            padding: 85px 35px;
+        }
+
+        .section-light {
+            background: #f8f6f1;
+        }
+
+        .section-white {
+            background: white;
+        }
+
+        .section-container {
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: #b2873e;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 42px;
+            color: #102a43;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            color: #667784;
+            font-size: 17px;
+            margin-bottom: 45px;
+        }
+
+        /* =========================
+           RESEARCH CARDS
+        ========================= */
+
         .research-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            margin-top: 30px;
         }
 
         .research-card {
             background: white;
-            padding: 28px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            padding: 35px 30px;
+            border-top: 3px solid #d8b36a;
+            transition: 0.3s ease;
+            box-shadow: 0 8px 30px rgba(16,42,67,0.06);
+        }
+
+        .research-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(16,42,67,0.10);
+        }
+
+        .research-number {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 15px;
+            color: #b2873e;
+            margin-bottom: 20px;
         }
 
         .research-card h3 {
-            color: #164a7a;
-            margin-bottom: 12px;
-            font-size: 20px;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #102a43;
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 15px;
         }
 
         .research-card p {
-            color: #52606d;
+            color: #667784;
             font-size: 15px;
         }
 
-        /* Teaching */
-        .teaching-section {
-            background: white;
+        /* =========================
+           TEACHING
+        ========================= */
+
+        .teaching-layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+            align-items: start;
         }
 
-        .course-list {
-            margin-top: 20px;
-            padding-left: 25px;
+        .teaching-highlight {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 28px;
+            color: #102a43;
+            line-height: 1.5;
         }
 
-        .course-list li {
-            margin-bottom: 8px;
-            color: #52606d;
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-top: 1px solid #dfe5e9;
         }
 
-        /* Links */
-        .button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 22px;
-            background: #164a7a;
+        .course {
+            padding: 16px 10px;
+            border-bottom: 1px solid #dfe5e9;
+            color: #526674;
+        }
+
+        .course::before {
+            content: "→";
+            color: #b2873e;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           ACTIVITIES
+        ========================= */
+
+        .activity-box {
+            background: #102a43;
             color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
+            padding: 55px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
 
-        .button:hover {
-            background: #0b1f3a;
+        .activity-box h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 38px;
+            font-weight: 500;
+            margin-bottom: 15px;
         }
 
-        /* Contact */
-        .contact-section {
-            background: #eef4fa;
+        .activity-box p {
+            color: #cbd9e2;
+        }
+
+        .activity-links {
+            display: grid;
+            gap: 14px;
+        }
+
+        .activity-link {
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 12px;
+        }
+
+        .activity-link span {
+            color: #d8b36a;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #667784;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
         }
 
         .contact-links a {
+            border: 1px solid #cbd5dc;
+            padding: 11px 22px;
             color: #164a7a;
-            text-decoration: none;
-            margin-right: 20px;
+            border-radius: 4px;
             font-weight: 600;
+            transition: 0.3s ease;
         }
 
         .contact-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background: #0b1f3a;
+            background: #102a43;
             color: white;
-            text-align: center;
-            padding: 25px;
-            font-size: 14px;
+            border-color: #102a43;
         }
 
-        /* Mobile */
-        @media (max-width: 800px) {
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0b1f33;
+            color: #9fb0bc;
+            text-align: center;
+            padding: 28px;
+            font-size: 13px;
+        }
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
 
             nav {
-                padding: 15px 10px;
+                gap: 12px;
+                padding: 16px 10px;
+                flex-wrap: wrap;
             }
 
             nav a {
-                display: inline-block;
-                margin: 6px 8px;
-            }
-
-            .hero {
-                padding: 50px 20px;
+                font-size: 13px;
             }
 
             .hero-container {
-                flex-direction: column;
+                grid-template-columns: 1fr;
                 text-align: center;
-                gap: 30px;
+                padding: 70px 25px;
             }
 
-            .profile-image {
-                width: 190px;
-                height: 190px;
+            .hero h1 {
+                font-size: 48px;
             }
 
-            .hero-text h1 {
-                font-size: 36px;
+            .hero-description {
+                margin: auto;
             }
 
-            .hero-text h2 {
-                font-size: 20px;
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .photo-wrapper {
+                order: -1;
+            }
+
+            .photo-frame {
+                width: 280px;
+                height: 340px;
+            }
+
+            .intro-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .research-grid {
                 grid-template-columns: 1fr;
             }
 
-            .container {
-                padding: 50px 20px;
+            .teaching-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .activity-box {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                padding: 40px 30px;
             }
         }
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 19px;
+            }
+
+            .section {
+                padding: 60px 22px;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+
+            .stats {
+                padding: 35px 15px;
+            }
+
+            .stat-number {
+                font-size: 30px;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-<!-- Navigation -->
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -251,33 +663,62 @@
 </nav>
 
 
-<!-- Hero Section -->
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
     <div class="hero-container">
 
-        <img src="profile.jpeg"
-             alt="Dr. Prashant Gupta"
-             class="profile-image">
+        <div class="hero-content">
 
-        <div class="hero-text">
-
-            <h1>Dr. Prashant Gupta</h1>
-
-            <h2>Assistant Professor – Accounting and Finance</h2>
-
-            <div class="institution">
-                School of Management, Mahindra University, Hyderabad
+            <div class="small-heading">
+                Academic • Research • Teaching
             </div>
 
-            <p>
-                I am an academic and researcher working at the intersection of
-                accounting, finance, banking and emerging digital financial systems.
-                My research interests include corporate governance, banking and
-                asset quality, and Central Bank Digital Currencies (CBDCs).
+            <h1>
+                Dr. Prashant Gupta
+            </h1>
+
+            <h2>
+                Assistant Professor – Accounting and Finance
+            </h2>
+
+            <div class="university">
+                School of Management · Mahindra University · Hyderabad
+            </div>
+
+            <p class="hero-description">
+                I am an academic and researcher working across accounting,
+                finance and banking, with research interests in corporate
+                governance, banking and asset quality, and Central Bank
+                Digital Currencies (CBDCs).
             </p>
 
-            <a href="about.html" class="button">About Me</a>
+            <div class="hero-buttons">
+
+                <a href="about.html" class="btn-primary">
+                    About Me
+                </a>
+
+                <a href="research.html" class="btn-outline">
+                    Explore Research
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo-wrapper">
+
+            <div class="photo-frame">
+
+                <img src="profile.jpeg"
+                     alt="Dr. Prashant Gupta">
+
+            </div>
 
         </div>
 
@@ -286,176 +727,318 @@
 </section>
 
 
-<!-- Research Section -->
-<section>
+<!-- =========================
+     INTRODUCTION
+========================= -->
 
-    <div class="container">
+<section class="intro-strip">
 
-        <h2 class="section-title">Research</h2>
+    <div class="intro-container">
 
-        <p class="section-text">
-            My research focuses on understanding important issues in financial
-            institutions, corporate governance and emerging digital financial
-            technologies.
+        <h2>
+            Teaching finance.<br>
+            Researching the future.
+        </h2>
+
+        <p>
+            My academic work combines research, teaching and institutional
+            engagement, with a focus on understanding financial institutions,
+            governance and emerging developments in digital finance.
         </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ACADEMIC SNAPSHOT
+========================= -->
+
+<section class="section section-white">
+
+    <div class="stats">
+
+        <div class="stat">
+            <span class="stat-number">Ph.D.</span>
+            <span class="stat-label">Finance · IIT Delhi</span>
+        </div>
+
+        <div class="stat">
+            <span class="stat-number">4+</span>
+            <span class="stat-label">Journal Publications</span>
+        </div>
+
+        <div class="stat">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Core Research Areas</span>
+        </div>
+
+        <div class="stat">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Years in Academia</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RESEARCH
+========================= -->
+
+<section class="section section-light">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            Research
+        </div>
+
+        <h2 class="section-title">
+            Areas of Research
+        </h2>
+
+        <p class="section-intro">
+            My research examines important questions in corporate governance,
+            banking and emerging digital financial systems.
+        </p>
+
 
         <div class="research-grid">
 
             <div class="research-card">
 
-                <h3>Corporate Governance</h3>
+                <div class="research-number">
+                    01
+                </div>
+
+                <h3>
+                    Corporate Governance
+                </h3>
 
                 <p>
-                    Research examining corporate governance mechanisms and their
-                    implications for organisational and financial outcomes.
+                    Research examining corporate governance mechanisms and
+                    their relationship with organisational and financial
+                    outcomes.
                 </p>
 
             </div>
 
+
             <div class="research-card">
 
-                <h3>Banking &amp; Asset Quality</h3>
+                <div class="research-number">
+                    02
+                </div>
+
+                <h3>
+                    Banking &amp; Asset Quality
+                </h3>
 
                 <p>
-                    Research on bank asset quality, non-performing assets and the
-                    role of governance and institutional factors in banking.
+                    Research on bank asset quality, non-performing assets,
+                    corporate governance and institutional factors affecting
+                    banking performance.
                 </p>
 
             </div>
 
+
             <div class="research-card">
 
-                <h3>Central Bank Digital Currencies</h3>
+                <div class="research-number">
+                    03
+                </div>
+
+                <h3>
+                    Central Bank Digital Currencies
+                </h3>
 
                 <p>
-                    Research exploring the evolving literature, design, adoption
-                    and broader implications of Central Bank Digital Currencies.
+                    Research exploring the evolving literature, design,
+                    adoption and broader implications of Central Bank
+                    Digital Currencies.
                 </p>
 
             </div>
 
         </div>
 
-        <a href="research.html" class="button">Explore Research</a>
+
+        <a href="research.html" class="btn-primary" style="display:inline-block; margin-top:35px;">
+            View Research
+        </a>
 
     </div>
 
 </section>
 
 
-<!-- Teaching Section -->
-<section class="teaching-section">
+<!-- =========================
+     TEACHING
+========================= -->
 
-    <div class="container">
+<section class="section section-white">
 
-        <h2 class="section-title">Teaching</h2>
+    <div class="section-container">
 
-        <p class="section-text">
-            My teaching approach combines conceptual understanding with
-            practical application, helping students connect financial concepts
-            with real-world business situations.
-        </p>
+        <div class="section-label">
+            Teaching
+        </div>
 
-        <ul class="course-list">
+        <div class="teaching-layout">
 
-            <li>Financial Accounting</li>
-            <li>Management Accounting</li>
-            <li>Financial Management</li>
-            <li>Advanced Financial Management</li>
-            <li>Cost &amp; Management Accounting</li>
-            <li>Enterprise Risk Management</li>
-            <li>Financial Modelling</li>
+            <div>
 
-        </ul>
+                <h2 class="section-title">
+                    Learning through<br>
+                    application
+                </h2>
 
-        <a href="teaching.html" class="button">Teaching Profile</a>
+                <p class="teaching-highlight">
+                    My teaching approach connects financial concepts with
+                    practical business situations.
+                </p>
 
-    </div>
+                <a href="teaching.html" class="btn-primary" style="display:inline-block; margin-top:30px;">
+                    Teaching Profile
+                </a>
 
-</section>
-
-
-<!-- Academic Activities -->
-<section>
-
-    <div class="container">
-
-        <h2 class="section-title">Academic &amp; Institutional Activities</h2>
-
-        <p class="section-text">
-            Alongside teaching and research, I contribute to academic
-            administration, accreditation, student development and institutional
-            initiatives at Mahindra University.
-        </p>
-
-        <a href="activities.html" class="button">View Activities</a>
-
-    </div>
-
-</section>
+            </div>
 
 
-<!-- Art of Living -->
-<section class="teaching-section">
+            <div>
 
-    <div class="container">
+                <div class="course-grid">
 
-        <h2 class="section-title">Art of Living &amp; Well-being</h2>
+                    <div class="course">Financial Accounting</div>
+                    <div class="course">Management Accounting</div>
+                    <div class="course">Financial Management</div>
+                    <div class="course">Advanced Financial Management</div>
+                    <div class="course">Cost &amp; Management Accounting</div>
+                    <div class="course">Enterprise Risk Management</div>
+                    <div class="course">Financial Modelling</div>
 
-        <p class="section-text">
-            I have been associated with the Art of Living as a teacher since 2011,
-            conducting well-being and stress management programmes for students
-            and youth across India. I have also contributed to rehabilitation and
-            stress management programmes at Tihar Jail and Hotwar Central Jail.
-        </p>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- Contact -->
-<section class="contact-section">
+<!-- =========================
+     ACTIVITIES
+========================= -->
 
-    <div class="container">
+<section class="section section-light">
 
-        <h2 class="section-title">Contact</h2>
+    <div class="section-container">
 
-        <p class="section-text">
-            For academic communication, research collaboration and professional
-            interactions:
-        </p>
+        <div class="activity-box">
 
-        <br>
+            <div>
+
+                <div class="section-label">
+                    Beyond the Classroom
+                </div>
+
+                <h2>
+                    Academic &amp;<br>
+                    Institutional Engagement
+                </h2>
+
+                <p>
+                    Alongside teaching and research, I contribute to
+                    academic administration, accreditation, NCC,
+                    student development and institutional initiatives.
+                </p>
+
+            </div>
+
+
+            <div class="activity-links">
+
+                <a href="activities.html" class="activity-link">
+                    <span>→</span>
+                    Academic &amp; Institutional Leadership
+                </a>
+
+                <a href="activities.html" class="activity-link">
+                    <span>→</span>
+                    NCC &amp; Student Development
+                </a>
+
+                <a href="activities.html" class="activity-link">
+                    <span>→</span>
+                    Accreditation &amp; Quality Initiatives
+                </a>
+
+                <a href="activities.html" class="activity-link">
+                    <span>→</span>
+                    Art of Living &amp; Well-being
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section section-white contact">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            Get in Touch
+        </div>
+
+        <h2 class="section-title">
+            Contact
+        </h2>
 
         <p>
-            <strong>Academic Email:</strong>
-            <a href="mailto:prashant.gupta@mahindrauniversity.edu.in">
+            I welcome academic communication, research collaboration,
+            teaching-related discussions and professional interactions.
+        </p>
+
+        <p>
+            <strong>
                 prashant.gupta@mahindrauniversity.edu.in
-            </a>
+            </strong>
         </p>
-
-        <p>
-            <strong>Personal Email:</strong>
-            <a href="mailto:kumar.prashantgupta@gmail.com">
-                kumar.prashantgupta@gmail.com
-            </a>
-        </p>
-
-        <br>
 
         <div class="contact-links">
 
-            <a href="https://www.linkedin.com/in/kumar-prashantgupta/" target="_blank">
+            <a href="https://www.linkedin.com/in/kumar-prashantgupta/"
+               target="_blank">
                 LinkedIn
             </a>
 
-            <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ" target="_blank">
+            <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
+               target="_blank">
                 Google Scholar
             </a>
 
-            <a href="https://orcid.org/0000-0002-6206-6158" target="_blank">
+            <a href="https://orcid.org/0000-0002-6206-6158"
+               target="_blank">
                 ORCID
+            </a>
+
+            <a href="contact.html">
+                Contact Page
             </a>
 
         </div>
@@ -465,10 +1048,16 @@
 </section>
 
 
-<!-- Footer -->
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-    © Dr. Prashant Gupta | Academic Website
+
+    © Dr. Prashant Gupta · Academic Website
+
 </footer>
+
 
 </body>
 </html>
