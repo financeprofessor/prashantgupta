@@ -9,6 +9,10 @@
     <meta name="description"
           content="Dr. Prashant Gupta, Assistant Professor of Accounting and Finance at Mahindra University, Hyderabad. Research interests include Corporate Governance, Banking & Asset Quality, and Central Bank Digital Currencies.">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
 
         /* =========================
@@ -61,7 +65,6 @@
             width: 88%;
             max-width: 1180px;
             margin: auto;
-
             min-height: 72px;
 
             display: flex;
@@ -99,8 +102,13 @@
 
         .hero {
             padding: 90px 0 100px;
+
             background:
-                radial-gradient(circle at 85% 20%, rgba(22, 74, 122, 0.08), transparent 28%),
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(22, 74, 122, 0.08),
+                    transparent 28%
+                ),
                 #f8f6f1;
         }
 
@@ -511,8 +519,8 @@
         }
 
         .contact-icons a {
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
 
             border: 1px solid #cbd5dc;
             border-radius: 50%;
@@ -531,12 +539,17 @@
             background: #102a43;
             color: white;
             border-color: white;
-            transform: translateY(-3px);
+            transform: translateY(-4px);
         }
 
-        .contact-icons span {
-            font-weight: 700;
-            font-size: 16px;
+        .contact-icons i {
+            font-size: 21px;
+        }
+
+        .contact-icons .scholar-icon {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 21px;
+            font-weight: bold;
         }
 
 
@@ -672,8 +685,8 @@
             }
 
             .contact-icons a {
-                width: 44px;
-                height: 44px;
+                width: 46px;
+                height: 46px;
             }
         }
 
@@ -689,6 +702,7 @@
     ========================= -->
 
     <nav>
+
         <div class="nav-container">
 
             <a href="index.html" class="logo">
@@ -696,16 +710,25 @@
             </a>
 
             <div class="nav-links">
+
                 <a href="index.html">Home</a>
+
                 <a href="about.html">About</a>
+
                 <a href="research.html">Research</a>
+
                 <a href="teaching.html">Teaching</a>
+
                 <a href="publications.html">Publications</a>
+
                 <a href="activities.html">Activities</a>
+
                 <a href="contact.html">Contact</a>
+
             </div>
 
         </div>
+
     </nav>
 
 
@@ -1221,6 +1244,7 @@
 
             <div class="contact-icons">
 
+
                 <!-- LinkedIn -->
 
                 <a
@@ -1230,7 +1254,7 @@
                     aria-label="LinkedIn"
                     title="LinkedIn"
                 >
-                    <span>in</span>
+                    <i class="fa-brands fa-linkedin-in"></i>
                 </a>
 
 
@@ -1243,7 +1267,7 @@
                     aria-label="Google Scholar"
                     title="Google Scholar"
                 >
-                    <span>GS</span>
+                    <i class="fa-solid fa-graduation-cap"></i>
                 </a>
 
 
@@ -1256,19 +1280,20 @@
                     aria-label="ORCID"
                     title="ORCID"
                 >
-                    <span>iD</span>
+                    <span class="scholar-icon">iD</span>
                 </a>
 
 
-                <!-- Contact -->
+                <!-- Email / Contact -->
 
                 <a
                     href="contact.html"
                     aria-label="Contact"
                     title="Contact"
                 >
-                    <span>✉</span>
+                    <i class="fa-regular fa-envelope"></i>
                 </a>
+
 
             </div>
 
