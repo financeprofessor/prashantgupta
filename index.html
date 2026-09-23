@@ -15,10 +15,6 @@
 
     <style>
 
-        /* =========================
-           GLOBAL
-        ========================= */
-
         * {
             margin: 0;
             padding: 0;
@@ -507,7 +503,7 @@
 
 
         /* =========================
-           SOCIAL / CONTACT ICONS
+           SOCIAL ICONS
         ========================= */
 
         .contact-icons {
@@ -519,37 +515,65 @@
         }
 
         .contact-icons a {
-            width: 50px;
-            height: 50px;
+            width: 52px;
+            height: 52px;
 
-            border: 1px solid #cbd5dc;
+            border: 1px solid #d9e2ec;
             border-radius: 50%;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            color: #164a7a;
             background: white;
 
             transition: all 0.3s ease;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
         }
 
         .contact-icons a:hover {
-            background: #102a43;
-            color: white;
-            border-color: white;
-            transform: translateY(-4px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.20);
         }
 
-        .contact-icons i {
-            font-size: 21px;
+        /* LinkedIn */
+        .linkedin-icon {
+            color: #0A66C2;
         }
 
-        .contact-icons .scholar-icon {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 21px;
-            font-weight: bold;
+        .contact-icons a:hover .linkedin-icon {
+            color: #0A66C2;
+        }
+
+        /* Google Scholar */
+        .scholar-icon {
+            color: #4285F4;
+        }
+
+        .contact-icons a:hover .scholar-icon {
+            color: #4285F4;
+        }
+
+        /* ORCID */
+        .orcid-icon {
+            color: #A6CE39;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .contact-icons a:hover .orcid-icon {
+            color: #A6CE39;
+        }
+
+        /* Email */
+        .email-icon {
+            color: #52606d;
+        }
+
+        .contact-icons a:hover .email-icon {
+            color: #102a43;
         }
 
 
@@ -712,17 +736,11 @@
             <div class="nav-links">
 
                 <a href="index.html">Home</a>
-
                 <a href="about.html">About</a>
-
                 <a href="research.html">Research</a>
-
                 <a href="teaching.html">Teaching</a>
-
                 <a href="publications.html">Publications</a>
-
                 <a href="activities.html">Activities</a>
-
                 <a href="contact.html">Contact</a>
 
             </div>
@@ -1240,7 +1258,9 @@
             </div>
 
 
-            <!-- SOCIAL / CONTACT ICONS -->
+            <!-- =========================
+                 SOCIAL ICONS
+            ========================= -->
 
             <div class="contact-icons">
 
@@ -1254,7 +1274,7 @@
                     aria-label="LinkedIn"
                     title="LinkedIn"
                 >
-                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-linkedin-in linkedin-icon"></i>
                 </a>
 
 
@@ -1267,7 +1287,7 @@
                     aria-label="Google Scholar"
                     title="Google Scholar"
                 >
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    <i class="fa-solid fa-graduation-cap scholar-icon"></i>
                 </a>
 
 
@@ -1280,18 +1300,18 @@
                     aria-label="ORCID"
                     title="ORCID"
                 >
-                    <span class="scholar-icon">iD</span>
+                    <span class="orcid-icon">iD</span>
                 </a>
 
 
-                <!-- Email / Contact -->
+                <!-- Contact -->
 
                 <a
                     href="contact.html"
                     aria-label="Contact"
                     title="Contact"
                 >
-                    <i class="fa-regular fa-envelope"></i>
+                    <i class="fa-regular fa-envelope email-icon"></i>
                 </a>
 
 
