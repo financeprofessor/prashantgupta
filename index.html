@@ -6,6 +6,8 @@
 
   <title>Dr. Prashant Gupta | Assistant Professor</title>
 
+  <meta name="description" content="Academic website of Dr. Prashant Gupta, Assistant Professor at the School of Management, Mahindra University, Hyderabad.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -18,15 +20,15 @@
 
     :root {
       --navy: #0b1f33;
-      --navy-light: #16344f;
+      --navy2: #102c47;
       --gold: #c9a227;
-      --gold-light: #e1c45a;
-      --ivory: #f8f6f0;
+      --gold-light: #e1c766;
+      --ivory: #f7f4ed;
       --white: #ffffff;
-      --text: #243447;
-      --muted: #687789;
-      --border: #e3e7eb;
-      --shadow: 0 15px 40px rgba(11, 31, 51, 0.08);
+      --text: #263746;
+      --muted: #667685;
+      --border: #e5e0d6;
+      --shadow: 0 18px 45px rgba(11,31,51,0.09);
     }
 
     * {
@@ -42,7 +44,7 @@
     body {
       font-family: "DM Sans", sans-serif;
       color: var(--text);
-      background: var(--white);
+      background: white;
       line-height: 1.7;
     }
 
@@ -51,54 +53,44 @@
       color: inherit;
     }
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* NAVIGATION */
 
     nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(11, 31, 51, 0.97);
+      background: rgba(11,31,51,0.97);
       backdrop-filter: blur(10px);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav-container {
-      max-width: 1200px;
+      max-width: 1180px;
       margin: auto;
-      min-height: 72px;
-      padding: 0 25px;
-
+      padding: 18px 28px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .brand {
-      color: var(--white);
+      color: white;
       font-family: "Playfair Display", serif;
       font-size: 1.25rem;
       font-weight: 600;
       white-space: nowrap;
     }
 
-    .brand span {
-      color: var(--gold-light);
-    }
-
     .nav-links {
       display: flex;
+      gap: 25px;
       align-items: center;
-      gap: 27px;
-      list-style: none;
+      font-size: 0.9rem;
     }
 
     .nav-links a {
-      color: #dfe7ee;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: 0.25s ease;
+      color: rgba(255,255,255,0.82);
+      transition: 0.25s;
     }
 
     .nav-links a:hover,
@@ -106,769 +98,373 @@
       color: var(--gold-light);
     }
 
-    .cv-btn {
-      padding: 9px 17px;
+    .cv-button {
+      padding: 8px 16px;
       border: 1px solid var(--gold);
       color: var(--gold-light) !important;
       border-radius: 4px;
     }
 
-    .cv-btn:hover {
-      background: var(--gold);
-      color: var(--navy) !important;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
       background:
-        linear-gradient(
-          135deg,
-          rgba(11,31,51,0.99),
-          rgba(22,52,79,0.97)
-        );
-
-      color: var(--white);
-
-      padding: 90px 25px;
-
-      position: relative;
-      overflow: hidden;
+        radial-gradient(circle at 80% 20%, rgba(201,162,39,0.13), transparent 30%),
+        var(--navy);
+      color: white;
+      padding: 90px 25px 100px;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-
-      width: 550px;
-      height: 550px;
-
-      border: 1px solid rgba(201,162,39,0.14);
-      border-radius: 50%;
-
-      right: -220px;
-      top: -250px;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-
-      width: 300px;
-      height: 300px;
-
-      border: 1px solid rgba(201,162,39,0.08);
-      border-radius: 50%;
-
-      left: -180px;
-      bottom: -180px;
-    }
-
-    .hero-container {
-      max-width: 1150px;
+    .hero-inner {
+      max-width: 1120px;
       margin: auto;
-
       display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 75px;
       align-items: center;
-      gap: 70px;
-
-      position: relative;
-      z-index: 2;
     }
 
-    .hero-content {
-      min-width: 0;
+    .hero-image {
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 330px;
+      height: 330px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 7px solid rgba(255,255,255,0.08);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.25);
     }
 
     .eyebrow {
       color: var(--gold-light);
-
-      font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 3px;
-
+      font-size: 0.78rem;
       font-weight: 700;
-
-      margin-bottom: 25px;
-    }
-
-    /*
-      IMPORTANT:
-      The name is kept on ONE LINE.
-    */
-
-    .hero h1 {
-      font-family: "Playfair Display", serif;
-
-      font-size: clamp(2.1rem, 8vw, 4.8rem);
-
-      line-height: 1.05;
-
-      letter-spacing: -1.5px;
-
-      white-space: nowrap;
-
-      margin-bottom: 22px;
-    }
-
-    .hero-title {
-      color: var(--gold-light);
-
-      font-size: 1.25rem;
-      font-weight: 600;
-
       margin-bottom: 18px;
     }
 
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3.2rem, 6vw, 5.3rem);
+      line-height: 1.03;
+      letter-spacing: -1.5px;
+      white-space: nowrap;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero-title {
+      font-size: 1.25rem;
+      color: white;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
     .hero-affiliation {
-      color: #d9e1e8;
-
-      font-size: 1rem;
-
-      margin-bottom: 28px;
+      color: rgba(255,255,255,0.62);
+      margin-bottom: 25px;
     }
 
     .hero-description {
-      color: #c8d3dd;
-
-      max-width: 650px;
-
+      max-width: 620px;
+      color: rgba(255,255,255,0.75);
       font-size: 1rem;
-
-      line-height: 1.8;
-
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
 
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .primary-button {
-      background: var(--gold);
-      color: var(--navy);
-
-      padding: 13px 23px;
-
-      font-weight: 700;
-
-      border-radius: 3px;
-
-      transition: 0.25s ease;
-    }
-
-    .primary-button:hover {
-      background: var(--gold-light);
-      transform: translateY(-2px);
-    }
-
-    .secondary-button {
-      border: 1px solid rgba(255,255,255,0.35);
-
-      color: var(--white);
-
-      padding: 12px 23px;
-
-      font-weight: 600;
-
-      border-radius: 3px;
-
-      transition: 0.25s ease;
-    }
-
-    .secondary-button:hover {
-      border-color: var(--gold-light);
-      color: var(--gold-light);
-    }
-
-
-    /* PROFILE IMAGE */
-
-    .hero-image {
-      display: flex;
-      justify-content: center;
-    }
-
-    .profile-frame {
-      width: 310px;
-      height: 390px;
-
-      position: relative;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .profile-frame::before {
-      content: "";
-
-      position: absolute;
-
-      width: 280px;
-      height: 360px;
-
-      border: 1px solid var(--gold);
-
-      top: 15px;
-      right: 5px;
-    }
-
-    .profile-frame img {
-      width: 270px;
-      height: 350px;
-
-      object-fit: cover;
-
-      position: relative;
-      z-index: 2;
-
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-    }
-
-
-    /* SOCIAL LINKS */
-
-    .hero-social {
+    .socials {
       display: flex;
       gap: 15px;
-
-      margin-top: 30px;
     }
 
-    .hero-social a {
-      width: 38px;
-      height: 38px;
-
+    .socials a {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      border: 1px solid rgba(255,255,255,0.22);
-
-      color: #dbe4eb;
-
-      border-radius: 50%;
-
-      transition: 0.25s ease;
+      color: rgba(255,255,255,0.75);
+      transition: 0.25s;
     }
 
-    .hero-social a:hover {
+    .socials a:hover {
       color: var(--gold-light);
       border-color: var(--gold);
-      transform: translateY(-2px);
     }
 
-
-    /* =========================
-       GENERAL
-    ========================= */
+    /* GENERAL */
 
     .section {
-      padding: 85px 25px;
+      padding: 90px 25px;
     }
 
-    .section.ivory {
+    .section.alt {
       background: var(--ivory);
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: auto;
     }
 
-    .section-heading {
-      margin-bottom: 42px;
+    .heading {
+      max-width: 720px;
+      margin-bottom: 45px;
     }
 
-    .small-title {
+    .heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .label {
       color: var(--gold);
-
       text-transform: uppercase;
-
       letter-spacing: 2.5px;
-
-      font-size: 0.78rem;
-
+      font-size: 0.75rem;
       font-weight: 700;
-
       margin-bottom: 10px;
     }
 
-    .section-heading h2 {
+    h2 {
       font-family: "Playfair Display", serif;
-
       color: var(--navy);
-
       font-size: clamp(2rem, 4vw, 3rem);
-
       line-height: 1.2;
+      margin-bottom: 15px;
     }
 
-    .section-heading p {
+    .heading p {
       color: var(--muted);
-
-      max-width: 720px;
-
-      margin-top: 14px;
     }
 
+    /* THREE AREAS */
 
-    /* =========================
-       ABOUT INTRO
-    ========================= */
-
-    .intro-grid {
+    .areas {
       display: grid;
-
-      grid-template-columns: 1.15fr 0.85fr;
-
-      gap: 60px;
-
-      align-items: center;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
-    .intro-text p {
-      color: var(--muted);
+    .area-card {
+      padding: 35px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: white;
+      transition: 0.3s;
+    }
 
+    .area-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .area-number {
+      font-family: "Playfair Display", serif;
+      color: var(--gold);
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .area-card h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+    }
+
+    .area-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
       margin-bottom: 18px;
     }
 
-    .intro-highlight {
-      background: var(--navy);
-
-      padding: 35px;
-
-      color: var(--white);
-
-      border-left: 4px solid var(--gold);
-
-      box-shadow: var(--shadow);
-    }
-
-    .intro-highlight h3 {
-      font-family: "Playfair Display", serif;
-
-      font-size: 1.6rem;
-
-      margin-bottom: 15px;
-    }
-
-    .intro-highlight p {
-      color: #d4dde5;
-
-      font-size: 0.94rem;
-    }
-
-
-    /* =========================
-       RESEARCH AREAS
-    ========================= */
-
-    .research-grid {
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 22px;
-    }
-
-    .research-card {
-      background: var(--white);
-
-      border: 1px solid var(--border);
-
-      padding: 32px;
-
-      transition: 0.25s ease;
-
-      position: relative;
-    }
-
-    .research-card:hover {
-      transform: translateY(-6px);
-
-      box-shadow: var(--shadow);
-
-      border-color: rgba(201,162,39,0.45);
-    }
-
-    .research-number {
-      color: var(--gold);
-
-      font-family: "Playfair Display", serif;
-
-      font-size: 2rem;
-
-      margin-bottom: 15px;
-    }
-
-    .research-card h3 {
+    .area-link {
       color: var(--navy);
-
-      font-size: 1.1rem;
-
-      line-height: 1.4;
-
-      margin-bottom: 12px;
-    }
-
-    .research-card p {
-      color: var(--muted);
-
-      font-size: 0.9rem;
-    }
-
-    .research-link {
-      display: inline-block;
-
-      color: var(--gold);
-
-      font-size: 0.85rem;
-
       font-weight: 700;
-
-      margin-top: 20px;
+      font-size: 0.85rem;
     }
 
-
-    /* =========================
-       FACTS
-    ========================= */
-
-    .facts-grid {
-      display: grid;
-
-      grid-template-columns: repeat(4, 1fr);
-
-      gap: 18px;
-    }
-
-    .fact-card {
-      background: var(--white);
-
-      border: 1px solid var(--border);
-
-      padding: 27px;
-
-      text-align: center;
-    }
-
-    .fact-icon {
+    .area-link i {
       color: var(--gold);
-
-      font-size: 1.35rem;
-
-      margin-bottom: 13px;
+      margin-left: 5px;
     }
 
-    .fact-number {
-      color: var(--navy);
+    /* HIGHLIGHTS */
 
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .highlight {
+      padding: 30px 22px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .highlight:last-child {
+      border-right: none;
+    }
+
+    .highlight strong {
+      display: block;
       font-family: "Playfair Display", serif;
-
-      font-size: 1.8rem;
-
-      font-weight: 600;
-
+      font-size: 1.65rem;
+      color: var(--navy);
       margin-bottom: 5px;
     }
 
-    .fact-label {
+    .highlight span {
       color: var(--muted);
-
       font-size: 0.82rem;
     }
 
+    /* PROFILE STRIP */
 
-    /* =========================
-       PUBLICATIONS
-    ========================= */
-
-    .publication-preview {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 25px;
-    }
-
-    .publication-card {
-      background: var(--white);
-
-      border: 1px solid var(--border);
-
-      padding: 30px;
-
-      transition: 0.25s ease;
-    }
-
-    .publication-card:hover {
-      transform: translateY(-4px);
-
-      box-shadow: var(--shadow);
-    }
-
-    .publication-year {
-      display: inline-block;
-
-      color: var(--gold);
-
-      font-size: 0.78rem;
-
-      font-weight: 700;
-
-      letter-spacing: 1px;
-
-      margin-bottom: 13px;
-    }
-
-    .publication-card h3 {
-      color: var(--navy);
-
-      font-family: "Playfair Display", serif;
-
-      font-size: 1.15rem;
-
-      line-height: 1.45;
-
-      margin-bottom: 12px;
-    }
-
-    .publication-journal {
-      color: var(--muted);
-
-      font-size: 0.88rem;
-
-      margin-bottom: 18px;
-    }
-
-    .article-link {
-      color: var(--gold);
-
-      font-size: 0.84rem;
-
-      font-weight: 700;
-    }
-
-    .view-all {
-      text-align: center;
-
-      margin-top: 35px;
-    }
-
-
-    /* =========================
-       TEACHING
-    ========================= */
-
-    .teaching-grid {
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 22px;
-    }
-
-    .teaching-card {
-      padding: 30px;
-
-      background: var(--white);
-
-      border-top: 3px solid var(--gold);
-
-      box-shadow: 0 8px 30px rgba(11,31,51,0.05);
-    }
-
-    .teaching-card i {
-      color: var(--gold);
-
-      font-size: 1.4rem;
-
-      margin-bottom: 17px;
-    }
-
-    .teaching-card h3 {
-      color: var(--navy);
-
-      font-size: 1.05rem;
-
-      margin-bottom: 8px;
-    }
-
-    .teaching-card p {
-      color: var(--muted);
-
-      font-size: 0.88rem;
-    }
-
-
-    /* =========================
-       PERSONAL / A FEW THINGS
-    ========================= */
-
-    .things-grid {
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 20px;
-    }
-
-    .thing-card {
-      background: var(--white);
-
-      border: 1px solid var(--border);
-
-      padding: 30px;
-    }
-
-    .thing-card i {
-      color: var(--gold);
-
-      font-size: 1.4rem;
-
-      margin-bottom: 15px;
-    }
-
-    .thing-card h3 {
-      color: var(--navy);
-
-      font-size: 1.05rem;
-
-      margin-bottom: 8px;
-    }
-
-    .thing-card p {
-      color: var(--muted);
-
-      font-size: 0.9rem;
-    }
-
-
-    /* =========================
-       CTA
-    ========================= */
-
-    .cta {
+    .profile-strip {
       background: var(--navy);
-
-      color: var(--white);
-
-      text-align: center;
-
-      padding: 80px 25px;
-    }
-
-    .cta h2 {
-      font-family: "Playfair Display", serif;
-
-      font-size: 2.6rem;
-
-      margin-bottom: 15px;
-    }
-
-    .cta p {
-      color: #d4dde5;
-
-      max-width: 650px;
-
-      margin: 0 auto 28px;
-    }
-
-    .cta-button {
-      display: inline-block;
-
-      background: var(--gold);
-
-      color: var(--navy);
-
-      padding: 13px 25px;
-
-      font-weight: 700;
-
-      border-radius: 3px;
-
-      transition: 0.25s ease;
-    }
-
-    .cta-button:hover {
-      background: var(--gold-light);
-
-      transform: translateY(-2px);
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #071521;
-
-      color: #b9c5cf;
-
-      padding: 35px 25px;
-    }
-
-    .footer-container {
-      max-width: 1100px;
-
-      margin: auto;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      gap: 25px;
-
+      color: white;
+      border-radius: 14px;
+      padding: 55px 60px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
       align-items: center;
     }
 
-    .footer-name {
-      font-family: "Playfair Display", serif;
-
-      color: var(--white);
-
-      font-size: 1.1rem;
-    }
-
-    .footer-links {
-      display: flex;
-
-      gap: 18px;
-
-      font-size: 0.85rem;
-    }
-
-    .footer-links a:hover {
+    .profile-strip .label {
       color: var(--gold-light);
     }
 
+    .profile-strip h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
 
-    /* =========================
-       RESPONSIVE
-    ========================= */
+    .profile-strip p {
+      color: rgba(255,255,255,0.7);
+      max-width: 700px;
+    }
 
-    @media (max-width: 950px) {
+    .button {
+      display: inline-block;
+      padding: 13px 24px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 4px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* SELECTED WORK */
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .work-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 32px;
+      background: white;
+    }
+
+    .work-card .work-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .work-card h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .work-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+
+    .text-link {
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .text-link i {
+      color: var(--gold);
+      margin-left: 5px;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      padding: 90px 25px;
+      background: var(--ivory);
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #071725;
+      color: rgba(255,255,255,0.55);
+      padding: 35px 25px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
 
       .nav-links {
         gap: 14px;
+        font-size: 0.8rem;
       }
 
-      .hero-container {
+      .hero-inner {
         grid-template-columns: 1fr;
-
         text-align: center;
+        gap: 45px;
+      }
 
-        gap: 50px;
+      .hero-image {
+        order: 2;
+      }
+
+      .hero-content {
+        order: 1;
       }
 
       .hero-description {
@@ -876,116 +472,86 @@
         margin-right: auto;
       }
 
-      .hero-buttons,
-      .hero-social {
+      .socials {
         justify-content: center;
       }
 
-      .intro-grid {
+      .areas {
         grid-template-columns: 1fr;
       }
 
-      .research-grid,
-      .teaching-grid {
+      .highlights {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .facts-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .highlight:nth-child(2) {
+        border-right: none;
       }
 
-      .things-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .highlight:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
       }
+
+      .profile-strip {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .profile-strip p {
+        margin: auto;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
     }
-
 
     @media (max-width: 700px) {
 
       .nav-container {
         flex-direction: column;
-
-        padding: 15px 20px;
-
-        gap: 12px;
+        gap: 14px;
       }
 
       .nav-links {
         flex-wrap: wrap;
-
         justify-content: center;
-
-        gap: 11px;
+        gap: 12px;
       }
 
       .hero {
-        padding: 70px 20px;
+        padding: 70px 20px 80px;
       }
-
-      /*
-        Keep the name on ONE LINE on mobile too.
-      */
 
       .hero h1 {
-        font-size: clamp(2rem, 8.5vw, 3rem);
-
+        font-size: 2.55rem;
         white-space: nowrap;
-
-        letter-spacing: -1px;
       }
 
-      .profile-frame {
-        width: 280px;
-        height: 350px;
-      }
-
-      .profile-frame::before {
-        width: 250px;
-        height: 325px;
-      }
-
-      .profile-frame img {
-        width: 240px;
-        height: 315px;
+      .hero-image img {
+        width: 235px;
+        height: 235px;
       }
 
       .section {
         padding: 65px 20px;
       }
 
-      .research-grid,
-      .teaching-grid,
-      .things-grid,
-      .publication-preview {
-        grid-template-columns: 1fr;
-      }
-
-      .facts-grid {
+      .highlights {
         grid-template-columns: 1fr 1fr;
       }
 
-      .footer-container {
-        flex-direction: column;
-
-        text-align: center;
+      .profile-strip {
+        padding: 38px 25px;
       }
 
-      .footer-links {
-        flex-wrap: wrap;
-
-        justify-content: center;
-      }
     }
-
 
     @media (max-width: 380px) {
 
       .hero h1 {
-        font-size: 1.85rem;
-      }
-
-      .facts-grid {
-        grid-template-columns: 1fr;
+        font-size: 2.15rem;
       }
 
     }
@@ -993,124 +559,80 @@
   </style>
 </head>
 
-
 <body>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
   <div class="nav-container">
 
     <a href="index.html" class="brand">
-      Dr. Prashant <span>Gupta</span>
+      Dr. Prashant Gupta
     </a>
 
-    <ul class="nav-links">
+    <div class="nav-links">
 
-      <li>
-        <a href="index.html" class="active">Home</a>
-      </li>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="publications.html">Publications</a>
+      <a href="activities.html">Activities</a>
+      <a href="contact.html">Contact</a>
 
-      <li>
-        <a href="about.html">About</a>
-      </li>
+      <a href="Prashant%20Kumar%20Gupta_CV.pdf" class="cv-button">
+        CV
+      </a>
 
-      <li>
-        <a href="research.html">Research</a>
-      </li>
-
-      <li>
-        <a href="teaching.html">Teaching</a>
-      </li>
-
-      <li>
-        <a href="publications.html">Publications</a>
-      </li>
-
-      <li>
-        <a href="activities.html">Activities</a>
-      </li>
-
-      <li>
-        <a href="contact.html">Contact</a>
-      </li>
-
-      <li>
-        <a href="Prashant%20Kumar%20Gupta_CV.pdf"
-           class="cv-btn">
-          CV
-        </a>
-      </li>
-
-    </ul>
+    </div>
 
   </div>
 
 </nav>
 
 
+<!-- HERO -->
 
-<!-- =========================
-     HERO
-========================= -->
+<header class="hero">
 
-<section class="hero">
+  <div class="hero-inner">
 
-  <div class="hero-container">
+
+    <div class="hero-image">
+
+      <img src="profile.jpeg" alt="Dr. Prashant Gupta">
+
+    </div>
 
 
     <div class="hero-content">
 
       <div class="eyebrow">
-        Academic · Research · Teaching
-      </div>
-
-
-      <h1>
-        Dr. Prashant Gupta
-      </h1>
-
-
-      <div class="hero-title">
         Assistant Professor
       </div>
 
+      <h1>
+        Dr. Prashant <span>Gupta</span>
+      </h1>
 
-      <div class="hero-affiliation">
-        School of Management, Mahindra University, Hyderabad
+      <div class="hero-title">
+        School of Management
       </div>
 
+      <div class="hero-affiliation">
+        Mahindra University · Hyderabad
+      </div>
 
       <p class="hero-description">
-
-        I am a finance academic and researcher working at the intersection
-        of corporate governance, banking, asset quality and emerging areas
-        of digital finance.
-
+        An academic working at the intersection of finance, teaching
+        and student development, with a professional journey shaped by
+        curiosity, continuous learning and meaningful engagement.
       </p>
 
 
-      <div class="hero-buttons">
-
-        <a href="research.html" class="primary-button">
-          Explore Research
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-
-        <a href="Prashant%20Kumar%20Gupta_CV.pdf"
-           class="secondary-button">
-          Download CV
-          <i class="fa-solid fa-download"></i>
-        </a>
-
-      </div>
-
-
-      <div class="hero-social">
+      <div class="socials">
 
         <a href="https://www.linkedin.com/in/kumar-prashantgupta/"
            target="_blank"
@@ -1134,197 +656,101 @@
 
     </div>
 
-
-
-    <div class="hero-image">
-
-      <div class="profile-frame">
-
-        <img src="profile.jpeg"
-             alt="Dr. Prashant Gupta">
-
-      </div>
-
-    </div>
-
-
   </div>
 
-</section>
+</header>
 
 
-
-<!-- =========================
-     INTRODUCTION
-========================= -->
+<!-- THREE AREAS -->
 
 <section class="section">
 
   <div class="container">
 
-    <div class="section-heading">
+    <div class="heading center">
 
-      <div class="small-title">
-        Welcome
+      <div class="label">
+        Explore
       </div>
 
       <h2>
-        Teaching, Research & Student Development
-      </h2>
-
-    </div>
-
-
-    <div class="intro-grid">
-
-
-      <div class="intro-text">
-
-        <p>
-          I am an Assistant Professor at the School of Management,
-          Mahindra University, Hyderabad, with a Ph.D. in Finance from
-          IIT Delhi.
-        </p>
-
-        <p>
-          My academic work focuses on corporate governance, banking and
-          asset quality, while my recent research also explores Central
-          Bank Digital Currencies, FinTech and digital finance.
-        </p>
-
-        <p>
-          Alongside research and teaching, I remain actively involved in
-          student development and institutional activities.
-        </p>
-
-      </div>
-
-
-      <div class="intro-highlight">
-
-        <h3>
-          A few things about me
-        </h3>
-
-        <p>
-          Finance academic · Researcher · Teacher · Student mentor
-        </p>
-
-        <br>
-
-        <p>
-          Ph.D. in Finance from IIT Delhi, with academic and professional
-          experience across leading institutions in India.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     RESEARCH AREAS
-========================= -->
-
-<section class="section ivory">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="small-title">
-        Research
-      </div>
-
-      <h2>
-        Research Areas
+        Three Dimensions of My Work
       </h2>
 
       <p>
-        My research spans established areas of banking and corporate
-        governance as well as emerging developments in digital finance.
+        Explore the different aspects of my academic and professional life.
       </p>
 
     </div>
 
 
-    <div class="research-grid">
+    <div class="areas">
 
 
-      <!-- RESEARCH 1 -->
+      <div class="area-card">
 
-      <div class="research-card">
-
-        <div class="research-number">
+        <div class="area-number">
           01
         </div>
 
         <h3>
-          Corporate Governance, Banking & Asset Quality
+          Research
         </h3>
 
         <p>
-          Corporate governance, banking asset quality, non-performing
-          assets, public and private banks, capital adequacy and legal
-          and institutional frameworks.
+          Research interests spanning corporate governance, banking,
+          asset quality and emerging areas of digital finance.
         </p>
 
-        <a href="research.html" class="research-link">
-          Explore Research →
+        <a href="research.html" class="area-link">
+          Explore Research
+          <i class="fa-solid fa-arrow-right"></i>
         </a>
 
       </div>
 
 
-      <!-- RESEARCH 2 -->
+      <div class="area-card">
 
-      <div class="research-card">
-
-        <div class="research-number">
+        <div class="area-number">
           02
         </div>
 
         <h3>
-          Central Bank Digital Currencies & Digital Finance
+          Teaching
         </h3>
 
         <p>
-          Research on CBDCs, G-19 economies, CBDC adoption, digital
-          finance and systematic literature reviews.
+          Practice-oriented teaching in accounting and finance, with
+          an emphasis on connecting concepts with real-world applications.
         </p>
 
-        <a href="research.html" class="research-link">
-          Explore Research →
+        <a href="teaching.html" class="area-link">
+          Explore Teaching
+          <i class="fa-solid fa-arrow-right"></i>
         </a>
 
       </div>
 
 
-      <!-- RESEARCH 3 -->
+      <div class="area-card">
 
-      <div class="research-card">
-
-        <div class="research-number">
+        <div class="area-number">
           03
         </div>
 
         <h3>
-          Financial Inclusion, FinTech & Digital Payments
+          Beyond Academia
         </h3>
 
         <p>
-          Financial inclusion, microfinance, FinTech, mobile payments,
-          security and privacy, financial fraud and artificial intelligence.
+          Engagement in NCC leadership, student development,
+          institutional service and social initiatives.
         </p>
 
-        <a href="research.html" class="research-link">
-          Explore Research →
+        <a href="activities.html" class="area-link">
+          Explore Activities
+          <i class="fa-solid fa-arrow-right"></i>
         </a>
 
       </div>
@@ -1337,95 +763,55 @@
 </section>
 
 
+<!-- HIGHLIGHTS -->
 
-<!-- =========================
-     ACADEMIC HIGHLIGHTS
-========================= -->
-
-<section class="section">
+<section class="section alt">
 
   <div class="container">
 
-    <div class="section-heading">
-
-      <div class="small-title">
-        Academic Highlights
-      </div>
-
-      <h2>
-        A Snapshot of My Academic Journey
-      </h2>
-
-    </div>
+    <div class="highlights">
 
 
-    <div class="facts-grid">
+      <div class="highlight">
 
+        <strong>Ph.D.</strong>
 
-      <div class="fact-card">
-
-        <div class="fact-icon">
-          <i class="fa-solid fa-graduation-cap"></i>
-        </div>
-
-        <div class="fact-number">
-          Ph.D.
-        </div>
-
-        <div class="fact-label">
+        <span>
           Finance · IIT Delhi
-        </div>
+        </span>
 
       </div>
 
 
-      <div class="fact-card">
+      <div class="highlight">
 
-        <div class="fact-icon">
-          <i class="fa-solid fa-book-open"></i>
-        </div>
+        <strong>2022</strong>
 
-        <div class="fact-number">
-          4
-        </div>
-
-        <div class="fact-label">
-          Journal Publications
-        </div>
+        <span>
+          Joined Mahindra University
+        </span>
 
       </div>
 
 
-      <div class="fact-card">
+      <div class="highlight">
 
-        <div class="fact-icon">
-          <i class="fa-solid fa-award"></i>
-        </div>
+        <strong>15+</strong>
 
-        <div class="fact-number">
-          3
-        </div>
-
-        <div class="fact-label">
-          Research Awards & Recognition
-        </div>
-
-      </div>
-
-
-      <div class="fact-card">
-
-        <div class="fact-icon">
-          <i class="fa-solid fa-person-chalkboard"></i>
-        </div>
-
-        <div class="fact-number">
-          15+
-        </div>
-
-        <div class="fact-label">
+        <span>
           Years with Art of Living
-        </div>
+        </span>
+
+      </div>
+
+
+      <div class="highlight">
+
+        <strong>NCC</strong>
+
+        <span>
+          Leadership & Student Development
+        </span>
 
       </div>
 
@@ -1437,261 +823,119 @@
 </section>
 
 
-
-<!-- =========================
-     PUBLICATIONS HIGHLIGHT
-========================= -->
-
-<section class="section ivory">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="small-title">
-        Selected Research
-      </div>
-
-      <h2>
-        Recent Publications
-      </h2>
-
-    </div>
-
-
-    <div class="publication-preview">
-
-
-      <div class="publication-card">
-
-        <div class="publication-year">
-          2024
-        </div>
-
-        <h3>
-          Navigating the interplay of legal frameworks and corporate
-          governance: the impact on asset quality in an emerging economy
-        </h3>
-
-        <div class="publication-journal">
-          Asian Journal of Business Ethics
-        </div>
-
-        <a href="https://link.springer.com/article/10.1007/s13520-024-00209-5"
-           target="_blank"
-           class="article-link">
-          View Article ↗
-        </a>
-
-      </div>
-
-
-
-      <div class="publication-card">
-
-        <div class="publication-year">
-          2023
-        </div>
-
-        <h3>
-          Role of corporate governance in asset quality of banks:
-          comparison between government-owned and private banks
-        </h3>
-
-        <div class="publication-journal">
-          Managerial Finance
-        </div>
-
-        <a href="https://www.emerald.com/mf/article-abstract/49/4/724/289525/Role-of-corporate-governance-in-asset-quality-of?redirectedFrom=fulltext"
-           target="_blank"
-           class="article-link">
-          View Article ↗
-        </a>
-
-      </div>
-
-
-    </div>
-
-
-    <div class="view-all">
-
-      <a href="publications.html"
-         class="primary-button">
-        View All Publications
-        <i class="fa-solid fa-arrow-right"></i>
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     TEACHING
-========================= -->
+<!-- SHORT PROFILE -->
 
 <section class="section">
 
   <div class="container">
 
-    <div class="section-heading">
+    <div class="profile-strip">
 
-      <div class="small-title">
-        Teaching
+      <div>
+
+        <div class="label">
+          A Little More About Me
+        </div>
+
+        <h2>
+          An academic journey beyond the classroom
+        </h2>
+
+        <p>
+          From universities and business schools to student leadership
+          and social engagement, my professional journey has involved
+          learning from different academic environments and contributing
+          to the communities around them.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <a href="about.html" class="button">
+          Read My Story
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SELECTED WORK -->
+
+<section class="section alt">
+
+  <div class="container">
+
+    <div class="heading">
+
+      <div class="label">
+        On This Website
       </div>
 
       <h2>
-        Teaching Finance Through Practice
+        Selected Work
       </h2>
 
       <p>
-        My teaching combines conceptual clarity with practical
-        application, real-world examples and hands-on learning.
+        A quick starting point for exploring my academic work and professional
+        contributions.
       </p>
 
     </div>
 
 
-    <div class="teaching-grid">
+    <div class="work-grid">
 
 
-      <div class="teaching-card">
+      <div class="work-card">
 
-        <i class="fa-solid fa-calculator"></i>
+        <div class="work-label">
+          Research
+        </div>
 
         <h3>
-          Financial Accounting
+          Research & Current Projects
         </h3>
 
         <p>
-          Understanding financial statements and accounting fundamentals.
+          Explore my research areas, ongoing projects and research
+          contributions across finance and digital finance.
         </p>
+
+        <a href="research.html" class="text-link">
+          View Research
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
 
       </div>
 
 
-      <div class="teaching-card">
+      <div class="work-card">
 
-        <i class="fa-solid fa-chart-line"></i>
+        <div class="work-label">
+          Publications
+        </div>
 
         <h3>
-          Financial Management
+          Publications & Academic Work
         </h3>
 
         <p>
-          Applying financial concepts to corporate decision-making.
+          Browse journal publications, submitted papers, working papers
+          and selected academic presentations.
         </p>
 
-      </div>
-
-
-      <div class="teaching-card">
-
-        <i class="fa-solid fa-table-cells-large"></i>
-
-        <h3>
-          Financial Modelling
-        </h3>
-
-        <p>
-          Practice-based financial modelling using Excel and real-world data.
-        </p>
-
-      </div>
-
-
-    </div>
-
-
-    <div class="view-all">
-
-      <a href="teaching.html"
-         class="primary-button">
-        Explore Teaching
-        <i class="fa-solid fa-arrow-right"></i>
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     A FEW THINGS ABOUT ME
-========================= -->
-
-<section class="section ivory">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="small-title">
-        Beyond Academia
-      </div>
-
-      <h2>
-        A Few Things About Me
-      </h2>
-
-    </div>
-
-
-    <div class="things-grid">
-
-
-      <div class="thing-card">
-
-        <i class="fa-solid fa-people-group"></i>
-
-        <h3>
-          Student Development
-        </h3>
-
-        <p>
-          I remain actively engaged in mentoring and student development
-          beyond the classroom.
-        </p>
-
-      </div>
-
-
-      <div class="thing-card">
-
-        <i class="fa-solid fa-shield-halved"></i>
-
-        <h3>
-          NCC & Leadership
-        </h3>
-
-        <p>
-          Contributing to student leadership, discipline and institutional
-          development through NCC and related responsibilities.
-        </p>
-
-      </div>
-
-
-      <div class="thing-card">
-
-        <i class="fa-solid fa-heart"></i>
-
-        <h3>
-          Art of Living
-        </h3>
-
-        <p>
-          Associated with the Art of Living as a teacher for more than
-          15 years, conducting programmes focused on well-being and
-          student development.
-        </p>
+        <a href="publications.html" class="text-link">
+          View Publications
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
 
       </div>
 
@@ -1703,76 +947,43 @@
 </section>
 
 
-
-<!-- =========================
-     CTA
-========================= -->
+<!-- CTA -->
 
 <section class="cta">
 
-  <h2>
-    Explore My Academic Work
-  </h2>
+  <div class="container">
 
-  <p>
-    Discover my research, publications, teaching experience and
-    academic activities.
-  </p>
+    <div class="label">
+      Connect
+    </div>
 
-  <a href="research.html"
-     class="cta-button">
-    Explore Research
-    <i class="fa-solid fa-arrow-right"></i>
-  </a>
+    <h2>
+      Let's Connect
+    </h2>
+
+    <p>
+      For academic conversations, collaborations or professional engagement,
+      feel free to get in touch.
+    </p>
+
+    <a href="contact.html" class="button">
+      Contact Me
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+  </div>
 
 </section>
 
 
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-  <div class="footer-container">
-
-
-    <div>
-
-      <div class="footer-name">
-        Dr. Prashant Gupta
-      </div>
-
-      <div>
-        Assistant Professor
-      </div>
-
-    </div>
-
-
-    <div class="footer-links">
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="research.html">
-        Research
-      </a>
-
-      <a href="publications.html">
-        Publications
-      </a>
-
-      <a href="contact.html">
-        Contact
-      </a>
-
-    </div>
-
-
-  </div>
+  <p>
+    © 2026 <strong>Dr. Prashant Gupta</strong> · Assistant Professor ·
+    School of Management, Mahindra University, Hyderabad
+  </p>
 
 </footer>
 
