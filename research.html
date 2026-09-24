@@ -18,6 +18,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <style>
 
+/* =========================
+   GLOBAL
+========================= */
+
 * {
     box-sizing: border-box;
 }
@@ -53,7 +57,7 @@ nav {
     top: 0;
     z-index: 1000;
 
-    background: rgba(8, 27, 48, 0.96);
+    background: rgba(8, 27, 48, 0.97);
     backdrop-filter: blur(12px);
 
     border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -82,7 +86,7 @@ nav {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 23px;
 }
 
 .nav-links a {
@@ -123,7 +127,23 @@ nav {
 
     color: white;
 
-    padding: 90px 0 85px;
+    padding: 95px 0 90px;
+}
+
+.page-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border: 1px solid rgba(216,179,106,0.12);
+
+    border-radius: 50%;
+
+    right: -220px;
+    top: -180px;
 }
 
 .page-hero::after {
@@ -131,15 +151,15 @@ nav {
 
     position: absolute;
 
-    width: 360px;
-    height: 360px;
+    width: 280px;
+    height: 280px;
 
-    border: 1px solid rgba(216,179,106,0.18);
+    border: 1px solid rgba(216,179,106,0.16);
 
     border-radius: 50%;
 
-    right: -170px;
-    bottom: -190px;
+    left: -150px;
+    bottom: -180px;
 }
 
 .hero-inner {
@@ -178,7 +198,7 @@ nav {
 .page-hero p {
     color: #d3dfe8;
 
-    max-width: 800px;
+    max-width: 790px;
 
     font-size: 18px;
 
@@ -187,136 +207,92 @@ nav {
 
 
 /* =========================
-   COMMON
+   INTRO
 ========================= */
 
-section {
-    padding: 85px 0;
+.intro {
+    background: white;
+
+    padding: 70px 0;
 }
 
-.section-heading {
-    margin-bottom: 42px;
+.intro-grid {
+    display: grid;
+
+    grid-template-columns: 0.75fr 1.25fr;
+
+    gap: 70px;
+
+    align-items: center;
 }
 
-.section-heading h2 {
+.intro-label {
+    color: #a67b2e;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+.intro h2 {
     font-family: "Playfair Display", serif;
 
     color: #102d4b;
 
-    font-size: 39px;
+    font-size: 38px;
 
     line-height: 1.2;
 
-    margin: 0 0 13px;
+    margin: 10px 0 0;
 }
 
-.section-heading p {
-    color: #697887;
+.intro-text {
+    color: #63717e;
 
-    max-width: 760px;
+    font-size: 16px;
 
     margin: 0;
 }
 
 
 /* =========================
-   RESEARCH OVERVIEW
+   RESEARCH AREAS
 ========================= */
 
-.overview {
+.research-section {
+    padding: 85px 0;
+}
+
+.research-section:nth-of-type(even) {
     background: white;
 }
 
-.overview-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.overview-card {
-    padding: 30px;
-
-    background: #f7f8fa;
-
-    border: 1px solid #e1e5e8;
-
-    transition: 0.3s ease;
-}
-
-.overview-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow: 0 14px 30px rgba(15,42,67,0.08);
-}
-
-.overview-number {
-    color: #d8b36a;
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 27px;
-
-    margin-bottom: 12px;
-}
-
-.overview-card h3 {
-    font-family: "Playfair Display", serif;
-
-    color: #102d4b;
-
-    font-size: 22px;
-
-    line-height: 1.35;
-
-    margin: 0 0 10px;
-}
-
-.overview-card p {
-    color: #697887;
-
-    font-size: 13px;
-
-    margin: 0;
-}
-
-
-/* =========================
-   RESEARCH CATEGORY
-========================= */
-
-.research-area {
+.research-section:nth-of-type(odd) {
     background: #f8f6f2;
 }
 
-.research-area.alt {
-    background: white;
+
+/* AREA HEADER */
+
+.area-header {
+    display: grid;
+
+    grid-template-columns: 75px 1fr;
+
+    gap: 25px;
+
+    align-items: start;
+
+    margin-bottom: 40px;
 }
 
-.category {
-    margin-bottom: 75px;
-}
-
-.category:last-child {
-    margin-bottom: 0;
-}
-
-.category-header {
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 22px;
-
-    margin-bottom: 32px;
-}
-
-.category-icon {
-    flex: 0 0 58px;
-
-    width: 58px;
-    height: 58px;
+.area-number {
+    width: 68px;
+    height: 68px;
 
     display: flex;
 
@@ -327,25 +303,27 @@ section {
 
     color: #d8b36a;
 
-    font-size: 21px;
+    font-family: "Playfair Display", serif;
 
-    border-radius: 4px;
+    font-size: 24px;
 }
 
-.category-header h2 {
+.area-header h2 {
     font-family: "Playfair Display", serif;
 
     color: #102d4b;
 
-    font-size: 32px;
+    font-size: 35px;
 
     line-height: 1.25;
 
-    margin: 0 0 6px;
+    margin: 0 0 9px;
 }
 
-.category-header p {
+.area-header p {
     color: #697887;
+
+    max-width: 800px;
 
     font-size: 14px;
 
@@ -353,25 +331,74 @@ section {
 }
 
 
-/* CATEGORY CONTENT */
+/* RESEARCH FOCUS */
 
-.category-grid {
+.focus-box {
+    background: #102d4b;
+
+    color: white;
+
+    padding: 28px 32px;
+
+    margin-bottom: 25px;
+}
+
+.focus-title {
+    color: #d8b36a;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.8px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    margin-bottom: 14px;
+}
+
+.focus-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.focus-item {
+    padding: 7px 12px;
+
+    border: 1px solid #49647c;
+
+    color: #d5dfe7;
+
+    font-size: 12px;
+}
+
+
+/* MAIN CONTENT */
+
+.area-content {
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.15fr 0.85fr;
 
     gap: 25px;
 }
 
-.content-panel {
+.content-card {
     background: white;
 
     border: 1px solid #e1e5e8;
 
-    padding: 29px;
+    padding: 30px;
 }
 
-.content-panel h3 {
+.research-section:nth-of-type(even) .content-card {
+    background: #f8f9fa;
+}
+
+.content-card h3 {
     display: flex;
 
     align-items: center;
@@ -382,37 +409,37 @@ section {
 
     color: #102d4b;
 
-    font-size: 21px;
+    font-size: 22px;
 
-    margin: 0 0 20px;
+    margin: 0 0 23px;
 }
 
-.content-panel h3 i {
+.content-card h3 i {
     color: #a67b2e;
 
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
-/* PUBLICATION ITEM */
+/* PUBLICATIONS */
 
-.pub-item {
+.publication {
     padding: 18px 0;
 
-    border-bottom: 1px solid #e6e8ea;
+    border-bottom: 1px solid #e5e7e9;
 }
 
-.pub-item:first-of-type {
+.publication:first-of-type {
     padding-top: 0;
 }
 
-.pub-item:last-child {
+.publication:last-child {
     border-bottom: none;
 
     padding-bottom: 0;
 }
 
-.pub-item h4 {
+.publication h4 {
     color: #193c5d;
 
     font-size: 14px;
@@ -424,7 +451,7 @@ section {
     font-weight: 600;
 }
 
-.pub-meta {
+.publication-meta {
     color: #7a8792;
 
     font-size: 12px;
@@ -434,7 +461,7 @@ section {
     margin-bottom: 8px;
 }
 
-.view-link {
+.article-link {
     display: inline-flex;
 
     align-items: center;
@@ -443,43 +470,43 @@ section {
 
     color: #a67b2e;
 
-    font-size: 11px;
-
-    font-weight: 700;
+    font-size: 10px;
 
     text-transform: uppercase;
 
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
+
+    font-weight: 700;
 }
 
-.view-link:hover {
+.article-link:hover {
     color: #164a7a;
 }
 
-.view-link i {
-    font-size: 9px;
+.article-link i {
+    font-size: 8px;
 }
 
 
-/* WORKING PAPER */
+/* RESEARCH IN PROGRESS */
 
-.working-item {
+.research-item {
     padding: 17px 0;
 
-    border-bottom: 1px solid #e6e8ea;
+    border-bottom: 1px solid #e5e7e9;
 }
 
-.working-item:first-of-type {
+.research-item:first-of-type {
     padding-top: 0;
 }
 
-.working-item:last-child {
+.research-item:last-child {
     border-bottom: none;
 
     padding-bottom: 0;
 }
 
-.working-item h4 {
+.research-item h4 {
     color: #193c5d;
 
     font-size: 14px;
@@ -491,28 +518,34 @@ section {
     font-weight: 600;
 }
 
-.working-item p {
-    color: #7a8792;
+.status {
+    display: inline-block;
 
-    font-size: 12px;
+    color: #a67b2e;
 
-    margin: 0;
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+
+    font-weight: 700;
 }
 
 
-/* CONFERENCE */
+/* CONFERENCES */
 
-.conference-item {
+.conference {
     padding: 18px 0;
 
-    border-bottom: 1px solid #e6e8ea;
+    border-bottom: 1px solid #e5e7e9;
 }
 
-.conference-item:first-of-type {
+.conference:first-of-type {
     padding-top: 0;
 }
 
-.conference-item:last-child {
+.conference:last-child {
     border-bottom: none;
 
     padding-bottom: 0;
@@ -525,21 +558,21 @@ section {
 
     text-transform: uppercase;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.4px;
 
     font-weight: 700;
 
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
-.conference-item h4 {
+.conference h4 {
     color: #193c5d;
 
     font-size: 14px;
 
     line-height: 1.5;
 
-    margin: 0 0 4px;
+    margin: 0 0 5px;
 
     font-weight: 700;
 }
@@ -551,9 +584,9 @@ section {
 
     line-height: 1.55;
 
-    margin: 0 0 5px;
-
     font-style: italic;
+
+    margin: 0 0 6px;
 }
 
 .conference-location {
@@ -567,15 +600,15 @@ section {
 .conference-location i {
     color: #a67b2e;
 
-    margin-right: 4px;
+    margin-right: 5px;
 }
 
 .award-tag {
     display: inline-block;
 
-    margin-top: 8px;
+    margin-top: 9px;
 
-    padding: 4px 8px;
+    padding: 4px 9px;
 
     background: #f6edd9;
 
@@ -592,24 +625,46 @@ section {
 
 
 /* =========================
-   RESEARCH AWARDS
+   RESEARCH RECOGNITION
 ========================= */
 
-.awards {
+.recognition {
     background: #102d4b;
 
     color: white;
+
+    padding: 80px 0;
 }
 
-.awards .section-heading h2 {
+.recognition-heading {
+    text-align: center;
+
+    margin-bottom: 42px;
+}
+
+.recognition-heading .eyebrow {
+    margin-bottom: 12px;
+}
+
+.recognition-heading h2 {
+    font-family: "Playfair Display", serif;
+
     color: white;
+
+    font-size: 38px;
+
+    margin: 0 0 10px;
 }
 
-.awards .section-heading p {
+.recognition-heading p {
     color: #c5d2dd;
+
+    max-width: 650px;
+
+    margin: auto;
 }
 
-.award-grid {
+.recognition-grid {
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -617,47 +672,47 @@ section {
     gap: 20px;
 }
 
-.award-card {
+.recognition-card {
+    text-align: center;
+
     padding: 30px;
 
     border: 1px solid #38536d;
 
     background: rgba(255,255,255,0.025);
-
-    text-align: center;
 }
 
-.award-icon {
+.recognition-icon {
     width: 55px;
     height: 55px;
 
     margin: 0 auto 17px;
+
+    border: 1px solid #d8b36a;
+
+    border-radius: 50%;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    border-radius: 50%;
-
-    border: 1px solid #d8b36a;
-
     color: #d8b36a;
 
-    font-size: 20px;
+    font-size: 19px;
 }
 
-.award-card h3 {
+.recognition-card h3 {
     font-family: "Playfair Display", serif;
 
     color: white;
 
     font-size: 20px;
 
-    margin: 0 0 8px;
+    margin: 0 0 7px;
 }
 
-.award-card p {
+.recognition-card p {
     color: #c5d2dd;
 
     font-size: 13px;
@@ -758,12 +813,17 @@ footer {
         gap: 12px;
     }
 
-    .overview-grid,
-    .award-grid {
+    .intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .area-content {
         grid-template-columns: 1fr;
     }
 
-    .category-grid {
+    .recognition-grid {
         grid-template-columns: 1fr;
     }
 
@@ -771,7 +831,7 @@ footer {
 
 @media (max-width: 650px) {
 
-    section {
+    .research-section {
         padding: 65px 0;
     }
 
@@ -787,12 +847,29 @@ footer {
         font-size: 16px;
     }
 
-    .section-heading h2 {
-        font-size: 32px;
+    .area-header {
+        grid-template-columns: 55px 1fr;
+
+        gap: 17px;
     }
 
-    .category-header h2 {
+    .area-number {
+        width: 52px;
+        height: 52px;
+
+        font-size: 19px;
+    }
+
+    .area-header h2 {
         font-size: 27px;
+    }
+
+    .content-card {
+        padding: 25px;
+    }
+
+    .focus-box {
+        padding: 24px;
     }
 
 }
@@ -867,8 +944,8 @@ Research
 <p>
 
 My research examines corporate governance, banking and asset quality,
-Central Bank Digital Currencies, financial inclusion, and emerging
-developments in digital finance.
+Central Bank Digital Currencies, financial inclusion, FinTech,
+digital payments, and emerging applications of technology in finance.
 
 </p>
 
@@ -880,95 +957,36 @@ developments in digital finance.
 
 
 <!-- =========================
-     RESEARCH OVERVIEW
+     INTRO
 ========================= -->
 
-<section class="overview">
+<section class="intro">
 
 <div class="container">
 
-<div class="section-heading">
+<div class="intro-grid">
 
-<div class="eyebrow">
+<div>
+
+<div class="intro-label">
 Research Agenda
 </div>
 
 <h2>
-Three interconnected areas of inquiry
+Three major areas of research
 </h2>
 
-<p>
+</div>
+
+<p class="intro-text">
 
 My research agenda combines established work in banking and corporate
-governance with emerging research in CBDCs, FinTech, and digital finance.
+governance with emerging research on Central Bank Digital Currencies,
+FinTech, financial inclusion, digital payments, and technology-enabled
+financial services. Each research area below brings together the
+related publications, ongoing studies, and conference presentations.
 
 </p>
-
-</div>
-
-
-<div class="overview-grid">
-
-
-<div class="overview-card">
-
-<div class="overview-number">
-01
-</div>
-
-<h3>
-Corporate Governance, Banking & Asset Quality
-</h3>
-
-<p>
-
-Research examining corporate governance, non-performing assets,
-banking performance, and institutional frameworks in emerging economies.
-
-</p>
-
-</div>
-
-
-<div class="overview-card">
-
-<div class="overview-number">
-02
-</div>
-
-<h3>
-Central Bank Digital Currencies & Digital Finance
-</h3>
-
-<p>
-
-Research examining the evolving CBDC landscape and broader developments
-in digital financial systems.
-
-</p>
-
-</div>
-
-
-<div class="overview-card">
-
-<div class="overview-number">
-03
-</div>
-
-<h3>
-Financial Inclusion, FinTech & Digital Payments
-</h3>
-
-<p>
-
-Research on microfinance, financial inclusion, FinTech, mobile payments,
-and emerging applications of technology in finance.
-
-</p>
-
-</div>
-
 
 </div>
 
@@ -978,22 +996,18 @@ and emerging applications of technology in finance.
 
 
 <!-- =====================================================
-     CATEGORY 1
+     RESEARCH AREA 1
 ===================================================== -->
 
-<section class="research-area">
+<section class="research-section">
 
 <div class="container">
 
-<div class="category">
 
+<div class="area-header">
 
-<div class="category-header">
-
-<div class="category-icon">
-
-<i class="fa-solid fa-building-columns"></i>
-
+<div class="area-number">
+01
 </div>
 
 <div>
@@ -1004,8 +1018,10 @@ Corporate Governance, Banking & Asset Quality
 
 <p>
 
-Research on corporate governance mechanisms, banking systems,
-non-performing assets, and asset quality in emerging economies.
+This research stream examines the relationship between corporate
+governance and banking outcomes, with particular emphasis on asset
+quality, non-performing assets, banking ownership, capital adequacy,
+and institutional and regulatory frameworks.
 
 </p>
 
@@ -1014,37 +1030,80 @@ non-performing assets, and asset quality in emerging economies.
 </div>
 
 
-<div class="category-grid">
+<!-- RESEARCH FOCUS -->
+
+<div class="focus-box">
+
+<div class="focus-title">
+Research Focus
+</div>
+
+<div class="focus-list">
+
+<span class="focus-item">
+Corporate Governance
+</span>
+
+<span class="focus-item">
+Banking & Asset Quality
+</span>
+
+<span class="focus-item">
+Non-Performing Assets
+</span>
+
+<span class="focus-item">
+Public & Private Banks
+</span>
+
+<span class="focus-item">
+Capital Adequacy
+</span>
+
+<span class="focus-item">
+Legal & Institutional Frameworks
+</span>
+
+<span class="focus-item">
+Insolvency & Bankruptcy Code
+</span>
+
+</div>
+
+</div>
+
+
+<div class="area-content">
 
 
 <!-- PUBLICATIONS -->
 
-<div class="content-panel">
+<div class="content-card">
 
 <h3>
 
 <i class="fa-solid fa-book-open"></i>
 
-Selected Publications
+Publications
 
 </h3>
 
 
-<div class="pub-item">
+<div class="publication">
 
 <h4>
 Navigating the interplay of legal frameworks and corporate governance:
 the impact on asset quality in an emerging economy
 </h4>
 
-<div class="pub-meta">
-Asian Journal of Business Ethics · 2024
+<div class="publication-meta">
+Gupta, P. K., & Sharma, S. · Asian Journal of Business Ethics · 2024
 </div>
 
 <a
 href="https://link.springer.com/article/10.1007/s13520-024-00209-5"
 target="_blank"
-class="view-link">
+class="article-link">
 
 View Article
 
@@ -1055,21 +1114,21 @@ View Article
 </div>
 
 
-<div class="pub-item">
+<div class="publication">
 
 <h4>
 Role of corporate governance in asset quality of banks:
 comparison between government-owned and private banks
 </h4>
 
-<div class="pub-meta">
-Managerial Finance · 2023
+<div class="publication-meta">
+Gupta, P. K., & Sharma, S. · Managerial Finance · 2023
 </div>
 
 <a
 href="https://www.emerald.com/mf/article-abstract/49/4/724/289525/Role-of-corporate-governance-in-asset-quality-of?redirectedFrom=fulltext"
 target="_blank"
-class="view-link">
+class="article-link">
 
 View Article
 
@@ -1080,21 +1139,21 @@ View Article
 </div>
 
 
-<div class="pub-item">
+<div class="publication">
 
 <h4>
 Corporate governance determinants of asset quality in an emerging economy:
 evidence from Indian banks
 </h4>
 
-<div class="pub-meta">
-Journal of Advances in Management Research · 2022
+<div class="publication-meta">
+Gupta, P. K., & Sharma, S. · Journal of Advances in Management Research · 2022
 </div>
 
 <a
 href="https://www.emerald.com/jamr/article-abstract/19/4/560/431698/Corporate-governance-determinants-of-asset-quality?redirectedFrom=fulltext"
 target="_blank"
-class="view-link">
+class="article-link">
 
 View Article
 
@@ -1105,28 +1164,37 @@ View Article
 </div>
 
 
-<div class="pub-item">
-
-<h4>
-Unravelling the Impact of Capital Adequacy Components on Non-Performing Assets:
-A Granular Study in India’s Banking Sector
-</h4>
-
-<div class="pub-meta">
-Submitted · Studies in Economics and Finance
-</div>
-
 </div>
 
 
-</div>
+<!-- RESEARCH + CONFERENCES -->
 
-
-<!-- CONFERENCES -->
-
-<div class="content-panel">
+<div class="content-card">
 
 <h3>
+
+<i class="fa-solid fa-flask"></i>
+
+Research in Progress
+
+</h3>
+
+
+<div class="research-item">
+
+<h4>
+Unravelling the Impact of Capital Adequacy Components on
+Non-Performing Assets: A Granular Study in India’s Banking Sector
+</h4>
+
+<span class="status">
+Submitted · Studies in Economics and Finance
+</span>
+
+</div>
+
+
+<h3 style="margin-top:32px;">
 
 <i class="fa-solid fa-microphone"></i>
 
@@ -1135,10 +1203,10 @@ Conference Presentations
 </h3>
 
 
-<div class="conference-item">
+<div class="conference">
 
 <div class="conference-year">
-2024 · INDAM
+2024 · INDAM 2024
 </div>
 
 <h4>
@@ -1157,7 +1225,7 @@ Goa Institute of Management, Goa, India
 </div>
 
 
-<div class="conference-item">
+<div class="conference">
 
 <div class="conference-year">
 2022 · 16th Economics & Finance Conference
@@ -1179,7 +1247,7 @@ University of Economics, Prague, Czech Republic
 </div>
 
 
-<div class="conference-item">
+<div class="conference">
 
 <div class="conference-year">
 2021 · MDC ‘Shodh Samagam
@@ -1207,28 +1275,22 @@ IIM Visakhapatnam, India
 
 </div>
 
-</div>
-
 </section>
 
 
 <!-- =====================================================
-     CATEGORY 2
+     RESEARCH AREA 2
 ===================================================== -->
 
-<section class="research-area alt">
+<section class="research-section">
 
 <div class="container">
 
-<div class="category">
 
+<div class="area-header">
 
-<div class="category-header">
-
-<div class="category-icon">
-
-<i class="fa-solid fa-coins"></i>
-
+<div class="area-number">
+02
 </div>
 
 <div>
@@ -1239,8 +1301,9 @@ Central Bank Digital Currencies & Digital Finance
 
 <p>
 
-Current research examining the development, research landscape,
-and broader implications of Central Bank Digital Currencies.
+This emerging research stream examines the development of Central Bank
+Digital Currencies, the global research landscape, and differences in
+CBDC scholarship across economies and income levels.
 
 </p>
 
@@ -1249,45 +1312,84 @@ and broader implications of Central Bank Digital Currencies.
 </div>
 
 
-<div class="category-grid">
+<!-- RESEARCH FOCUS -->
+
+<div class="focus-box">
+
+<div class="focus-title">
+Research Focus
+</div>
+
+<div class="focus-list">
+
+<span class="focus-item">
+Central Bank Digital Currencies
+</span>
+
+<span class="focus-item">
+G-19 Economies
+</span>
+
+<span class="focus-item">
+CBDC Adoption
+</span>
+
+<span class="focus-item">
+Digital Finance
+</span>
+
+<span class="focus-item">
+Income-Level Perspectives
+</span>
+
+<span class="focus-item">
+Systematic Literature Reviews
+</span>
+
+</div>
+
+</div>
 
 
-<!-- WORKING PAPERS -->
+<div class="area-content">
 
-<div class="content-panel">
+
+<!-- CURRENT RESEARCH -->
+
+<div class="content-card">
 
 <h3>
 
 <i class="fa-solid fa-flask"></i>
 
-Current Research
+Research in Progress
 
 </h3>
 
 
-<div class="working-item">
+<div class="research-item">
 
 <h4>
 Mapping the CBDC Landscape in G-19 Economies
 </h4>
 
-<p>
+<span class="status">
 Working Paper
-</p>
+</span>
 
 </div>
 
 
-<div class="working-item">
+<div class="research-item">
 
 <h4>
 Understanding Central Bank Digital Currencies across Income levels:
 A systematic review
 </h4>
 
-<p>
+<span class="status">
 Working Paper
-</p>
+</span>
 
 </div>
 
@@ -1297,7 +1399,7 @@ Working Paper
 
 <!-- CONFERENCE -->
 
-<div class="content-panel">
+<div class="content-card">
 
 <h3>
 
@@ -1308,7 +1410,7 @@ Conference Presentation
 </h3>
 
 
-<div class="conference-item">
+<div class="conference">
 
 <div class="conference-year">
 2025 · ICSSR Sponsored Conference
@@ -1343,28 +1445,22 @@ Best Paper Award
 
 </div>
 
-</div>
-
 </section>
 
 
 <!-- =====================================================
-     CATEGORY 3
+     RESEARCH AREA 3
 ===================================================== -->
 
-<section class="research-area">
+<section class="research-section">
 
 <div class="container">
 
-<div class="category">
 
+<div class="area-header">
 
-<div class="category-header">
-
-<div class="category-icon">
-
-<i class="fa-solid fa-mobile-screen-button"></i>
-
+<div class="area-number">
+03
 </div>
 
 <div>
@@ -1375,8 +1471,9 @@ Financial Inclusion, FinTech & Digital Payments
 
 <p>
 
-Research exploring financial inclusion, microfinance, FinTech,
-mobile payments, and emerging technology applications in finance.
+This research stream explores financial inclusion, microfinance,
+FinTech, mobile payments, security and privacy, and emerging
+applications of artificial intelligence in financial services.
 
 </p>
 
@@ -1385,37 +1482,80 @@ mobile payments, and emerging technology applications in finance.
 </div>
 
 
-<div class="category-grid">
+<!-- RESEARCH FOCUS -->
+
+<div class="focus-box">
+
+<div class="focus-title">
+Research Focus
+</div>
+
+<div class="focus-list">
+
+<span class="focus-item">
+Financial Inclusion
+</span>
+
+<span class="focus-item">
+Microfinance
+</span>
+
+<span class="focus-item">
+FinTech
+</span>
+
+<span class="focus-item">
+Mobile Payments
+</span>
+
+<span class="focus-item">
+Security & Privacy
+</span>
+
+<span class="focus-item">
+Financial Fraud
+</span>
+
+<span class="focus-item">
+Artificial Intelligence
+</span>
+
+</div>
+
+</div>
 
 
-<!-- PUBLICATIONS / WORKING -->
+<div class="area-content">
 
-<div class="content-panel">
+
+<!-- PUBLICATIONS + RESEARCH -->
+
+<div class="content-card">
 
 <h3>
 
 <i class="fa-solid fa-book-open"></i>
 
-Publications & Current Research
+Publications & Research in Progress
 
 </h3>
 
 
-<div class="pub-item">
+<div class="publication">
 
 <h4>
 Literature review on effect of microfinance institutions on poverty
 in South Asian countries and their sustainability
 </h4>
 
-<div class="pub-meta">
-International Journal of Emerging Markets · 2023
+<div class="publication-meta">
+Gupta, P. K., & Sharma, S. · International Journal of Emerging Markets · 2023
 </div>
 
 <a
 href="https://www.emerald.com/ijoem/article-abstract/18/8/1827/141200/Literature-review-on-effect-of-microfinance"
 target="_blank"
-class="view-link">
+class="article-link">
 
 View Article
 
@@ -1426,21 +1566,21 @@ View Article
 </div>
 
 
-<div class="pub-item">
+<div class="research-item">
 
 <h4>
 Role of security and privacy factors in the mobile payments’
 adoption and usage: A Systematic Literature Review
 </h4>
 
-<div class="pub-meta">
+<span class="status">
 Submitted · Journal of Advances in Management Research
-</div>
+</span>
 
 </div>
 
 
-<div class="working-item">
+<div class="research-item">
 
 <h4>
 Artificial Intelligence for Multi-Domain Financial Fraud Detection:
@@ -1448,9 +1588,9 @@ A Comprehensive PRISMA Review of Algorithms, Challenges and
 Sector-Specific Evidence
 </h4>
 
-<p>
+<span class="status">
 Working Paper
-</p>
+</span>
 
 </div>
 
@@ -1460,7 +1600,7 @@ Working Paper
 
 <!-- CONFERENCES -->
 
-<div class="content-panel">
+<div class="content-card">
 
 <h3>
 
@@ -1471,7 +1611,7 @@ Conference Presentations
 </h3>
 
 
-<div class="conference-item">
+<div class="conference">
 
 <div class="conference-year">
 2024 · ICOI
@@ -1494,7 +1634,7 @@ Hoa Sen University, Ho Chi Minh City, Vietnam
 </div>
 
 
-<div class="conference-item">
+<div class="conference">
 
 <div class="conference-year">
 2019 · AGBA's 16th World Conference
@@ -1526,20 +1666,18 @@ Best Paper Award
 
 </div>
 
-</div>
-
 </section>
 
 
 <!-- =========================
-     RESEARCH AWARDS
+     RESEARCH RECOGNITION
 ========================= -->
 
-<section class="awards">
+<section class="recognition">
 
 <div class="container">
 
-<div class="section-heading">
+<div class="recognition-heading">
 
 <div class="eyebrow">
 Recognition
@@ -1550,23 +1688,19 @@ Research Awards & Recognition
 </h2>
 
 <p>
-
-Selected recognition received for research and conference contributions.
-
+Selected recognition for research contributions and conference presentations.
 </p>
 
 </div>
 
 
-<div class="award-grid">
+<div class="recognition-grid">
 
 
-<div class="award-card">
+<div class="recognition-card">
 
-<div class="award-icon">
-
+<div class="recognition-icon">
 <i class="fa-solid fa-trophy"></i>
-
 </div>
 
 <h3>
@@ -1581,12 +1715,10 @@ MNIT Jaipur.
 </div>
 
 
-<div class="award-card">
+<div class="recognition-card">
 
-<div class="award-icon">
-
+<div class="recognition-icon">
 <i class="fa-solid fa-medal"></i>
-
 </div>
 
 <h3>
@@ -1600,12 +1732,10 @@ Top 10 Finance Track
 </div>
 
 
-<div class="award-card">
+<div class="recognition-card">
 
-<div class="award-icon">
-
+<div class="recognition-icon">
 <i class="fa-solid fa-award"></i>
-
 </div>
 
 <h3>
@@ -1640,8 +1770,8 @@ Explore the complete publication record
 
 <p>
 
-View journal publications, submitted papers, working papers,
-conference presentations, and research recognition.
+View the complete list of journal publications, submitted papers,
+working papers, conference presentations, and research recognition.
 
 </p>
 
