@@ -6,7 +6,7 @@
 
   <title>Activities | Dr. Prashant Gupta</title>
 
-  <meta name="description" content="Leadership, institutional service, student development and social engagement of Dr. Prashant Gupta.">
+  <meta name="description" content="Leadership, student development, institutional service and social engagement of Dr. Prashant Gupta.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +17,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
+
     :root {
       --navy: #0b1f33;
-      --navy2: #102c47;
       --gold: #c9a227;
       --gold-light: #e1c766;
       --ivory: #f7f4ed;
@@ -27,7 +27,7 @@
       --text: #263746;
       --muted: #667685;
       --border: #e5e0d6;
-      --shadow: 0 18px 45px rgba(11, 31, 51, 0.08);
+      --shadow: 0 18px 45px rgba(11,31,51,0.09);
     }
 
     * {
@@ -43,7 +43,7 @@
     body {
       font-family: "DM Sans", sans-serif;
       color: var(--text);
-      background: var(--white);
+      background: white;
       line-height: 1.7;
     }
 
@@ -52,13 +52,13 @@
       color: inherit;
     }
 
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(11, 31, 51, 0.97);
+      background: rgba(11,31,51,0.97);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
@@ -107,15 +107,13 @@
     /* HERO */
 
     .hero {
-      background:
-        linear-gradient(rgba(11,31,51,0.96), rgba(11,31,51,0.96)),
-        radial-gradient(circle at top right, rgba(201,162,39,0.2), transparent 40%);
+      background: var(--navy);
       color: white;
       padding: 105px 25px 100px;
     }
 
     .hero-inner {
-      max-width: 1050px;
+      max-width: 900px;
       margin: auto;
       text-align: center;
     }
@@ -131,7 +129,7 @@
 
     .hero h1 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-size: clamp(3rem, 7vw, 5.2rem);
       line-height: 1.05;
       margin-bottom: 25px;
     }
@@ -141,10 +139,10 @@
     }
 
     .hero p {
-      max-width: 760px;
+      max-width: 700px;
       margin: auto;
-      color: rgba(255,255,255,0.78);
-      font-size: 1.12rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 1.1rem;
     }
 
     /* GENERAL */
@@ -162,22 +160,22 @@
       margin: auto;
     }
 
-    .section-heading {
-      max-width: 760px;
-      margin-bottom: 50px;
+    .heading {
+      max-width: 720px;
+      margin-bottom: 45px;
     }
 
-    .section-heading.center {
+    .heading.center {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .section-label {
+    .label {
       color: var(--gold);
       text-transform: uppercase;
       letter-spacing: 2.5px;
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
@@ -190,336 +188,227 @@
       margin-bottom: 15px;
     }
 
-    .section-heading p {
+    .heading p {
       color: var(--muted);
-      font-size: 1rem;
     }
 
-    /* FEATURE CARDS */
+    /* LEADERSHIP */
 
-    .cards {
+    .leadership {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
     }
 
-    .card {
-      background: white;
-      border: 1px solid var(--border);
-      padding: 32px;
-      border-radius: 10px;
-      box-shadow: 0 8px 25px rgba(11,31,51,0.04);
-      transition: 0.3s ease;
+    .leadership-text p {
+      color: var(--muted);
+      margin-bottom: 18px;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
+    .leadership-quote {
+      background: var(--navy);
+      color: white;
+      padding: 45px;
+      border-radius: 12px;
       box-shadow: var(--shadow);
     }
 
-    .icon {
+    .leadership-quote i {
+      color: var(--gold-light);
+      font-size: 1.7rem;
+      margin-bottom: 20px;
+    }
+
+    .leadership-quote p {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      line-height: 1.45;
+    }
+
+    /* NCC */
+
+    .ncc {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .ncc-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 32px;
+      transition: 0.3s;
+    }
+
+    .ncc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .ncc-icon {
       width: 48px;
       height: 48px;
-      border-radius: 50%;
       background: var(--navy);
       color: var(--gold-light);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 22px;
-      font-size: 1.1rem;
     }
 
-    .card h3 {
+    .ncc-card h3 {
       font-family: "Playfair Display", serif;
       color: var(--navy);
-      font-size: 1.35rem;
-      margin-bottom: 12px;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
     }
 
-    .card p {
+    .ncc-card p {
       color: var(--muted);
-      font-size: 0.94rem;
+      font-size: 0.93rem;
     }
 
-    /* NCC FEATURE */
+    /* INSTITUTIONAL */
 
-    .ncc-feature {
-      background: var(--navy);
-      color: white;
-      border-radius: 14px;
-      padding: 55px;
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 55px;
-      align-items: center;
-      box-shadow: var(--shadow);
-    }
-
-    .ncc-feature .section-label {
-      color: var(--gold-light);
-    }
-
-    .ncc-feature h2 {
-      color: white;
-    }
-
-    .ncc-feature p {
-      color: rgba(255,255,255,0.72);
-    }
-
-    .ncc-points {
-      margin-top: 25px;
-      display: grid;
-      gap: 15px;
-    }
-
-    .ncc-point {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-    }
-
-    .ncc-point i {
-      color: var(--gold-light);
-      margin-top: 5px;
-    }
-
-    .ncc-point strong {
-      display: block;
-      color: white;
-      margin-bottom: 2px;
-    }
-
-    .ncc-point span {
-      color: rgba(255,255,255,0.65);
-      font-size: 0.9rem;
-    }
-
-    /* TIMELINE */
-
-    .timeline {
-      position: relative;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .timeline::before {
-      content: "";
-      position: absolute;
-      left: 16px;
-      top: 5px;
-      bottom: 5px;
-      width: 1px;
-      background: var(--border);
-    }
-
-    .timeline-item {
-      position: relative;
-      padding-left: 55px;
-      margin-bottom: 42px;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: 8px;
-      top: 5px;
-      width: 17px;
-      height: 17px;
-      border-radius: 50%;
-      background: var(--gold);
-      border: 4px solid white;
-      box-shadow: 0 0 0 1px var(--gold);
-    }
-
-    .timeline-year {
-      color: var(--gold);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .timeline-item h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.4rem;
-      margin-bottom: 7px;
-    }
-
-    .timeline-item p {
-      color: var(--muted);
-    }
-
-    /* PROFESSIONAL DEVELOPMENT */
-
-    .development {
+    .institutional {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
-    .development-item {
-      padding: 25px;
-      border: 1px solid var(--border);
+    .institutional-item {
+      padding: 28px;
+      border-left: 3px solid var(--gold);
       background: white;
-      border-radius: 8px;
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
+      border: 1px solid var(--border);
+      border-left-width: 3px;
     }
 
-    .development-item i {
-      color: var(--gold);
-      margin-top: 5px;
-    }
-
-    .development-item h3 {
+    .institutional-item h3 {
       color: var(--navy);
-      font-size: 1rem;
-      margin-bottom: 5px;
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      margin-bottom: 8px;
     }
 
-    .development-item p {
+    .institutional-item p {
       color: var(--muted);
-      font-size: 0.88rem;
+      font-size: 0.92rem;
     }
 
     /* SOCIAL IMPACT */
 
-    .impact-box {
-      background: linear-gradient(135deg, var(--ivory), #fff);
-      border: 1px solid var(--border);
-      padding: 55px;
-      border-radius: 12px;
+    .impact {
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 60px;
+      color: white;
       text-align: center;
     }
 
-    .impact-box .large-icon {
-      font-size: 2.3rem;
-      color: var(--gold);
-      margin-bottom: 20px;
+    .impact .label {
+      color: var(--gold-light);
     }
 
-    .impact-box h2 {
-      margin-bottom: 15px;
+    .impact h2 {
+      color: white;
     }
 
-    .impact-box p {
+    .impact p {
       max-width: 780px;
       margin: auto;
-      color: var(--muted);
+      color: rgba(255,255,255,0.72);
     }
 
-    .impact-stats {
-      margin-top: 35px;
+    .impact-grid {
+      margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 25px;
     }
 
-    .impact-stat {
+    .impact-item {
       padding: 20px;
+      border-top: 1px solid rgba(255,255,255,0.15);
     }
 
-    .impact-stat strong {
-      display: block;
-      font-family: "Playfair Display", serif;
-      font-size: 1.8rem;
-      color: var(--navy);
-    }
-
-    .impact-stat span {
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-
-    /* GALLERY PLACEHOLDER */
-
-    .moments {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .moment {
-      min-height: 190px;
-      border-radius: 10px;
-      background: var(--navy);
-      color: white;
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .moment::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,0.7));
-    }
-
-    .moment-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .moment i {
+    .impact-item i {
       color: var(--gold-light);
-      margin-bottom: 10px;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
     }
 
-    .moment h3 {
+    .impact-item h3 {
       font-family: "Playfair Display", serif;
-      font-size: 1.2rem;
+      margin-bottom: 7px;
+    }
+
+    .impact-item p {
+      font-size: 0.87rem;
+    }
+
+    /* MILESTONES */
+
+    .milestones {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .milestone {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 30px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .milestone:last-child {
+      border-bottom: none;
+    }
+
+    .milestone-year {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    .milestone h3 {
+      color: var(--navy);
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      margin-bottom: 5px;
+    }
+
+    .milestone p {
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
     /* CTA */
 
     .cta {
-      background: var(--navy);
-      color: white;
       text-align: center;
       padding: 85px 25px;
-    }
-
-    .cta h2 {
-      color: white;
+      background: var(--ivory);
     }
 
     .cta p {
-      color: rgba(255,255,255,0.7);
       max-width: 650px;
       margin: 0 auto 30px;
+      color: var(--muted);
     }
 
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 12px 23px;
+    .button {
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      padding: 13px 25px;
       border-radius: 4px;
       font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: var(--navy);
-    }
-
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,0.35);
-      color: white;
     }
 
     /* FOOTER */
@@ -539,22 +428,28 @@
     /* RESPONSIVE */
 
     @media (max-width: 900px) {
+
       .nav-links {
         gap: 14px;
         font-size: 0.8rem;
       }
 
-      .cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .ncc-feature {
+      .leadership {
         grid-template-columns: 1fr;
       }
 
-      .moments {
-        grid-template-columns: repeat(2, 1fr);
+      .ncc {
+        grid-template-columns: 1fr;
       }
+
+      .institutional {
+        grid-template-columns: 1fr;
+      }
+
+      .impact-grid {
+        grid-template-columns: 1fr;
+      }
+
     }
 
     @media (max-width: 700px) {
@@ -571,7 +466,7 @@
       }
 
       .hero {
-        padding: 80px 20px;
+        padding: 75px 20px;
       }
 
       .hero h1 {
@@ -582,33 +477,31 @@
         padding: 65px 20px;
       }
 
-      .cards,
-      .development,
-      .moments {
+      .leadership-quote {
+        padding: 32px;
+      }
+
+      .impact {
+        padding: 40px 25px;
+      }
+
+      .milestone {
         grid-template-columns: 1fr;
+        gap: 5px;
       }
 
-      .ncc-feature {
-        padding: 35px 25px;
-        gap: 30px;
-      }
-
-      .impact-box {
-        padding: 35px 25px;
-      }
-
-      .impact-stats {
-        grid-template-columns: 1fr;
-      }
     }
+
   </style>
 </head>
 
 <body>
 
+
 <!-- NAVIGATION -->
 
 <nav>
+
   <div class="nav-container">
 
     <a href="index.html" class="brand">
@@ -616,6 +509,7 @@
     </a>
 
     <div class="nav-links">
+
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="research.html">Research</a>
@@ -623,10 +517,15 @@
       <a href="publications.html">Publications</a>
       <a href="activities.html" class="active">Activities</a>
       <a href="contact.html">Contact</a>
-      <a href="Prashant%20Kumar%20Gupta_CV.pdf" class="cv-button">CV</a>
+
+      <a href="Prashant%20Kumar%20Gupta_CV.pdf" class="cv-button">
+        CV
+      </a>
+
     </div>
 
   </div>
+
 </nav>
 
 
@@ -646,8 +545,9 @@
     </h1>
 
     <p>
-      A collection of institutional leadership, student development,
-      professional engagement and social initiatives beyond teaching and research.
+      The work that happens beyond the classroom —
+      through leadership, student development, institutional service
+      and social engagement.
     </p>
 
   </div>
@@ -655,78 +555,47 @@
 </header>
 
 
-<!-- INSTITUTIONAL LEADERSHIP -->
+<!-- LEADERSHIP -->
 
 <section class="section">
 
   <div class="container">
 
-    <div class="section-heading">
+    <div class="leadership">
 
-      <div class="section-label">
-        Institutional Contribution
-      </div>
+      <div class="leadership-text">
 
-      <h2>
-        Leadership & Institutional Service
-      </h2>
-
-      <p>
-        Contributing to the wider university community through student
-        development, institutional responsibilities and initiatives that
-        extend beyond the classroom.
-      </p>
-
-    </div>
-
-
-    <div class="cards">
-
-      <div class="card">
-
-        <div class="icon">
-          <i class="fa-solid fa-people-group"></i>
+        <div class="label">
+          Leadership & Service
         </div>
 
-        <h3>NCC Leadership</h3>
+        <h2>
+          Contributing Beyond the Classroom
+        </h2>
 
         <p>
-          Involved in building and leading Mahindra University's NCC
-          initiative, with a focus on discipline, leadership, teamwork
-          and student development.
+          My engagement at Mahindra University extends beyond my role in
+          the classroom. I have taken on responsibilities that involve
+          student life, institutional initiatives and the development of
+          opportunities for students to learn through experience.
+        </p>
+
+        <p>
+          These experiences have allowed me to work closely with students
+          in settings where leadership, discipline, responsibility and
+          collaboration matter as much as academic knowledge.
         </p>
 
       </div>
 
 
-      <div class="card">
+      <div class="leadership-quote">
 
-        <div class="icon">
-          <i class="fa-solid fa-building-columns"></i>
-        </div>
-
-        <h3>Institutional Service</h3>
+        <i class="fa-solid fa-quote-left"></i>
 
         <p>
-          Contributing to university committees and institutional
-          initiatives involving student affairs, discipline, quality
-          processes and academic administration.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">
-          <i class="fa-solid fa-house-user"></i>
-        </div>
-
-        <h3>Student & Hostel Affairs</h3>
-
-        <p>
-          Supporting residential student life, discipline and
-          student welfare as part of wider university responsibilities.
+          “Leadership is best experienced through responsibility,
+          service and the opportunity to help others grow.”
         </p>
 
       </div>
@@ -744,556 +613,377 @@
 
   <div class="container">
 
-    <div class="ncc-feature">
+    <div class="heading center">
 
-      <div>
-
-        <div class="section-label">
-          National Cadet Corps
-        </div>
-
-        <h2>
-          Building Leaders Beyond the Classroom
-        </h2>
-
-        <p>
-          The NCC has become an important part of my engagement with
-          student leadership, discipline and service at Mahindra University.
-        </p>
-
+      <div class="label">
+        NCC & Youth Leadership
       </div>
 
+      <h2>
+        Building Leaders Through Experience
+      </h2>
 
-      <div class="ncc-points">
+      <p>
+        The Mahindra University NCC has become one of the most meaningful
+        dimensions of my work with students.
+      </p>
 
-        <div class="ncc-point">
-
-          <i class="fa-solid fa-medal"></i>
-
-          <div>
-            <strong>Mahindra University NCC</strong>
-            <span>
-              Involved in establishing and developing the university's
-              NCC initiative as its first CTO.
-            </span>
-          </div>
-
-        </div>
+    </div>
 
 
-        <div class="ncc-point">
-
-          <i class="fa-solid fa-users"></i>
-
-          <div>
-            <strong>Cadet Development</strong>
-            <span>
-              Supporting leadership, discipline, teamwork, training
-              and service-oriented student development.
-            </span>
-          </div>
-
-        </div>
+    <div class="ncc">
 
 
-        <div class="ncc-point">
+      <div class="ncc-card">
 
-          <i class="fa-solid fa-star"></i>
-
-          <div>
-            <strong>Commissioned as Lieutenant</strong>
-            <span>
-              Commissioned as a Lieutenant in the Indian Army (NCC)
-              following three months of training at Officers Training
-              Academy, Kamptee.
-            </span>
-          </div>
-
-        </div>
-
-
-        <div class="ncc-point">
-
+        <div class="ncc-icon">
           <i class="fa-solid fa-flag"></i>
-
-          <div>
-            <strong>Leadership Through Service</strong>
-            <span>
-              Working with cadets to translate discipline, responsibility
-              and leadership into meaningful student experiences.
-            </span>
-          </div>
-
         </div>
 
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- INSTITUTIONAL DEVELOPMENT -->
-
-<section class="section">
-
-  <div class="container">
-
-    <div class="section-heading center">
-
-      <div class="section-label">
-        Building Better Institutions
-      </div>
-
-      <h2>
-        Quality & Institutional Development
-      </h2>
-
-      <p>
-        Engagement in initiatives that contribute to continuous improvement,
-        quality assurance and institutional development.
-      </p>
-
-    </div>
-
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-year">
-          Institutional Service
-        </div>
-
-        <h3>Rankings & Accreditations</h3>
+        <h3>
+          Building the NCC Unit
+        </h3>
 
         <p>
-          Contributing to institutional ranking and accreditation
-          initiatives within the School of Management.
+          Involved in establishing Mahindra University's NCC chapter
+          and developing an environment centred on discipline,
+          leadership and service.
         </p>
 
       </div>
 
 
-      <div class="timeline-item">
+      <div class="ncc-card">
 
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-year">
-          Quality Assurance
+        <div class="ncc-icon">
+          <i class="fa-solid fa-users"></i>
         </div>
 
-        <h3>IQAC Engagement</h3>
+        <h3>
+          Cadet Development
+        </h3>
 
         <p>
-          Supporting internal quality assurance and continuous
-          improvement initiatives.
+          Working with cadets through training, leadership activities,
+          community initiatives and opportunities for personal growth.
         </p>
 
       </div>
 
 
-      <div class="timeline-item">
+      <div class="ncc-card">
 
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-year">
-          Student Development
-        </div>
-
-        <h3>University Committees</h3>
-
-        <p>
-          Institutional service through responsibilities involving
-          student discipline, PhD selection, research administration
-          and student welfare.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- STUDENT DEVELOPMENT -->
-
-<section class="section alt">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="section-label">
-        Student Engagement
-      </div>
-
-      <h2>
-        Developing the Whole Student
-      </h2>
-
-      <p>
-        Beyond academic instruction, I engage in initiatives that encourage
-        leadership, confidence, well-being, discipline and personal growth.
-      </p>
-
-    </div>
-
-
-    <div class="cards">
-
-      <div class="card">
-
-        <div class="icon">
-          <i class="fa-solid fa-person-chalkboard"></i>
-        </div>
-
-        <h3>Youth Empowerment</h3>
-
-        <p>
-          Supporting youth-focused programmes designed to help students
-          develop confidence, awareness, resilience and life skills.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">
-          <i class="fa-solid fa-brain"></i>
-        </div>
-
-        <h3>Well-being Initiatives</h3>
-
-        <p>
-          Engaging with programmes that introduce students to
-          practical approaches for managing stress and improving
-          personal well-being.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">
-          <i class="fa-solid fa-compass"></i>
-        </div>
-
-        <h3>Student Leadership</h3>
-
-        <p>
-          Creating opportunities for students to experience responsibility,
-          teamwork, discipline and leadership through activities beyond
-          conventional classroom learning.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ART OF LIVING -->
-
-<section class="section">
-
-  <div class="container">
-
-    <div class="impact-box">
-
-      <div class="large-icon">
-        <i class="fa-solid fa-heart"></i>
-      </div>
-
-      <div class="section-label">
-        Social Impact
-      </div>
-
-      <h2>
-        Art of Living & Social Engagement
-      </h2>
-
-      <p>
-        For more than 15 years, I have been associated with the Art of Living
-        as a teacher, conducting and supporting programmes focused on
-        youth development, well-being, stress management and personal growth.
-        This engagement has included programmes for students and youth as
-        well as social initiatives.
-      </p>
-
-
-      <div class="impact-stats">
-
-        <div class="impact-stat">
-
-          <strong>15+</strong>
-
-          <span>
-            Years of engagement
-          </span>
-
-        </div>
-
-
-        <div class="impact-stat">
-
-          <strong>Youth</strong>
-
-          <span>
-            Development programmes
-          </span>
-
-        </div>
-
-
-        <div class="impact-stat">
-
-          <strong>Service</strong>
-
-          <span>
-            Beyond the campus
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PROFESSIONAL DEVELOPMENT -->
-
-<section class="section alt">
-
-  <div class="container">
-
-    <div class="section-heading center">
-
-      <div class="section-label">
-        Continuous Learning
-      </div>
-
-      <h2>
-        Professional Development
-      </h2>
-
-      <p>
-        Continuing to learn, reflect and develop through professional
-        workshops, training programmes and institutional engagements.
-      </p>
-
-    </div>
-
-
-    <div class="development">
-
-      <div class="development-item">
-
-        <i class="fa-solid fa-award"></i>
-
-        <div>
-
-          <h3>Faculty Development & Training</h3>
-
-          <p>
-            Participation in professional development initiatives
-            related to teaching, leadership and institutional practice.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="development-item">
-
-        <i class="fa-solid fa-users-gear"></i>
-
-        <div>
-
-          <h3>Leadership Development</h3>
-
-          <p>
-            Continuous development through experiential learning,
-            leadership programmes and professional training.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="development-item">
-
-        <i class="fa-solid fa-globe"></i>
-
-        <div>
-
-          <h3>International Academic Engagement</h3>
-
-          <p>
-            Participation in international forums and professional
-            engagements focused on management education and quality.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="development-item">
-
-        <i class="fa-solid fa-arrows-rotate"></i>
-
-        <div>
-
-          <h3>Continuous Improvement</h3>
-
-          <p>
-            A continuing commitment to learning and bringing new
-            perspectives into academic and institutional work.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- SELECTED MOMENTS -->
-
-<section class="section">
-
-  <div class="container">
-
-    <div class="section-heading center">
-
-      <div class="section-label">
-        Selected Moments
-      </div>
-
-      <h2>
-        Beyond the Desk
-      </h2>
-
-      <p>
-        A visual collection of moments from leadership, student engagement,
-        institutional initiatives and social activities.
-      </p>
-
-    </div>
-
-
-    <div class="moments">
-
-      <div class="moment">
-
-        <div class="moment-content">
-
-          <i class="fa-solid fa-shield-halved"></i>
-
-          <h3>
-            NCC Leadership
-          </h3>
-
-        </div>
-
-      </div>
-
-
-      <div class="moment">
-
-        <div class="moment-content">
-
+        <div class="ncc-icon">
           <i class="fa-solid fa-star"></i>
-
-          <h3>
-            Commissioning as Lieutenant
-          </h3>
-
         </div>
+
+        <h3>
+          Leadership Through Service
+        </h3>
+
+        <p>
+          In 2026, I was commissioned as a Lieutenant in the Indian Army
+          (NCC) following training at Officers Training Academy, Kamptee.
+        </p>
 
       </div>
 
 
-      <div class="moment">
+    </div>
 
-        <div class="moment-content">
+  </div>
 
-          <i class="fa-solid fa-people-group"></i>
+</section>
 
-          <h3>
-            Student Development
-          </h3>
 
-        </div>
+<!-- INSTITUTIONAL SERVICE -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="heading">
+
+      <div class="label">
+        Institutional Contribution
+      </div>
+
+      <h2>
+        Supporting the University Community
+      </h2>
+
+      <p>
+        Alongside my core academic responsibilities, I contribute to
+        university life through roles connected with students,
+        institutional processes and community building.
+      </p>
+
+    </div>
+
+
+    <div class="institutional">
+
+
+      <div class="institutional-item">
+
+        <h3>
+          Student & Hostel Life
+        </h3>
+
+        <p>
+          Supporting residential student life and contributing to a
+          disciplined, safe and constructive campus environment.
+        </p>
 
       </div>
 
 
-      <div class="moment">
+      <div class="institutional-item">
 
-        <div class="moment-content">
+        <h3>
+          Student Affairs
+        </h3>
 
-          <i class="fa-solid fa-building-columns"></i>
-
-          <h3>
-            Institutional Engagement
-          </h3>
-
-        </div>
+        <p>
+          Engaging with student-related matters and initiatives that
+          contribute to their wider university experience.
+        </p>
 
       </div>
 
 
-      <div class="moment">
+      <div class="institutional-item">
 
-        <div class="moment-content">
+        <h3>
+          Institutional Initiatives
+        </h3>
+
+        <p>
+          Contributing to university-level initiatives and committees
+          that support the wider development of the institution.
+        </p>
+
+      </div>
+
+
+      <div class="institutional-item">
+
+        <h3>
+          Quality & Accreditation
+        </h3>
+
+        <p>
+          Supporting institutional quality and accreditation initiatives
+          as part of the School of Management's broader development.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- STUDENT WELLBEING / SOCIAL IMPACT -->
+
+<section class="section alt">
+
+  <div class="container">
+
+    <div class="impact">
+
+      <div class="label">
+        Student Well-being & Social Engagement
+      </div>
+
+      <h2>
+        Learning Beyond Conventional Boundaries
+      </h2>
+
+      <p>
+        A significant part of my engagement outside formal academic work
+        has focused on helping young people develop confidence, resilience,
+        awareness and a greater sense of well-being.
+      </p>
+
+
+      <div class="impact-grid">
+
+
+        <div class="impact-item">
+
+          <i class="fa-solid fa-seedling"></i>
+
+          <h3>
+            Youth Development
+          </h3>
+
+          <p>
+            Supporting programmes that encourage personal growth,
+            confidence and life skills.
+          </p>
+
+        </div>
+
+
+        <div class="impact-item">
 
           <i class="fa-solid fa-heart"></i>
 
           <h3>
-            Social Engagement
+            Art of Living
           </h3>
+
+          <p>
+            More than 15 years of engagement as an Art of Living
+            teacher and facilitator.
+          </p>
 
         </div>
 
-      </div>
 
+        <div class="impact-item">
 
-      <div class="moment">
-
-        <div class="moment-content">
-
-          <i class="fa-solid fa-person-rays"></i>
+          <i class="fa-solid fa-hands-helping"></i>
 
           <h3>
-            Youth & Well-being
+            Social Service
           </h3>
+
+          <p>
+            Participation in well-being, stress-management and
+            social-service initiatives.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SELECTED MILESTONES -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="heading center">
+
+      <div class="label">
+        Selected Milestones
+      </div>
+
+      <h2>
+        A Few Moments Along the Way
+      </h2>
+
+      <p>
+        Selected moments that reflect the broader dimensions of my
+        engagement with students and the university community.
+      </p>
+
+    </div>
+
+
+    <div class="milestones">
+
+
+      <div class="milestone">
+
+        <div class="milestone-year">
+          2024
+        </div>
+
+        <div>
+
+          <h3>
+            Mahindra University NCC Chapter
+          </h3>
+
+          <p>
+            The university introduced its NCC chapter, creating a new
+            platform for student leadership, discipline and service.
+          </p>
 
         </div>
 
       </div>
+
+
+      <div class="milestone">
+
+        <div class="milestone-year">
+          2025
+        </div>
+
+        <div>
+
+          <h3>
+            Leadership & Cadet Engagement
+          </h3>
+
+          <p>
+            Continued engagement with NCC cadets through leadership,
+            motivation and training-oriented activities.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="milestone">
+
+        <div class="milestone-year">
+          2026
+        </div>
+
+        <div>
+
+          <h3>
+            Commissioned as Lieutenant
+          </h3>
+
+          <p>
+            Commissioned as a Lieutenant in the Indian Army (NCC)
+            following training at Officers Training Academy, Kamptee.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="milestone">
+
+        <div class="milestone-year">
+          Ongoing
+        </div>
+
+        <div>
+
+          <h3>
+            Student Development & Service
+          </h3>
+
+          <p>
+            Continuing to contribute to student leadership, well-being,
+            institutional initiatives and social engagement.
+          </p>
+
+        </div>
+
+      </div>
+
 
     </div>
 
@@ -1308,25 +998,23 @@
 
   <div class="container">
 
+    <div class="label">
+      Explore Further
+    </div>
+
     <h2>
-      Leadership. Learning. Service.
+      The work behind the role
     </h2>
 
     <p>
-      Explore the different dimensions of my academic and professional journey.
+      Explore my teaching, research and publications to see the other
+      dimensions of my academic journey.
     </p>
 
-    <div class="cta-buttons">
-
-      <a href="research.html" class="btn btn-primary">
-        Explore Research
-      </a>
-
-      <a href="contact.html" class="btn btn-outline">
-        Get in Touch
-      </a>
-
-    </div>
+    <a href="teaching.html" class="button">
+      Explore Teaching
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
 
   </div>
 
@@ -1343,6 +1031,7 @@
   </p>
 
 </footer>
+
 
 </body>
 </html>
