@@ -1,735 +1,887 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Dr. Prashant Gupta</title>
 
-<title>About | Dr. Prashant Gupta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
 
-<style>
+    :root {
+      --navy: #0b1f33;
+      --navy-light: #16344f;
+      --gold: #c9a227;
+      --gold-light: #e1c45a;
+      --ivory: #f8f6f0;
+      --white: #ffffff;
+      --text: #243447;
+      --muted: #687789;
+      --border: #e3e7eb;
+      --shadow: 0 15px 40px rgba(11, 31, 51, 0.08);
+    }
 
-/* =========================
-   GLOBAL
-========================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-* {
-    box-sizing: border-box;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-html {
-    scroll-behavior: smooth;
-}
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
 
-body {
-    margin: 0;
-    font-family: "DM Sans", Arial, sans-serif;
-    background: #f8f6f2;
-    color: #243447;
-    line-height: 1.75;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-a {
-    text-decoration: none;
-}
 
-.container {
-    width: min(1160px, 90%);
-    margin: auto;
-}
+    /* =========================
+       NAVIGATION
+    ========================= */
 
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
-/* =========================
-   NAVIGATION
-========================= */
+      background: rgba(11, 31, 51, 0.97);
 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+      backdrop-filter: blur(10px);
 
-    background: rgba(8, 27, 48, 0.96);
-    backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
 
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
+    .nav-container {
+      max-width: 1200px;
 
-.nav-inner {
-    width: min(1160px, 90%);
-    margin: auto;
+      margin: auto;
 
-    min-height: 72px;
+      min-height: 72px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+      padding: 0 25px;
 
-.logo {
-    color: white;
-    font-family: "Playfair Display", serif;
-    font-size: 21px;
-    font-weight: 600;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
+    .brand {
+      color: var(--white);
 
-.nav-links a {
-    color: #dce5ed;
-    font-size: 13px;
-    font-weight: 500;
+      font-family: "Playfair Display", serif;
 
-    transition: 0.25s ease;
-}
+      font-size: 1.25rem;
 
-.nav-links a:hover {
-    color: #d8b36a;
-}
+      font-weight: 600;
 
-.nav-cv {
-    padding: 8px 15px;
-    border: 1px solid #d8b36a;
-    border-radius: 4px;
-    color: #f0cf89 !important;
-}
+      white-space: nowrap;
+    }
 
-
-/* =========================
-   PAGE HERO
-========================= */
-
-.page-hero {
-    position: relative;
-    overflow: hidden;
-
-    background:
-        radial-gradient(circle at 85% 25%, rgba(61,105,143,0.30), transparent 32%),
-        linear-gradient(135deg, #081b30 0%, #0d2b49 60%, #123c61 100%);
-
-    color: white;
-
-    padding: 90px 0 85px;
-}
-
-.page-hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 330px;
-    height: 330px;
-
-    border: 1px solid rgba(216,179,106,0.18);
-
-    border-radius: 50%;
-
-    right: -150px;
-    bottom: -180px;
-}
-
-.hero-inner {
-    position: relative;
-    z-index: 2;
-
-    max-width: 850px;
-}
-
-.eyebrow {
-    color: #d8b36a;
-
-    text-transform: uppercase;
-    letter-spacing: 3px;
-
-    font-size: 11px;
-    font-weight: 700;
-
-    margin-bottom: 16px;
-}
-
-.page-hero h1 {
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(48px, 6vw, 68px);
-
-    line-height: 1.05;
-
-    margin: 0 0 20px;
-
-    font-weight: 600;
-}
-
-.page-hero p {
-    color: #d3dfe8;
-
-    max-width: 760px;
-
-    font-size: 18px;
-
-    margin: 0;
-}
-
-
-/* =========================
-   MAIN CONTENT
-========================= */
-
-section {
-    padding: 85px 0;
-}
-
-.section-heading {
-    margin-bottom: 38px;
-}
-
-.section-heading h2 {
-    font-family: "Playfair Display", serif;
-
-    color: #102d4b;
-
-    font-size: 38px;
-
-    line-height: 1.2;
-
-    margin: 0 0 12px;
-}
-
-.section-heading p {
-    color: #697887;
-
-    max-width: 760px;
-
-    margin: 0;
-}
-
-
-/* =========================
-   PROFILE
-========================= */
-
-.profile-section {
-    background: white;
-}
-
-.profile-layout {
-    display: grid;
-
-    grid-template-columns: 0.8fr 1.2fr;
-
-    gap: 65px;
-
-    align-items: center;
-}
-
-.profile-card {
-    position: relative;
-
-    background: #102d4b;
-
-    padding: 40px;
-
-    color: white;
-}
-
-.profile-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: 15px;
-    left: 15px;
-
-    width: 100%;
-    height: 100%;
-
-    border: 1px solid #d8b36a;
-
-    z-index: 0;
-}
-
-.profile-card-inner {
-    position: relative;
-    z-index: 1;
-}
-
-.profile-card-icon {
-    width: 55px;
-    height: 55px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #d8b36a;
-
-    border-radius: 50%;
-
-    color: #d8b36a;
-
-    font-size: 20px;
-
-    margin-bottom: 24px;
-}
-
-.profile-card h3 {
-    font-family: "Playfair Display", serif;
-
-    font-size: 27px;
-
-    margin: 0 0 8px;
-}
-
-.profile-card p {
-    color: #c9d5df;
-
-    font-size: 14px;
-
-    margin: 0;
-}
-
-.profile-text {
-    color: #596978;
-
-    font-size: 16px;
-}
-
-.profile-text p {
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-
-/* =========================
-   RESEARCH
-========================= */
-
-.research-section {
-    background: #f8f6f2;
-}
-
-.research-box {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 22px;
-}
-
-.research-card {
-    background: white;
-
-    padding: 30px;
-
-    border: 1px solid #e3e5e8;
-
-    position: relative;
-
-    transition: 0.3s ease;
-}
-
-.research-card::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 3px;
-
-    background: #d8b36a;
-}
-
-.research-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow: 0 15px 35px rgba(15,42,67,0.08);
-}
-
-.research-icon {
-    width: 48px;
-    height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #eef3f7;
-
-    color: #164a7a;
-
-    border-radius: 50%;
-
-    margin-bottom: 20px;
-}
-
-.research-card h3 {
-    font-family: "Playfair Display", serif;
-
-    color: #102d4b;
-
-    font-size: 22px;
-
-    margin: 0 0 10px;
-}
-
-.research-card p {
-    color: #697887;
-
-    font-size: 14px;
-
-    margin: 0;
-}
-
-
-/* =========================
-   EXPERIENCE
-========================= */
-
-.experience-section {
-    background: white;
-}
-
-.timeline {
-    position: relative;
-
-    max-width: 900px;
-}
-
-.timeline::before {
-    content: "";
-
-    position: absolute;
-
-    left: 9px;
-    top: 5px;
-    bottom: 5px;
-
-    width: 1px;
-
-    background: #d8b36a;
-}
-
-.timeline-item {
-    position: relative;
-
-    padding-left: 45px;
-
-    margin-bottom: 35px;
-}
-
-.timeline-item:last-child {
-    margin-bottom: 0;
-}
-
-.timeline-dot {
-    position: absolute;
-
-    left: 3px;
-    top: 6px;
-
-    width: 13px;
-    height: 13px;
-
-    border-radius: 50%;
-
-    background: #102d4b;
-
-    border: 3px solid #d8b36a;
-}
-
-.timeline-item h3 {
-    font-family: "Playfair Display", serif;
-
-    color: #102d4b;
-
-    font-size: 23px;
-
-    margin: 0 0 5px;
-}
-
-.timeline-item .period {
-    color: #a67b2e;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    margin-bottom: 8px;
-}
-
-.timeline-item p {
-    color: #697887;
-
-    font-size: 14px;
-
-    margin: 0;
-}
-
-
-/* =========================
-   TEACHING
-========================= */
-
-.teaching-section {
-    background: #f0ede6;
-}
-
-.teaching-layout {
-    display: grid;
-
-    grid-template-columns: 0.9fr 1.1fr;
-
-    gap: 65px;
-
-    align-items: start;
-}
-
-.teaching-text {
-    color: #697887;
-
-    font-size: 15px;
-}
-
-.course-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 11px;
-}
-
-.course {
-    background: white;
-
-    padding: 16px 18px;
-
-    border-left: 3px solid #d8b36a;
-
-    color: #263b50;
-
-    font-size: 13px;
-
-    font-weight: 600;
-}
-
-
-/* =========================
-   LEADERSHIP
-========================= */
-
-.leadership-section {
-    background: #102d4b;
-
-    color: white;
-}
-
-.leadership-section .section-heading h2 {
-    color: white;
-}
-
-.leadership-section .section-heading p {
-    color: #c5d2dd;
-}
-
-.leadership-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.leadership-card {
-    padding: 28px;
-
-    border: 1px solid #38536d;
-
-    background: rgba(255,255,255,0.025);
-}
-
-.leadership-icon {
-    color: #d8b36a;
-
-    font-size: 22px;
-
-    margin-bottom: 17px;
-}
-
-.leadership-card h3 {
-    font-family: "Playfair Display", serif;
-
-    color: white;
-
-    font-size: 21px;
-
-    margin: 0 0 10px;
-}
-
-.leadership-card p {
-    color: #c5d2dd;
-
-    font-size: 14px;
-
-    margin: 0;
-}
-
-
-/* =========================
-   ART OF LIVING
-========================= */
-
-.aol-section {
-    background: #f8f6f2;
-}
-
-.aol-layout {
-    display: grid;
-
-    grid-template-columns: 0.35fr 1.65fr;
-
-    gap: 55px;
-
-    align-items: center;
-}
-
-.aol-number {
-    font-family: "Playfair Display", serif;
-
-    font-size: 80px;
-
-    line-height: 1;
-
-    color: #a67b2e;
-}
-
-.aol-number-label {
-    color: #697887;
-
-    font-size: 14px;
-
-    margin-top: 10px;
-}
-
-.aol-content h2 {
-    font-family: "Playfair Display", serif;
-
-    color: #102d4b;
-
-    font-size: 35px;
-
-    margin: 0 0 15px;
-}
-
-.aol-content p {
-    color: #697887;
-
-    font-size: 15px;
-
-    max-width: 800px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    background: #071827;
-
-    color: #94a3b1;
-
-    text-align: center;
-
-    padding: 25px;
-
-    font-size: 12px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 950px) {
-
-    .nav-inner {
-        flex-direction: column;
-
-        gap: 12px;
-
-        padding: 14px 0;
+    .brand span {
+      color: var(--gold-light);
     }
 
     .nav-links {
+      display: flex;
+
+      align-items: center;
+
+      gap: 27px;
+
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #dfe7ee;
+
+      font-size: 0.9rem;
+
+      font-weight: 500;
+
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold-light);
+    }
+
+    .cv-btn {
+      padding: 9px 17px;
+
+      border: 1px solid var(--gold);
+
+      color: var(--gold-light) !important;
+
+      border-radius: 4px;
+    }
+
+    .cv-btn:hover {
+      background: var(--gold);
+
+      color: var(--navy) !important;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(11,31,51,0.99),
+          rgba(22,52,79,0.97)
+        );
+
+      color: var(--white);
+
+      padding: 90px 25px;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      border: 1px solid rgba(201,162,39,0.15);
+
+      border-radius: 50%;
+
+      right: -200px;
+      top: -230px;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+
+      margin: auto;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+
+      font-size: 0.8rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 3px;
+
+      font-weight: 700;
+
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(2.7rem, 6vw, 4.6rem);
+
+      line-height: 1.1;
+
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #d8e0e8;
+
+      max-width: 720px;
+
+      font-size: 1.05rem;
+    }
+
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    .section {
+      padding: 85px 25px;
+    }
+
+    .section.ivory {
+      background: var(--ivory);
+    }
+
+    .container {
+      max-width: 1100px;
+
+      margin: auto;
+    }
+
+    .section-heading {
+      margin-bottom: 45px;
+    }
+
+    .small-title {
+      color: var(--gold);
+
+      text-transform: uppercase;
+
+      letter-spacing: 2.5px;
+
+      font-size: 0.78rem;
+
+      font-weight: 700;
+
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+
+      color: var(--navy);
+
+      font-size: clamp(2rem, 4vw, 3rem);
+
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+
+      max-width: 760px;
+
+      margin-top: 14px;
+    }
+
+
+    /* =========================
+       PROFILE
+    ========================= */
+
+    .profile-grid {
+      display: grid;
+
+      grid-template-columns: 1.15fr 0.85fr;
+
+      gap: 60px;
+
+      align-items: center;
+    }
+
+    .profile-text p {
+      color: var(--muted);
+
+      margin-bottom: 18px;
+    }
+
+    .profile-highlight {
+      background: var(--navy);
+
+      color: var(--white);
+
+      padding: 40px;
+
+      border-left: 4px solid var(--gold);
+
+      box-shadow: var(--shadow);
+    }
+
+    .profile-highlight i {
+      color: var(--gold-light);
+
+      font-size: 1.7rem;
+
+      margin-bottom: 20px;
+    }
+
+    .profile-highlight h3 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.7rem;
+
+      margin-bottom: 15px;
+    }
+
+    .profile-highlight p {
+      color: #d5dfe7;
+
+      font-size: 0.94rem;
+    }
+
+
+    /* =========================
+       ACADEMIC JOURNEY
+    ========================= */
+
+    .journey-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 25px;
+    }
+
+    .journey-card {
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      padding: 32px;
+
+      display: flex;
+
+      gap: 25px;
+
+      align-items: flex-start;
+
+      transition: 0.25s ease;
+
+      position: relative;
+    }
+
+    .journey-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow: var(--shadow);
+
+      border-color: rgba(201,162,39,0.45);
+    }
+
+    .journey-logo {
+      width: 105px;
+      height: 105px;
+
+      min-width: 105px;
+
+      border: 1px solid var(--border);
+
+      background: var(--white);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 12px;
+    }
+
+    .journey-logo img {
+      max-width: 100%;
+
+      max-height: 78px;
+
+      object-fit: contain;
+    }
+
+    .journey-content {
+      flex: 1;
+    }
+
+    .journey-content h3 {
+      color: var(--navy);
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.25rem;
+
+      line-height: 1.35;
+
+      margin-bottom: 6px;
+    }
+
+    .journey-role {
+      color: var(--gold);
+
+      font-size: 0.9rem;
+
+      font-weight: 700;
+
+      margin-bottom: 3px;
+    }
+
+    .journey-period {
+      color: var(--muted);
+
+      font-size: 0.78rem;
+
+      margin-bottom: 13px;
+    }
+
+    .journey-content p {
+      color: var(--muted);
+
+      font-size: 0.88rem;
+
+      line-height: 1.65;
+    }
+
+    .journey-content ul {
+      margin-top: 10px;
+
+      padding-left: 17px;
+
+      color: var(--muted);
+
+      font-size: 0.86rem;
+    }
+
+    .journey-content li {
+      margin-bottom: 5px;
+    }
+
+
+    /* =========================
+       EDUCATION
+    ========================= */
+
+    .education-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .education-card {
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      padding: 32px;
+
+      text-align: center;
+
+      transition: 0.25s ease;
+    }
+
+    .education-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow: var(--shadow);
+    }
+
+    .education-logo {
+      height: 105px;
+
+      width: 130px;
+
+      margin: 0 auto 20px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+    }
+
+    .education-logo img {
+      max-width: 100%;
+
+      max-height: 95px;
+
+      object-fit: contain;
+    }
+
+    .education-card h3 {
+      color: var(--navy);
+
+      font-size: 1.05rem;
+
+      margin-bottom: 7px;
+    }
+
+    .education-card p {
+      color: var(--gold);
+
+      font-size: 0.88rem;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       RESEARCH INTERESTS
+    ========================= */
+
+    .interest-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 22px;
+    }
+
+    .interest-card {
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      padding: 30px;
+
+      transition: 0.25s ease;
+    }
+
+    .interest-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow: var(--shadow);
+    }
+
+    .interest-icon {
+      width: 45px;
+      height: 45px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background: #f3eee0;
+
+      color: var(--gold);
+
+      margin-bottom: 18px;
+    }
+
+    .interest-card h3 {
+      color: var(--navy);
+
+      font-size: 1.05rem;
+
+      margin-bottom: 9px;
+    }
+
+    .interest-card p {
+      color: var(--muted);
+
+      font-size: 0.88rem;
+    }
+
+
+    /* =========================
+       ENGAGEMENT
+    ========================= */
+
+    .engagement-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 25px;
+    }
+
+    .engagement-card {
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      padding: 35px;
+
+      border-top: 3px solid var(--gold);
+    }
+
+    .engagement-card i {
+      color: var(--gold);
+
+      font-size: 1.5rem;
+
+      margin-bottom: 15px;
+    }
+
+    .engagement-card h3 {
+      color: var(--navy);
+
+      margin-bottom: 10px;
+    }
+
+    .engagement-card p {
+      color: var(--muted);
+
+      font-size: 0.9rem;
+    }
+
+
+    /* =========================
+       ART OF LIVING
+    ========================= */
+
+    .aol-card {
+      background: var(--navy);
+
+      color: var(--white);
+
+      padding: 45px;
+
+      display: grid;
+
+      grid-template-columns: 120px 1fr;
+
+      gap: 35px;
+
+      align-items: center;
+
+      box-shadow: var(--shadow);
+    }
+
+    .aol-logo {
+      width: 115px;
+      height: 115px;
+
+      background: var(--white);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 14px;
+    }
+
+    .aol-logo img {
+      max-width: 100%;
+
+      max-height: 88px;
+
+      object-fit: contain;
+    }
+
+    .aol-content h3 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.9rem;
+
+      margin-bottom: 5px;
+    }
+
+    .aol-content .role {
+      color: var(--gold-light);
+
+      font-weight: 700;
+
+      margin-bottom: 12px;
+    }
+
+    .aol-content p {
+      color: #d4dde5;
+
+      max-width: 750px;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      background: var(--navy);
+
+      color: var(--white);
+
+      text-align: center;
+
+      padding: 75px 25px;
+    }
+
+    .cta h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 2.5rem;
+
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #d4dde5;
+
+      max-width: 650px;
+
+      margin: 0 auto 28px;
+    }
+
+    .cta-button {
+      display: inline-block;
+
+      background: var(--gold);
+
+      color: var(--navy);
+
+      padding: 13px 25px;
+
+      font-weight: 700;
+
+      border-radius: 3px;
+
+      transition: 0.25s ease;
+    }
+
+    .cta-button:hover {
+      background: var(--gold-light);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #071521;
+
+      color: #b9c5cf;
+
+      padding: 35px 25px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+
+      margin: auto;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 25px;
+
+      align-items: center;
+    }
+
+    .footer-name {
+      font-family: "Playfair Display", serif;
+
+      color: var(--white);
+
+      font-size: 1.1rem;
+    }
+
+    .footer-links {
+      display: flex;
+
+      gap: 18px;
+
+      font-size: 0.85rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 950px) {
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .journey-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .education-grid,
+      .interest-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .engagement-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .nav-container {
+        flex-direction: column;
+
+        padding: 15px 20px;
+
+        gap: 12px;
+      }
+
+      .nav-links {
         flex-wrap: wrap;
 
         justify-content: center;
 
-        gap: 12px;
-    }
+        gap: 11px;
+      }
 
-    .profile-layout,
-    .teaching-layout,
-    .aol-layout {
+      .hero {
+        padding: 70px 20px;
+      }
+
+      .section {
+        padding: 65px 20px;
+      }
+
+      .journey-card {
+        flex-direction: column;
+      }
+
+      .education-grid,
+      .interest-grid {
         grid-template-columns: 1fr;
-    }
+      }
 
-    .research-box,
-    .leadership-grid {
+      .aol-card {
         grid-template-columns: 1fr;
+
+        text-align: center;
+      }
+
+      .aol-logo {
+        margin: auto;
+      }
+
+      .footer-container {
+        flex-direction: column;
+
+        text-align: center;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+      }
+
     }
 
-}
-
-
-@media (max-width: 600px) {
-
-    section {
-        padding: 65px 0;
-    }
-
-    .page-hero {
-        padding: 70px 0;
-    }
-
-    .page-hero h1 {
-        font-size: 47px;
-    }
-
-    .page-hero p {
-        font-size: 16px;
-    }
-
-    .section-heading h2 {
-        font-size: 32px;
-    }
-
-    .course-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .profile-card {
-        padding: 30px;
-    }
-
-}
-
-</style>
-
+  </style>
 </head>
 
 
@@ -742,619 +894,845 @@ footer {
 
 <nav>
 
-<div class="nav-inner">
+  <div class="nav-container">
 
-<a href="index.html" class="logo">
-Dr. Prashant Gupta
-</a>
+    <a href="index.html" class="brand">
+      Dr. Prashant <span>Gupta</span>
+    </a>
 
-<div class="nav-links">
+    <ul class="nav-links">
 
-<a href="index.html">Home</a>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
 
-<a href="about.html">About</a>
+      <li>
+        <a href="about.html" class="active">About</a>
+      </li>
 
-<a href="research.html">Research</a>
+      <li>
+        <a href="research.html">Research</a>
+      </li>
 
-<a href="teaching.html">Teaching</a>
+      <li>
+        <a href="teaching.html">Teaching</a>
+      </li>
 
-<a href="publications.html">Publications</a>
+      <li>
+        <a href="publications.html">Publications</a>
+      </li>
 
-<a href="activities.html">Activities</a>
+      <li>
+        <a href="activities.html">Activities</a>
+      </li>
 
-<a href="contact.html">Contact</a>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
 
-<a href="Prashant%20Kumar%20Gupta_CV.pdf"
-target="_blank"
-class="nav-cv">
-CV
-</a>
+      <li>
+        <a href="Prashant%20Kumar%20Gupta_CV.pdf"
+           class="cv-btn">
+          CV
+        </a>
+      </li>
 
-</div>
+    </ul>
 
-</div>
+  </div>
 
 </nav>
 
 
-<!-- =========================
-     PAGE HERO
-========================= -->
-
-<header class="page-hero">
-
-<div class="container">
-
-<div class="hero-inner">
-
-<div class="eyebrow">
-About
-</div>
-
-<h1>
-Dr. Prashant Gupta
-</h1>
-
-<p>
-
-Assistant Professor of Accounting and Finance at the School of Management,
-Mahindra University, Hyderabad, with interests spanning teaching,
-research, academic leadership, and student development.
-
-</p>
-
-</div>
-
-</div>
-
-</header>
-
 
 <!-- =========================
-     PROFESSIONAL PROFILE
+     HERO
 ========================= -->
 
-<section class="profile-section">
+<section class="hero">
 
-<div class="container">
+  <div class="hero-inner">
 
-<div class="profile-layout">
+    <div class="eyebrow">
+      About
+    </div>
 
+    <h1>
+      Academic Profile
+    </h1>
 
-<div class="profile-card">
+    <p>
+      An academic journey shaped by teaching, research, student
+      development and engagement with institutions across India.
+    </p>
 
-<div class="profile-card-inner">
-
-<div class="profile-card-icon">
-<i class="fa-solid fa-user-tie"></i>
-</div>
-
-<h3>
-Professional Profile
-</h3>
-
-<p>
-Accounting & Finance · Research · Teaching · Academic Leadership
-</p>
-
-</div>
-
-</div>
-
-
-<div class="profile-text">
-
-<p>
-
-Dr. Prashant Gupta is an Assistant Professor of Accounting and Finance
-at the School of Management, Mahindra University, Hyderabad. He holds
-a Ph.D. in Finance from IIT Delhi and has over a decade of experience
-spanning teaching, academic administration, research, and student
-development.
-
-</p>
-
-<p>
-
-His academic work combines teaching and research in finance and
-accounting, with particular emphasis on corporate governance,
-banking and asset quality, and Central Bank Digital Currencies.
-
-</p>
-
-<p>
-
-Beyond the classroom, he contributes to institutional responsibilities,
-student development, academic quality initiatives, and well-being
-programmes.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
+
 <!-- =========================
-     RESEARCH
+     PROFILE
 ========================= -->
 
-<section class="research-section">
+<section class="section">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-heading">
+    <div class="section-heading">
 
-<div class="eyebrow">
-Research
-</div>
+      <div class="small-title">
+        Profile
+      </div>
 
-<h2>
-Areas of Inquiry
-</h2>
+      <h2>
+        About Dr. Prashant Gupta
+      </h2>
 
-<p>
-
-His research focuses on questions related to governance, banking,
-asset quality, and emerging forms of digital money.
-
-</p>
-
-</div>
+    </div>
 
 
-<div class="research-box">
+    <div class="profile-grid">
 
 
-<div class="research-card">
+      <div class="profile-text">
 
-<div class="research-icon">
+        <p>
+          I am an Assistant Professor at the School of Management,
+          Mahindra University, Hyderabad, with a Ph.D. in Finance from
+          IIT Delhi.
+        </p>
 
-<i class="fa-solid fa-building-columns"></i>
+        <p>
+          My research interests include corporate governance, banking
+          and asset quality, Central Bank Digital Currencies and
+          emerging areas of digital finance.
+        </p>
 
-</div>
+        <p>
+          My academic interests are closely connected with my teaching,
+          where I focus on making finance and accounting concepts
+          practical, structured and relevant to real-world business
+          situations.
+        </p>
 
-<h3>
-Corporate Governance
-</h3>
-
-<p>
-
-Research examining governance structures, legal frameworks,
-and institutional characteristics and their relationship with
-corporate and banking outcomes.
-
-</p>
-
-</div>
-
-
-<div class="research-card">
-
-<div class="research-icon">
-
-<i class="fa-solid fa-chart-line"></i>
-
-</div>
-
-<h3>
-Banking & Asset Quality
-</h3>
-
-<p>
-
-Research focused on bank asset quality, non-performing assets,
-corporate governance, and differences across banking institutions.
-
-</p>
-
-</div>
+      </div>
 
 
-<div class="research-card">
+      <div class="profile-highlight">
 
-<div class="research-icon">
+        <i class="fa-solid fa-graduation-cap"></i>
 
-<i class="fa-solid fa-coins"></i>
+        <h3>
+          Research. Teaching. Development.
+        </h3>
 
-</div>
+        <p>
+          My academic work combines research in finance with classroom
+          teaching and sustained engagement in student development and
+          institutional activities.
+        </p>
 
-<h3>
-Central Bank Digital Currencies
-</h3>
-
-<p>
-
-Research exploring the evolving CBDC literature and its
-implications for financial systems and economies.
-
-</p>
-
-</div>
+      </div>
 
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
 
+
 <!-- =========================
-     ACADEMIC EXPERIENCE
+     ACADEMIC JOURNEY
 ========================= -->
 
-<section class="experience-section">
+<section class="section ivory">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-heading">
+    <div class="section-heading">
 
-<div class="eyebrow">
-Academic Journey
-</div>
+      <div class="small-title">
+        Academic Career
+      </div>
 
-<h2>
-Academic Experience
-</h2>
+      <h2>
+        Academic Journey
+      </h2>
 
-<p>
+      <p>
+        My academic and professional experience spans teaching,
+        research and academic support across several institutions.
+      </p>
 
-A career combining teaching, research, academic administration,
-and institutional engagement.
-
-</p>
-
-</div>
+    </div>
 
 
-<div class="timeline">
+    <div class="journey-grid">
 
 
-<div class="timeline-item">
+      <!-- MAHINDRA UNIVERSITY -->
 
-<div class="timeline-dot"></div>
+      <div class="journey-card">
 
-<h3>
-Mahindra University
-</h3>
+        <div class="journey-logo">
 
-<div class="period">
-Assistant Professor · July 2022 – Present
-</div>
+          <img src="som-logo.jpg"
+               alt="Mahindra University School of Management">
 
-<p>
+        </div>
 
-Teaching, research, academic administration, student development,
-and institutional responsibilities within the School of Management.
+        <div class="journey-content">
 
-</p>
+          <h3>
+            Mahindra University
+          </h3>
 
-</div>
+          <div class="journey-role">
+            Assistant Professor
+          </div>
 
+          <div class="journey-period">
+            July 2022 – Present
+          </div>
 
-<div class="timeline-item">
+          <ul>
 
-<div class="timeline-dot"></div>
+            <li>
+              School of Management, Hyderabad
+            </li>
 
-<h3>
-NALSAR University of Law
-</h3>
+            <li>
+              Teaching Accounting and Finance
+            </li>
 
-<div class="period">
-Visiting Professor
-</div>
+            <li>
+              Research in corporate governance, banking and digital finance
+            </li>
 
-<p>
+            <li>
+              Academic and institutional responsibilities
+            </li>
 
-Teaching finance-related courses including Advanced Financial
-Management and Cost & Management Accounting.
+          </ul>
 
-</p>
+        </div>
 
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<h3>
-IIT Delhi
-</h3>
-
-<div class="period">
-Teaching Assistant · July 2017 – June 2022
-</div>
-
-<p>
-
-Teaching and academic support during doctoral studies in Finance.
-
-</p>
-
-</div>
+      </div>
 
 
-<div class="timeline-item">
 
-<div class="timeline-dot"></div>
+      <!-- NALSAR -->
 
-<h3>
-Earlier Academic & Professional Experience
-</h3>
+      <div class="journey-card">
 
-<div class="period">
-Multiple Academic & Professional Roles
-</div>
+        <div class="journey-logo">
 
-<p>
+          <img src="nalsar-logo.jpg"
+               alt="NALSAR University of Law">
 
-Experience across academic and professional institutions including
-the Indian School of Business, PSIT Kanpur, PIBM Pune, and the
-Australian Council for Educational Research.
+        </div>
 
-</p>
+        <div class="journey-content">
 
-</div>
+          <h3>
+            NALSAR University of Law
+          </h3>
+
+          <div class="journey-role">
+            Visiting Professor
+          </div>
+
+          <div class="journey-period">
+            Hyderabad
+          </div>
+
+          <ul>
+
+            <li>
+              Taught Advanced Financial Management
+            </li>
+
+            <li>
+              Taught Cost & Management Accounting
+            </li>
+
+            <li>
+              Engaged in postgraduate and integrated programme teaching
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
 
 
-</div>
 
-</div>
+      <!-- IIT DELHI -->
+
+      <div class="journey-card">
+
+        <div class="journey-logo">
+
+          <img src="iitd-dms-logo.png"
+               alt="IIT Delhi Department of Management Studies">
+
+        </div>
+
+        <div class="journey-content">
+
+          <h3>
+            IIT Delhi
+          </h3>
+
+          <div class="journey-role">
+            Teaching Assistant
+          </div>
+
+          <div class="journey-period">
+            July 2017 – June 2022
+          </div>
+
+          <ul>
+
+            <li>
+              Department of Management Studies
+            </li>
+
+            <li>
+              Teaching and academic support during doctoral studies
+            </li>
+
+            <li>
+              Ph.D. in Finance
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ISB -->
+
+      <div class="journey-card">
+
+        <div class="journey-logo">
+
+          <img src="isb-logo.jpg"
+               alt="Indian School of Business">
+
+        </div>
+
+        <div class="journey-content">
+
+          <h3>
+            Indian School of Business
+          </h3>
+
+          <div class="journey-role">
+            Academic Associate
+          </div>
+
+          <div class="journey-period">
+            Hyderabad
+          </div>
+
+          <ul>
+
+            <li>
+              Academic and research experience
+            </li>
+
+            <li>
+              Supported academic and research activities
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PSIT -->
+
+      <div class="journey-card">
+
+        <div class="journey-logo">
+
+          <img src="psit-logo.png"
+               alt="PSIT">
+
+        </div>
+
+        <div class="journey-content">
+
+          <h3>
+            PSIT
+          </h3>
+
+          <div class="journey-role">
+            Assistant Professor
+          </div>
+
+          <div class="journey-period">
+            Kanpur
+          </div>
+
+          <ul>
+
+            <li>
+              Teaching finance and management-related courses
+            </li>
+
+            <li>
+              Academic and student-related responsibilities
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PIBM -->
+
+      <div class="journey-card">
+
+        <div class="journey-logo">
+
+          <img src="pibm-logo.png"
+               alt="PIBM">
+
+        </div>
+
+        <div class="journey-content">
+
+          <h3>
+            PIBM
+          </h3>
+
+          <div class="journey-role">
+            Assistant Professor & Batch In-Charge
+          </div>
+
+          <div class="journey-period">
+            Pune
+          </div>
+
+          <ul>
+
+            <li>
+              Teaching finance and management courses
+            </li>
+
+            <li>
+              Academic coordination and batch management
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ACER -->
+
+      <div class="journey-card">
+
+        <div class="journey-logo">
+
+          <img src="acer-logo.jpg"
+               alt="Australian Council for Educational Research">
+
+        </div>
+
+        <div class="journey-content">
+
+          <h3>
+            Australian Council for Educational Research
+          </h3>
+
+          <div class="journey-role">
+            Consultant
+          </div>
+
+          <div class="journey-period">
+            Professional Experience
+          </div>
+
+          <ul>
+
+            <li>
+              Educational research and consulting experience
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
 
 </section>
 
 
+
 <!-- =========================
-     TEACHING
+     EDUCATION
 ========================= -->
 
-<section class="teaching-section">
+<section class="section">
 
-<div class="container">
+  <div class="container">
 
-<div class="teaching-layout">
+    <div class="section-heading">
 
+      <div class="small-title">
+        Academic Background
+      </div>
 
-<div>
+      <h2>
+        Education
+      </h2>
 
-<div class="section-heading">
-
-<div class="eyebrow">
-Teaching
-</div>
-
-<h2>
-Practice-oriented learning
-</h2>
-
-</div>
-
-<p class="teaching-text">
-
-Teaching is centred on conceptual clarity, practical application,
-and connecting financial concepts with real-world business
-decision-making.
-
-</p>
-
-<p class="teaching-text">
-
-The emphasis is on helping students understand not only financial
-concepts, but also how those concepts are applied in practice.
-
-</p>
-
-</div>
+    </div>
 
 
-<div>
-
-<div class="course-grid">
-
-<div class="course">
-Financial Accounting
-</div>
-
-<div class="course">
-Management Accounting
-</div>
-
-<div class="course">
-Financial Management
-</div>
-
-<div class="course">
-Advanced Financial Management
-</div>
-
-<div class="course">
-Cost & Management Accounting
-</div>
-
-<div class="course">
-Enterprise Risk Management
-</div>
-
-<div class="course">
-Financial Modelling
-</div>
-
-</div>
-
-</div>
+    <div class="education-grid">
 
 
-</div>
+      <!-- IIT DELHI -->
 
-</div>
+      <div class="education-card">
+
+        <div class="education-logo">
+
+          <img src="iitd-dms-logo.png"
+               alt="IIT Delhi Department of Management Studies">
+
+        </div>
+
+        <h3>
+          IIT Delhi
+        </h3>
+
+        <p>
+          Ph.D. in Finance
+        </p>
+
+      </div>
+
+
+
+      <!-- BIT MESRA -->
+
+      <div class="education-card">
+
+        <div class="education-logo">
+
+          <img src="bit-mesra-logo.png"
+               alt="BIT Mesra">
+
+        </div>
+
+        <h3>
+          BIT Mesra
+        </h3>
+
+        <p>
+          MBA – Finance
+        </p>
+
+      </div>
+
+
+
+      <!-- XAVIER'S -->
+
+      <div class="education-card">
+
+        <div class="education-logo">
+
+          <img src="xaviers-logo.jpg"
+               alt="St. Xavier's College Ranchi">
+
+        </div>
+
+        <h3>
+          St. Xavier's College, Ranchi
+        </h3>
+
+        <p>
+          B.Com. – Accounts Hons.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
 
 </section>
 
 
+
 <!-- =========================
-     LEADERSHIP
+     RESEARCH INTERESTS
 ========================= -->
 
-<section class="leadership-section">
+<section class="section ivory">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-heading">
+    <div class="section-heading">
 
-<div class="eyebrow">
-Leadership & Engagement
-</div>
+      <div class="small-title">
+        Research
+      </div>
 
-<h2>
-Beyond teaching and research
-</h2>
+      <h2>
+        Research Interests
+      </h2>
 
-<p>
+      <p>
+        My research interests span established finance themes and
+        emerging developments in digital finance.
+      </p>
 
-Academic responsibilities extend into institutional leadership,
-student development, quality initiatives, and community engagement.
-
-</p>
-
-</div>
+    </div>
 
 
-<div class="leadership-grid">
+    <div class="interest-grid">
 
 
-<div class="leadership-card">
+      <div class="interest-card">
 
-<div class="leadership-icon">
-<i class="fa-solid fa-landmark"></i>
-</div>
+        <div class="interest-icon">
+          <i class="fa-solid fa-building-columns"></i>
+        </div>
 
-<h3>
-Academic Leadership
-</h3>
+        <h3>
+          Corporate Governance & Banking
+        </h3>
 
-<p>
+        <p>
+          Corporate governance, banking asset quality, non-performing
+          assets and institutional frameworks.
+        </p>
 
-Contributing to ranking and accreditation, quality assurance,
-research, Ph.D. selection, and institutional committees.
-
-</p>
-
-</div>
+      </div>
 
 
-<div class="leadership-card">
+      <div class="interest-card">
 
-<div class="leadership-icon">
-<i class="fa-solid fa-people-group"></i>
-</div>
+        <div class="interest-icon">
+          <i class="fa-solid fa-coins"></i>
+        </div>
 
-<h3>
-NCC & Student Development
-</h3>
+        <h3>
+          Central Bank Digital Currencies
+        </h3>
 
-<p>
+        <p>
+          CBDCs, digital finance, adoption and comparative perspectives
+          across economies.
+        </p>
 
-Supporting student leadership, discipline, development, and
-institutional activities through NCC and student-facing
-responsibilities.
-
-</p>
-
-</div>
+      </div>
 
 
-<div class="leadership-card">
+      <div class="interest-card">
 
-<div class="leadership-icon">
-<i class="fa-solid fa-award"></i>
-</div>
+        <div class="interest-icon">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
 
-<h3>
-Institutional Engagement
-</h3>
+        <h3>
+          FinTech & Digital Payments
+        </h3>
 
-<p>
+        <p>
+          Financial inclusion, FinTech, mobile payments, security,
+          privacy and emerging financial technologies.
+        </p>
 
-Contributing to accreditation initiatives, academic quality,
-research activities, and broader institutional development.
-
-</p>
-
-</div>
+      </div>
 
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
+
+
+
+<!-- =========================
+     ACADEMIC & INSTITUTIONAL ENGAGEMENT
+========================= -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="small-title">
+        Beyond Teaching
+      </div>
+
+      <h2>
+        Academic & Institutional Engagement
+      </h2>
+
+    </div>
+
+
+    <div class="engagement-grid">
+
+
+      <div class="engagement-card">
+
+        <i class="fa-solid fa-users"></i>
+
+        <h3>
+          Student Development
+        </h3>
+
+        <p>
+          Engagement with students through mentoring, academic
+          activities and institutional initiatives.
+        </p>
+
+      </div>
+
+
+      <div class="engagement-card">
+
+        <i class="fa-solid fa-landmark"></i>
+
+        <h3>
+          Institutional Engagement
+        </h3>
+
+        <p>
+          Participation in academic, quality, accreditation, research
+          and university-level institutional activities.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
 
 
 <!-- =========================
      ART OF LIVING
 ========================= -->
 
-<section class="aol-section">
+<section class="section ivory">
 
-<div class="container">
+  <div class="container">
 
-<div class="aol-layout">
+    <div class="section-heading">
 
+      <div class="small-title">
+        Training & Social Engagement
+      </div>
 
-<div>
+      <h2>
+        Art of Living
+      </h2>
 
-<div class="aol-number">
-15+
-</div>
-
-<div class="aol-number-label">
-Years with Art of Living
-</div>
-
-</div>
+    </div>
 
 
-<div class="aol-content">
-
-<div class="eyebrow">
-Art of Living
-</div>
-
-<h2>
-Leadership, well-being & service
-</h2>
-
-<p>
-
-Alongside his academic work, Dr. Gupta has been associated with
-the Art of Living and involved in leadership, youth development,
-stress-management, and well-being programmes.
-
-</p>
-
-<p>
-
-These initiatives have included programmes for students and youth
-across India, as well as stress-management and rehabilitation
-programmes at Tihar and Hotwar Central Jails.
-
-</p>
-
-</div>
+    <div class="aol-card">
 
 
-</div>
+      <div class="aol-logo">
 
-</div>
+        <img src="aol-logo.png"
+             alt="Art of Living">
+
+      </div>
+
+
+      <div class="aol-content">
+
+        <h3>
+          Art of Living
+        </h3>
+
+        <div class="role">
+          Teacher
+        </div>
+
+        <p>
+          Conducting programmes and workshops focused on student
+          development, stress management, well-being and human values
+          across educational institutions and other settings.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
 
 </section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+  <h2>
+    Explore My Research
+  </h2>
+
+  <p>
+    Explore my research interests, publications, working papers and
+    conference presentations.
+  </p>
+
+  <a href="research.html"
+     class="cta-button">
+
+    View Research
+    <i class="fa-solid fa-arrow-right"></i>
+
+  </a>
+
+</section>
+
 
 
 <!-- =========================
@@ -1363,11 +1741,47 @@ programmes at Tihar and Hotwar Central Jails.
 
 <footer>
 
-© Dr. Prashant Gupta · Academic Website
+  <div class="footer-container">
+
+
+    <div>
+
+      <div class="footer-name">
+        Dr. Prashant Gupta
+      </div>
+
+      <div>
+        Assistant Professor
+      </div>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="research.html">
+        Research
+      </a>
+
+      <a href="publications.html">
+        Publications
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </div>
+
+
+  </div>
 
 </footer>
 
 
 </body>
-
 </html>
