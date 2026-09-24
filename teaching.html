@@ -6,25 +6,28 @@
 
   <title>Teaching | Dr. Prashant Gupta</title>
 
+  <meta name="description" content="Teaching profile of Dr. Prashant Gupta, Assistant Professor at Mahindra University, covering finance, accounting, financial management and financial modelling.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
+
     :root {
       --navy: #0b1f33;
-      --navy-light: #16344f;
       --gold: #c9a227;
-      --gold-light: #e1c45a;
-      --ivory: #f8f6f0;
+      --gold-light: #e1c766;
+      --ivory: #f7f4ed;
       --white: #ffffff;
-      --text: #243447;
-      --muted: #687789;
-      --border: #e3e7eb;
-      --shadow: 0 15px 40px rgba(11, 31, 51, 0.08);
+      --text: #263746;
+      --muted: #667685;
+      --border: #e5e0d6;
+      --shadow: 0 18px 45px rgba(11,31,51,0.09);
     }
 
     * {
@@ -40,7 +43,7 @@
     body {
       font-family: "DM Sans", sans-serif;
       color: var(--text);
-      background: var(--white);
+      background: white;
       line-height: 1.7;
     }
 
@@ -55,45 +58,38 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(11, 31, 51, 0.97);
+      background: rgba(11,31,51,0.97);
       backdrop-filter: blur(10px);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav-container {
-      max-width: 1200px;
+      max-width: 1180px;
       margin: auto;
-      padding: 0 25px;
-      min-height: 72px;
+      padding: 18px 28px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .brand {
-      color: var(--white);
+      color: white;
       font-family: "Playfair Display", serif;
       font-size: 1.25rem;
       font-weight: 600;
-      letter-spacing: 0.2px;
-    }
-
-    .brand span {
-      color: var(--gold-light);
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
+      gap: 25px;
       align-items: center;
-      gap: 28px;
-      list-style: none;
+      font-size: 0.9rem;
     }
 
     .nav-links a {
-      color: #dfe7ee;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: 0.25s ease;
+      color: rgba(255,255,255,0.82);
+      transition: 0.25s;
     }
 
     .nav-links a:hover,
@@ -101,117 +97,109 @@
       color: var(--gold-light);
     }
 
-    .cv-btn {
-      padding: 9px 17px;
+    .cv-button {
+      padding: 8px 16px;
       border: 1px solid var(--gold);
       color: var(--gold-light) !important;
       border-radius: 4px;
-    }
-
-    .cv-btn:hover {
-      background: var(--gold);
-      color: var(--navy) !important;
     }
 
     /* HERO */
 
     .hero {
       background:
-        linear-gradient(135deg, rgba(11,31,51,0.98), rgba(22,52,79,0.96));
-      color: var(--white);
-      padding: 95px 25px 90px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 450px;
-      height: 450px;
-      border: 1px solid rgba(201,162,39,0.18);
-      border-radius: 50%;
-      right: -150px;
-      top: -160px;
+        radial-gradient(circle at 80% 20%, rgba(201,162,39,0.13), transparent 30%),
+        var(--navy);
+      color: white;
+      padding: 105px 25px 100px;
     }
 
     .hero-inner {
-      max-width: 1100px;
+      max-width: 900px;
       margin: auto;
-      position: relative;
-      z-index: 2;
+      text-align: center;
     }
 
     .eyebrow {
       color: var(--gold-light);
-      font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 3px;
+      font-size: 0.78rem;
       font-weight: 700;
       margin-bottom: 18px;
     }
 
     .hero h1 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(2.8rem, 6vw, 4.6rem);
-      line-height: 1.1;
-      max-width: 800px;
-      margin-bottom: 25px;
+      font-size: clamp(3.2rem, 7vw, 5.2rem);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
     }
 
     .hero p {
-      max-width: 700px;
-      color: #d8e0e8;
+      max-width: 720px;
+      margin: auto;
+      color: rgba(255,255,255,0.75);
       font-size: 1.08rem;
     }
 
     /* GENERAL */
 
     .section {
-      padding: 85px 25px;
+      padding: 90px 25px;
     }
 
-    .section.ivory {
+    .section.alt {
       background: var(--ivory);
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: auto;
     }
 
-    .section-heading {
-      margin-bottom: 45px;
+    .heading {
+      max-width: 760px;
+      margin-bottom: 48px;
     }
 
-    .section-heading .small-title {
+    .heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .label {
       color: var(--gold);
       text-transform: uppercase;
       letter-spacing: 2.5px;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
 
-    .section-heading h2 {
+    h2 {
       font-family: "Playfair Display", serif;
       color: var(--navy);
       font-size: clamp(2rem, 4vw, 3rem);
       line-height: 1.2;
+      margin-bottom: 15px;
     }
 
-    .section-heading p {
-      margin-top: 14px;
-      max-width: 760px;
+    .heading p {
       color: var(--muted);
     }
 
-    /* PHILOSOPHY */
+    /* TEACHING PHILOSOPHY */
 
     .philosophy {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 55px;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
       align-items: center;
     }
 
@@ -221,22 +209,15 @@
     }
 
     .philosophy-quote {
-      background: var(--navy);
-      color: var(--white);
-      padding: 40px;
       border-left: 4px solid var(--gold);
-      box-shadow: var(--shadow);
-    }
-
-    .philosophy-quote i {
-      color: var(--gold-light);
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+      padding: 30px 35px;
+      background: var(--ivory);
     }
 
     .philosophy-quote p {
       font-family: "Playfair Display", serif;
-      font-size: 1.45rem;
+      color: var(--navy);
+      font-size: 1.55rem;
       line-height: 1.5;
     }
 
@@ -245,37 +226,39 @@
     .course-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
 
     .course-card {
-      background: var(--white);
+      background: white;
       border: 1px solid var(--border);
-      padding: 27px;
-      transition: 0.25s ease;
+      border-radius: 9px;
+      padding: 28px;
+      transition: 0.3s ease;
     }
 
     .course-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow);
-      border-color: rgba(201,162,39,0.45);
     }
 
     .course-icon {
-      width: 42px;
-      height: 42px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--ivory);
+      color: var(--gold);
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #f3eee0;
-      color: var(--gold);
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .course-card h3 {
       color: var(--navy);
-      font-size: 1rem;
-      margin-bottom: 6px;
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
     }
 
     .course-card p {
@@ -283,36 +266,37 @@
       font-size: 0.88rem;
     }
 
-    /* PRACTICE BASED */
+    /* LEARNING APPROACH */
 
-    .practice-grid {
+    .approach-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
     }
 
-    .practice-card {
+    .approach-card {
       padding: 32px;
-      background: var(--white);
       border-top: 3px solid var(--gold);
-      box-shadow: 0 8px 30px rgba(11,31,51,0.06);
+      background: white;
+      border: 1px solid var(--border);
     }
 
-    .practice-card i {
+    .approach-card i {
       color: var(--gold);
-      font-size: 1.5rem;
-      margin-bottom: 17px;
+      font-size: 1.35rem;
+      margin-bottom: 18px;
     }
 
-    .practice-card h3 {
+    .approach-card h3 {
+      font-family: "Playfair Display", serif;
       color: var(--navy);
+      font-size: 1.3rem;
       margin-bottom: 10px;
-      font-size: 1.1rem;
     }
 
-    .practice-card p {
+    .approach-card p {
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
     }
 
     /* EXPERIENCE */
@@ -320,108 +304,137 @@
     .experience-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
+      gap: 20px;
     }
 
     .experience-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      padding: 30px;
       display: flex;
-      gap: 25px;
-      align-items: flex-start;
-      transition: 0.25s ease;
+      gap: 22px;
+      align-items: center;
+      padding: 28px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      transition: 0.3s ease;
     }
 
     .experience-card:hover {
-      transform: translateY(-4px);
       box-shadow: var(--shadow);
+      transform: translateY(-4px);
     }
 
     .logo-box {
-      width: 105px;
-      height: 105px;
-      min-width: 105px;
-      background: var(--white);
+      width: 85px;
+      height: 85px;
+      flex-shrink: 0;
+      background: white;
       border: 1px solid var(--border);
+      border-radius: 7px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 12px;
+      padding: 9px;
     }
 
     .logo-box img {
       max-width: 100%;
-      max-height: 78px;
+      max-height: 65px;
       object-fit: contain;
     }
 
-    .experience-content {
-      flex: 1;
-    }
-
-    .experience-content h3 {
+    .experience-card h3 {
+      font-family: "Playfair Display", serif;
       color: var(--navy);
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       margin-bottom: 5px;
     }
 
-    .experience-content .role {
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 9px;
-    }
-
-    .experience-content p {
+    .experience-card p {
       color: var(--muted);
       font-size: 0.88rem;
     }
 
+    /* OTHER ACADEMIC EXPERIENCE */
+
+    .other-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .other-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .other-card .logo-box {
+      width: 70px;
+      height: 70px;
+    }
+
+    .other-card .logo-box img {
+      max-height: 52px;
+    }
+
+    .other-card h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+
+    .other-card p {
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 3px;
+    }
+
     /* TRAINER */
 
-    .trainer-card {
+    .trainer {
       background: var(--navy);
-      color: var(--white);
-      padding: 45px;
-      display: grid;
-      grid-template-columns: 130px 1fr;
-      gap: 35px;
+      color: white;
+      border-radius: 14px;
+      padding: 55px;
+      display: flex;
       align-items: center;
-      box-shadow: var(--shadow);
+      gap: 35px;
     }
 
     .trainer-logo {
-      width: 120px;
-      height: 120px;
-      background: var(--white);
+      width: 105px;
+      height: 105px;
+      background: white;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 15px;
+      padding: 12px;
+      flex-shrink: 0;
     }
 
     .trainer-logo img {
       max-width: 100%;
-      max-height: 90px;
+      max-height: 80px;
       object-fit: contain;
     }
 
-    .trainer-content h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 1.9rem;
-      margin-bottom: 5px;
-    }
-
-    .trainer-content .role {
+    .trainer .label {
       color: var(--gold-light);
-      font-weight: 700;
-      margin-bottom: 12px;
     }
 
-    .trainer-content p {
-      color: #d4dde5;
-      max-width: 750px;
+    .trainer h2 {
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .trainer p {
+      color: rgba(255,255,255,0.7);
     }
 
     /* EDUCATION */
@@ -429,98 +442,56 @@
     .education-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      gap: 20px;
     }
 
     .education-card {
-      background: var(--white);
+      background: white;
       border: 1px solid var(--border);
-      padding: 32px;
+      border-radius: 9px;
+      padding: 30px;
       text-align: center;
-      transition: 0.25s ease;
     }
 
-    .education-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .education-logo {
-      width: 120px;
-      height: 100px;
-      margin: 0 auto 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .education-logo img {
-      max-width: 100%;
-      max-height: 90px;
-      object-fit: contain;
+    .education-card .logo-box {
+      margin: 0 auto 20px;
+      width: 100px;
+      height: 80px;
     }
 
     .education-card h3 {
+      font-family: "Playfair Display", serif;
       color: var(--navy);
-      font-size: 1.05rem;
-      margin-bottom: 8px;
+      font-size: 1.15rem;
+      margin-bottom: 5px;
     }
 
     .education-card p {
-      color: var(--gold);
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    /* BEYOND CLASSROOM */
-
-    .beyond {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
-
-    .beyond-card {
-      padding: 35px;
-      background: var(--ivory);
-      border-left: 4px solid var(--gold);
-    }
-
-    .beyond-card i {
-      color: var(--gold);
-      font-size: 1.4rem;
-      margin-bottom: 15px;
-    }
-
-    .beyond-card h3 {
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-
-    .beyond-card p {
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.85rem;
     }
 
     /* CTA */
 
     .cta {
-      background: var(--navy);
-      padding: 75px 25px;
       text-align: center;
-      color: var(--white);
+      padding: 90px 25px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .cta .label {
+      color: var(--gold-light);
     }
 
     .cta h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 2.5rem;
-      margin-bottom: 15px;
+      color: white;
     }
 
     .cta p {
-      color: #d4dde5;
       max-width: 650px;
-      margin: 0 auto 28px;
+      margin: 0 auto 30px;
+      color: rgba(255,255,255,0.7);
     }
 
     .cta-button {
@@ -528,82 +499,55 @@
       background: var(--gold);
       color: var(--navy);
       padding: 13px 25px;
+      border-radius: 4px;
       font-weight: 700;
-      border-radius: 3px;
-      transition: 0.25s ease;
-    }
-
-    .cta-button:hover {
-      background: var(--gold-light);
-      transform: translateY(-2px);
     }
 
     /* FOOTER */
 
     footer {
-      background: #071521;
-      color: #b9c5cf;
+      background: #071725;
+      color: rgba(255,255,255,0.55);
       padding: 35px 25px;
-    }
-
-    .footer-container {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 25px;
-      align-items: center;
-    }
-
-    .footer-name {
-      font-family: "Playfair Display", serif;
-      color: var(--white);
-      font-size: 1.1rem;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 18px;
+      text-align: center;
       font-size: 0.85rem;
     }
 
-    .footer-links a:hover {
-      color: var(--gold-light);
+    footer strong {
+      color: white;
     }
 
     /* RESPONSIVE */
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
 
       .nav-links {
-        gap: 15px;
+        gap: 14px;
+        font-size: 0.8rem;
       }
 
       .philosophy {
         grid-template-columns: 1fr;
+        gap: 35px;
       }
 
       .course-grid,
-      .practice-grid,
+      .approach-grid,
       .education-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .experience-grid {
+      .other-grid {
         grid-template-columns: 1fr;
       }
 
-      .beyond {
-        grid-template-columns: 1fr;
-      }
     }
 
     @media (max-width: 700px) {
 
       .nav-container {
         flex-direction: column;
-        padding: 15px 20px;
-        gap: 12px;
+        gap: 14px;
       }
 
       .nav-links {
@@ -613,7 +557,11 @@
       }
 
       .hero {
-        padding: 70px 20px;
+        padding: 75px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
       }
 
       .section {
@@ -621,193 +569,268 @@
       }
 
       .course-grid,
-      .practice-grid,
-      .education-grid {
+      .approach-grid,
+      .education-grid,
+      .experience-grid {
         grid-template-columns: 1fr;
       }
 
       .experience-card {
-        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .trainer-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .trainer-logo {
-        margin: auto;
-      }
-
-      .footer-container {
+      .trainer {
         flex-direction: column;
         text-align: center;
+        padding: 40px 25px;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
+
 <!-- NAVIGATION -->
+
 <nav>
+
   <div class="nav-container">
 
     <a href="index.html" class="brand">
-      Dr. Prashant <span>Gupta</span>
+      Dr. Prashant Gupta
     </a>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="teaching.html" class="active">Teaching</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="activities.html">Activities</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="Prashant%20Kumar%20Gupta_CV.pdf" class="cv-btn">CV</a></li>
-    </ul>
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html" class="active">Teaching</a>
+      <a href="publications.html">Publications</a>
+      <a href="activities.html">Activities</a>
+      <a href="contact.html">Contact</a>
+
+      <a href="Prashant%20Kumar%20Gupta_CV.pdf" class="cv-button">
+        CV
+      </a>
+
+    </div>
 
   </div>
+
 </nav>
 
 
 <!-- HERO -->
-<section class="hero">
+
+<header class="hero">
+
   <div class="hero-inner">
 
-    <div class="eyebrow">Teaching & Academic Experience</div>
+    <div class="eyebrow">
+      Teaching
+    </div>
 
-    <h1>Teaching Finance.<br>Building Understanding.</h1>
+    <h1>
+      Teaching Finance. <span>Building Understanding.</span>
+    </h1>
 
     <p>
-      My teaching focuses on making finance and accounting concepts
-      practical, structured and relevant to real-world business decisions.
+      I approach finance and accounting as subjects to be understood,
+      practised and applied—not simply memorised.
     </p>
 
   </div>
-</section>
+
+</header>
 
 
 <!-- TEACHING PHILOSOPHY -->
-<section class="section">
-  <div class="container">
 
-    <div class="section-heading">
-      <div class="small-title">Teaching Philosophy</div>
-      <h2>Learning by Understanding, Applying and Doing</h2>
-    </div>
+<section class="section">
+
+  <div class="container">
 
     <div class="philosophy">
 
       <div class="philosophy-text">
 
+        <div class="label">
+          Teaching Philosophy
+        </div>
+
+        <h2>
+          From Concepts to Application
+        </h2>
+
         <p>
-          I believe that finance and accounting are best understood when
-          students can connect classroom concepts with actual business
-          situations.
+          My teaching focuses on helping students develop a clear
+          conceptual understanding of finance and accounting while
+          connecting classroom concepts with practical business situations.
         </p>
 
         <p>
-          My teaching therefore combines conceptual clarity with
-          practical application, real-world examples, financial analysis,
-          Excel-based exercises and case-based learning.
-        </p>
-
-        <p>
-          The objective is not simply to help students learn formulas,
-          but to develop their ability to interpret financial information
-          and use it to make informed managerial decisions.
+          I place particular emphasis on practice, structured problem
+          solving and the ability to interpret financial information
+          rather than simply arriving at an answer.
         </p>
 
       </div>
 
+
       <div class="philosophy-quote">
-        <i class="fa-solid fa-quote-left"></i>
 
         <p>
-          “Finance becomes meaningful when students can see how
-          concepts work beyond the classroom.”
+          “The objective is not just to teach students a formula,
+          but to help them understand when, why and how to use it.”
         </p>
+
       </div>
 
     </div>
 
   </div>
+
 </section>
 
 
 <!-- COURSES -->
-<section class="section ivory">
+
+<section class="section alt">
 
   <div class="container">
 
-    <div class="section-heading">
-      <div class="small-title">Courses</div>
-      <h2>Courses Taught</h2>
+    <div class="heading center">
+
+      <div class="label">
+        Courses
+      </div>
+
+      <h2>
+        Areas I Teach
+      </h2>
+
       <p>
-        Courses taught across undergraduate, postgraduate and executive
-        learning environments.
+        Courses taught across undergraduate, postgraduate and management
+        education programmes.
       </p>
+
     </div>
+
 
     <div class="course-grid">
 
+
       <div class="course-card">
+
         <div class="course-icon">
           <i class="fa-solid fa-calculator"></i>
         </div>
-        <h3>Financial Accounting</h3>
-        <p>Understanding financial statements and accounting fundamentals.</p>
+
+        <h3>
+          Financial Accounting
+        </h3>
+
+        <p>
+          Understanding financial statements, accounting concepts and
+          the interpretation of financial information.
+        </p>
+
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">
-          <i class="fa-solid fa-chart-column"></i>
-        </div>
-        <h3>Management Accounting</h3>
-        <p>Using accounting information for managerial decision-making.</p>
-      </div>
 
       <div class="course-card">
-        <div class="course-icon">
-          <i class="fa-solid fa-coins"></i>
-        </div>
-        <h3>Financial Management</h3>
-        <p>Core principles of corporate financial decision-making.</p>
-      </div>
 
-      <div class="course-card">
-        <div class="course-icon">
-          <i class="fa-solid fa-chart-line"></i>
-        </div>
-        <h3>Advanced Financial Management</h3>
-        <p>Advanced applications of financial management concepts.</p>
-      </div>
-
-      <div class="course-card">
         <div class="course-icon">
           <i class="fa-solid fa-file-invoice-dollar"></i>
         </div>
-        <h3>Cost & Management Accounting</h3>
-        <p>Cost analysis and accounting information for management.</p>
+
+        <h3>
+          Management Accounting
+        </h3>
+
+        <p>
+          Applying accounting information to managerial planning,
+          analysis and decision-making.
+        </p>
+
       </div>
 
+
       <div class="course-card">
+
         <div class="course-icon">
-          <i class="fa-solid fa-shield-halved"></i>
+          <i class="fa-solid fa-chart-line"></i>
         </div>
-        <h3>Enterprise Risk Management</h3>
-        <p>Understanding and managing financial and enterprise risks.</p>
+
+        <h3>
+          Financial Management
+        </h3>
+
+        <p>
+          Core principles of financial decision-making and management
+          within organisations.
+        </p>
+
       </div>
 
+
       <div class="course-card">
+
+        <div class="course-icon">
+          <i class="fa-solid fa-coins"></i>
+        </div>
+
+        <h3>
+          Advanced Financial Management
+        </h3>
+
+        <p>
+          Advanced applications of financial management concepts in
+          business and managerial contexts.
+        </p>
+
+      </div>
+
+
+      <div class="course-card">
+
         <div class="course-icon">
           <i class="fa-solid fa-table-cells-large"></i>
         </div>
-        <h3>Financial Modelling</h3>
-        <p>Practical financial modelling using Excel and real-world data.</p>
+
+        <h3>
+          Financial Modelling
+        </h3>
+
+        <p>
+          Building practical financial models using Excel and structured
+          approaches to financial analysis.
+        </p>
+
       </div>
+
+
+      <div class="course-card">
+
+        <div class="course-icon">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+
+        <h3>
+          Cost & Management Accounting
+        </h3>
+
+        <p>
+          Cost concepts, managerial accounting tools and their
+          application to business decisions.
+        </p>
+
+      </div>
+
 
     </div>
 
@@ -816,48 +839,80 @@
 </section>
 
 
-<!-- PRACTICE BASED LEARNING -->
+<!-- LEARNING APPROACH -->
+
 <section class="section">
 
   <div class="container">
 
-    <div class="section-heading">
-      <div class="small-title">Classroom Approach</div>
-      <h2>Practice-Based Learning</h2>
+    <div class="heading">
+
+      <div class="label">
+        Classroom Approach
+      </div>
+
+      <h2>
+        How I Teach
+      </h2>
+
       <p>
-        My classroom approach emphasizes application and active
-        participation rather than passive learning.
+        My classroom approach is designed to move students from
+        understanding concepts to applying them independently.
       </p>
+
     </div>
 
-    <div class="practice-grid">
 
-      <div class="practice-card">
-        <i class="fa-solid fa-building"></i>
-        <h3>Real-World Examples</h3>
+    <div class="approach-grid">
+
+
+      <div class="approach-card">
+
+        <i class="fa-solid fa-lightbulb"></i>
+
+        <h3>
+          Concept First
+        </h3>
+
         <p>
-          Business situations and examples are used to connect
-          theoretical concepts with actual corporate decisions.
+          Concepts are introduced with emphasis on clarity, logic and
+          understanding before moving into application.
         </p>
+
       </div>
 
-      <div class="practice-card">
+
+      <div class="approach-card">
+
         <i class="fa-solid fa-laptop"></i>
-        <h3>Excel-Based Learning</h3>
+
+        <h3>
+          Practice-Based Learning
+        </h3>
+
         <p>
-          Students work with Excel to build financial models,
-          analyse data and understand financial relationships.
+          Students learn by working through problems, exercises and
+          practical financial analysis.
         </p>
+
       </div>
 
-      <div class="practice-card">
-        <i class="fa-solid fa-users"></i>
-        <h3>Collaborative Learning</h3>
+
+      <div class="approach-card">
+
+        <i class="fa-solid fa-briefcase"></i>
+
+        <h3>
+          Real-World Context
+        </h3>
+
         <p>
-          Team exercises and classroom discussions encourage
-          students to learn through collaboration and application.
+          Classroom discussions are connected to businesses, financial
+          statements and situations encountered in practice.
         </p>
+
       </div>
+
 
     </div>
 
@@ -867,87 +922,123 @@
 
 
 <!-- TEACHING EXPERIENCE -->
-<section class="section ivory">
+
+<section class="section alt">
 
   <div class="container">
 
-    <div class="section-heading">
-      <div class="small-title">Academic Career</div>
-      <h2>Teaching Experience</h2>
+    <div class="heading">
+
+      <div class="label">
+        Teaching Experience
+      </div>
+
+      <h2>
+        Teaching Across Institutions
+      </h2>
+
+      <p>
+        Teaching experience across universities, management schools
+        and professional learning environments.
+      </p>
+
     </div>
+
 
     <div class="experience-grid">
 
+
       <!-- MAHINDRA -->
+
       <div class="experience-card">
 
         <div class="logo-box">
           <img src="som-logo.jpg" alt="Mahindra University School of Management">
         </div>
 
-        <div class="experience-content">
-          <h3>Mahindra University</h3>
-          <div class="role">Assistant Professor</div>
+        <div>
+
+          <h3>
+            Mahindra University
+          </h3>
+
           <p>
-            School of Management, Hyderabad
+            Assistant Professor
           </p>
+
         </div>
 
       </div>
 
 
       <!-- NALSAR -->
+
       <div class="experience-card">
 
         <div class="logo-box">
           <img src="nalsar-logo.jpg" alt="NALSAR University of Law">
         </div>
 
-        <div class="experience-content">
-          <h3>NALSAR University of Law</h3>
-          <div class="role">Visiting Professor</div>
+        <div>
+
+          <h3>
+            NALSAR University of Law
+          </h3>
+
           <p>
-            Teaching finance and accounting courses.
+            Visiting Professor
           </p>
+
         </div>
 
       </div>
 
 
       <!-- PIBM -->
+
       <div class="experience-card">
 
         <div class="logo-box">
           <img src="pibm-logo.png" alt="PIBM">
         </div>
 
-        <div class="experience-content">
-          <h3>PIBM</h3>
-          <div class="role">Assistant Professor & Batch In-Charge</div>
+        <div>
+
+          <h3>
+            PIBM
+          </h3>
+
           <p>
-            Academic teaching and student management responsibilities.
+            Assistant Professor &amp; Batch In-Charge
           </p>
+
         </div>
 
       </div>
 
 
       <!-- PSIT -->
+
       <div class="experience-card">
 
         <div class="logo-box">
           <img src="psit-logo.png" alt="PSIT">
         </div>
 
-        <div class="experience-content">
-          <h3>PSIT</h3>
-          <div class="role">Assistant Professor</div>
+        <div>
+
+          <h3>
+            PSIT
+          </h3>
+
           <p>
-            Teaching finance and management subjects.
+            Assistant Professor
           </p>
+
         </div>
 
       </div>
+
 
     </div>
 
@@ -957,69 +1048,95 @@
 
 
 <!-- OTHER ACADEMIC EXPERIENCE -->
+
 <section class="section">
 
   <div class="container">
 
-    <div class="section-heading">
-      <div class="small-title">Academic Experience</div>
-      <h2>Other Academic Experience</h2>
+    <div class="heading">
+
+      <div class="label">
+        Academic Experience
+      </div>
+
+      <h2>
+        Other Academic Roles
+      </h2>
+
     </div>
 
-    <div class="experience-grid">
+
+    <div class="other-grid">
+
 
       <!-- IIT DELHI -->
-      <div class="experience-card">
+
+      <div class="other-card">
 
         <div class="logo-box">
-          <img src="iitd-dms-logo.png" alt="IIT Delhi Department of Management Studies">
+          <img src="iitd-dms-logo.png" alt="IIT Delhi">
         </div>
 
-        <div class="experience-content">
-          <h3>IIT Delhi</h3>
-          <div class="role">Teaching Assistant</div>
+        <div>
+
+          <h3>
+            IIT Delhi
+          </h3>
+
           <p>
-            Academic teaching and research support during doctoral studies.
+            Teaching Assistant
           </p>
+
         </div>
 
       </div>
 
 
       <!-- ISB -->
-      <div class="experience-card">
+
+      <div class="other-card">
 
         <div class="logo-box">
           <img src="isb-logo.jpg" alt="Indian School of Business">
         </div>
 
-        <div class="experience-content">
-          <h3>Indian School of Business</h3>
-          <div class="role">Academic Associate</div>
+        <div>
+
+          <h3>
+            Indian School of Business
+          </h3>
+
           <p>
-            Academic and research experience at ISB, Hyderabad.
+            Academic Associate
           </p>
+
         </div>
 
       </div>
 
 
       <!-- ACER -->
-      <div class="experience-card">
+
+      <div class="other-card">
 
         <div class="logo-box">
           <img src="acer-logo.jpg" alt="Australian Council for Educational Research">
         </div>
 
-        <div class="experience-content">
-          <h3>Australian Council for Educational Research</h3>
-          <div class="role">Consultant</div>
+        <div>
+
+          <h3>
+            Australian Council for Educational Research
+          </h3>
+
           <p>
-            Professional experience in educational research and consulting.
+            Consultant
           </p>
+
         </div>
 
       </div>
+
 
     </div>
 
@@ -1029,33 +1146,32 @@
 
 
 <!-- TRAINER EXPERIENCE -->
-<section class="section ivory">
+
+<section class="section alt">
 
   <div class="container">
 
-    <div class="section-heading">
-      <div class="small-title">Training & Development</div>
-      <h2>Trainer Experience</h2>
-    </div>
-
-    <div class="trainer-card">
+    <div class="trainer">
 
       <div class="trainer-logo">
+
         <img src="aol-logo.png" alt="Art of Living">
+
       </div>
 
-      <div class="trainer-content">
 
-        <h3>Art of Living</h3>
+      <div>
 
-        <div class="role">
-          Teacher
+        <div class="label">
+          Trainer Experience
         </div>
 
+        <h2>
+          Art of Living
+        </h2>
+
         <p>
-          Conducting workshops and programmes focused on student
-          development, leadership, stress management and well-being
-          across educational institutions and other settings.
+          Teacher
         </p>
 
       </div>
@@ -1068,94 +1184,89 @@
 
 
 <!-- EDUCATION -->
+
 <section class="section">
 
   <div class="container">
 
-    <div class="section-heading">
-      <div class="small-title">Academic Background</div>
-      <h2>Education</h2>
+    <div class="heading center">
+
+      <div class="label">
+        Education
+      </div>
+
+      <h2>
+        Academic Foundation
+      </h2>
+
     </div>
+
 
     <div class="education-grid">
 
+
       <!-- IIT DELHI -->
+
       <div class="education-card">
 
-        <div class="education-logo">
-          <img src="iitd-dms-logo.png"
-               alt="IIT Delhi Department of Management Studies">
+        <div class="logo-box">
+
+          <img src="iitd-dms-logo.png" alt="IIT Delhi">
+
         </div>
 
-        <h3>IIT Delhi</h3>
-        <p>Ph.D. in Finance</p>
+        <h3>
+          IIT Delhi
+        </h3>
+
+        <p>
+          Ph.D. in Finance
+        </p>
 
       </div>
 
 
       <!-- BIT MESRA -->
+
       <div class="education-card">
 
-        <div class="education-logo">
-          <img src="bit-mesra-logo.png"
-               alt="BIT Mesra">
+        <div class="logo-box">
+
+          <img src="bit-mesra-logo.png" alt="BIT Mesra">
+
         </div>
 
-        <h3>BIT Mesra</h3>
-        <p>MBA – Finance</p>
+        <h3>
+          BIT Mesra
+        </h3>
+
+        <p>
+          MBA – Finance
+        </p>
 
       </div>
 
 
       <!-- XAVIER'S -->
+
       <div class="education-card">
 
-        <div class="education-logo">
-          <img src="xaviers-logo.jpg"
-               alt="St. Xavier's College Ranchi">
+        <div class="logo-box">
+
+          <img src="xaviers-logo.jpg" alt="St. Xavier's College Ranchi">
+
         </div>
 
-        <h3>St. Xavier's College, Ranchi</h3>
-        <p>B.Com. – Accounts Hons.</p>
+        <h3>
+          St. Xavier's College, Ranchi
+        </h3>
 
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- BEYOND CLASSROOM -->
-<section class="section ivory">
-
-  <div class="container">
-
-    <div class="section-heading">
-      <div class="small-title">Beyond Teaching</div>
-      <h2>Academic & Student Engagement</h2>
-    </div>
-
-    <div class="beyond">
-
-      <div class="beyond-card">
-        <i class="fa-solid fa-user-graduate"></i>
-        <h3>Student Development</h3>
         <p>
-          Engaging with students beyond the classroom through
-          mentoring, institutional activities and development initiatives.
+          B.Com. – Accounts Hons.
         </p>
+
       </div>
 
-      <div class="beyond-card">
-        <i class="fa-solid fa-people-group"></i>
-        <h3>Leadership & Institutional Engagement</h3>
-        <p>
-          Contributing to academic and institutional initiatives
-          focused on quality, accreditation and student development.
-        </p>
-      </div>
 
     </div>
 
@@ -1165,44 +1276,45 @@
 
 
 <!-- CTA -->
+
 <section class="cta">
 
-  <h2>Explore My Research</h2>
+  <div class="container">
 
-  <p>
-    My teaching and research interests are closely connected through
-    my work in corporate governance, banking, CBDCs and digital finance.
-  </p>
+    <div class="label">
+      Academic Work
+    </div>
 
-  <a href="research.html" class="cta-button">
-    View Research <i class="fa-solid fa-arrow-right"></i>
-  </a>
+    <h2>
+      Explore My Research
+    </h2>
+
+    <p>
+      My teaching and research are closely connected through a common
+      interest in understanding finance and applying it to real-world problems.
+    </p>
+
+    <a href="research.html" class="cta-button">
+      View Research
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+  </div>
 
 </section>
 
 
 <!-- FOOTER -->
+
 <footer>
 
-  <div class="footer-container">
-
-    <div>
-      <div class="footer-name">Dr. Prashant Gupta</div>
-      <div>Assistant Professor</div>
-    </div>
-
-    <div class="footer-links">
-
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="publications.html">Publications</a>
-      <a href="contact.html">Contact</a>
-
-    </div>
-
-  </div>
+  <p>
+    © 2026 <strong>Dr. Prashant Gupta</strong> · Assistant Professor ·
+    School of Management, Mahindra University, Hyderabad
+  </p>
 
 </footer>
+
 
 </body>
 </html>
