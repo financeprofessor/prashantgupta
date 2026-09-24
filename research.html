@@ -1,1804 +1,991 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Research | Dr. Prashant Gupta</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<style>
-
-/* =========================
-   GLOBAL
-========================= */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: "DM Sans", Arial, sans-serif;
-    background: #f8f6f2;
-    color: #243447;
-    line-height: 1.7;
-}
-
-a {
-    text-decoration: none;
-}
-
-.container {
-    width: min(1160px, 90%);
-    margin: auto;
-}
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background: rgba(8, 27, 48, 0.97);
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.nav-inner {
-    width: min(1160px, 90%);
-    margin: auto;
-
-    min-height: 72px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    color: white;
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 21px;
-    font-weight: 600;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 23px;
-}
-
-.nav-links a {
-    color: #dce5ed;
-
-    font-size: 13px;
-    font-weight: 500;
-
-    transition: 0.25s ease;
-}
-
-.nav-links a:hover {
-    color: #d8b36a;
-}
-
-.nav-cv {
-    padding: 8px 15px;
-
-    border: 1px solid #d8b36a;
-
-    border-radius: 4px;
-
-    color: #f0cf89 !important;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.page-hero {
-    position: relative;
-    overflow: hidden;
-
-    background:
-        radial-gradient(circle at 85% 25%, rgba(61,105,143,0.30), transparent 32%),
-        linear-gradient(135deg, #081b30 0%, #0d2b49 60%, #123c61 100%);
-
-    color: white;
-
-    padding: 95px 0 90px;
-}
-
-.page-hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 430px;
-    height: 430px;
-
-    border: 1px solid rgba(216,179,106,0.12);
-
-    border-radius: 50%;
-
-    right: -220px;
-    top: -180px;
-}
-
-.page-hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 280px;
-    height: 280px;
-
-    border: 1px solid rgba(216,179,106,0.16);
-
-    border-radius: 50%;
-
-    left: -150px;
-    bottom: -180px;
-}
-
-.hero-inner {
-    position: relative;
-    z-index: 2;
-
-    max-width: 850px;
-}
-
-.eyebrow {
-    color: #d8b36a;
-
-    text-transform: uppercase;
-
-    letter-spacing: 3px;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    margin-bottom: 16px;
-}
-
-.page-hero h1 {
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(48px, 6vw, 68px);
-
-    line-height: 1.05;
-
-    margin: 0 0 20px;
-
-    font-weight: 600;
-}
-
-.page-hero p {
-    color: #d3dfe8;
-
-    max-width: 790px;
-
-    font-size: 18px;
-
-    margin: 0;
-}
-
-
-/* =========================
-   INTRO
-========================= */
-
-.intro {
-    background: white;
-
-    padding: 70px 0;
-}
-
-.intro-grid {
-    display: grid;
-
-    grid-template-columns: 0.75fr 1.25fr;
-
-    gap: 70px;
-
-    align-items: center;
-}
-
-.intro-label {
-    color: #a67b2e;
-
-    font-size: 11px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-    font-weight: 700;
-}
-
-.intro h2 {
-    font-family: "Playfair Display", serif;
-
-    color: #102d4b;
-
-    font-size: 38px;
-
-    line-height: 1.2;
-
-    margin: 10px 0 0;
-}
-
-.intro-text {
-    color: #63717e;
-
-    font-size: 16px;
-
-    margin: 0;
-}
-
-
-/* =========================
-   RESEARCH AREAS
-========================= */
-
-.research-section {
-    padding: 85px 0;
-}
-
-.research-section:nth-of-type(even) {
-    background: white;
-}
-
-.research-section:nth-of-type(odd) {
-    background: #f8f6f2;
-}
-
-
-/* AREA HEADER */
-
-.area-header {
-    display: grid;
-
-    grid-template-columns: 75px 1fr;
-
-    gap: 25px;
-
-    align-items: start;
-
-    margin-bottom: 40px;
-}
-
-.area-number {
-    width: 68px;
-    height: 68px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    background: #102d4b;
-
-    color: #d8b36a;
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 24px;
-}
-
-.area-header h2 {
-    font-family: "Playfair Display", serif;
-
-    color: #102d4b;
-
-    font-size: 35px;
-
-    line-height: 1.25;
-
-    margin: 0 0 9px;
-}
-
-.area-header p {
-    color: #697887;
-
-    max-width: 800px;
-
-    font-size: 14px;
-
-    margin: 0;
-}
-
-
-/* RESEARCH FOCUS */
-
-.focus-box {
-    background: #102d4b;
-
-    color: white;
-
-    padding: 28px 32px;
-
-    margin-bottom: 25px;
-}
-
-.focus-title {
-    color: #d8b36a;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1.8px;
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    margin-bottom: 14px;
-}
-
-.focus-list {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 9px;
-}
-
-.focus-item {
-    padding: 7px 12px;
-
-    border: 1px solid #49647c;
-
-    color: #d5dfe7;
-
-    font-size: 12px;
-}
-
-
-/* MAIN CONTENT */
-
-.area-content {
-    display: grid;
-
-    grid-template-columns: 1.15fr 0.85fr;
-
-    gap: 25px;
-}
-
-.content-card {
-    background: white;
-
-    border: 1px solid #e1e5e8;
-
-    padding: 30px;
-}
-
-.research-section:nth-of-type(even) .content-card {
-    background: #f8f9fa;
-}
-
-.content-card h3 {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    font-family: "Playfair Display", serif;
-
-    color: #102d4b;
-
-    font-size: 22px;
-
-    margin: 0 0 23px;
-}
-
-.content-card h3 i {
-    color: #a67b2e;
-
-    font-size: 16px;
-}
-
-
-/* PUBLICATIONS */
-
-.publication {
-    padding: 18px 0;
-
-    border-bottom: 1px solid #e5e7e9;
-}
-
-.publication:first-of-type {
-    padding-top: 0;
-}
-
-.publication:last-child {
-    border-bottom: none;
-
-    padding-bottom: 0;
-}
-
-.publication h4 {
-    color: #193c5d;
-
-    font-size: 14px;
-
-    line-height: 1.55;
-
-    margin: 0 0 6px;
-
-    font-weight: 600;
-}
-
-.publication-meta {
-    color: #7a8792;
-
-    font-size: 12px;
-
-    font-style: italic;
-
-    margin-bottom: 8px;
-}
-
-.article-link {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 6px;
-
-    color: #a67b2e;
-
-    font-size: 10px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-
-    font-weight: 700;
-}
-
-.article-link:hover {
-    color: #164a7a;
-}
-
-.article-link i {
-    font-size: 8px;
-}
-
-
-/* RESEARCH IN PROGRESS */
-
-.research-item {
-    padding: 17px 0;
-
-    border-bottom: 1px solid #e5e7e9;
-}
-
-.research-item:first-of-type {
-    padding-top: 0;
-}
-
-.research-item:last-child {
-    border-bottom: none;
-
-    padding-bottom: 0;
-}
-
-.research-item h4 {
-    color: #193c5d;
-
-    font-size: 14px;
-
-    line-height: 1.55;
-
-    margin: 0 0 5px;
-
-    font-weight: 600;
-}
-
-.status {
-    display: inline-block;
-
-    color: #a67b2e;
-
-    font-size: 9px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1.2px;
-
-    font-weight: 700;
-}
-
-
-/* CONFERENCES */
-
-.conference {
-    padding: 18px 0;
-
-    border-bottom: 1px solid #e5e7e9;
-}
-
-.conference:first-of-type {
-    padding-top: 0;
-}
-
-.conference:last-child {
-    border-bottom: none;
-
-    padding-bottom: 0;
-}
-
-.conference-year {
-    color: #a67b2e;
-
-    font-size: 10px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1.4px;
-
-    font-weight: 700;
-
-    margin-bottom: 5px;
-}
-
-.conference h4 {
-    color: #193c5d;
-
-    font-size: 14px;
-
-    line-height: 1.5;
-
-    margin: 0 0 5px;
-
-    font-weight: 700;
-}
-
-.conference-topic {
-    color: #596978;
-
-    font-size: 13px;
-
-    line-height: 1.55;
-
-    font-style: italic;
-
-    margin: 0 0 6px;
-}
-
-.conference-location {
-    color: #87939d;
-
-    font-size: 11px;
-
-    margin: 0;
-}
-
-.conference-location i {
-    color: #a67b2e;
-
-    margin-right: 5px;
-}
-
-.award-tag {
-    display: inline-block;
-
-    margin-top: 9px;
-
-    padding: 4px 9px;
-
-    background: #f6edd9;
-
-    color: #91691f;
-
-    font-size: 9px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-
-    font-weight: 700;
-}
-
-
-/* =========================
-   RESEARCH RECOGNITION
-========================= */
-
-.recognition {
-    background: #102d4b;
-
-    color: white;
-
-    padding: 80px 0;
-}
-
-.recognition-heading {
-    text-align: center;
-
-    margin-bottom: 42px;
-}
-
-.recognition-heading .eyebrow {
-    margin-bottom: 12px;
-}
-
-.recognition-heading h2 {
-    font-family: "Playfair Display", serif;
-
-    color: white;
-
-    font-size: 38px;
-
-    margin: 0 0 10px;
-}
-
-.recognition-heading p {
-    color: #c5d2dd;
-
-    max-width: 650px;
-
-    margin: auto;
-}
-
-.recognition-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.recognition-card {
-    text-align: center;
-
-    padding: 30px;
-
-    border: 1px solid #38536d;
-
-    background: rgba(255,255,255,0.025);
-}
-
-.recognition-icon {
-    width: 55px;
-    height: 55px;
-
-    margin: 0 auto 17px;
-
-    border: 1px solid #d8b36a;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    color: #d8b36a;
-
-    font-size: 19px;
-}
-
-.recognition-card h3 {
-    font-family: "Playfair Display", serif;
-
-    color: white;
-
-    font-size: 20px;
-
-    margin: 0 0 7px;
-}
-
-.recognition-card p {
-    color: #c5d2dd;
-
-    font-size: 13px;
-
-    margin: 0;
-}
-
-
-/* =========================
-   CTA
-========================= */
-
-.cta {
-    background: white;
-
-    text-align: center;
-
-    padding: 75px 0;
-}
-
-.cta h2 {
-    font-family: "Playfair Display", serif;
-
-    color: #102d4b;
-
-    font-size: 37px;
-
-    margin: 0 0 12px;
-}
-
-.cta p {
-    color: #697887;
-
-    max-width: 650px;
-
-    margin: 0 auto 25px;
-}
-
-.cta-btn {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 9px;
-
-    padding: 12px 22px;
-
-    background: #102d4b;
-
-    color: white;
-
-    font-size: 13px;
-
-    font-weight: 600;
-}
-
-.cta-btn:hover {
-    background: #164a7a;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    background: #071827;
-
-    color: #94a3b1;
-
-    text-align: center;
-
-    padding: 25px;
-
-    font-size: 12px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 950px) {
-
-    .nav-inner {
-        flex-direction: column;
-
-        gap: 12px;
-
-        padding: 14px 0;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Research | Dr. Prashant Gupta</title>
+
+  <meta name="description" content="Research profile of Dr. Prashant Gupta, covering corporate governance, banking, CBDCs, digital finance, financial inclusion and FinTech.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+
+    :root {
+      --navy: #0b1f33;
+      --gold: #c9a227;
+      --gold-light: #e1c766;
+      --ivory: #f7f4ed;
+      --white: #ffffff;
+      --text: #263746;
+      --muted: #667685;
+      --border: #e5e0d6;
+      --shadow: 0 18px 45px rgba(11,31,51,0.09);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: white;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11,31,51,0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: auto;
+      padding: 18px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      color: white;
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      white-space: nowrap;
     }
 
     .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.82);
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold-light);
+    }
+
+    .cv-button {
+      padding: 8px 16px;
+      border: 1px solid var(--gold);
+      color: var(--gold-light) !important;
+      border-radius: 4px;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(201,162,39,0.13), transparent 30%),
+        var(--navy);
+      color: white;
+      padding: 105px 25px 100px;
+    }
+
+    .hero-inner {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3.2rem, 7vw, 5.2rem);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: rgba(255,255,255,0.75);
+      font-size: 1.08rem;
+    }
+
+    /* GENERAL */
+
+    .section {
+      padding: 90px 25px;
+    }
+
+    .section.alt {
+      background: var(--ivory);
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .heading {
+      max-width: 760px;
+      margin-bottom: 48px;
+    }
+
+    .heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .heading p {
+      color: var(--muted);
+    }
+
+    /* RESEARCH AREAS */
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .research-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 35px;
+      transition: 0.3s ease;
+    }
+
+    .research-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .research-number {
+      color: var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .research-card h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 1.4rem;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    .research-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+    }
+
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .topic {
+      border: 1px solid var(--border);
+      padding: 5px 9px;
+      border-radius: 20px;
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    /* RESEARCH IN PROGRESS */
+
+    .projects {
+      display: grid;
+      gap: 18px;
+    }
+
+    .project {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 30px 34px;
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .project-type {
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding-top: 5px;
+    }
+
+    .project h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 1.3rem;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .project p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* RESEARCH PERSPECTIVE */
+
+    .perspective {
+      background: var(--navy);
+      color: white;
+      border-radius: 14px;
+      padding: 65px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .perspective .label {
+      color: var(--gold-light);
+    }
+
+    .perspective h2 {
+      color: white;
+    }
+
+    .perspective p {
+      max-width: 800px;
+      margin: auto;
+      color: rgba(255,255,255,0.72);
+      font-size: 1rem;
+    }
+
+    /* RESEARCH JOURNEY */
+
+    .questions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .question {
+      padding: 30px;
+      border-top: 3px solid var(--gold);
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .question i {
+      color: var(--gold);
+      font-size: 1.3rem;
+      margin-bottom: 18px;
+    }
+
+    .question h3 {
+      color: var(--navy);
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    .question p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* PUBLICATIONS LINK */
+
+    .publication-strip {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+      background: var(--ivory);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 42px 45px;
+    }
+
+    .publication-strip h2 {
+      margin-bottom: 8px;
+    }
+
+    .publication-strip p {
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      padding: 13px 24px;
+      border-radius: 4px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      padding: 90px 25px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .cta .label {
+      color: var(--gold-light);
+    }
+
+    .cta h2 {
+      color: white;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 13px 25px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #071725;
+      color: rgba(255,255,255,0.55);
+      padding: 35px 25px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        gap: 14px;
+        font-size: 0.8rem;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .questions {
+        grid-template-columns: 1fr;
+      }
+
+      .publication-strip {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+    }
+
+    @media (max-width: 700px) {
+
+      .nav-container {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .nav-links {
         flex-wrap: wrap;
-
         justify-content: center;
-
         gap: 12px;
-    }
+      }
 
-    .intro-grid {
+      .hero {
+        padding: 75px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .section {
+        padding: 65px 20px;
+      }
+
+      .project {
         grid-template-columns: 1fr;
-
-        gap: 25px;
-    }
-
-    .area-content {
-        grid-template-columns: 1fr;
-    }
-
-    .recognition-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-@media (max-width: 650px) {
-
-    .research-section {
-        padding: 65px 0;
-    }
-
-    .page-hero {
-        padding: 70px 0;
-    }
-
-    .page-hero h1 {
-        font-size: 47px;
-    }
-
-    .page-hero p {
-        font-size: 16px;
-    }
-
-    .area-header {
-        grid-template-columns: 55px 1fr;
-
-        gap: 17px;
-    }
-
-    .area-number {
-        width: 52px;
-        height: 52px;
-
-        font-size: 19px;
-    }
-
-    .area-header h2 {
-        font-size: 27px;
-    }
-
-    .content-card {
+        gap: 5px;
         padding: 25px;
+      }
+
+      .perspective {
+        padding: 40px 25px;
+      }
+
+      .publication-strip {
+        padding: 35px 25px;
+      }
+
     }
 
-    .focus-box {
-        padding: 24px;
-    }
-
-}
-
-</style>
-
+  </style>
 </head>
-
 
 <body>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
-<div class="nav-inner">
+  <div class="nav-container">
 
-<a href="index.html" class="logo">
-Dr. Prashant Gupta
-</a>
+    <a href="index.html" class="brand">
+      Dr. Prashant Gupta
+    </a>
 
-<div class="nav-links">
+    <div class="nav-links">
 
-<a href="index.html">Home</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="publications.html">Publications</a>
+      <a href="activities.html">Activities</a>
+      <a href="contact.html">Contact</a>
 
-<a href="about.html">About</a>
+      <a href="Prashant%20Kumar%20Gupta_CV.pdf" class="cv-button">
+        CV
+      </a>
 
-<a href="research.html">Research</a>
+    </div>
 
-<a href="teaching.html">Teaching</a>
-
-<a href="publications.html">Publications</a>
-
-<a href="activities.html">Activities</a>
-
-<a href="contact.html">Contact</a>
-
-<a href="Prashant%20Kumar%20Gupta_CV.pdf"
-target="_blank"
-class="nav-cv">
-CV
-</a>
-
-</div>
-
-</div>
+  </div>
 
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
-<header class="page-hero">
+<header class="hero">
 
-<div class="container">
+  <div class="hero-inner">
 
-<div class="hero-inner">
+    <div class="eyebrow">
+      Research
+    </div>
 
-<div class="eyebrow">
-Research & Scholarship
-</div>
+    <h1>
+      Questions That <span>Matter</span>
+    </h1>
 
-<h1>
-Research
-</h1>
+    <p>
+      My research explores questions at the intersection of finance,
+      banking, corporate governance and emerging digital financial systems,
+      with a particular interest in evidence from emerging economies.
+    </p>
 
-<p>
-
-My research examines corporate governance, banking and asset quality,
-Central Bank Digital Currencies, financial inclusion, FinTech,
-digital payments, and emerging applications of technology in finance.
-
-</p>
-
-</div>
-
-</div>
+  </div>
 
 </header>
 
 
-<!-- =========================
-     INTRO
-========================= -->
+<!-- RESEARCH AREAS -->
 
-<section class="intro">
+<section class="section">
 
-<div class="container">
+  <div class="container">
 
-<div class="intro-grid">
+    <div class="heading center">
 
-<div>
+      <div class="label">
+        Research Areas
+      </div>
 
-<div class="intro-label">
-Research Agenda
-</div>
+      <h2>
+        Areas of Inquiry
+      </h2>
 
-<h2>
-Three major areas of research
-</h2>
+      <p>
+        My research interests span established questions in banking and
+        corporate governance as well as emerging developments in digital finance.
+      </p>
 
-</div>
+    </div>
 
-<p class="intro-text">
 
-My research agenda combines established work in banking and corporate
-governance with emerging research on Central Bank Digital Currencies,
-FinTech, financial inclusion, digital payments, and technology-enabled
-financial services. Each research area below brings together the
-related publications, ongoing studies, and conference presentations.
+    <div class="research-grid">
 
-</p>
 
-</div>
+      <!-- AREA 1 -->
 
-</div>
+      <div class="research-card">
+
+        <div class="research-number">
+          01
+        </div>
+
+        <h3>
+          Corporate Governance, Banking & Asset Quality
+        </h3>
+
+        <p>
+          Examining how governance structures, institutional frameworks
+          and banking characteristics relate to asset quality and
+          financial stability in emerging economies.
+        </p>
+
+        <div class="topics">
+
+          <span class="topic">Corporate Governance</span>
+          <span class="topic">Banking</span>
+          <span class="topic">Asset Quality</span>
+          <span class="topic">NPAs</span>
+          <span class="topic">Capital Adequacy</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- AREA 2 -->
+
+      <div class="research-card">
+
+        <div class="research-number">
+          02
+        </div>
+
+        <h3>
+          Central Bank Digital Currencies & Digital Finance
+        </h3>
+
+        <p>
+          Exploring the evolving CBDC landscape, adoption, design,
+          policy questions and differences across economies and
+          income levels.
+        </p>
+
+        <div class="topics">
+
+          <span class="topic">CBDCs</span>
+          <span class="topic">G-19 Economies</span>
+          <span class="topic">Digital Finance</span>
+          <span class="topic">Adoption</span>
+          <span class="topic">Income Levels</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- AREA 3 -->
+
+      <div class="research-card">
+
+        <div class="research-number">
+          03
+        </div>
+
+        <h3>
+          Financial Inclusion, FinTech & Digital Payments
+        </h3>
+
+        <p>
+          Investigating financial inclusion, FinTech, mobile payments,
+          security and privacy, microfinance and emerging applications
+          of artificial intelligence in finance.
+        </p>
+
+        <div class="topics">
+
+          <span class="topic">Financial Inclusion</span>
+          <span class="topic">FinTech</span>
+          <span class="topic">Mobile Payments</span>
+          <span class="topic">Microfinance</span>
+          <span class="topic">AI in Finance</span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- =====================================================
-     RESEARCH AREA 1
-===================================================== -->
+<!-- RESEARCH IN PROGRESS -->
 
-<section class="research-section">
+<section class="section alt">
 
-<div class="container">
+  <div class="container">
 
+    <div class="heading">
 
-<div class="area-header">
+      <div class="label">
+        Current Work
+      </div>
 
-<div class="area-number">
-01
-</div>
+      <h2>
+        Research in Progress
+      </h2>
 
-<div>
+      <p>
+        Selected projects that represent areas of my ongoing research activity.
+      </p>
 
-<h2>
-Corporate Governance, Banking & Asset Quality
-</h2>
-
-<p>
-
-This research stream examines the relationship between corporate
-governance and banking outcomes, with particular emphasis on asset
-quality, non-performing assets, banking ownership, capital adequacy,
-and institutional and regulatory frameworks.
-
-</p>
-
-</div>
-
-</div>
+    </div>
 
 
-<!-- RESEARCH FOCUS -->
-
-<div class="focus-box">
-
-<div class="focus-title">
-Research Focus
-</div>
-
-<div class="focus-list">
-
-<span class="focus-item">
-Corporate Governance
-</span>
-
-<span class="focus-item">
-Banking & Asset Quality
-</span>
-
-<span class="focus-item">
-Non-Performing Assets
-</span>
-
-<span class="focus-item">
-Public & Private Banks
-</span>
-
-<span class="focus-item">
-Capital Adequacy
-</span>
-
-<span class="focus-item">
-Legal & Institutional Frameworks
-</span>
-
-<span class="focus-item">
-Insolvency & Bankruptcy Code
-</span>
-
-</div>
-
-</div>
+    <div class="projects">
 
 
-<div class="area-content">
+      <div class="project">
+
+        <div class="project-type">
+          Submitted
+        </div>
+
+        <div>
+
+          <h3>
+            Unravelling the Impact of Capital Adequacy Components on Non-Performing Assets: A Granular Study in India's Banking Sector
+          </h3>
+
+          <p>
+            A study examining the relationship between capital adequacy
+            components and non-performing assets in India's banking sector.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-type">
+          Working
+        </div>
+
+        <div>
+
+          <h3>
+            Mapping the CBDC Landscape in G-19 Economies
+          </h3>
+
+          <p>
+            Mapping the development and characteristics of central bank
+            digital currencies across G-19 economies.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-type">
+          Working
+        </div>
+
+        <div>
+
+          <h3>
+            Understanding Central Bank Digital Currencies across Income Levels: A Systematic Review
+          </h3>
+
+          <p>
+            A systematic examination of CBDC research through an
+            income-level perspective.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-type">
+          Working
+        </div>
+
+        <div>
+
+          <h3>
+            Artificial Intelligence for Multi-Domain Financial Fraud Detection: A Comprehensive PRISMA Review of Algorithms, Challenges and Sector-Specific Evidence
+          </h3>
+
+          <p>
+            A systematic review examining the use of artificial intelligence
+            for financial fraud detection across domains and sectors.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RESEARCH PERSPECTIVE -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="perspective">
+
+      <div class="label">
+        Research Perspective
+      </div>
+
+      <h2>
+        From Financial Institutions to Emerging Digital Systems
+      </h2>
+
+      <p>
+        My research journey has evolved from questions around corporate
+        governance and banking asset quality toward emerging questions in
+        digital finance. Across these areas, I remain interested in how
+        institutions, policies, technologies and financial systems interact
+        and shape outcomes in emerging economies.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RESEARCH QUESTIONS -->
+
+<section class="section alt">
+
+  <div class="container">
+
+    <div class="heading center">
+
+      <div class="label">
+        What Drives My Research
+      </div>
+
+      <h2>
+        Questions I Keep Exploring
+      </h2>
+
+    </div>
+
+
+    <div class="questions">
+
+
+      <div class="question">
+
+        <i class="fa-solid fa-building-columns"></i>
+
+        <h3>
+          How do institutions shape financial outcomes?
+        </h3>
+
+        <p>
+          Understanding the role of governance, regulation and institutional
+          structures in financial systems.
+        </p>
+
+      </div>
+
+
+      <div class="question">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <h3>
+          How can financial systems become more resilient?
+        </h3>
+
+        <p>
+          Exploring questions related to banking stability, asset quality,
+          capital and financial risk.
+        </p>
+
+      </div>
+
+
+      <div class="question">
+
+        <i class="fa-solid fa-microchip"></i>
+
+        <h3>
+          How is technology reshaping finance?
+        </h3>
+
+        <p>
+          Examining emerging developments such as CBDCs, FinTech,
+          digital payments and artificial intelligence.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
 
 
 <!-- PUBLICATIONS -->
 
-<div class="content-card">
+<section class="section">
 
-<h3>
+  <div class="container">
 
-<i class="fa-solid fa-book-open"></i>
+    <div class="publication-strip">
 
-Publications
+      <div>
 
-</h3>
+        <div class="label">
+          Research Output
+        </div>
 
+        <h2>
+          Explore My Publications
+        </h2>
 
-<div class="publication">
+        <p>
+          View published journal articles, submitted papers, working papers
+          and selected academic presentations.
+        </p>
 
-<h4>
-Navigating the interplay of legal frameworks and corporate governance:
-the impact on asset quality in an emerging economy
-</h4>
+      </div>
 
-<div class="publication-meta">
-Gupta, P. K., & Sharma, S. · Asian Journal of Business Ethics · 2024
-</div>
+      <a href="publications.html" class="button">
+        View Publications
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
 
-<a
-href="https://link.springer.com/article/10.1007/s13520-024-00209-5"
-target="_blank"
-class="article-link">
+    </div>
 
-View Article
-
-<i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-</a>
-
-</div>
-
-
-<div class="publication">
-
-<h4>
-Role of corporate governance in asset quality of banks:
-comparison between government-owned and private banks
-</h4>
-
-<div class="publication-meta">
-Gupta, P. K., & Sharma, S. · Managerial Finance · 2023
-</div>
-
-<a
-href="https://www.emerald.com/mf/article-abstract/49/4/724/289525/Role-of-corporate-governance-in-asset-quality-of?redirectedFrom=fulltext"
-target="_blank"
-class="article-link">
-
-View Article
-
-<i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-</a>
-
-</div>
-
-
-<div class="publication">
-
-<h4>
-Corporate governance determinants of asset quality in an emerging economy:
-evidence from Indian banks
-</h4>
-
-<div class="publication-meta">
-Gupta, P. K., & Sharma, S. · Journal of Advances in Management Research · 2022
-</div>
-
-<a
-href="https://www.emerald.com/jamr/article-abstract/19/4/560/431698/Corporate-governance-determinants-of-asset-quality?redirectedFrom=fulltext"
-target="_blank"
-class="article-link">
-
-View Article
-
-<i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-</a>
-
-</div>
-
-
-</div>
-
-
-<!-- RESEARCH + CONFERENCES -->
-
-<div class="content-card">
-
-<h3>
-
-<i class="fa-solid fa-flask"></i>
-
-Research in Progress
-
-</h3>
-
-
-<div class="research-item">
-
-<h4>
-Unravelling the Impact of Capital Adequacy Components on
-Non-Performing Assets: A Granular Study in India’s Banking Sector
-</h4>
-
-<span class="status">
-Submitted · Studies in Economics and Finance
-</span>
-
-</div>
-
-
-<h3 style="margin-top:32px;">
-
-<i class="fa-solid fa-microphone"></i>
-
-Conference Presentations
-
-</h3>
-
-
-<div class="conference">
-
-<div class="conference-year">
-2024 · INDAM 2024
-</div>
-
-<h4>
-Impact of Insolvency and Bankruptcy Code, 2016 on Corporate Governance
-Determinants of Asset Quality in the Banking System: An Indian Perspective
-</h4>
-
-<p class="conference-location">
-
-<i class="fa-solid fa-location-dot"></i>
-
-Goa Institute of Management, Goa, India
-
-</p>
-
-</div>
-
-
-<div class="conference">
-
-<div class="conference-year">
-2022 · 16th Economics & Finance Conference
-</div>
-
-<h4>
-Asset quality and corporate governance:
-what does an emerging economy tell us?
-</h4>
-
-<p class="conference-location">
-
-<i class="fa-solid fa-location-dot"></i>
-
-University of Economics, Prague, Czech Republic
-
-</p>
-
-</div>
-
-
-<div class="conference">
-
-<div class="conference-year">
-2021 · MDC ‘Shodh Samagam
-</div>
-
-<h4>
-Difference in NPAs of Public and Private Banks:
-Contribution of Corporate Governance in India
-</h4>
-
-<p class="conference-location">
-
-<i class="fa-solid fa-location-dot"></i>
-
-IIM Visakhapatnam, India
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- =====================================================
-     RESEARCH AREA 2
-===================================================== -->
-
-<section class="research-section">
-
-<div class="container">
-
-
-<div class="area-header">
-
-<div class="area-number">
-02
-</div>
-
-<div>
-
-<h2>
-Central Bank Digital Currencies & Digital Finance
-</h2>
-
-<p>
-
-This emerging research stream examines the development of Central Bank
-Digital Currencies, the global research landscape, and differences in
-CBDC scholarship across economies and income levels.
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- RESEARCH FOCUS -->
-
-<div class="focus-box">
-
-<div class="focus-title">
-Research Focus
-</div>
-
-<div class="focus-list">
-
-<span class="focus-item">
-Central Bank Digital Currencies
-</span>
-
-<span class="focus-item">
-G-19 Economies
-</span>
-
-<span class="focus-item">
-CBDC Adoption
-</span>
-
-<span class="focus-item">
-Digital Finance
-</span>
-
-<span class="focus-item">
-Income-Level Perspectives
-</span>
-
-<span class="focus-item">
-Systematic Literature Reviews
-</span>
-
-</div>
-
-</div>
-
-
-<div class="area-content">
-
-
-<!-- CURRENT RESEARCH -->
-
-<div class="content-card">
-
-<h3>
-
-<i class="fa-solid fa-flask"></i>
-
-Research in Progress
-
-</h3>
-
-
-<div class="research-item">
-
-<h4>
-Mapping the CBDC Landscape in G-19 Economies
-</h4>
-
-<span class="status">
-Working Paper
-</span>
-
-</div>
-
-
-<div class="research-item">
-
-<h4>
-Understanding Central Bank Digital Currencies across Income levels:
-A systematic review
-</h4>
-
-<span class="status">
-Working Paper
-</span>
-
-</div>
-
-
-</div>
-
-
-<!-- CONFERENCE -->
-
-<div class="content-card">
-
-<h3>
-
-<i class="fa-solid fa-microphone"></i>
-
-Conference Presentation
-
-</h3>
-
-
-<div class="conference">
-
-<div class="conference-year">
-2025 · ICSSR Sponsored Conference
-</div>
-
-<h4>
-Mapping the CBDC Landscape in G-19 Economies
-</h4>
-
-<p class="conference-topic">
-Paper Presentation
-</p>
-
-<p class="conference-location">
-
-<i class="fa-solid fa-location-dot"></i>
-
-MNIT Jaipur, India
-
-</p>
-
-<span class="award-tag">
-Best Paper Award
-</span>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     RESEARCH AREA 3
-===================================================== -->
-
-<section class="research-section">
-
-<div class="container">
-
-
-<div class="area-header">
-
-<div class="area-number">
-03
-</div>
-
-<div>
-
-<h2>
-Financial Inclusion, FinTech & Digital Payments
-</h2>
-
-<p>
-
-This research stream explores financial inclusion, microfinance,
-FinTech, mobile payments, security and privacy, and emerging
-applications of artificial intelligence in financial services.
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- RESEARCH FOCUS -->
-
-<div class="focus-box">
-
-<div class="focus-title">
-Research Focus
-</div>
-
-<div class="focus-list">
-
-<span class="focus-item">
-Financial Inclusion
-</span>
-
-<span class="focus-item">
-Microfinance
-</span>
-
-<span class="focus-item">
-FinTech
-</span>
-
-<span class="focus-item">
-Mobile Payments
-</span>
-
-<span class="focus-item">
-Security & Privacy
-</span>
-
-<span class="focus-item">
-Financial Fraud
-</span>
-
-<span class="focus-item">
-Artificial Intelligence
-</span>
-
-</div>
-
-</div>
-
-
-<div class="area-content">
-
-
-<!-- PUBLICATIONS + RESEARCH -->
-
-<div class="content-card">
-
-<h3>
-
-<i class="fa-solid fa-book-open"></i>
-
-Publications & Research in Progress
-
-</h3>
-
-
-<div class="publication">
-
-<h4>
-Literature review on effect of microfinance institutions on poverty
-in South Asian countries and their sustainability
-</h4>
-
-<div class="publication-meta">
-Gupta, P. K., & Sharma, S. · International Journal of Emerging Markets · 2023
-</div>
-
-<a
-href="https://www.emerald.com/ijoem/article-abstract/18/8/1827/141200/Literature-review-on-effect-of-microfinance"
-target="_blank"
-class="article-link">
-
-View Article
-
-<i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-</a>
-
-</div>
-
-
-<div class="research-item">
-
-<h4>
-Role of security and privacy factors in the mobile payments’
-adoption and usage: A Systematic Literature Review
-</h4>
-
-<span class="status">
-Submitted · Journal of Advances in Management Research
-</span>
-
-</div>
-
-
-<div class="research-item">
-
-<h4>
-Artificial Intelligence for Multi-Domain Financial Fraud Detection:
-A Comprehensive PRISMA Review of Algorithms, Challenges and
-Sector-Specific Evidence
-</h4>
-
-<span class="status">
-Working Paper
-</span>
-
-</div>
-
-
-</div>
-
-
-<!-- CONFERENCES -->
-
-<div class="content-card">
-
-<h3>
-
-<i class="fa-solid fa-microphone"></i>
-
-Conference Presentations
-
-</h3>
-
-
-<div class="conference">
-
-<div class="conference-year">
-2024 · ICOI
-</div>
-
-<h4>
-Exploring the Horizons of FinTech:
-A Systematic Review of the Existing Literature and Prospects
-for Future Research
-</h4>
-
-<p class="conference-location">
-
-<i class="fa-solid fa-location-dot"></i>
-
-Hoa Sen University, Ho Chi Minh City, Vietnam
-
-</p>
-
-</div>
-
-
-<div class="conference">
-
-<div class="conference-year">
-2019 · AGBA's 16th World Conference
-</div>
-
-<h4>
-Microfinance Institutions: Understanding its impact on poverty
-in South Asia through a Systematic Review
-</h4>
-
-<p class="conference-location">
-
-<i class="fa-solid fa-location-dot"></i>
-
-IIT Delhi, India
-
-</p>
-
-<span class="award-tag">
-Best Paper Award
-</span>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     RESEARCH RECOGNITION
-========================= -->
-
-<section class="recognition">
-
-<div class="container">
-
-<div class="recognition-heading">
-
-<div class="eyebrow">
-Recognition
-</div>
-
-<h2>
-Research Awards & Recognition
-</h2>
-
-<p>
-Selected recognition for research contributions and conference presentations.
-</p>
-
-</div>
-
-
-<div class="recognition-grid">
-
-
-<div class="recognition-card">
-
-<div class="recognition-icon">
-<i class="fa-solid fa-trophy"></i>
-</div>
-
-<h3>
-Best Paper Award
-</h3>
-
-<p>
-ICSSR Sponsored Conference on FinTech Innovation & Digital Practices,
-MNIT Jaipur.
-</p>
-
-</div>
-
-
-<div class="recognition-card">
-
-<div class="recognition-icon">
-<i class="fa-solid fa-medal"></i>
-</div>
-
-<h3>
-Top 10 Finance Track
-</h3>
-
-<p>
-1st Doctoral Colloquium of IIM Visakhapatnam.
-</p>
-
-</div>
-
-
-<div class="recognition-card">
-
-<div class="recognition-icon">
-<i class="fa-solid fa-award"></i>
-</div>
-
-<h3>
-Best Paper Award
-</h3>
-
-<p>
-AGBA Conference.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     CTA
-========================= -->
+<!-- CTA -->
 
 <section class="cta">
 
-<div class="container">
+  <div class="container">
 
-<h2>
-Explore the complete publication record
-</h2>
+    <div class="label">
+      Collaboration
+    </div>
 
-<p>
+    <h2>
+      Interested in Research?
+    </h2>
 
-View the complete list of journal publications, submitted papers,
-working papers, conference presentations, and research recognition.
+    <p>
+      I welcome academic conversations and opportunities for research
+      collaboration around finance, banking and emerging digital financial systems.
+    </p>
 
-</p>
+    <a href="contact.html" class="cta-button">
+      Get in Touch
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
 
-<a href="publications.html" class="cta-btn">
-
-View Publications
-
-<i class="fa-solid fa-arrow-right"></i>
-
-</a>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-© Dr. Prashant Gupta · Academic Website
+  <p>
+    © 2026 <strong>Dr. Prashant Gupta</strong> · Assistant Professor ·
+    School of Management, Mahindra University, Hyderabad
+  </p>
 
 </footer>
 
 
 </body>
-
 </html>
