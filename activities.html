@@ -1,513 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Activities | Dr. Prashant Gupta</title>
-
-<style>
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
-
-:root {
-    --navy: #142033;
-    --blue: #315c8c;
-    --gold: #b08a4a;
-    --cream: #f7f5f0;
-    --white: #ffffff;
-    --text: #253044;
-    --muted: #707988;
-    --line: #ddd9d0;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    background: var(--cream);
-    color: var(--text);
-    font-family: "DM Sans", Arial, sans-serif;
-    line-height: 1.65;
-}
-
-/* NAVIGATION */
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(247,245,240,0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(20,32,51,0.10);
-    padding: 17px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-name {
-    color: var(--navy);
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.nav-links {
-    display: flex;
-    gap: 21px;
-    flex-wrap: wrap;
-}
-
-.nav-links a {
-    color: #596272;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 4px;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--navy);
-}
-
-.nav-links a.active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background: var(--gold);
-}
-
-/* MAIN */
-
-.container {
-    width: 88%;
-    max-width: 1160px;
-    margin: auto;
-}
-
-/* PAGE HEADER */
-
-.page-header {
-    padding: 45px 0 30px;
-    border-bottom: 1px solid var(--line);
-}
-
-.eyebrow {
-    color: var(--gold);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    margin-bottom: 8px;
-}
-
-.page-header h1 {
-    margin: 0;
-    color: var(--navy);
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 40px;
-    line-height: 1.15;
-    font-weight: 600;
-}
-
-.page-header p {
-    max-width: 790px;
-    margin: 10px 0 0;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* SNAPSHOT */
-
-.snapshot {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 58px;
-}
-
-.stat {
-    padding: 23px 21px;
-    border-right: 1px solid var(--line);
-}
-
-.stat:first-child {
-    border-left: 1px solid var(--line);
-}
-
-.stat-number {
-    color: var(--navy);
-    font-size: 25px;
-    font-weight: 700;
-}
-
-.stat-label {
-    color: var(--muted);
-    font-size: 10px;
-    line-height: 1.45;
-    margin-top: 3px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* SECTIONS */
-
-.section {
-    margin-bottom: 60px;
-}
-
-.section-top {
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 11px;
-    margin-bottom: 27px;
-}
-
-.section-number {
-    color: var(--gold);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.section-top h2 {
-    margin: 0;
-    color: var(--navy);
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 27px;
-    font-weight: 600;
-}
-
-/* ACTIVITY GRID */
-
-.activity-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 45px;
-}
-
-.activity {
-    padding: 18px 0;
-    border-bottom: 1px solid var(--line);
-}
-
-.activity-label {
-    color: var(--gold);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.activity h3 {
-    margin: 0 0 5px;
-    color: var(--navy);
-    font-size: 16px;
-}
-
-.activity p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 13px;
-}
-
-/* FEATURE */
-
-.feature {
-    background: var(--navy);
-    color: white;
-    padding: 35px 40px;
-}
-
-.feature h2 {
-    margin: 0 0 8px;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 27px;
-    font-weight: 500;
-}
-
-.feature p {
-    margin: 0;
-    max-width: 820px;
-    color: #d5d9e1;
-    font-size: 14px;
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 25px;
-}
-
-.feature-item {
-    border-top: 1px solid rgba(255,255,255,0.18);
-    padding-top: 12px;
-}
-
-.feature-item strong {
-    display: block;
-    color: white;
-    font-size: 14px;
-}
-
-.feature-item span {
-    color: #c4cad5;
-    font-size: 12px;
-}
-
-/* TIMELINE */
-
-.timeline {
-    border-left: 1px solid var(--line);
-    margin-left: 5px;
-}
-
-.timeline-item {
-    position: relative;
-    padding: 0 0 27px 30px;
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-}
-
-.timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -5px;
-    top: 5px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--gold);
-}
-
-.timeline-year {
-    color: var(--gold);
-    font-size: 11px;
-    font-weight: 700;
-    margin-bottom: 3px;
-}
-
-.timeline-item h3 {
-    margin: 0 0 4px;
-    color: var(--navy);
-    font-size: 15px;
-}
-
-.timeline-item p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 12px;
-}
-
-/* TWO COLUMN INFORMATION */
-
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 45px;
-}
-
-.info-block {
-    border-top: 2px solid var(--navy);
-    padding-top: 15px;
-}
-
-.info-block h3 {
-    margin: 0 0 7px;
-    color: var(--navy);
-    font-size: 16px;
-}
-
-.info-block p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 13px;
-}
-
-/* PROFESSIONAL DEVELOPMENT */
-
-.development-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 45px;
-}
-
-.development-item {
-    padding: 17px 0;
-    border-bottom: 1px solid var(--line);
-}
-
-.development-item h3 {
-    margin: 0 0 4px;
-    color: var(--navy);
-    font-size: 15px;
-}
-
-.development-item p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 12px;
-}
-
-/* CTA */
-
-.cta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
-    padding: 5px 0 55px;
-}
-
-.cta h2 {
-    margin: 0 0 4px;
-    color: var(--navy);
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 23px;
-}
-
-.cta p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.cta a {
-    flex-shrink: 0;
-    text-decoration: none;
-    color: white;
-    background: var(--navy);
-    padding: 10px 18px;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.cta a:hover {
-    background: var(--blue);
-}
-
-/* FOOTER */
-
-footer {
-    border-top: 1px solid var(--line);
-    padding: 23px 6%;
-    text-align: center;
-    color: #858b95;
-    font-size: 11px;
-    background: var(--cream);
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-
-    .snapshot {
-        grid-template-columns: repeat(2, 1fr);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Activities | Dr. Prashant Gupta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F7F5F0;
+      --navy: #142033;
+      --blue: #315C8C;
+      --gold: #B08A4A;
+      --text: #253044;
+      --muted: #707988;
+      --border: #DDD9D0;
+      --white: #FFFFFF;
     }
 
-    .stat:nth-child(2) {
-        border-right: none;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .stat:nth-child(-n+2) {
-        border-bottom: 1px solid var(--line);
+    html {
+      scroll-behavior: smooth;
     }
 
-    .feature-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-}
-
-@media (max-width: 700px) {
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
 
-    .nav-links {
-        gap: 13px;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     .container {
-        width: 90%;
+      width: min(1120px, 92%);
+      margin: auto;
     }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(247, 245, 240, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--navy);
+    }
+
+    .nav-links a.active {
+      position: relative;
+    }
+
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    /* PAGE HEADER */
 
     .page-header {
-        padding-top: 32px;
+      padding: 62px 0 36px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .page-header h1 {
-        font-size: 34px;
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 10px;
     }
 
-    .activity-grid,
-    .info-grid,
-    .development-list {
-        grid-template-columns: 1fr;
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.1;
+      color: var(--navy);
+      margin-bottom: 14px;
     }
 
-    .feature {
-        padding: 30px 25px;
+    .intro {
+      max-width: 760px;
+      font-size: 17px;
+      color: var(--muted);
     }
 
-    .cta {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 500px) {
+    /* SNAPSHOT */
 
     .snapshot {
-        grid-template-columns: 1fr 1fr;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--border);
     }
 
     .stat {
-        padding: 18px 14px;
+      padding: 28px 22px;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: none;
     }
 
     .stat-number {
-        font-size: 22px;
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      color: var(--navy);
+      margin-bottom: 4px;
     }
 
     .stat-label {
-        font-size: 9px;
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.5;
     }
-}
 
-</style>
+    /* SECTIONS */
+
+    section {
+      padding: 64px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 31px;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-bottom: 7px;
+    }
+
+    .section-description {
+      max-width: 540px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 30px;
+    }
+
+    /* ROLE LIST */
+
+    .role-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 35px;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .role-title {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 15px;
+    }
+
+    .role-org {
+      color: var(--blue);
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    .role-description {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* FEATURE BLOCK */
+
+    .feature {
+      background: var(--navy);
+      color: white;
+      padding: 38px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .feature-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #D6B77A;
+      margin-bottom: 10px;
+    }
+
+    .feature h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    .feature p {
+      color: #D8DEE7;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .feature ul {
+      padding-left: 18px;
+      color: #D8DEE7;
+      font-size: 14px;
+    }
+
+    .feature li {
+      margin-bottom: 8px;
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+      border-left: 1px solid var(--border);
+      margin-left: 8px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 30px 32px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      background: var(--gold);
+      border-radius: 50%;
+      left: -5px;
+      top: 8px;
+    }
+
+    .timeline-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .timeline-text {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* TWO COLUMN */
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .info-block {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.35);
+      padding: 28px;
+    }
+
+    .info-block h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .info-block p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .info-block ul {
+      margin-top: 12px;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .info-block li {
+      margin-bottom: 7px;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: #ECE8DF;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 50px 0;
+    }
+
+    .cta-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 30px;
+      margin-bottom: 6px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: var(--navy);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .button:hover {
+      background: var(--blue);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--navy);
+      border: 1px solid var(--navy);
+      margin-left: 8px;
+    }
+
+    .button.secondary:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 28px 0;
+      background: var(--navy);
+      color: #C8D0DB;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .footer-name {
+      font-family: "Playfair Display", serif;
+      color: white;
+      font-size: 18px;
+    }
+
+    .footer-text {
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .nav-inner {
+        flex-direction: column;
+        padding: 16px 0;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .snapshot {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat:nth-child(2) {
+        border-right: none;
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .feature {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page-header {
+        padding: 42px 0 30px;
+      }
+
+      section {
+        padding: 45px 0;
+      }
+
+      .snapshot {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat {
+        padding: 22px 15px;
+      }
+
+      .role {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-description {
+        margin-top: 12px;
+      }
+
+      .feature {
+        padding: 28px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
 
-    <a href="index.html" class="nav-name">
+      <a href="index.html" class="brand">
         Dr. Prashant Gupta
-    </a>
+      </a>
 
-    <div class="nav-links">
-
+      <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="research.html">Research</a>
@@ -516,621 +567,435 @@ footer {
         <a href="activities.html" class="active">Activities</a>
         <a href="achievements.html">Achievements</a>
         <a href="contact.html">Contact</a>
+      </div>
 
     </div>
+  </nav>
 
-</nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container">
+
+      <div class="eyebrow">Beyond Academia</div>
+
+      <h1>Activities</h1>
+
+      <p class="intro">
+        Institutional leadership, student development, academic quality,
+        community engagement and professional initiatives beyond the classroom.
+      </p>
+
+    </div>
+  </header>
 
 
-<main class="container">
+  <!-- SNAPSHOT -->
+  <div class="container">
+    <div class="snapshot">
 
-    <!-- PAGE HEADER -->
+      <div class="stat">
+        <div class="stat-number">05+</div>
+        <div class="stat-label">Institutional Roles</div>
+      </div>
 
-    <section class="page-header">
+      <div class="stat">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Years with Art of Living</div>
+      </div>
 
-        <div class="eyebrow">
-            Leadership & Engagement
+      <div class="stat">
+        <div class="stat-number">01</div>
+        <div class="stat-label">NCC Unit Founded</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">03+</div>
+        <div class="stat-label">Development Areas</div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- INSTITUTIONAL LEADERSHIP -->
+  <section>
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <div class="section-number">01 / LEADERSHIP</div>
+          <h2 class="section-title">Institutional Leadership & Service</h2>
         </div>
 
-        <h1>
-            Beyond Academia
-        </h1>
-
-        <p>
-            Institutional leadership, student development, academic quality,
-            NCC and long-standing engagement in personal excellence and
-            social impact.
+        <p class="section-description">
+          Contributing to institutional governance, academic quality,
+          research systems and student development at Mahindra University.
         </p>
+      </div>
 
-    </section>
+      <div class="role-list">
 
+        <div class="role">
+          <div>
+            <div class="role-title">Chair</div>
+            <div class="role-org">Ranking & Accreditation Committee</div>
+          </div>
 
-    <!-- SNAPSHOT -->
-
-    <section class="snapshot">
-
-        <div class="stat">
-
-            <div class="stat-number">
-                05+
-            </div>
-
-            <div class="stat-label">
-                Institutional Roles
-            </div>
-
+          <div class="role-description">
+            Leading institutional efforts related to rankings, accreditation
+            and long-term academic quality enhancement.
+          </div>
         </div>
 
 
-        <div class="stat">
+        <div class="role">
+          <div>
+            <div class="role-title">SPOC</div>
+            <div class="role-org">Internal Quality Assurance</div>
+          </div>
 
-            <div class="stat-number">
-                15+
-            </div>
-
-            <div class="stat-label">
-                Years with Art of Living
-            </div>
-
+          <div class="role-description">
+            Supporting quality assurance processes and institutional
+            coordination through the IQAC.
+          </div>
         </div>
 
 
-        <div class="stat">
+        <div class="role">
+          <div>
+            <div class="role-title">Member</div>
+            <div class="role-org">PhD Selection Committee</div>
+          </div>
 
-            <div class="stat-number">
-                01
-            </div>
-
-            <div class="stat-label">
-                NCC Unit Founded
-            </div>
-
+          <div class="role-description">
+            Contributing to doctoral admissions and the development of
+            institutional research systems.
+          </div>
         </div>
 
 
-        <div class="stat">
+        <div class="role">
+          <div>
+            <div class="role-title">Member</div>
+            <div class="role-org">Internal Research Committee</div>
+          </div>
 
-            <div class="stat-number">
-                03+
-            </div>
-
-            <div class="stat-label">
-                Institutional Development Areas
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- INSTITUTIONAL LEADERSHIP -->
-
-    <section class="section">
-
-        <div class="section-top">
-
-            <span class="section-number">
-                01
-            </span>
-
-            <h2>
-                Institutional Leadership & Service
-            </h2>
-
+          <div class="role-description">
+            Supporting research-related academic processes and initiatives
+            within the university.
+          </div>
         </div>
 
 
-        <div class="activity-grid">
-
-            <div class="activity">
-
-                <div class="activity-label">
-                    Mahindra University
-                </div>
-
-                <h3>
-                    Chair — Ranking & Accreditation Committee
-                </h3>
-
-                <p>
-                    Leading institutional efforts related to rankings,
-                    accreditation and the School of Management's
-                    long-term quality roadmap.
-                </p>
-
-            </div>
-
-
-            <div class="activity">
-
-                <div class="activity-label">
-                    Academic Quality
-                </div>
-
-                <h3>
-                    SPOC — IQAC
-                </h3>
-
-                <p>
-                    Supporting internal quality assurance and
-                    academic quality initiatives.
-                </p>
-
-            </div>
-
-
-            <div class="activity">
-
-                <div class="activity-label">
-                    Doctoral Education
-                </div>
-
-                <h3>
-                    Member — PhD Selection Committee
-                </h3>
-
-                <p>
-                    Contributing to doctoral admissions and the
-                    development of PhD-related academic processes.
-                </p>
-
-            </div>
-
-
-            <div class="activity">
-
-                <div class="activity-label">
-                    Research
-                </div>
-
-                <h3>
-                    Member — Internal Research Committee
-                </h3>
-
-                <p>
-                    Supporting institutional research initiatives
-                    and academic research processes.
-                </p>
-
-            </div>
-
-
-            <div class="activity">
-
-                <div class="activity-label">
-                    University Service
-                </div>
-
-                <h3>
-                    Member — University Discipline Committee
-                </h3>
-
-                <p>
-                    Contributing to student discipline and institutional
-                    guidelines.
-                </p>
-
-            </div>
-
-
-            <div class="activity">
-
-                <div class="activity-label">
-                    Student Well-being
-                </div>
-
-                <h3>
-                    Member — Anti-Drugs Committee
-                </h3>
-
-                <p>
-                    Supporting institutional initiatives focused on
-                    student awareness and well-being.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- NCC -->
-
-    <section class="section">
-
-        <div class="feature">
-
-            <h2>
-                NCC & Leadership
-            </h2>
-
-            <p>
-                As the Founding Officer In-Charge of the NCC Unit at
-                Mahindra University, the role involves building a culture
-                of discipline, leadership, responsibility and service
-                among students.
-            </p>
-
-
-            <div class="feature-grid">
-
-                <div class="feature-item">
-
-                    <strong>
-                        Leadership
-                    </strong>
-
-                    <span>
-                        Guiding students through structured leadership
-                        and responsibility
-                    </span>
-
-                </div>
-
-
-                <div class="feature-item">
-
-                    <strong>
-                        Discipline
-                    </strong>
-
-                    <span>
-                        Encouraging consistency, accountability and
-                        professional conduct
-                    </span>
-
-                </div>
-
-
-                <div class="feature-item">
-
-                    <strong>
-                        Service
-                    </strong>
-
-                    <span>
-                        Promoting a spirit of service and civic responsibility
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ACADEMIC QUALITY -->
-
-    <section class="section">
-
-        <div class="section-top">
-
-            <span class="section-number">
-                02
-            </span>
-
-            <h2>
-                Academic Quality & Institutional Development
-            </h2>
-
+        <div class="role">
+          <div>
+            <div class="role-title">Member</div>
+            <div class="role-org">University Discipline Committee</div>
+          </div>
+
+          <div class="role-description">
+            Contributing to institutional discipline processes and
+            student-related policy implementation.
+          </div>
         </div>
 
 
-        <div class="timeline">
+        <div class="role">
+          <div>
+            <div class="role-title">Member</div>
+            <div class="role-org">Anti-Drugs Committee</div>
+          </div>
 
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2025 – Present
-                </div>
-
-                <h3>
-                    School of Management Ranking & Accreditation
-                </h3>
-
-                <p>
-                    Chairing the committee responsible for developing
-                    the School's ranking and accreditation roadmap.
-                </p>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2024 – Present
-                </div>
-
-                <h3>
-                    Internal Research & Academic Quality
-                </h3>
-
-                <p>
-                    Contributing to university-level research and
-                    quality assurance initiatives.
-                </p>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    Ongoing
-                </div>
-
-                <h3>
-                    Doctoral & Academic Development
-                </h3>
-
-                <p>
-                    Supporting PhD selection, academic processes and
-                    institutional development.
-                </p>
-
-            </div>
-
+          <div class="role-description">
+            Supporting institutional initiatives focused on student
+            well-being and a responsible campus environment.
+          </div>
         </div>
 
-    </section>
+      </div>
 
+    </div>
+  </section>
 
-    <!-- STUDENT DEVELOPMENT -->
 
-    <section class="section">
+  <!-- NCC FEATURE -->
+  <section style="padding-top: 0;">
+    <div class="container">
 
-        <div class="section-top">
-
-            <span class="section-number">
-                03
-            </span>
-
-            <h2>
-                Student Development & Well-being
-            </h2>
-
-        </div>
-
-
-        <div class="info-grid">
-
-            <div class="info-block">
-
-                <h3>
-                    Boys' Hostel
-                </h3>
-
-                <p>
-                    Faculty In-Charge with responsibility for student
-                    discipline, coordination and residential well-being.
-                </p>
-
-            </div>
-
-
-            <div class="info-block">
-
-                <h3>
-                    Student Engagement
-                </h3>
-
-                <p>
-                    Supporting initiatives that encourage leadership,
-                    discipline, responsibility and personal development.
-                </p>
-
-            </div>
-
-
-            <div class="info-block">
-
-                <h3>
-                    University Discipline
-                </h3>
-
-                <p>
-                    Contributing to institutional discipline processes
-                    and the development of student guidelines.
-                </p>
-
-            </div>
-
-
-            <div class="info-block">
-
-                <h3>
-                    Personal Excellence
-                </h3>
-
-                <p>
-                    Bringing long-standing experience in personal
-                    development and youth-focused programmes.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ART OF LIVING -->
-
-    <section class="section">
-
-        <div class="feature">
-
-            <h2>
-                Art of Living & Social Impact
-            </h2>
-
-            <p>
-                A long-standing engagement with the Art of Living as a
-                Teacher, facilitating programmes focused on personal
-                excellence, stress management and youth development.
-            </p>
-
-
-            <div class="feature-grid">
-
-                <div class="feature-item">
-
-                    <strong>
-                        15+ Years
-                    </strong>
-
-                    <span>
-                        As an Art of Living Teacher
-                    </span>
-
-                </div>
-
-
-                <div class="feature-item">
-
-                    <strong>
-                        Institutional Programmes
-                    </strong>
-
-                    <span>
-                        Engagements across educational institutions
-                    </span>
-
-                </div>
-
-
-                <div class="feature-item">
-
-                    <strong>
-                        Social Impact
-                    </strong>
-
-                    <span>
-                        Stress management and rehabilitation initiatives
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROFESSIONAL DEVELOPMENT -->
-
-    <section class="section">
-
-        <div class="section-top">
-
-            <span class="section-number">
-                04
-            </span>
-
-            <h2>
-                Professional Development
-            </h2>
-
-        </div>
-
-
-        <div class="development-list">
-
-            <div class="development-item">
-
-                <h3>
-                    AACSB Engagement
-                </h3>
-
-                <p>
-                    Participation in AACSB-related academic and
-                    accreditation activities.
-                </p>
-
-            </div>
-
-
-            <div class="development-item">
-
-                <h3>
-                    Academic Conferences
-                </h3>
-
-                <p>
-                    Continued participation in conferences and
-                    scholarly academic discussions.
-                </p>
-
-            </div>
-
-
-            <div class="development-item">
-
-                <h3>
-                    Institutional Learning
-                </h3>
-
-                <p>
-                    Engagement with contemporary approaches to
-                    academic quality and institutional development.
-                </p>
-
-            </div>
-
-
-            <div class="development-item">
-
-                <h3>
-                    Cross-disciplinary Engagement
-                </h3>
-
-                <p>
-                    Interaction across management, finance, education
-                    and student development initiatives.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CTA -->
-
-    <section class="cta">
+      <div class="feature">
 
         <div>
-
-            <h2>
-                Every Role Adds to the Journey
-            </h2>
-
-            <p>
-                Explore the achievements and milestones behind these engagements.
-            </p>
-
+          <div class="feature-label">Leadership & Service</div>
+          <h3>NCC & Leadership</h3>
         </div>
 
-        <a href="achievements.html">
-            Achievements →
-        </a>
+        <div>
+          <p>
+            Founding Officer In-Charge of the NCC Unit at Mahindra University,
+            contributing to the development of a culture centred on
+            discipline, leadership, responsibility and service.
+          </p>
 
-    </section>
+          <ul>
+            <li>Leadership and character development</li>
+            <li>Discipline and responsibility</li>
+            <li>Service-oriented student engagement</li>
+            <li>Institutional support for NCC activities</li>
+          </ul>
+        </div>
 
-</main>
+      </div>
+
+    </div>
+  </section>
 
 
-<footer>
+  <!-- ACADEMIC QUALITY -->
+  <section>
+    <div class="container">
 
-    © 2026 Dr. Prashant Gupta · Mahindra University
+      <div class="section-heading">
+        <div>
+          <div class="section-number">02 / INSTITUTIONAL DEVELOPMENT</div>
+          <h2 class="section-title">Academic Quality & Development</h2>
+        </div>
 
-</footer>
+        <p class="section-description">
+          Engagement with initiatives that contribute to academic systems,
+          institutional processes and long-term development.
+        </p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-label">Academic Quality</div>
+          <div class="timeline-title">
+            Ranking & Accreditation
+          </div>
+          <div class="timeline-text">
+            Working on institutional ranking and accreditation initiatives,
+            including the School of Management's long-term accreditation roadmap.
+          </div>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="timeline-label">Research</div>
+          <div class="timeline-title">
+            Research Governance
+          </div>
+          <div class="timeline-text">
+            Participation in research committees and doctoral selection
+            processes supporting the university's research ecosystem.
+          </div>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="timeline-label">Student Development</div>
+          <div class="timeline-title">
+            Student Engagement & Well-being
+          </div>
+          <div class="timeline-text">
+            Institutional responsibilities involving student discipline,
+            residential life and broader student development.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- STUDENT DEVELOPMENT -->
+  <section style="padding-top: 0;">
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <div class="section-number">03 / STUDENTS</div>
+          <h2 class="section-title">Student Development & Well-being</h2>
+        </div>
+
+        <p class="section-description">
+          Engagement that extends beyond formal teaching to student
+          development, leadership, discipline and well-being.
+        </p>
+      </div>
+
+
+      <div class="two-column">
+
+        <div class="info-block">
+          <h3>Residential Life</h3>
+          <p>
+            Faculty In-Charge of the Boys' Hostel, contributing to student
+            discipline, residential administration and a supportive campus
+            environment.
+          </p>
+        </div>
+
+
+        <div class="info-block">
+          <h3>Leadership Development</h3>
+          <p>
+            Through NCC and other institutional responsibilities, supporting
+            students in developing leadership, discipline, responsibility
+            and service orientation.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ART OF LIVING -->
+  <section>
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <div class="section-number">04 / SOCIAL IMPACT</div>
+          <h2 class="section-title">Art of Living & Social Impact</h2>
+        </div>
+
+        <p class="section-description">
+          A long-standing engagement in personal development, youth
+          programmes and community-oriented initiatives.
+        </p>
+      </div>
+
+
+      <div class="feature">
+
+        <div>
+          <div class="feature-label">Since 2011</div>
+          <h3>Art of Living Teacher</h3>
+        </div>
+
+        <div>
+          <p>
+            As an Art of Living Teacher, I have facilitated personal
+            development and well-being programmes across educational
+            institutions and community settings.
+          </p>
+
+          <ul>
+            <li>IIT Delhi</li>
+            <li>IIT Dhanbad</li>
+            <li>IIM Ranchi</li>
+            <li>NLU Ranchi</li>
+            <li>BIT Mesra</li>
+            <li>Stress management and rehabilitation programmes at
+              Tihar and Hotwar Central Jails</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PROFESSIONAL DEVELOPMENT -->
+  <section style="padding-top: 0;">
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <div class="section-number">05 / PROFESSIONAL ENGAGEMENT</div>
+          <h2 class="section-title">Professional Development</h2>
+        </div>
+
+        <p class="section-description">
+          Continuous engagement with academic, professional and institutional
+          communities beyond regular teaching responsibilities.
+        </p>
+      </div>
+
+
+      <div class="two-column">
+
+        <div class="info-block">
+          <h3>Academic Engagement</h3>
+          <ul>
+            <li>Conference participation and research presentations</li>
+            <li>Academic workshops and seminars</li>
+            <li>Research and institutional committees</li>
+            <li>Doctoral and student engagement</li>
+          </ul>
+        </div>
+
+
+        <div class="info-block">
+          <h3>Institutional Contribution</h3>
+          <ul>
+            <li>Academic quality initiatives</li>
+            <li>Accreditation and ranking activities</li>
+            <li>Student development initiatives</li>
+            <li>Leadership and service activities</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <div class="cta">
+    <div class="container">
+
+      <div class="cta-inner">
+
+        <div>
+          <h2>Explore the academic journey</h2>
+          <p>
+            Discover research, publications, teaching and professional achievements.
+          </p>
+        </div>
+
+        <div>
+          <a href="achievements.html" class="button">
+            View Achievements
+          </a>
+
+          <a href="contact.html" class="button secondary">
+            Get in Touch
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+
+      <div>
+        <div class="footer-name">Dr. Prashant Gupta</div>
+        <div class="footer-text">
+          Assistant Professor · School of Management · Mahindra University
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/kumar-prashantgupta/" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ" target="_blank">Google Scholar</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </div>
+  </footer>
 
 </body>
 </html>
