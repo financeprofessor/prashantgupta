@@ -1,681 +1,664 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Teaching | Dr. Prashant Gupta</title>
-
-  <meta name="description" content="Teaching profile of Dr. Prashant Gupta, Assistant Professor at Mahindra University. Courses, teaching experience and practice-based learning approach.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <style>
-
-    :root {
-      --navy: #0d1b2a;
-      --navy-light: #14283d;
-      --gold: #c6a15b;
-      --gold-light: #dfc78f;
-      --ivory: #f8f6f0;
-      --white: #ffffff;
-      --text: #25313d;
-      --muted: #66727e;
-      --border: #e5e1d8;
-      --soft: #f0ede6;
-      --shadow: 0 12px 35px rgba(13,27,42,0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "DM Sans", sans-serif;
-      background: var(--ivory);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: auto;
-    }
-
-    /* =========================
-       NAVIGATION
-    ========================= */
-
-    nav {
-      background: rgba(13,27,42,0.98);
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(198,161,91,0.25);
-    }
-
-    .nav-inner {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .brand {
-      font-family: "Playfair Display", serif;
-      font-size: 1.2rem;
-      color: white;
-      white-space: nowrap;
-    }
-
-    .brand span {
-      color: var(--gold-light);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 19px;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-
-    .nav-links a {
-      color: rgba(255,255,255,0.85);
-      white-space: nowrap;
-      transition: 0.2s;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--gold-light);
-    }
-
-    .cv-button {
-      border: 1px solid var(--gold);
-      padding: 8px 14px;
-      border-radius: 5px;
-      color: var(--gold-light) !important;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      background:
-        radial-gradient(circle at 85% 20%, rgba(198,161,91,0.12), transparent 30%),
-        linear-gradient(135deg, #0d1b2a, #17314a);
-      color: white;
-      padding: 48px 0 50px;
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 8px;
-    }
-
-    .hero h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2.2rem, 4.5vw, 3.7rem);
-      line-height: 1.1;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      max-width: 780px;
-      color: rgba(255,255,255,0.78);
-      font-size: 0.96rem;
-    }
-
-    /* =========================
-       QUICK SNAPSHOT
-    ========================= */
-
-    .snapshot {
-      margin-top: -25px;
-      position: relative;
-      z-index: 5;
-    }
-
-    .snapshot-grid {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 1px;
-      background: var(--border);
-      border-radius: 9px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .snapshot-card {
-      background: white;
-      padding: 23px 15px;
-      text-align: center;
-      min-height: 125px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .snapshot-icon {
-      color: var(--gold);
-      font-size: 1.15rem;
-      margin-bottom: 8px;
-    }
-
-    .snapshot-title {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.05rem;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    .snapshot-detail {
-      color: var(--muted);
-      font-size: 0.76rem;
-      margin-top: 5px;
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    section {
-      padding: 65px 0;
-    }
-
-    .section-heading {
-      margin-bottom: 28px;
-    }
-
-    .section-heading .eyebrow {
-      color: var(--gold);
-    }
-
-    .section-heading h2 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      max-width: 760px;
-      margin-top: 7px;
-      font-size: 0.91rem;
-    }
-
-    /* =========================
-       COURSES
-    ========================= */
-
-    .course-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 16px;
-    }
-
-    .course-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--gold);
-      border-radius: 7px;
-      padding: 21px;
-      transition: 0.2s;
-    }
-
-    .course-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
-    }
-
-    .course-card i {
-      color: var(--gold);
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-
-    .course-card h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.08rem;
-      line-height: 1.3;
-    }
-
-    /* =========================
-       TEACHING EXPERIENCE
-    ========================= */
-
-    .experience-section {
-      background: var(--soft);
-    }
-
-    .experience-grid {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 16px;
-    }
-
-    .experience-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 22px;
-      text-align: center;
-    }
-
-    .logo-wrap {
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 13px;
-    }
-
-    .logo-wrap img {
-      max-width: 125px;
-      max-height: 70px;
-      object-fit: contain;
-    }
-
-    .experience-card h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.08rem;
-      line-height: 1.3;
-    }
-
-    .experience-card p {
-      color: var(--muted);
-      font-size: 0.78rem;
-      margin-top: 5px;
-    }
-
-    /* =========================
-       OTHER ACADEMIC EXPERIENCE
-    ========================= */
-
-    .academic-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 16px;
-    }
-
-    .academic-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      padding: 21px;
-      display: flex;
-      align-items: center;
-      gap: 17px;
-    }
-
-    .academic-logo {
-      width: 65px;
-      height: 65px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .academic-logo img {
-      max-width: 65px;
-      max-height: 55px;
-      object-fit: contain;
-    }
-
-    .academic-card h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1rem;
-      line-height: 1.25;
-    }
-
-    .academic-card p {
-      color: var(--muted);
-      font-size: 0.76rem;
-      margin-top: 3px;
-    }
-
-    /* =========================
-       TEACHING PHILOSOPHY
-    ========================= */
-
-    .philosophy {
-      background: var(--navy);
-      color: white;
-    }
-
-    .philosophy-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 50px;
-      align-items: start;
-    }
-
-    .philosophy h2 {
-      font-family: "Playfair Display", serif;
-      color: white;
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-
-    .philosophy p {
-      color: rgba(255,255,255,0.74);
-      font-size: 0.92rem;
-      margin-bottom: 13px;
-    }
-
-    .philosophy-points {
-      display: grid;
-      gap: 11px;
-    }
-
-    .philosophy-point {
-      border-left: 3px solid var(--gold);
-      padding: 9px 0 9px 16px;
-      background: rgba(255,255,255,0.035);
-    }
-
-    .philosophy-point strong {
-      display: block;
-      color: var(--gold-light);
-      font-size: 0.9rem;
-      margin-bottom: 2px;
-    }
-
-    .philosophy-point span {
-      color: rgba(255,255,255,0.67);
-      font-size: 0.8rem;
-    }
-
-    /* =========================
-       TRAINER
-    ========================= */
-
-    .trainer {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 25px;
-      align-items: center;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      padding: 25px;
-    }
-
-    .trainer-logo {
-      height: 110px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .trainer-logo img {
-      max-width: 125px;
-      max-height: 100px;
-      object-fit: contain;
-    }
-
-    .trainer h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.4rem;
-      margin-bottom: 4px;
-    }
-
-    .trainer-role {
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 0.85rem;
-      margin-bottom: 7px;
-    }
-
-    .trainer p {
-      color: var(--muted);
-      font-size: 0.84rem;
-    }
-
-    /* =========================
-       EDUCATION
-    ========================= */
-
-    .education-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 16px;
-    }
-
-    .education-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      padding: 23px;
-      text-align: center;
-    }
-
-    .education-logo {
-      height: 70px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-
-    .education-logo img {
-      max-width: 115px;
-      max-height: 65px;
-      object-fit: contain;
-    }
-
-    .education-card h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.08rem;
-      line-height: 1.3;
-    }
-
-    .education-card p {
-      color: var(--muted);
-      font-size: 0.78rem;
-      margin-top: 4px;
-    }
-
-    /* =========================
-       CTA
-    ========================= */
-
-    .cta {
-      background: #f0ede6;
-      text-align: center;
-      padding: 55px 20px;
-    }
-
-    .cta h2 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-
-    .cta p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 17px;
-      border-radius: 5px;
-      font-size: 0.83rem;
-      font-weight: 600;
-      margin: 4px;
-    }
-
-    .button-gold {
-      background: var(--gold);
-      color: var(--navy);
-    }
-
-    .button-dark {
-      background: var(--navy);
-      color: white;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #081521;
-      color: rgba(255,255,255,0.65);
-      padding: 29px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .footer-name {
-      color: white;
-      font-family: "Playfair Display", serif;
-      font-size: 1.02rem;
-    }
-
-    .footer-small {
-      font-size: 0.77rem;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 18px;
-    }
-
-    .social-links a:hover {
-      color: var(--gold-light);
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1050px) {
-
-      .nav-inner {
-        flex-direction: column;
-        padding: 14px 0;
-        gap: 12px;
-      }
-
-      .nav-links {
-        justify-content: center;
-      }
-
-      .snapshot-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .experience-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .philosophy-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 750px) {
-
-      section {
-        padding: 50px 0;
-      }
-
-      .course-grid,
-      .academic-grid,
-      .education-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .trainer {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .trainer-logo {
-        margin: auto;
-      }
-    }
-
-    @media (max-width: 550px) {
-
-      .hero {
-        padding: 40px 0;
-      }
-
-      .course-grid,
-      .academic-grid,
-      .education-grid,
-      .experience-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .nav-links {
-        gap: 10px 14px;
-        font-size: 0.77rem;
-      }
-
-      .snapshot-title {
-        font-size: 0.93rem;
-      }
-
-      .snapshot-detail {
-        font-size: 0.7rem;
-      }
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teaching | Dr. Prashant Gupta</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+:root{
+  --navy:#0d1b2a;
+  --gold:#c6a15b;
+  --gold-light:#dfc78f;
+  --ivory:#f8f6f0;
+  --white:#fff;
+  --text:#25313d;
+  --muted:#66727e;
+  --border:#e5e1d8;
+  --soft:#f0ede6;
+  --shadow:0 8px 25px rgba(13,27,42,.07);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--ivory);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+  background:var(--navy);
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid rgba(198,161,91,.25);
+}
+
+.nav-inner{
+  min-height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.brand{
+  font-family:"Playfair Display",serif;
+  font-size:1.15rem;
+  white-space:nowrap;
+}
+
+.brand span{
+  color:var(--gold-light);
+}
+
+.nav-links{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:18px;
+  font-size:.83rem;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,.84);
+}
+
+.nav-links a:hover,
+.nav-links .active{
+  color:var(--gold-light);
+}
+
+.cv-button{
+  border:1px solid var(--gold);
+  padding:7px 13px;
+  border-radius:4px;
+  color:var(--gold-light)!important;
+}
+
+/* =========================
+   COMPACT HEADER
+========================= */
+
+.page-header{
+  background:linear-gradient(135deg,#0d1b2a,#17314a);
+  color:white;
+  padding:25px 0;
+}
+
+.page-header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.eyebrow{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:1.8px;
+  font-size:.65rem;
+  font-weight:700;
+  margin-bottom:3px;
+}
+
+.page-header h1{
+  font-family:"Playfair Display",serif;
+  font-size:2rem;
+  line-height:1.15;
+}
+
+.page-header p{
+  color:rgba(255,255,255,.7);
+  font-size:.82rem;
+  max-width:620px;
+}
+
+/* =========================
+   SNAPSHOT
+========================= */
+
+.snapshot{
+  padding:28px 0 35px;
+}
+
+.snapshot-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.snapshot-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:7px;
+  padding:20px 15px;
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+
+.snapshot-icon{
+  color:var(--gold);
+  margin-bottom:6px;
+}
+
+.snapshot-number{
+  font-family:"Playfair Display",serif;
+  font-size:1.65rem;
+  font-weight:700;
+  color:var(--navy);
+  line-height:1;
+}
+
+.snapshot-title{
+  color:var(--muted);
+  font-size:.74rem;
+  margin-top:6px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+  padding:45px 0;
+}
+
+.section-heading{
+  margin-bottom:22px;
+}
+
+.section-heading h2{
+  font-family:"Playfair Display",serif;
+  color:var(--navy);
+  font-size:1.8rem;
+}
+
+.section-heading p{
+  color:var(--muted);
+  font-size:.84rem;
+  max-width:760px;
+  margin-top:3px;
+}
+
+/* =========================
+   COURSES
+========================= */
+
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:13px;
+}
+
+.course-card{
+  background:white;
+  border:1px solid var(--border);
+  border-top:3px solid var(--gold);
+  border-radius:6px;
+  padding:19px;
+}
+
+.course-card i{
+  color:var(--gold);
+  font-size:1rem;
+  margin-bottom:9px;
+}
+
+.course-card h3{
+  font-family:"Playfair Display",serif;
+  color:var(--navy);
+  font-size:1rem;
+  line-height:1.35;
+}
+
+/* =========================
+   TEACHING EXPERIENCE
+========================= */
+
+.experience-section{
+  background:var(--soft);
+}
+
+.experience-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.experience-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:7px;
+  padding:20px 15px;
+  text-align:center;
+}
+
+.logo-wrap{
+  height:65px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:12px;
+}
+
+.logo-wrap img{
+  max-width:115px;
+  max-height:60px;
+  object-fit:contain;
+}
+
+.experience-card h3{
+  font-family:"Playfair Display",serif;
+  color:var(--navy);
+  font-size:1rem;
+  line-height:1.3;
+}
+
+.experience-card p{
+  color:var(--muted);
+  font-size:.73rem;
+  margin-top:4px;
+}
+
+/* =========================
+   OTHER ACADEMIC EXPERIENCE
+========================= */
+
+.academic-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.academic-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:7px;
+  padding:19px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.academic-logo{
+  width:62px;
+  height:62px;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.academic-logo img{
+  max-width:62px;
+  max-height:54px;
+  object-fit:contain;
+}
+
+.academic-card h3{
+  font-family:"Playfair Display",serif;
+  color:var(--navy);
+  font-size:.95rem;
+  line-height:1.3;
+}
+
+.academic-card p{
+  color:var(--muted);
+  font-size:.72rem;
+  margin-top:3px;
+}
+
+/* =========================
+   TEACHING PHILOSOPHY
+========================= */
+
+.philosophy{
+  background:var(--navy);
+  color:white;
+}
+
+.philosophy-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:45px;
+}
+
+.philosophy h2{
+  font-family:"Playfair Display",serif;
+  font-size:1.8rem;
+  line-height:1.25;
+}
+
+.philosophy-intro{
+  color:rgba(255,255,255,.7);
+  font-size:.8rem;
+  margin-top:10px;
+}
+
+.philosophy-points{
+  display:grid;
+  gap:9px;
+}
+
+.philosophy-point{
+  border-left:3px solid var(--gold);
+  padding:9px 0 9px 15px;
+  background:rgba(255,255,255,.035);
+}
+
+.philosophy-point strong{
+  display:block;
+  color:var(--gold-light);
+  font-size:.82rem;
+}
+
+.philosophy-point span{
+  color:rgba(255,255,255,.65);
+  font-size:.73rem;
+}
+
+/* =========================
+   TRAINER
+========================= */
+
+.trainer{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:25px;
+  align-items:center;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:22px;
+}
+
+.trainer-logo{
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.trainer-logo img{
+  max-width:110px;
+  max-height:85px;
+  object-fit:contain;
+}
+
+.trainer h3{
+  font-family:"Playfair Display",serif;
+  color:var(--navy);
+  font-size:1.25rem;
+}
+
+.trainer-role{
+  color:var(--gold);
+  font-weight:700;
+  font-size:.78rem;
+  margin:2px 0 5px;
+}
+
+.trainer p{
+  color:var(--muted);
+  font-size:.77rem;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-section{
+  background:var(--soft);
+}
+
+.education-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.education-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:7px;
+  padding:20px;
+  text-align:center;
+}
+
+.education-logo{
+  height:65px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:11px;
+}
+
+.education-logo img{
+  max-width:110px;
+  max-height:60px;
+  object-fit:contain;
+}
+
+.education-card h3{
+  font-family:"Playfair Display",serif;
+  color:var(--navy);
+  font-size:1rem;
+}
+
+.education-card p{
+  color:var(--muted);
+  font-size:.73rem;
+  margin-top:3px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+  background:var(--navy);
+  color:white;
+  padding:35px 0;
+}
+
+.cta-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.cta h2{
+  font-family:"Playfair Display",serif;
+  font-size:1.6rem;
+}
+
+.cta p{
+  color:rgba(255,255,255,.65);
+  font-size:.78rem;
+  margin-top:3px;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.button{
+  padding:8px 13px;
+  border-radius:4px;
+  font-size:.72rem;
+  font-weight:600;
+  border:1px solid rgba(255,255,255,.25);
+}
+
+.button-gold{
+  background:var(--gold);
+  color:var(--navy);
+  border-color:var(--gold);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#081521;
+  color:rgba(255,255,255,.6);
+  padding:25px 0;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.footer-name{
+  color:white;
+  font-family:"Playfair Display",serif;
+  font-size:1rem;
+}
+
+.footer-small{
+  font-size:.7rem;
+}
+
+.social-links{
+  display:flex;
+  gap:17px;
+}
+
+.social-links a:hover{
+  color:var(--gold-light);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+  .nav-inner{
+    flex-direction:column;
+    padding:12px 0;
+  }
+
+  .snapshot-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .experience-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:750px){
+
+  .page-header-inner{
+    display:block;
+  }
+
+  .page-header p{
+    margin-top:7px;
+  }
+
+  .course-grid,
+  .academic-grid,
+  .education-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .philosophy-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .cta-inner{
+    display:block;
+  }
+
+  .buttons{
+    margin-top:15px;
+  }
+
+}
+
+@media(max-width:550px){
+
+  .snapshot-grid,
+  .course-grid,
+  .academic-grid,
+  .education-grid,
+  .experience-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trainer{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .trainer-logo{
+    margin:auto;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .nav-links{
+    gap:9px 13px;
+    font-size:.74rem;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
+
 
 <!-- =========================
      NAVIGATION
@@ -683,159 +666,155 @@
 
 <nav>
 
-  <div class="container nav-inner">
+<div class="container nav-inner">
 
-    <a href="index.html" class="brand">
-      Dr. Prashant <span>Gupta</span>
-    </a>
+<a href="index.html" class="brand">
+Dr. Prashant <span>Gupta</span>
+</a>
 
-    <div class="nav-links">
+<div class="nav-links">
 
-      <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 
-      <a href="about.html">About</a>
+<a href="about.html">About</a>
 
-      <a href="research.html">Research</a>
+<a href="research.html">Research</a>
 
-      <a href="teaching.html"
-         class="active"
-         aria-current="page">
-        Teaching
-      </a>
+<a href="teaching.html" class="active">Teaching</a>
 
-      <a href="publications.html">Publications</a>
+<a href="publications.html">Publications</a>
 
-      <a href="activities.html">Activities</a>
+<a href="activities.html">Activities</a>
 
-      <a href="achievements.html">Achievements</a>
+<a href="achievements.html">Achievements</a>
 
-      <a href="contact.html">Contact</a>
+<a href="contact.html">Contact</a>
 
-      <a href="Prashant Kumar Gupta_CV.pdf"
-         class="cv-button">
+<a href="Prashant Kumar Gupta_CV.pdf" class="cv-button">
+<i class="fa-solid fa-file-pdf"></i> CV
+</a>
 
-        <i class="fa-solid fa-file-pdf"></i>
-        CV
+</div>
 
-      </a>
-
-    </div>
-
-  </div>
+</div>
 
 </nav>
 
 
 <!-- =========================
-     HERO
+     COMPACT HEADER
 ========================= -->
 
-<header class="hero">
+<header class="page-header">
 
-  <div class="container">
+<div class="container page-header-inner">
 
-    <div class="eyebrow">
-      Teaching
-    </div>
+<div>
 
-    <h1>
-      Teaching Finance. Building Understanding.
-    </h1>
+<div class="eyebrow">
+Teaching
+</div>
 
-    <p>
-      Teaching finance through conceptual clarity, practical application,
-      real-world examples and active classroom engagement.
-    </p>
+<h1>
+Teaching &amp; Learning
+</h1>
 
-  </div>
+</div>
+
+<p>
+Teaching across financial accounting, management accounting,
+financial management, risk and financial modelling.
+</p>
+
+</div>
 
 </header>
 
 
 <!-- =========================
-     TEACHING SNAPSHOT
+     SNAPSHOT
 ========================= -->
 
-<div class="snapshot">
+<section class="snapshot">
 
-  <div class="container">
+<div class="container">
 
-    <div class="snapshot-grid">
-
-
-      <div class="snapshot-card">
-
-        <div class="snapshot-icon">
-          <i class="fa-solid fa-building-columns"></i>
-        </div>
-
-        <div class="snapshot-title">
-          Mahindra University
-        </div>
-
-        <div class="snapshot-detail">
-          Assistant Professor
-        </div>
-
-      </div>
+<div class="snapshot-grid">
 
 
-      <div class="snapshot-card">
+<div class="snapshot-card">
 
-        <div class="snapshot-icon">
-          <i class="fa-solid fa-book-open"></i>
-        </div>
+<div class="snapshot-icon">
+<i class="fa-solid fa-building-columns"></i>
+</div>
 
-        <div class="snapshot-title">
-          7 Teaching Areas
-        </div>
+<div class="snapshot-number">
+7
+</div>
 
-        <div class="snapshot-detail">
-          Accounting · Finance · Risk · Modelling
-        </div>
-
-      </div>
-
-
-      <div class="snapshot-card">
-
-        <div class="snapshot-icon">
-          <i class="fa-solid fa-chalkboard-user"></i>
-        </div>
-
-        <div class="snapshot-title">
-          Practice-Based Learning
-        </div>
-
-        <div class="snapshot-detail">
-          Concepts · Cases · Applications
-        </div>
-
-      </div>
-
-
-      <div class="snapshot-card">
-
-        <div class="snapshot-icon">
-          <i class="fa-solid fa-users"></i>
-        </div>
-
-        <div class="snapshot-title">
-          Student Development
-        </div>
-
-        <div class="snapshot-detail">
-          Classroom · Mentoring · Engagement
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
+<div class="snapshot-title">
+Teaching Areas
+</div>
 
 </div>
+
+
+<div class="snapshot-card">
+
+<div class="snapshot-icon">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+
+<div class="snapshot-number">
+4
+</div>
+
+<div class="snapshot-title">
+Teaching Institutions
+</div>
+
+</div>
+
+
+<div class="snapshot-card">
+
+<div class="snapshot-icon">
+<i class="fa-solid fa-chalkboard-user"></i>
+</div>
+
+<div class="snapshot-number">
+3
+</div>
+
+<div class="snapshot-title">
+Other Academic Roles
+</div>
+
+</div>
+
+
+<div class="snapshot-card">
+
+<div class="snapshot-icon">
+<i class="fa-solid fa-users"></i>
+</div>
+
+<div class="snapshot-number">
+15+
+</div>
+
+<div class="snapshot-title">
+Years with Art of Living
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
 
 
 <!-- =========================
@@ -844,74 +823,74 @@
 
 <section>
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-heading">
+<div class="section-heading">
 
-      <div class="eyebrow">
-        Courses
-      </div>
+<div class="eyebrow">
+Courses
+</div>
 
-      <h2>
-        Areas I Teach
-      </h2>
+<h2>
+Areas I Teach
+</h2>
 
-      <p>
-        Courses across financial accounting, management accounting,
-        financial management and applied finance.
-      </p>
+<p>
+Courses spanning accounting, finance, risk management and
+applied financial analysis.
+</p>
 
-    </div>
-
-
-    <div class="course-grid">
+</div>
 
 
-      <div class="course-card">
-        <i class="fa-solid fa-calculator"></i>
-        <h3>Financial Accounting</h3>
-      </div>
+<div class="course-grid">
 
 
-      <div class="course-card">
-        <i class="fa-solid fa-chart-column"></i>
-        <h3>Management Accounting</h3>
-      </div>
+<div class="course-card">
+<i class="fa-solid fa-calculator"></i>
+<h3>Financial Accounting</h3>
+</div>
 
 
-      <div class="course-card">
-        <i class="fa-solid fa-money-bill-trend-up"></i>
-        <h3>Financial Management</h3>
-      </div>
+<div class="course-card">
+<i class="fa-solid fa-chart-column"></i>
+<h3>Management Accounting</h3>
+</div>
 
 
-      <div class="course-card">
-        <i class="fa-solid fa-chart-line"></i>
-        <h3>Advanced Financial Management</h3>
-      </div>
+<div class="course-card">
+<i class="fa-solid fa-money-bill-trend-up"></i>
+<h3>Financial Management</h3>
+</div>
 
 
-      <div class="course-card">
-        <i class="fa-solid fa-file-invoice-dollar"></i>
-        <h3>Cost &amp; Management Accounting</h3>
-      </div>
+<div class="course-card">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Advanced Financial Management</h3>
+</div>
 
 
-      <div class="course-card">
-        <i class="fa-solid fa-shield-halved"></i>
-        <h3>Enterprise Risk Management</h3>
-      </div>
+<div class="course-card">
+<i class="fa-solid fa-file-invoice-dollar"></i>
+<h3>Cost &amp; Management Accounting</h3>
+</div>
 
 
-      <div class="course-card">
-        <i class="fa-solid fa-table-cells"></i>
-        <h3>Financial Modelling</h3>
-      </div>
+<div class="course-card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Enterprise Risk Management</h3>
+</div>
 
 
-    </div>
+<div class="course-card">
+<i class="fa-solid fa-table-cells"></i>
+<h3>Financial Modelling</h3>
+</div>
 
-  </div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -922,119 +901,99 @@
 
 <section class="experience-section">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-heading">
+<div class="section-heading">
 
-      <div class="eyebrow">
-        Teaching Experience
-      </div>
+<div class="eyebrow">
+Teaching Experience
+</div>
 
-      <h2>
-        Institutions
-      </h2>
+<h2>
+Teaching Institutions
+</h2>
 
-      <p>
-        Teaching experience across management, finance and higher education.
-      </p>
-
-    </div>
+</div>
 
 
-    <div class="experience-grid">
+<div class="experience-grid">
 
 
-      <!-- MAHINDRA -->
+<div class="experience-card">
 
-      <div class="experience-card">
+<div class="logo-wrap">
+<img src="som-logo.jpg"
+alt="School of Management, Mahindra University">
+</div>
 
-        <div class="logo-wrap">
+<h3>
+Mahindra University
+</h3>
 
-          <img src="som-logo.jpg"
-               alt="School of Management, Mahindra University">
+<p>
+Assistant Professor
+</p>
 
-        </div>
-
-        <h3>
-          Mahindra University
-        </h3>
-
-        <p>
-          Assistant Professor
-        </p>
-
-      </div>
+</div>
 
 
-      <!-- NALSAR -->
+<div class="experience-card">
 
-      <div class="experience-card">
+<div class="logo-wrap">
+<img src="nalsar-logo.jpg"
+alt="NALSAR University of Law">
+</div>
 
-        <div class="logo-wrap">
+<h3>
+NALSAR University of Law
+</h3>
 
-          <img src="nalsar-logo.jpg"
-               alt="NALSAR University of Law">
+<p>
+Visiting Professor
+</p>
 
-        </div>
-
-        <h3>
-          NALSAR University of Law
-        </h3>
-
-        <p>
-          Visiting Professor
-        </p>
-
-      </div>
+</div>
 
 
-      <!-- PIBM -->
+<div class="experience-card">
 
-      <div class="experience-card">
+<div class="logo-wrap">
+<img src="pibm-logo.png"
+alt="PIBM">
+</div>
 
-        <div class="logo-wrap">
+<h3>
+PIBM
+</h3>
 
-          <img src="pibm-logo.png"
-               alt="PIBM">
+<p>
+Assistant Professor &amp; Batch In-Charge
+</p>
 
-        </div>
-
-        <h3>
-          PIBM
-        </h3>
-
-        <p>
-          Assistant Professor &amp; Batch In-Charge
-        </p>
-
-      </div>
+</div>
 
 
-      <!-- PSIT -->
+<div class="experience-card">
 
-      <div class="experience-card">
+<div class="logo-wrap">
+<img src="psit-logo.png"
+alt="PSIT">
+</div>
 
-        <div class="logo-wrap">
+<h3>
+PSIT
+</h3>
 
-          <img src="psit-logo.png"
-               alt="PSIT">
+<p>
+Assistant Professor
+</p>
 
-        </div>
-
-        <h3>
-          PSIT
-        </h3>
-
-        <p>
-          Assistant Professor
-        </p>
-
-      </div>
+</div>
 
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
@@ -1045,105 +1004,99 @@
 
 <section>
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-heading">
+<div class="section-heading">
 
-      <div class="eyebrow">
-        Other Academic Experience
-      </div>
+<div class="eyebrow">
+Academic Experience
+</div>
 
-      <h2>
-        Academic Roles Beyond Teaching
-      </h2>
+<h2>
+Other Academic Roles
+</h2>
 
-    </div>
-
-
-    <div class="academic-grid">
+</div>
 
 
-      <!-- IIT DELHI -->
-
-      <div class="academic-card">
-
-        <div class="academic-logo">
-
-          <img src="iitd-dms-logo.png"
-               alt="IIT Delhi">
-
-        </div>
-
-        <div>
-
-          <h3>
-            IIT Delhi
-          </h3>
-
-          <p>
-            Teaching Assistant
-          </p>
-
-        </div>
-
-      </div>
+<div class="academic-grid">
 
 
-      <!-- ISB -->
+<div class="academic-card">
 
-      <div class="academic-card">
+<div class="academic-logo">
 
-        <div class="academic-logo">
+<img src="iitd-dms-logo.png"
+alt="IIT Delhi">
 
-          <img src="isb-logo.jpg"
-               alt="Indian School of Business">
+</div>
 
-        </div>
+<div>
 
-        <div>
+<h3>
+IIT Delhi
+</h3>
 
-          <h3>
-            Indian School of Business
-          </h3>
+<p>
+Teaching Assistant
+</p>
 
-          <p>
-            Academic Associate
-          </p>
+</div>
 
-        </div>
-
-      </div>
+</div>
 
 
-      <!-- ACER -->
+<div class="academic-card">
 
-      <div class="academic-card">
+<div class="academic-logo">
 
-        <div class="academic-logo">
+<img src="isb-logo.jpg"
+alt="Indian School of Business">
 
-          <img src="acer-logo.jpg"
-               alt="Australian Council for Educational Research">
+</div>
 
-        </div>
+<div>
 
-        <div>
+<h3>
+Indian School of Business
+</h3>
 
-          <h3>
-            ACER
-          </h3>
+<p>
+Academic Associate
+</p>
 
-          <p>
-            Consultant
-          </p>
+</div>
 
-        </div>
-
-      </div>
+</div>
 
 
-    </div>
+<div class="academic-card">
 
-  </div>
+<div class="academic-logo">
+
+<img src="acer-logo.jpg"
+alt="Australian Council for Educational Research">
+
+</div>
+
+<div>
+
+<h3>
+ACER
+</h3>
+
+<p>
+Consultant
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1154,88 +1107,84 @@
 
 <section class="philosophy">
 
-  <div class="container philosophy-grid">
+<div class="container philosophy-grid">
 
-    <div>
+<div>
 
-      <div class="eyebrow">
-        Teaching Philosophy
-      </div>
+<div class="eyebrow">
+Teaching Approach
+</div>
 
-      <h2>
-        From Concepts to Application
-      </h2>
+<h2>
+From Concepts to Application
+</h2>
 
-      <p style="margin-top:15px;">
-        The objective is not simply to explain financial concepts,
-        but to help students understand how those concepts work in
-        real organisations and real decisions.
-      </p>
+<p class="philosophy-intro">
+The focus is on helping students understand financial concepts
+and connect them with real-world decisions and applications.
+</p>
 
-    </div>
-
-
-    <div class="philosophy-points">
+</div>
 
 
-      <div class="philosophy-point">
-
-        <strong>
-          Conceptual Clarity
-        </strong>
-
-        <span>
-          Build a strong understanding of the underlying financial concepts.
-        </span>
-
-      </div>
+<div class="philosophy-points">
 
 
-      <div class="philosophy-point">
+<div class="philosophy-point">
 
-        <strong>
-          Real-World Examples
-        </strong>
+<strong>
+Conceptual Clarity
+</strong>
 
-        <span>
-          Connect classroom concepts with actual businesses, financial
-          decisions and contemporary situations.
-        </span>
+<span>
+Build a strong understanding of the underlying concepts.
+</span>
 
-      </div>
-
-
-      <div class="philosophy-point">
-
-        <strong>
-          Practice-Based Learning
-        </strong>
-
-        <span>
-          Use exercises, cases, Excel-based applications and problem solving
-          to move from theory to practice.
-        </span>
-
-      </div>
+</div>
 
 
-      <div class="philosophy-point">
+<div class="philosophy-point">
 
-        <strong>
-          Student Engagement
-        </strong>
+<strong>
+Real-World Examples
+</strong>
 
-        <span>
-          Encourage questions, discussion and active participation in the
-          learning process.
-        </span>
+<span>
+Connect classroom learning with actual businesses and financial decisions.
+</span>
 
-      </div>
+</div>
 
 
-    </div>
+<div class="philosophy-point">
 
-  </div>
+<strong>
+Practice-Based Learning
+</strong>
+
+<span>
+Use exercises, cases and applied tools to move from theory to practice.
+</span>
+
+</div>
+
+
+<div class="philosophy-point">
+
+<strong>
+Student Engagement
+</strong>
+
+<span>
+Encourage questions, discussion and active participation.
+</span>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1246,53 +1195,53 @@
 
 <section>
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-heading">
+<div class="section-heading">
 
-      <div class="eyebrow">
-        Trainer Experience
-      </div>
+<div class="eyebrow">
+Trainer Experience
+</div>
 
-      <h2>
-        Beyond Formal Academics
-      </h2>
+<h2>
+Beyond Formal Academics
+</h2>
 
-    </div>
-
-
-    <div class="trainer">
+</div>
 
 
-      <div class="trainer-logo">
-
-        <img src="aol-logo.png"
-             alt="Art of Living">
-
-      </div>
+<div class="trainer">
 
 
-      <div>
+<div class="trainer-logo">
 
-        <h3>
-          Art of Living
-        </h3>
+<img src="aol-logo.png"
+alt="Art of Living">
 
-        <div class="trainer-role">
-          Teacher
-        </div>
-
-        <p>
-          Long-standing engagement in facilitating programmes focused on
-          personal development, youth empowerment and human potential.
-        </p>
-
-      </div>
+</div>
 
 
-    </div>
+<div>
 
-  </div>
+<h3>
+Art of Living
+</h3>
+
+<div class="trainer-role">
+Teacher
+</div>
+
+<p>
+Long-standing engagement in programmes focused on personal
+development, youth empowerment and human potential.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1301,95 +1250,89 @@
      EDUCATION
 ========================= -->
 
-<section style="background:#f0ede6;">
+<section class="education-section">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-heading">
+<div class="section-heading">
 
-      <div class="eyebrow">
-        Education
-      </div>
+<div class="eyebrow">
+Education
+</div>
 
-      <h2>
-        Academic Background
-      </h2>
+<h2>
+Academic Background
+</h2>
 
-    </div>
-
-
-    <div class="education-grid">
+</div>
 
 
-      <!-- IIT -->
-
-      <div class="education-card">
-
-        <div class="education-logo">
-
-          <img src="iitd-dms-logo.png"
-               alt="IIT Delhi">
-
-        </div>
-
-        <h3>
-          Ph.D. in Finance
-        </h3>
-
-        <p>
-          IIT Delhi
-        </p>
-
-      </div>
+<div class="education-grid">
 
 
-      <!-- BIT -->
+<div class="education-card">
 
-      <div class="education-card">
+<div class="education-logo">
 
-        <div class="education-logo">
+<img src="iitd-dms-logo.png"
+alt="IIT Delhi">
 
-          <img src="bit-mesra-logo.png"
-               alt="BIT Mesra">
+</div>
 
-        </div>
+<h3>
+Ph.D. in Finance
+</h3>
 
-        <h3>
-          MBA – Finance
-        </h3>
+<p>
+IIT Delhi
+</p>
 
-        <p>
-          BIT Mesra
-        </p>
-
-      </div>
+</div>
 
 
-      <!-- XAVIER'S -->
+<div class="education-card">
 
-      <div class="education-card">
+<div class="education-logo">
 
-        <div class="education-logo">
+<img src="bit-mesra-logo.png"
+alt="BIT Mesra">
 
-          <img src="xaviers-logo.jpg"
-               alt="St. Xavier's College, Ranchi">
+</div>
 
-        </div>
+<h3>
+MBA – Finance
+</h3>
 
-        <h3>
-          B.Com. – Accounts Hons.
-        </h3>
+<p>
+BIT Mesra
+</p>
 
-        <p>
-          St. Xavier's College, Ranchi
-        </p>
-
-      </div>
+</div>
 
 
-    </div>
+<div class="education-card">
 
-  </div>
+<div class="education-logo">
+
+<img src="xaviers-logo.jpg"
+alt="St. Xavier's College, Ranchi">
+
+</div>
+
+<h3>
+B.Com. – Accounts Hons.
+</h3>
+
+<p>
+St. Xavier's College, Ranchi
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1400,46 +1343,40 @@
 
 <section class="cta">
 
-  <div class="container">
+<div class="container cta-inner">
 
-    <h2>
-      Explore More
-    </h2>
+<div>
 
-    <p>
-      Explore my research, publications, activities and achievements.
-    </p>
+<h2>
+Explore More
+</h2>
 
+<p>
+Explore research, publications and academic activities.
+</p>
 
-    <a href="research.html"
-       class="button button-gold">
+</div>
 
-      <i class="fa-solid fa-microscope"></i>
-      Research
+<div class="buttons">
 
-    </a>
+<a href="research.html" class="button button-gold">
+<i class="fa-solid fa-microscope"></i>
+Research
+</a>
 
+<a href="publications.html" class="button">
+<i class="fa-solid fa-book"></i>
+Publications
+</a>
 
-    <a href="publications.html"
-       class="button button-dark">
+<a href="achievements.html" class="button">
+<i class="fa-solid fa-award"></i>
+Achievements
+</a>
 
-      <i class="fa-solid fa-book-open"></i>
-      Publications
+</div>
 
-    </a>
-
-
-    <a href="achievements.html"
-       class="button"
-       style="border:1px solid #0d1b2a;">
-
-      <i class="fa-solid fa-award"></i>
-      Achievements
-
-    </a>
-
-
-  </div>
+</div>
 
 </section>
 
@@ -1450,55 +1387,41 @@
 
 <footer>
 
-  <div class="container footer-inner">
+<div class="container footer-inner">
 
-    <div>
+<div>
 
-      <div class="footer-name">
-        Dr. Prashant Gupta
-      </div>
+<div class="footer-name">
+Dr. Prashant Gupta
+</div>
 
-      <div class="footer-small">
-        Assistant Professor · School of Management · Mahindra University
-      </div>
+<div class="footer-small">
+Assistant Professor · School of Management · Mahindra University
+</div>
 
-    </div>
-
-
-    <div class="social-links">
-
-      <a href="https://www.linkedin.com/in/kumar-prashantgupta/"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="LinkedIn">
-
-        <i class="fa-brands fa-linkedin"></i>
-
-      </a>
+</div>
 
 
-      <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Google Scholar">
+<div class="social-links">
 
-        <i class="fa-solid fa-graduation-cap"></i>
+<a href="https://www.linkedin.com/in/kumar-prashantgupta/"
+target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+</a>
 
-      </a>
+<a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
+target="_blank">
+<i class="fa-solid fa-graduation-cap"></i>
+</a>
 
+<a href="https://orcid.org/0000-0002-6206-6158"
+target="_blank">
+<i class="fa-brands fa-orcid"></i>
+</a>
 
-      <a href="https://orcid.org/0000-0002-6206-6158"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="ORCID">
+</div>
 
-        <i class="fa-brands fa-orcid"></i>
-
-      </a>
-
-    </div>
-
-  </div>
+</div>
 
 </footer>
 
