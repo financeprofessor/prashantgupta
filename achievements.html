@@ -23,7 +23,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255,255,255,0.96);
+    background: rgba(255,255,255,0.97);
     border-bottom: 1px solid #e5e7eb;
     padding: 15px 6%;
     display: flex;
@@ -63,13 +63,12 @@ nav {
 /* HEADER */
 
 .page-header {
-    padding: 42px 0 28px;
+    padding: 40px 0 25px;
 }
 
 .page-header h1 {
     margin: 0 0 6px;
-    font-size: 34px;
-    letter-spacing: -0.5px;
+    font-size: 32px;
 }
 
 .page-header p {
@@ -84,41 +83,41 @@ nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    margin-bottom: 48px;
+    margin-bottom: 45px;
 }
 
 .snapshot-card {
-    background: white;
+    background: #fff;
     border: 1px solid #e5e7eb;
     border-radius: 14px;
-    padding: 22px;
+    padding: 20px;
 }
 
 .snapshot-number {
-    font-size: 28px;
+    font-size: 27px;
     font-weight: 800;
     color: #172033;
-    margin-bottom: 3px;
 }
 
 .snapshot-label {
     font-size: 13px;
     color: #6b7280;
+    margin-top: 3px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section {
-    margin-bottom: 52px;
+    margin-bottom: 48px;
 }
 
 .section-heading {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .section-heading h2 {
     margin: 0 0 5px;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .section-heading p {
@@ -132,25 +131,25 @@ nav {
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 17px;
 }
 
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    gap: 17px;
 }
 
 .card {
-    background: white;
+    background: #fff;
     border: 1px solid #e5e7eb;
-    border-radius: 15px;
-    padding: 24px;
+    border-radius: 14px;
+    padding: 22px;
 }
 
 .card h3 {
-    margin: 0 0 8px;
-    font-size: 18px;
+    margin: 0 0 7px;
+    font-size: 17px;
 }
 
 .card p {
@@ -159,70 +158,27 @@ nav {
     font-size: 14px;
 }
 
-.card .category {
-    display: inline-block;
-    margin-bottom: 10px;
+.category {
+    display: block;
+    margin-bottom: 7px;
+    color: #1d4ed8;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.6px;
-    color: #1d4ed8;
-}
-
-/* FEATURE */
-
-.feature {
-    background: #172033;
-    color: white;
-    border-radius: 18px;
-    padding: 30px;
-}
-
-.feature h2 {
-    margin: 0 0 8px;
-    font-size: 25px;
-}
-
-.feature p {
-    margin: 0;
-    color: #d5d9e1;
-    font-size: 14px;
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-    margin-top: 24px;
-}
-
-.feature-item {
-    border-top: 1px solid rgba(255,255,255,0.18);
-    padding-top: 15px;
-}
-
-.feature-item strong {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 15px;
-}
-
-.feature-item span {
-    color: #c4cad5;
-    font-size: 13px;
 }
 
 /* MILESTONES */
 
 .milestone {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 170px 1fr;
     gap: 25px;
-    background: white;
+    background: #fff;
     border: 1px solid #e5e7eb;
-    border-radius: 15px;
-    padding: 23px;
-    margin-bottom: 14px;
+    border-radius: 14px;
+    padding: 21px;
+    margin-bottom: 13px;
 }
 
 .milestone:last-child {
@@ -230,11 +186,11 @@ nav {
 }
 
 .milestone-label {
-    font-size: 12px;
-    font-weight: 700;
     color: #1d4ed8;
+    font-size: 11px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
 }
 
 .milestone h3 {
@@ -248,24 +204,67 @@ nav {
     font-size: 14px;
 }
 
+/* FEATURE */
+
+.feature {
+    background: #172033;
+    color: #fff;
+    border-radius: 17px;
+    padding: 28px;
+}
+
+.feature h2 {
+    margin: 0 0 7px;
+    font-size: 24px;
+}
+
+.feature > p {
+    margin: 0;
+    color: #d5d9e1;
+    font-size: 14px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 23px;
+}
+
+.feature-item {
+    border-top: 1px solid rgba(255,255,255,0.18);
+    padding-top: 14px;
+}
+
+.feature-item strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.feature-item span {
+    color: #c4cad5;
+    font-size: 13px;
+}
+
 /* CTA */
 
 .cta {
-    margin: 55px 0;
+    margin: 50px 0;
     background: #eef2ff;
     border: 1px solid #dbe3ff;
-    border-radius: 18px;
-    padding: 30px;
+    border-radius: 17px;
+    padding: 28px;
     text-align: center;
 }
 
 .cta h2 {
-    margin: 0 0 8px;
-    font-size: 24px;
+    margin: 0 0 7px;
+    font-size: 23px;
 }
 
 .cta p {
-    margin: 0 auto 18px;
+    margin: 0 auto 17px;
     max-width: 650px;
     color: #5f6877;
     font-size: 14px;
@@ -273,10 +272,10 @@ nav {
 
 .cta a {
     display: inline-block;
-    padding: 10px 18px;
+    padding: 9px 17px;
     border-radius: 8px;
     background: #172033;
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 13px;
     font-weight: 700;
@@ -284,11 +283,11 @@ nav {
 
 footer {
     border-top: 1px solid #e5e7eb;
-    padding: 25px 6%;
+    padding: 24px 6%;
     text-align: center;
     color: #7a8290;
     font-size: 12px;
-    background: white;
+    background: #fff;
 }
 
 /* RESPONSIVE */
@@ -303,22 +302,18 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .feature-grid {
-        grid-template-columns: 1fr;
-    }
-
     .milestone {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 7px;
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     nav {
+        flex-direction: column;
         align-items: flex-start;
         gap: 12px;
-        flex-direction: column;
     }
 
     .nav-links {
@@ -329,24 +324,28 @@ footer {
         width: 92%;
     }
 
-    .page-header {
-        padding-top: 30px;
+    .grid-2,
+    .feature-grid {
+        grid-template-columns: 1fr;
     }
 
     .page-header h1 {
         font-size: 28px;
     }
+}
+
+@media (max-width: 500px) {
 
     .snapshot {
         grid-template-columns: 1fr 1fr;
     }
 
-    .grid-2 {
-        grid-template-columns: 1fr;
+    .snapshot-card {
+        padding: 16px;
     }
 
-    .feature {
-        padding: 24px;
+    .snapshot-number {
+        font-size: 23px;
     }
 }
 </style>
@@ -383,8 +382,7 @@ footer {
         <h1>Achievements & Engagements</h1>
 
         <p>
-            Milestones, recognitions, leadership experiences and engagements
-            across different stages of the journey.
+            Milestones, recognitions, leadership experiences and engagements across the journey.
         </p>
 
     </section>
@@ -449,8 +447,7 @@ footer {
                 <h3>9th Among 475 Academicians</h3>
 
                 <p>
-                    Secured 9th position among 475 academicians at
-                    OTA Kamptee.
+                    Secured 9th position among 475 academicians at OTA Kamptee.
                 </p>
 
             </div>
@@ -490,8 +487,7 @@ footer {
                 <h3>Best Paper Award — AGBA Conference</h3>
 
                 <p>
-                    Best Paper Award at AGBA's 16th World Conference
-                    at IIT Delhi.
+                    Best Paper Award at AGBA's 16th World Conference at IIT Delhi.
                 </p>
 
             </div>
@@ -602,8 +598,7 @@ footer {
                 <h3>PhD Representative</h3>
 
                 <p>
-                    Served as PhD Representative during doctoral studies
-                    at IIT Delhi.
+                    Served as PhD Representative during doctoral studies at IIT Delhi.
                 </p>
 
             </div>
@@ -642,7 +637,7 @@ footer {
             <h2>Invited Sessions</h2>
 
             <p>
-                Selected sessions and academic engagements with students and institutions.
+                Selected academic sessions and engagements with students and institutions.
             </p>
 
         </div>
@@ -699,8 +694,7 @@ footer {
                 <h3>Handling Cases — Shaheed Bhagat Singh College</h3>
 
                 <p>
-                    Academic session on case handling and analysis
-                    for students.
+                    Academic session on case handling and analysis for students.
                 </p>
 
             </div>
@@ -710,7 +704,7 @@ footer {
     </section>
 
 
-    <!-- SCHOOL & YOUTH OUTREACH -->
+    <!-- SCHOOL OUTREACH -->
 
     <section class="section">
 
@@ -760,8 +754,8 @@ footer {
                 <h3>Coaching Institutes</h3>
 
                 <p>
-                    Student engagement sessions conducted across
-                    Surat, Ranchi and Patna.
+                    Student engagement sessions conducted across Surat,
+                    Ranchi and Patna.
                 </p>
 
             </div>
@@ -783,6 +777,7 @@ footer {
                 Every achievement, big or small, becomes a part of the journey —
                 and every journey shapes character.
             </p>
+
 
             <div class="feature-grid">
 
@@ -814,7 +809,7 @@ footer {
                     <strong>Student Engagement</strong>
 
                     <span>
-                        Experiences that involve mentoring, guiding and developing students.
+                        Experiences involving mentoring, guiding and developing students.
                     </span>
 
                 </div>
@@ -842,10 +837,10 @@ footer {
 
     <section class="cta">
 
-        <h2>Beyond the Milestones</h2>
+        <h2>Explore the Broader Journey</h2>
 
         <p>
-            Explore the broader institutional, leadership and social activities
+            See the institutional, leadership, NCC and social activities
             that continue alongside teaching and research.
         </p>
 
@@ -859,9 +854,7 @@ footer {
 
 
 <footer>
-
     © 2026 Dr. Prashant Gupta · Mahindra University
-
 </footer>
 
 </body>
