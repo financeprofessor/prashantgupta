@@ -250,6 +250,10 @@
       background: white;
       padding: 24px 20px;
       text-align: center;
+      min-height: 128px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .quick-icon {
@@ -258,17 +262,21 @@
       margin-bottom: 8px;
     }
 
+    /* MAIN INFORMATION — LARGE */
     .quick-number {
       font-family: "Playfair Display", serif;
       color: var(--navy);
-      font-size: 1.35rem;
+      font-size: 1.12rem;
+      line-height: 1.2;
       font-weight: 700;
-      margin-bottom: 2px;
+      margin-bottom: 5px;
     }
 
+    /* SUPPORTING INFORMATION — SMALL */
     .quick-label {
       color: var(--muted);
       font-size: 0.78rem;
+      line-height: 1.35;
     }
 
     /* =========================
@@ -574,6 +582,14 @@
         padding: 55px 0;
       }
 
+      .quick-number {
+        font-size: 1rem;
+      }
+
+      .quick-label {
+        font-size: 0.74rem;
+      }
+
       .footer-inner {
         flex-direction: column;
         text-align: center;
@@ -588,6 +604,15 @@
 
       .quick-card {
         padding: 18px 10px;
+        min-height: 115px;
+      }
+
+      .quick-number {
+        font-size: 0.95rem;
+      }
+
+      .quick-label {
+        font-size: 0.72rem;
       }
 
       .highlight-grid {
@@ -609,6 +634,7 @@
 ========================= -->
 
 <nav>
+
   <div class="container nav-inner">
 
     <a href="index.html" class="brand">
@@ -627,12 +653,14 @@
       <a href="contact.html">Contact</a>
 
       <a href="Prashant Kumar Gupta_CV.pdf" class="cv-button">
-        <i class="fa-solid fa-file-pdf"></i> CV
+        <i class="fa-solid fa-file-pdf"></i>
+        CV
       </a>
 
     </div>
 
   </div>
+
 </nav>
 
 
@@ -645,11 +673,14 @@
   <div class="container hero-grid">
 
     <div class="profile-wrap">
+
       <img
         src="profile.jpeg"
         alt="Dr. Prashant Gupta"
         class="profile-image">
+
     </div>
+
 
     <div>
 
@@ -673,6 +704,7 @@
         currencies and digital finance.
       </p>
 
+
       <div class="hero-buttons">
 
         <a href="research.html" class="button button-primary">
@@ -690,9 +722,12 @@
           Achievements
         </a>
 
-        <a href="Prashant Kumar Gupta_CV.pdf" class="button button-outline">
+        <a href="Prashant Kumar Gupta_CV.pdf"
+           class="button button-outline">
+
           <i class="fa-solid fa-file-lines"></i>
           View CV
+
         </a>
 
       </div>
@@ -714,6 +749,9 @@
 
     <div class="quick-grid">
 
+
+      <!-- PH.D. -->
+
       <div class="quick-card">
 
         <div class="quick-icon">
@@ -731,6 +769,8 @@
       </div>
 
 
+      <!-- JOURNAL PUBLICATIONS -->
+
       <div class="quick-card">
 
         <div class="quick-icon">
@@ -738,15 +778,17 @@
         </div>
 
         <div class="quick-number">
-          4
+          Journal Publications
         </div>
 
         <div class="quick-label">
-          Journal Publications
+          4
         </div>
 
       </div>
 
+
+      <!-- RESEARCH RECOGNITIONS -->
 
       <div class="quick-card">
 
@@ -755,15 +797,17 @@
         </div>
 
         <div class="quick-number">
-          3
+          Research Recognitions
         </div>
 
         <div class="quick-label">
-          Research Recognitions
+          3
         </div>
 
       </div>
 
+
+      <!-- ART OF LIVING -->
 
       <div class="quick-card">
 
@@ -780,6 +824,7 @@
         </div>
 
       </div>
+
 
     </div>
 
@@ -802,7 +847,9 @@
         Research
       </div>
 
-      <h2>Research Areas</h2>
+      <h2>
+        Research Areas
+      </h2>
 
       <p>
         My research broadly examines financial institutions, governance,
@@ -814,9 +861,12 @@
 
     <div class="research-grid">
 
+
       <div class="research-card">
 
-        <div class="research-number">01</div>
+        <div class="research-number">
+          01
+        </div>
 
         <h3>
           Corporate Governance, Banking & Asset Quality
@@ -837,7 +887,9 @@
 
       <div class="research-card">
 
-        <div class="research-number">02</div>
+        <div class="research-number">
+          02
+        </div>
 
         <h3>
           Central Bank Digital Currencies & Digital Finance
@@ -857,7 +909,9 @@
 
       <div class="research-card">
 
-        <div class="research-number">03</div>
+        <div class="research-number">
+          03
+        </div>
 
         <h3>
           Financial Inclusion, FinTech & Digital Payments
@@ -873,6 +927,7 @@
         </a>
 
       </div>
+
 
     </div>
 
@@ -891,13 +946,20 @@
 
     <div class="two-column">
 
+
+      <!-- TEACHING -->
+
       <div class="info-box">
 
         <h3>
+
           <i class="fa-solid fa-chalkboard-user"
              style="color:#c6a15b; margin-right:8px;"></i>
+
           Teaching
+
         </h3>
+
 
         <ul class="info-list">
 
@@ -938,50 +1000,74 @@
 
         </ul>
 
+
         <a href="teaching.html"
            class="research-link">
+
           View teaching profile →
+
         </a>
 
       </div>
 
+
+      <!-- EDUCATION -->
 
       <div class="info-box">
 
         <h3>
+
           <i class="fa-solid fa-graduation-cap"
              style="color:#c6a15b; margin-right:8px;"></i>
+
           Education
+
         </h3>
+
 
         <ul class="info-list">
 
           <li>
+
             <i class="fa-solid fa-building-columns"></i>
+
             <strong>Ph.D. in Finance</strong><br>
             IIT Delhi
+
           </li>
 
+
           <li>
+
             <i class="fa-solid fa-building-columns"></i>
+
             <strong>MBA – Finance</strong><br>
             BIT Mesra
+
           </li>
 
+
           <li>
+
             <i class="fa-solid fa-building-columns"></i>
+
             <strong>B.Com. – Accounts Hons.</strong><br>
             St. Xavier's College, Ranchi
+
           </li>
 
         </ul>
 
+
         <a href="about.html"
            class="research-link">
+
           More about my journey →
+
         </a>
 
       </div>
+
 
     </div>
 
@@ -1017,6 +1103,7 @@
 
 
     <div class="highlight-grid">
+
 
       <div class="highlight-card">
 
@@ -1080,6 +1167,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -1103,25 +1191,36 @@
       Explore my research, teaching, publications, activities and achievements.
     </p>
 
+
     <div class="hero-buttons"
          style="justify-content:center;">
 
+
       <a href="publications.html"
          class="button button-primary">
+
         Publications
+
       </a>
+
 
       <a href="activities.html"
          class="button"
          style="background:#0d1b2a;color:white;">
+
         Activities
+
       </a>
+
 
       <a href="contact.html"
          class="button"
          style="border:1px solid #0d1b2a;color:#0d1b2a;">
+
         Contact
+
       </a>
+
 
     </div>
 
@@ -1138,6 +1237,7 @@
 
   <div class="container footer-inner">
 
+
     <div>
 
       <div class="footer-name">
@@ -1153,29 +1253,40 @@
 
     <div class="footer-links">
 
+
       <a href="https://www.linkedin.com/in/kumar-prashantgupta/"
          target="_blank"
          aria-label="LinkedIn">
+
         <i class="fa-brands fa-linkedin"></i>
+
       </a>
+
 
       <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
          target="_blank"
          aria-label="Google Scholar">
+
         <i class="fa-solid fa-graduation-cap"></i>
+
       </a>
+
 
       <a href="https://orcid.org/0000-0002-6206-6158"
          target="_blank"
          aria-label="ORCID">
+
         <i class="fa-brands fa-orcid"></i>
+
       </a>
+
 
     </div>
 
   </div>
 
 </footer>
+
 
 </body>
 </html>
