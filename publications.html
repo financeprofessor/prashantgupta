@@ -6,502 +6,466 @@
 
 <title>Publications | Dr. Prashant Gupta</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 <style>
 
-:root{
-  --navy:#0d1b2a;
-  --gold:#c6a15b;
-  --gold-light:#dfc78f;
-  --ivory:#f8f6f0;
-  --white:#fff;
-  --text:#25313d;
-  --muted:#66727e;
-  --border:#e5e1d8;
-  --soft:#f0ede6;
-  --shadow:0 8px 25px rgba(13,27,42,.07);
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+:root {
+    --navy: #142033;
+    --blue: #315c8c;
+    --gold: #b08a4a;
+    --cream: #f7f5f0;
+    --white: #ffffff;
+    --text: #253044;
+    --muted: #707988;
+    --line: #ddd9d0;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-
-html{scroll-behavior:smooth}
-
-body{
-  font-family:"DM Sans",sans-serif;
-  background:var(--ivory);
-  color:var(--text);
-  line-height:1.6;
+* {
+    box-sizing: border-box;
 }
 
-a{text-decoration:none;color:inherit}
-
-.container{
-  width:min(1180px,92%);
-  margin:auto;
+html {
+    scroll-behavior: smooth;
 }
 
-/* NAV */
-
-nav{
-  background:var(--navy);
-  color:#fff;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  border-bottom:1px solid rgba(198,161,91,.25);
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.65;
 }
 
-.nav-inner{
-  min-height:68px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(247,245,240,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(20,32,51,0.10);
+    padding: 17px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.brand{
-  font-family:"Playfair Display",serif;
-  font-size:1.15rem;
-  white-space:nowrap;
+.nav-name {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 700;
 }
 
-.brand span{color:var(--gold-light)}
-
-.nav-links{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:18px;
-  font-size:.83rem;
+.nav-links {
+    display: flex;
+    gap: 21px;
+    flex-wrap: wrap;
 }
 
-.nav-links a{
-  color:rgba(255,255,255,.84);
+.nav-links a {
+    color: #596272;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 4px;
 }
 
 .nav-links a:hover,
-.nav-links .active{
-  color:var(--gold-light);
+.nav-links a.active {
+    color: var(--navy);
 }
 
-.cv-button{
-  border:1px solid var(--gold);
-  padding:7px 13px;
-  border-radius:4px;
-  color:var(--gold-light)!important;
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: var(--gold);
 }
 
-/* COMPACT PAGE HEADER */
+/* MAIN */
 
-.page-header{
-  background:linear-gradient(135deg,#0d1b2a,#17314a);
-  color:white;
-  padding:25px 0;
+.container {
+    width: 88%;
+    max-width: 1160px;
+    margin: auto;
 }
 
-.page-header-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
+/* PAGE HEADER */
+
+.page-header {
+    padding: 45px 0 30px;
+    border-bottom: 1px solid var(--line);
 }
 
-.page-header h1{
-  font-family:"Playfair Display",serif;
-  font-size:2rem;
-  line-height:1.15;
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    margin-bottom: 8px;
 }
 
-.page-header p{
-  color:rgba(255,255,255,.7);
-  font-size:.82rem;
-  max-width:600px;
-  margin-top:4px;
+.page-header h1 {
+    margin: 0;
+    color: var(--navy);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 600;
 }
 
-.eyebrow{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:1.8px;
-  font-size:.65rem;
-  font-weight:700;
-  margin-bottom:3px;
+.page-header p {
+    max-width: 780px;
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 14px;
 }
 
 /* SNAPSHOT */
 
-.snapshot{
-  padding:28px 0 35px;
+.snapshot {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 58px;
 }
 
-.snapshot-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
+.stat {
+    padding: 23px 21px;
+    border-right: 1px solid var(--line);
 }
 
-.snapshot-card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:7px;
-  padding:20px;
-  text-align:center;
-  box-shadow:var(--shadow);
+.stat:first-child {
+    border-left: 1px solid var(--line);
 }
 
-.snapshot-icon{
-  color:var(--gold);
-  margin-bottom:6px;
+.stat-number {
+    color: var(--navy);
+    font-size: 25px;
+    font-weight: 700;
 }
 
-.snapshot-number{
-  font-family:"Playfair Display",serif;
-  font-size:1.8rem;
-  font-weight:700;
-  color:var(--navy);
-  line-height:1;
+.stat-label {
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.45;
+    margin-top: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.snapshot-title{
-  font-size:.76rem;
-  color:var(--muted);
-  margin-top:6px;
+/* SECTIONS */
+
+.section {
+    margin-bottom: 60px;
 }
 
-/* CONTENT */
-
-section{
-  padding:45px 0;
+.section-top {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 11px;
+    margin-bottom: 27px;
 }
 
-.section-heading{
-  margin-bottom:22px;
+.section-number {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-.section-heading h2{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:1.8rem;
-}
-
-.section-heading p{
-  color:var(--muted);
-  font-size:.84rem;
-  max-width:700px;
+.section-top h2 {
+    margin: 0;
+    color: var(--navy);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 27px;
+    font-weight: 600;
 }
 
 /* PUBLICATIONS */
 
-.publication-list{
-  display:grid;
-  gap:14px;
+.publication {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 25px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
 }
 
-.publication-card{
-  background:white;
-  border:1px solid var(--border);
-  border-left:4px solid var(--gold);
-  border-radius:6px;
-  padding:21px 23px;
+.publication:first-child {
+    border-top: 1px solid var(--line);
 }
 
-.publication-year{
-  color:var(--gold);
-  font-size:.7rem;
-  font-weight:700;
-  letter-spacing:1px;
+.pub-year {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
 }
 
-.publication-card h3{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:1.08rem;
-  line-height:1.4;
-  margin:5px 0 7px;
+.publication h3 {
+    margin: 0 0 6px;
+    color: var(--navy);
+    font-size: 15px;
+    line-height: 1.5;
 }
 
-.authors{
-  font-size:.8rem;
+.publication p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
 }
 
-.journal{
-  color:var(--muted);
-  font-size:.78rem;
-  font-style:italic;
+.article-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
 }
 
-.publication-footer{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-  border-top:1px solid var(--border);
-  margin-top:14px;
-  padding-top:12px;
+.article-link:hover {
+    color: var(--navy);
 }
 
-.publication-type{
-  color:var(--muted);
-  font-size:.65rem;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  font-weight:700;
+/* STATUS PAPERS */
+
+.paper-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 45px;
 }
 
-.article-button{
-  background:var(--navy);
-  color:white;
-  padding:7px 11px;
-  border-radius:4px;
-  font-size:.7rem;
-  font-weight:600;
+.paper {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
 }
 
-.article-button:hover{
-  background:var(--gold);
-  color:var(--navy);
+.status {
+    color: var(--gold);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
-/* STATUS */
-
-.status-section{
-  background:var(--soft);
-}
-
-.status-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-}
-
-.status-card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:7px;
-  padding:20px;
-}
-
-.status-label{
-  display:inline-block;
-  color:var(--gold);
-  background:var(--soft);
-  padding:4px 8px;
-  border-radius:3px;
-  font-size:.62rem;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  font-weight:700;
-  margin-bottom:10px;
-}
-
-.status-card h3{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:1rem;
-  line-height:1.4;
-}
-
-.status-card p{
-  color:var(--muted);
-  font-size:.75rem;
-  margin-top:6px;
+.paper h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 /* CONFERENCES */
 
-.conference-list{
-  display:grid;
-  gap:10px;
+.conference {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 25px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
 }
 
-.conference-card{
-  display:grid;
-  grid-template-columns:75px 1fr;
-  gap:18px;
-  background:white;
-  border:1px solid var(--border);
-  border-radius:6px;
-  padding:17px 19px;
+.conference:first-child {
+    border-top: 1px solid var(--line);
 }
 
-.conference-year{
-  font-family:"Playfair Display",serif;
-  color:var(--gold);
-  font-size:1.35rem;
-  font-weight:700;
+.conference-year {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
 }
 
-.conference-card h3{
-  color:var(--navy);
-  font-size:.88rem;
-  line-height:1.4;
+.conference h3 {
+    margin: 0 0 5px;
+    color: var(--navy);
+    font-size: 15px;
+    line-height: 1.45;
 }
 
-.conference-card p{
-  color:var(--muted);
-  font-size:.73rem;
-  margin-top:3px;
+.conference p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
 }
 
-.recognition{
-  color:var(--gold);
-  font-weight:700;
-  font-size:.68rem;
-  display:inline-block;
-  margin-top:4px;
+.recognition {
+    display: inline-block;
+    margin-top: 7px;
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* RESEARCH LINK */
+
+.research-note {
+    background: var(--navy);
+    padding: 30px 35px;
+    color: white;
+}
+
+.research-note h2 {
+    margin: 0 0 7px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.research-note p {
+    margin: 0;
+    color: #d5d9e1;
+    font-size: 13px;
+    max-width: 780px;
+}
+
+.research-note a {
+    display: inline-block;
+    margin-top: 17px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 3px;
+    font-size: 11px;
+    font-weight: 700;
 }
 
 /* CTA */
 
-.cta{
-  background:var(--navy);
-  color:white;
-  padding:35px 0;
+.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 5px 0 55px;
 }
 
-.cta-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
+.cta h2 {
+    margin: 0 0 4px;
+    color: var(--navy);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 23px;
 }
 
-.cta h2{
-  font-family:"Playfair Display",serif;
-  font-size:1.6rem;
+.cta p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
 }
 
-.cta p{
-  color:rgba(255,255,255,.65);
-  font-size:.78rem;
-  margin-top:3px;
+.cta a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: white;
+    background: var(--navy);
+    padding: 10px 18px;
+    font-size: 12px;
+    font-weight: 700;
 }
 
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.button{
-  padding:8px 13px;
-  border-radius:4px;
-  font-size:.72rem;
-  font-weight:600;
-  border:1px solid rgba(255,255,255,.25);
-}
-
-.button-gold{
-  background:var(--gold);
-  color:var(--navy);
-  border-color:var(--gold);
+.cta a:hover {
+    background: var(--blue);
 }
 
 /* FOOTER */
 
-footer{
-  background:#081521;
-  color:rgba(255,255,255,.6);
-  padding:25px 0;
-}
-
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-
-.footer-name{
-  color:white;
-  font-family:"Playfair Display",serif;
-  font-size:1rem;
-}
-
-.footer-small{
-  font-size:.7rem;
-}
-
-.social-links{
-  display:flex;
-  gap:17px;
-}
-
-.social-links a:hover{
-  color:var(--gold-light);
+footer {
+    border-top: 1px solid var(--line);
+    padding: 23px 6%;
+    text-align: center;
+    color: #858b95;
+    font-size: 11px;
+    background: var(--cream);
 }
 
 /* RESPONSIVE */
 
-@media(max-width:1000px){
+@media (max-width: 900px) {
 
-  .nav-inner{
-    flex-direction:column;
-    padding:12px 0;
-  }
+    .snapshot {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  .snapshot-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+    .stat:nth-child(2) {
+        border-right: none;
+    }
 
+    .stat:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+    }
+
+    .paper-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-@media(max-width:700px){
+@media (max-width: 700px) {
 
-  .page-header-inner{
-    display:block;
-  }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
 
-  .page-header p{
-    margin-top:7px;
-  }
+    .nav-links {
+        gap: 13px;
+    }
 
-  .status-grid{
-    grid-template-columns:1fr;
-  }
+    .container {
+        width: 90%;
+    }
 
-  .cta-inner{
-    display:block;
-  }
+    .page-header {
+        padding-top: 32px;
+    }
 
-  .buttons{
-    margin-top:15px;
-  }
+    .page-header h1 {
+        font-size: 34px;
+    }
 
+    .publication,
+    .conference {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .research-note {
+        padding: 28px 25px;
+    }
+
+    .cta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
 
-@media(max-width:550px){
+@media (max-width: 500px) {
 
-  .snapshot-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    .snapshot {
+        grid-template-columns: 1fr 1fr;
+    }
 
-  .publication-footer{
-    flex-direction:column;
-    align-items:flex-start;
-  }
+    .stat {
+        padding: 18px 14px;
+    }
 
-  .conference-card{
-    grid-template-columns:1fr;
-    gap:2px;
-  }
+    .stat-number {
+        font-size: 22px;
+    }
 
-  .footer-inner{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .nav-links{
-    gap:9px 13px;
-    font-size:.74rem;
-  }
-
+    .stat-label {
+        font-size: 9px;
+    }
 }
 
 </style>
@@ -509,595 +473,557 @@ footer{
 
 <body>
 
-<!-- NAVIGATION -->
-
 <nav>
-<div class="container nav-inner">
 
-<a href="index.html" class="brand">
-Dr. Prashant <span>Gupta</span>
-</a>
+    <a href="index.html" class="nav-name">
+        Dr. Prashant Gupta
+    </a>
 
-<div class="nav-links">
+    <div class="nav-links">
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="research.html">Research</a>
-<a href="teaching.html">Teaching</a>
-<a href="publications.html" class="active">Publications</a>
-<a href="activities.html">Activities</a>
-<a href="achievements.html">Achievements</a>
-<a href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="publications.html" class="active">Publications</a>
+        <a href="activities.html">Activities</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
 
-<a href="Prashant Kumar Gupta_CV.pdf" class="cv-button">
-<i class="fa-solid fa-file-pdf"></i> CV
-</a>
+    </div>
 
-</div>
-</div>
 </nav>
 
 
-<!-- COMPACT HEADER -->
+<main class="container">
 
-<header class="page-header">
+    <!-- PAGE HEADER -->
 
-<div class="container page-header-inner">
+    <section class="page-header">
 
-<div>
-<div class="eyebrow">Academic Work</div>
-<h1>Publications</h1>
-</div>
+        <div class="eyebrow">
+            Research Output
+        </div>
 
-<p>
-Peer-reviewed research, ongoing scholarly work and selected
-conference presentations.
-</p>
+        <h1>
+            Publications
+        </h1>
 
-</div>
+        <p>
+            Journal publications, manuscripts under submission, working papers
+            and selected conference presentations across finance and digital
+            finance research.
+        </p>
 
-</header>
+    </section>
 
 
-<!-- SNAPSHOT FIRST -->
+    <!-- SNAPSHOT -->
 
-<section class="snapshot">
+    <section class="snapshot">
 
-<div class="container">
+        <div class="stat">
 
-<div class="snapshot-grid">
+            <div class="stat-number">
+                04
+            </div>
 
-<div class="snapshot-card">
-<div class="snapshot-icon">
-<i class="fa-solid fa-book"></i>
-</div>
-<div class="snapshot-number">4</div>
-<div class="snapshot-title">Journal Publications</div>
-</div>
+            <div class="stat-label">
+                Journal Publications
+            </div>
 
-<div class="snapshot-card">
-<div class="snapshot-icon">
-<i class="fa-solid fa-file-pen"></i>
-</div>
-<div class="snapshot-number">2</div>
-<div class="snapshot-title">Papers Submitted</div>
-</div>
+        </div>
 
-<div class="snapshot-card">
-<div class="snapshot-icon">
-<i class="fa-solid fa-lightbulb"></i>
-</div>
-<div class="snapshot-number">3</div>
-<div class="snapshot-title">Working Papers</div>
-</div>
 
-<div class="snapshot-card">
-<div class="snapshot-icon">
-<i class="fa-solid fa-microphone"></i>
-</div>
-<div class="snapshot-number">6</div>
-<div class="snapshot-title">Selected Conference Papers</div>
-</div>
+        <div class="stat">
 
-</div>
+            <div class="stat-number">
+                02
+            </div>
 
-</div>
+            <div class="stat-label">
+                Papers Submitted
+            </div>
 
-</section>
+        </div>
 
 
-<!-- JOURNAL PUBLICATIONS -->
+        <div class="stat">
 
-<section>
+            <div class="stat-number">
+                03
+            </div>
 
-<div class="container">
+            <div class="stat-label">
+                Working Papers
+            </div>
 
-<div class="section-heading">
-<div class="eyebrow">Peer-Reviewed Research</div>
-<h2>Journal Publications</h2>
-<p>
-Published research across corporate governance, banking,
-asset quality and financial inclusion.
-</p>
-</div>
+        </div>
 
 
-<div class="publication-list">
+        <div class="stat">
 
+            <div class="stat-number">
+                06
+            </div>
 
-<article class="publication-card">
+            <div class="stat-label">
+                Selected Conference Papers
+            </div>
 
-<span class="publication-year">2024</span>
+        </div>
 
-<h3>
-Navigating the interplay of legal frameworks and corporate
-governance: the impact on asset quality in an emerging economy
-</h3>
+    </section>
 
-<div class="authors">
-Gupta, P. K., &amp; Sharma, S.
-</div>
 
-<div class="journal">
-Asian Journal of Business Ethics
-</div>
+    <!-- JOURNAL PUBLICATIONS -->
 
-<div class="publication-footer">
+    <section class="section">
 
-<span class="publication-type">
-Journal Article
-</span>
+        <div class="section-top">
 
-<a href="https://link.springer.com/article/10.1007/s13520-024-00209-5"
-target="_blank"
-class="article-button">
+            <span class="section-number">
+                01
+            </span>
 
-View Article
-<i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <h2>
+                Journal Publications
+            </h2>
 
-</a>
+        </div>
 
-</div>
 
-</article>
+        <div class="publication">
 
+            <div class="pub-year">
+                2024
+            </div>
 
-<article class="publication-card">
+            <div>
 
-<span class="publication-year">2023</span>
+                <h3>
+                    Navigating the interplay of legal frameworks and
+                    corporate governance: the impact on asset quality
+                    in an emerging economy
+                </h3>
 
-<h3>
-Role of corporate governance in asset quality of banks:
-comparison between government-owned and private banks
-</h3>
+                <p>
+                    Gupta, P. K., & Sharma, S. · Asian Journal of Business Ethics
+                </p>
 
-<div class="authors">
-Gupta, P. K., &amp; Sharma, S.
-</div>
+                <a
+                    href="https://link.springer.com/article/10.1007/s13520-024-00209-5"
+                    target="_blank"
+                    class="article-link">
+                    View Article ↗
+                </a>
 
-<div class="journal">
-Managerial Finance, 49(4), 724–740
-</div>
+            </div>
 
-<div class="publication-footer">
+        </div>
 
-<span class="publication-type">
-Journal Article
-</span>
 
-<a href="https://www.emerald.com/mf/article-abstract/49/4/724/289525/Role-of-corporate-governance-in-asset-quality-of?redirectedFrom=fulltext"
-target="_blank"
-class="article-button">
+        <div class="publication">
 
-View Article
-<i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <div class="pub-year">
+                2023
+            </div>
 
-</a>
+            <div>
 
-</div>
+                <h3>
+                    Literature review on effect of microfinance institutions
+                    on poverty in South Asian countries and their sustainability
+                </h3>
 
-</article>
+                <p>
+                    Gupta, P. K., & Sharma, S. · International Journal of Emerging Markets
+                </p>
 
+                <a
+                    href="https://www.emerald.com/ijoem/article-abstract/18/8/1827/141200/Literature-review-on-effect-of-microfinance"
+                    target="_blank"
+                    class="article-link">
+                    View Article ↗
+                </a>
 
-<article class="publication-card">
+            </div>
 
-<span class="publication-year">2023</span>
+        </div>
 
-<h3>
-Literature review on effect of microfinance institutions
-on poverty in South Asian countries and their sustainability
-</h3>
 
-<div class="authors">
-Gupta, P. K., &amp; Sharma, S.
-</div>
+        <div class="publication">
 
-<div class="journal">
-International Journal of Emerging Markets, 18(8), 1827–1845
-</div>
+            <div class="pub-year">
+                2023
+            </div>
 
-<div class="publication-footer">
+            <div>
 
-<span class="publication-type">
-Journal Article
-</span>
+                <h3>
+                    Role of corporate governance in asset quality of banks:
+                    comparison between government-owned and private banks
+                </h3>
 
-<a href="https://www.emerald.com/ijoem/article-abstract/18/8/1827/141200/Literature-review-on-effect-of-microfinance"
-target="_blank"
-class="article-button">
+                <p>
+                    Gupta, P. K., & Sharma, S. · Managerial Finance
+                </p>
 
-View Article
-<i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <a
+                    href="https://www.emerald.com/mf/article-abstract/49/4/724/289525/Role-of-corporate-governance-in-asset-quality-of?redirectedFrom=fulltext"
+                    target="_blank"
+                    class="article-link">
+                    View Article ↗
+                </a>
 
-</a>
+            </div>
 
-</div>
+        </div>
 
-</article>
 
+        <div class="publication">
 
-<article class="publication-card">
+            <div class="pub-year">
+                2022
+            </div>
 
-<span class="publication-year">2022</span>
+            <div>
 
-<h3>
-Corporate governance determinants of asset quality in an
-emerging economy: evidence from Indian banks
-</h3>
+                <h3>
+                    Corporate governance determinants of asset quality
+                    in an emerging economy: evidence from Indian banks
+                </h3>
 
-<div class="authors">
-Gupta, P. K., &amp; Sharma, S.
-</div>
+                <p>
+                    Gupta, P. K., & Sharma, S. · Journal of Advances in Management Research
+                </p>
 
-<div class="journal">
-Journal of Advances in Management Research, 19(4), 560–577
-</div>
+                <a
+                    href="https://www.emerald.com/jamr/article-abstract/19/4/560/431698/Corporate-governance-determinants-of-asset-quality?redirectedFrom=fulltext"
+                    target="_blank"
+                    class="article-link">
+                    View Article ↗
+                </a>
 
-<div class="publication-footer">
+            </div>
 
-<span class="publication-type">
-Journal Article
-</span>
+        </div>
 
-<a href="https://www.emerald.com/jamr/article-abstract/19/4/560/431698/Corporate-governance-determinants-of-asset-quality?redirectedFrom=fulltext"
-target="_blank"
-class="article-button">
+    </section>
 
-View Article
-<i class="fa-solid fa-arrow-up-right-from-square"></i>
 
-</a>
+    <!-- SUBMITTED & WORKING -->
 
-</div>
+    <section class="section">
 
-</article>
+        <div class="section-top">
 
-</div>
+            <span class="section-number">
+                02
+            </span>
 
-</div>
+            <h2>
+                Submitted & Working Papers
+            </h2>
 
-</section>
+        </div>
 
 
-<!-- SUBMITTED / WORKING -->
+        <div class="paper-grid">
 
-<section class="status-section">
+            <div class="paper">
 
-<div class="container">
+                <div class="status">
+                    Submitted
+                </div>
 
-<div class="section-heading">
-<div class="eyebrow">Research in Progress</div>
-<h2>Submitted &amp; Working Papers</h2>
-</div>
+                <h3>
+                    Unravelling the Impact of Capital Adequacy Components
+                    on Non-Performing Assets: A Granular Study in India's
+                    Banking Sector
+                </h3>
 
-<div class="status-grid">
+            </div>
 
 
-<div class="status-card">
+            <div class="paper">
 
-<span class="status-label">Submitted</span>
+                <div class="status">
+                    Submitted
+                </div>
 
-<h3>
-Unravelling the Impact of Capital Adequacy Components on
-Non-Performing Assets: A Granular Study in India’s Banking Sector
-</h3>
+                <h3>
+                    Role of security and privacy factors in the mobile
+                    payments' adoption and usage: A Systematic Literature Review
+                </h3>
 
-<p>
-Submitted to <em>Studies in Economics and Finance</em>.
-</p>
+            </div>
 
-</div>
 
+            <div class="paper">
 
-<div class="status-card">
+                <div class="status">
+                    Working Paper
+                </div>
 
-<span class="status-label">Submitted</span>
+                <h3>
+                    Mapping the CBDC Landscape in G-19 Economies
+                </h3>
 
-<h3>
-Role of security and privacy factors in the mobile payments’
-adoption and usage: A Systematic Literature Review
-</h3>
+            </div>
 
-<p>
-Submitted to <em>Journal of Advances in Management Research</em>.
-</p>
 
-</div>
+            <div class="paper">
 
+                <div class="status">
+                    Working Paper
+                </div>
 
-<div class="status-card">
+                <h3>
+                    Understanding Central Bank Digital Currencies across
+                    Income levels: A systematic review
+                </h3>
 
-<span class="status-label">Working Paper</span>
+            </div>
 
-<h3>
-Mapping the CBDC Landscape in G-19 Economies
-</h3>
 
-</div>
+            <div class="paper">
 
+                <div class="status">
+                    Working Paper
+                </div>
 
-<div class="status-card">
+                <h3>
+                    Artificial Intelligence for Multi-Domain Financial
+                    Fraud Detection: A Comprehensive PRISMA Review of
+                    Algorithms, Challenges and Sector-Specific Evidence
+                </h3>
 
-<span class="status-label">Working Paper</span>
+            </div>
 
-<h3>
-Understanding Central Bank Digital Currencies across Income
-levels: A systematic review
-</h3>
+        </div>
 
-</div>
+    </section>
 
 
-<div class="status-card">
+    <!-- CONFERENCE PAPERS -->
 
-<span class="status-label">Working Paper</span>
+    <section class="section">
 
-<h3>
-Artificial Intelligence for Multi-Domain Financial Fraud
-Detection: A Comprehensive PRISMA Review of Algorithms,
-Challenges and Sector-Specific Evidence
-</h3>
+        <div class="section-top">
 
-</div>
+            <span class="section-number">
+                03
+            </span>
 
-</div>
+            <h2>
+                Selected Conference Papers
+            </h2>
 
-</div>
+        </div>
 
-</section>
 
+        <div class="conference">
 
-<!-- CONFERENCES -->
+            <div class="conference-year">
+                2025
+            </div>
 
-<section>
+            <div>
 
-<div class="container">
+                <h3>
+                    Mapping the CBDC Landscape in G-19 Economies
+                </h3>
 
-<div class="section-heading">
-<div class="eyebrow">Conference Presentations</div>
-<h2>Selected Conference Papers</h2>
-</div>
+                <p>
+                    ICSSR Sponsored Conference on FinTech Innovation &
+                    Digital Practices — MNIT Jaipur, India
+                </p>
 
-<div class="conference-list">
+                <span class="recognition">
+                    Best Paper Award
+                </span>
 
+            </div>
 
-<div class="conference-card">
+        </div>
 
-<div class="conference-year">2025</div>
 
-<div>
+        <div class="conference">
 
-<h3>
-Mapping the CBDC Landscape in G-19 Economies
-</h3>
+            <div class="conference-year">
+                2024
+            </div>
 
-<p>
-ICSSR Sponsored Conference on FinTech Innovation &amp;
-Digital Practices: A Way Towards Sustainable Development,
-MNIT Jaipur, India
-</p>
+            <div>
 
-<span class="recognition">
-<i class="fa-solid fa-award"></i> Best Paper Award
-</span>
+                <h3>
+                    Impact of Insolvency and Bankruptcy Code, 2016 on
+                    Corporate Governance Determinants of Asset Quality
+                    in the Banking System: An Indian Perspective
+                </h3>
 
-</div>
+                <p>
+                    INDAM 2024 — Goa Institute of Management, Goa, India
+                </p>
 
-</div>
+            </div>
 
+        </div>
 
-<div class="conference-card">
 
-<div class="conference-year">2024</div>
+        <div class="conference">
 
-<div>
+            <div class="conference-year">
+                2024
+            </div>
 
-<h3>
-Impact of Insolvency and Bankruptcy Code, 2016 on Corporate
-Governance Determinants of Asset Quality in the Banking System:
-An Indian Perspective
-</h3>
+            <div>
 
-<p>
-INDAM 2024, Goa Institute of Management, Goa, India
-</p>
+                <h3>
+                    Exploring the Horizons of FinTech: A Systematic Review
+                    of the Existing Literature and Prospects for Future Research
+                </h3>
 
-</div>
+                <p>
+                    ICOI — Hoa Sen University, Ho Chi Minh City, Vietnam
+                </p>
 
-</div>
+            </div>
 
+        </div>
 
-<div class="conference-card">
 
-<div class="conference-year">2024</div>
+        <div class="conference">
 
-<div>
+            <div class="conference-year">
+                2022
+            </div>
 
-<h3>
-Exploring the Horizons of FinTech: A Systematic Review of
-the Existing Literature and Prospects for Future Research
-</h3>
+            <div>
 
-<p>
-ICOI 2024, Hoa Sen University, Ho Chi Minh City, Vietnam
-</p>
+                <h3>
+                    Asset quality and corporate governance:
+                    what does an emerging economy tell us?
+                </h3>
 
-</div>
+                <p>
+                    16th Economics & Finance Conference —
+                    University of Economics, Prague, Czech Republic
+                </p>
 
-</div>
+            </div>
 
+        </div>
 
-<div class="conference-card">
 
-<div class="conference-year">2022</div>
+        <div class="conference">
 
-<div>
+            <div class="conference-year">
+                2021
+            </div>
 
-<h3>
-Asset quality and corporate governance:
-what does an emerging economy tell us?
-</h3>
+            <div>
 
-<p>
-16th Economics &amp; Finance Conference,
-University of Economics, Prague, Czech Republic
-</p>
+                <h3>
+                    Difference in NPAs of Public and Private Banks:
+                    Contribution of Corporate Governance in India
+                </h3>
 
-</div>
+                <p>
+                    MDC 'Shodh Samagam — IIM Visakhapatnam, India
+                </p>
 
-</div>
+                <span class="recognition">
+                    Top 10 — Finance Track
+                </span>
 
+            </div>
 
-<div class="conference-card">
+        </div>
 
-<div class="conference-year">2021</div>
 
-<div>
+        <div class="conference">
 
-<h3>
-Difference in NPAs of Public and Private Banks:
-Contribution of Corporate Governance in India
-</h3>
+            <div class="conference-year">
+                2019
+            </div>
 
-<p>
-MDC ‘Shodh Samagam, IIM Visakhapatnam, India
-</p>
+            <div>
 
-<span class="recognition">
-Top 10 · Finance Track
-</span>
+                <h3>
+                    Microfinance Institutions: Understanding its impact
+                    on poverty in South Asia through a Systematic Review
+                </h3>
 
-</div>
+                <p>
+                    AGBA's 16th World Conference — IIT Delhi, India
+                </p>
 
-</div>
+                <span class="recognition">
+                    Best Paper Award
+                </span>
 
+            </div>
 
-<div class="conference-card">
+        </div>
 
-<div class="conference-year">2019</div>
+    </section>
 
-<div>
 
-<h3>
-Microfinance Institutions: Understanding its impact on
-poverty in South Asia through a Systematic Review
-</h3>
+    <!-- RESEARCH LINK -->
 
-<p>
-AGBA's 16th World Conference, IIT Delhi, India
-</p>
+    <section class="section">
 
-<span class="recognition">
-<i class="fa-solid fa-award"></i> Best Paper Award
-</span>
+        <div class="research-note">
 
-</div>
+            <h2>
+                Research Beyond the Published Record
+            </h2>
 
-</div>
+            <p>
+                Current research extends into Central Bank Digital Currencies,
+                banking asset quality, mobile payments and artificial
+                intelligence for financial fraud detection.
+            </p>
 
+            <a href="research.html">
+                Explore Research Areas →
+            </a>
 
-</div>
+        </div>
 
-</div>
+    </section>
 
-</section>
 
+    <!-- CTA -->
 
-<!-- CTA -->
+    <section class="cta">
 
-<section class="cta">
+        <div>
 
-<div class="container cta-inner">
+            <h2>
+                Interested in Academic Collaboration?
+            </h2>
 
-<div>
+            <p>
+                Connect for research, academic discussions and scholarly engagement.
+            </p>
 
-<h2>Explore the Research</h2>
+        </div>
 
-<p>
-See the broader research themes and academic work.
-</p>
+        <a href="contact.html">
+            Contact →
+        </a>
 
-</div>
+    </section>
 
-<div class="buttons">
+</main>
 
-<a href="research.html" class="button button-gold">
-<i class="fa-solid fa-microscope"></i>
-Research
-</a>
-
-<a href="Prashant Kumar Gupta_CV.pdf"
-target="_blank"
-class="button">
-<i class="fa-solid fa-file-pdf"></i>
-View CV
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
 
 <footer>
 
-<div class="container footer-inner">
-
-<div>
-
-<div class="footer-name">
-Dr. Prashant Gupta
-</div>
-
-<div class="footer-small">
-Assistant Professor · School of Management · Mahindra University
-</div>
-
-</div>
-
-<div class="social-links">
-
-<a href="https://www.linkedin.com/in/kumar-prashantgupta/"
-target="_blank">
-<i class="fa-brands fa-linkedin"></i>
-</a>
-
-<a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
-target="_blank">
-<i class="fa-solid fa-graduation-cap"></i>
-</a>
-
-<a href="https://orcid.org/0000-0002-6206-6158"
-target="_blank">
-<i class="fa-brands fa-orcid"></i>
-</a>
-
-</div>
-
-</div>
+    © 2026 Dr. Prashant Gupta · Mahindra University
 
 </footer>
 
