@@ -6,667 +6,508 @@
 
 <title>Teaching | Dr. Prashant Gupta</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 <style>
 
-:root{
-  --navy:#0d1b2a;
-  --gold:#c6a15b;
-  --gold-light:#dfc78f;
-  --ivory:#f8f6f0;
-  --white:#fff;
-  --text:#25313d;
-  --muted:#66727e;
-  --border:#e5e1d8;
-  --soft:#f0ede6;
-  --shadow:0 8px 25px rgba(13,27,42,.07);
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+:root {
+    --navy: #142033;
+    --blue: #315c8c;
+    --gold: #b08a4a;
+    --cream: #f7f5f0;
+    --white: #ffffff;
+    --text: #253044;
+    --muted: #707988;
+    --line: #ddd9d0;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+* {
+    box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-  font-family:"DM Sans",sans-serif;
-  background:var(--ivory);
-  color:var(--text);
-  line-height:1.6;
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.65;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(247,245,240,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(20,32,51,0.10);
+    padding: 17px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.container{
-  width:min(1180px,92%);
-  margin:auto;
+.nav-name {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 700;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav{
-  background:var(--navy);
-  color:#fff;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  border-bottom:1px solid rgba(198,161,91,.25);
+.nav-links {
+    display: flex;
+    gap: 21px;
+    flex-wrap: wrap;
 }
 
-.nav-inner{
-  min-height:68px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-}
-
-.brand{
-  font-family:"Playfair Display",serif;
-  font-size:1.15rem;
-  white-space:nowrap;
-}
-
-.brand span{
-  color:var(--gold-light);
-}
-
-.nav-links{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:18px;
-  font-size:.83rem;
-}
-
-.nav-links a{
-  color:rgba(255,255,255,.84);
+.nav-links a {
+    color: #596272;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 4px;
 }
 
 .nav-links a:hover,
-.nav-links .active{
-  color:var(--gold-light);
+.nav-links a.active {
+    color: var(--navy);
 }
 
-.cv-button{
-  border:1px solid var(--gold);
-  padding:7px 13px;
-  border-radius:4px;
-  color:var(--gold-light)!important;
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: var(--gold);
 }
 
+/* MAIN */
 
-/* =========================
-   COMPACT HEADER
-========================= */
-
-.page-header{
-  background:linear-gradient(135deg,#0d1b2a,#17314a);
-  color:white;
-  padding:25px 0;
-}
-
-.page-header-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-}
-
-.eyebrow{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:1.8px;
-  font-size:.65rem;
-  font-weight:700;
-  margin-bottom:3px;
-}
-
-.page-header h1{
-  font-family:"Playfair Display",serif;
-  font-size:2rem;
-  line-height:1.15;
-}
-
-.page-header p{
-  color:rgba(255,255,255,.7);
-  font-size:.82rem;
-  max-width:620px;
-}
-
-
-/* =========================
-   SNAPSHOT
-========================= */
-
-.snapshot{
-  padding:28px 0 35px;
+.container {
+    width: 88%;
+    max-width: 1160px;
+    margin: auto;
 }
 
-.snapshot-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
-}
-
-.snapshot-card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:7px;
-  padding:20px 15px;
-  text-align:center;
-  box-shadow:var(--shadow);
-}
-
-.snapshot-icon{
-  color:var(--gold);
-  margin-bottom:6px;
-}
-
-.snapshot-number{
-  font-family:"Playfair Display",serif;
-  font-size:1.65rem;
-  font-weight:700;
-  color:var(--navy);
-  line-height:1;
-}
-
-.snapshot-title{
-  color:var(--muted);
-  font-size:.74rem;
-  margin-top:6px;
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-section{
-  padding:45px 0;
-}
+/* PAGE HEADER */
 
-.section-heading{
-  margin-bottom:22px;
+.page-header {
+    padding: 45px 0 30px;
+    border-bottom: 1px solid var(--line);
 }
 
-.section-heading h2{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:1.8rem;
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    margin-bottom: 8px;
 }
 
-.section-heading p{
-  color:var(--muted);
-  font-size:.84rem;
-  max-width:760px;
-  margin-top:3px;
+.page-header h1 {
+    margin: 0;
+    color: var(--navy);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 600;
 }
 
-
-/* =========================
-   COURSES
-========================= */
-
-.course-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:13px;
+.page-header p {
+    max-width: 780px;
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 14px;
 }
 
-.course-card{
-  background:white;
-  border:1px solid var(--border);
-  border-top:3px solid var(--gold);
-  border-radius:6px;
-  padding:19px;
-}
+/* SNAPSHOT */
 
-.course-card i{
-  color:var(--gold);
-  font-size:1rem;
-  margin-bottom:9px;
+.snapshot {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 58px;
 }
 
-.course-card h3{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:1rem;
-  line-height:1.35;
+.stat {
+    padding: 23px 21px;
+    border-right: 1px solid var(--line);
 }
 
-
-/* =========================
-   TEACHING EXPERIENCE
-========================= */
-
-.experience-section{
-  background:var(--soft);
+.stat:first-child {
+    border-left: 1px solid var(--line);
 }
 
-.experience-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
+.stat-number {
+    color: var(--navy);
+    font-size: 25px;
+    font-weight: 700;
 }
 
-.experience-card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:7px;
-  padding:20px 15px;
-  text-align:center;
+.stat-label {
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.45;
+    margin-top: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.logo-wrap{
-  height:65px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:12px;
-}
+/* SECTIONS */
 
-.logo-wrap img{
-  max-width:115px;
-  max-height:60px;
-  object-fit:contain;
+.section {
+    margin-bottom: 60px;
 }
 
-.experience-card h3{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:1rem;
-  line-height:1.3;
+.section-top {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 11px;
+    margin-bottom: 27px;
 }
 
-.experience-card p{
-  color:var(--muted);
-  font-size:.73rem;
-  margin-top:4px;
+.section-number {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-
-/* =========================
-   OTHER ACADEMIC EXPERIENCE
-========================= */
-
-.academic-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
+.section-top h2 {
+    margin: 0;
+    color: var(--navy);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 27px;
+    font-weight: 600;
 }
 
-.academic-card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:7px;
-  padding:19px;
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
+/* COURSES */
 
-.academic-logo{
-  width:62px;
-  height:62px;
-  flex-shrink:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 45px;
 }
 
-.academic-logo img{
-  max-width:62px;
-  max-height:54px;
-  object-fit:contain;
+.course {
+    padding: 17px 0;
+    border-bottom: 1px solid var(--line);
 }
 
-.academic-card h3{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:.95rem;
-  line-height:1.3;
+.course-number {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 3px;
 }
 
-.academic-card p{
-  color:var(--muted);
-  font-size:.72rem;
-  margin-top:3px;
+.course h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 16px;
 }
 
+/* EXPERIENCE */
 
-/* =========================
-   TEACHING PHILOSOPHY
-========================= */
-
-.philosophy{
-  background:var(--navy);
-  color:white;
-}
-
-.philosophy-grid{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:45px;
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 50px;
 }
 
-.philosophy h2{
-  font-family:"Playfair Display",serif;
-  font-size:1.8rem;
-  line-height:1.25;
+.experience-item {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 20px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--line);
 }
 
-.philosophy-intro{
-  color:rgba(255,255,255,.7);
-  font-size:.8rem;
-  margin-top:10px;
+.experience-period {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.45;
 }
 
-.philosophy-points{
-  display:grid;
-  gap:9px;
+.experience-item h3 {
+    margin: 0 0 3px;
+    color: var(--navy);
+    font-size: 15px;
 }
 
-.philosophy-point{
-  border-left:3px solid var(--gold);
-  padding:9px 0 9px 15px;
-  background:rgba(255,255,255,.035);
+.experience-item p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
 }
 
-.philosophy-point strong{
-  display:block;
-  color:var(--gold-light);
-  font-size:.82rem;
-}
+/* LOGOS */
 
-.philosophy-point span{
-  color:rgba(255,255,255,.65);
-  font-size:.73rem;
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
 }
 
-
-/* =========================
-   TRAINER
-========================= */
-
-.trainer{
-  display:grid;
-  grid-template-columns:120px 1fr;
-  gap:25px;
-  align-items:center;
-  background:white;
-  border:1px solid var(--border);
-  border-radius:8px;
-  padding:22px;
+.logo-card {
+    background: var(--white);
+    min-height: 135px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.trainer-logo{
-  height:90px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.logo-card img {
+    max-width: 105px;
+    max-height: 62px;
+    object-fit: contain;
+    margin-bottom: 11px;
 }
 
-.trainer-logo img{
-  max-width:110px;
-  max-height:85px;
-  object-fit:contain;
+.logo-card span {
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 600;
 }
 
-.trainer h3{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:1.25rem;
-}
+/* PHILOSOPHY */
 
-.trainer-role{
-  color:var(--gold);
-  font-weight:700;
-  font-size:.78rem;
-  margin:2px 0 5px;
+.philosophy {
+    background: var(--navy);
+    padding: 35px 40px;
+    color: white;
 }
 
-.trainer p{
-  color:var(--muted);
-  font-size:.77rem;
+.philosophy h2 {
+    margin: 0 0 9px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 27px;
+    font-weight: 500;
 }
 
-
-/* =========================
-   EDUCATION
-========================= */
-
-.education-section{
-  background:var(--soft);
+.philosophy p {
+    margin: 0;
+    max-width: 820px;
+    color: #d5d9e1;
+    font-size: 14px;
 }
 
-.education-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
+.philosophy-note {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    color: #c4cad5;
+    font-size: 12px;
 }
 
-.education-card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:7px;
-  padding:20px;
-  text-align:center;
-}
+/* TRAINER */
 
-.education-logo{
-  height:65px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin-bottom:11px;
+.trainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
 }
 
-.education-logo img{
-  max-width:110px;
-  max-height:60px;
-  object-fit:contain;
+.trainer-item {
+    border-top: 2px solid var(--navy);
+    padding-top: 16px;
 }
 
-.education-card h3{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:1rem;
+.trainer-item h3 {
+    margin: 0 0 5px;
+    color: var(--navy);
+    font-size: 17px;
 }
 
-.education-card p{
-  color:var(--muted);
-  font-size:.73rem;
-  margin-top:3px;
+.trainer-item p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
 }
 
+/* EDUCATION */
 
-/* =========================
-   CTA
-========================= */
-
-.cta{
-  background:var(--navy);
-  color:white;
-  padding:35px 0;
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-.cta-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
+.education-item {
+    border-top: 2px solid var(--navy);
+    padding-top: 15px;
 }
 
-.cta h2{
-  font-family:"Playfair Display",serif;
-  font-size:1.6rem;
+.education-item h3 {
+    margin: 0 0 5px;
+    color: var(--navy);
+    font-size: 16px;
 }
 
-.cta p{
-  color:rgba(255,255,255,.65);
-  font-size:.78rem;
-  margin-top:3px;
+.education-item p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
 }
 
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
+/* CTA */
 
-.button{
-  padding:8px 13px;
-  border-radius:4px;
-  font-size:.72rem;
-  font-weight:600;
-  border:1px solid rgba(255,255,255,.25);
+.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 5px 0 55px;
 }
 
-.button-gold{
-  background:var(--gold);
-  color:var(--navy);
-  border-color:var(--gold);
+.cta h2 {
+    margin: 0 0 4px;
+    color: var(--navy);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 23px;
 }
-
 
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  background:#081521;
-  color:rgba(255,255,255,.6);
-  padding:25px 0;
+.cta p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
 }
 
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
+.cta a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: white;
+    background: var(--navy);
+    padding: 10px 18px;
+    font-size: 12px;
+    font-weight: 700;
 }
 
-.footer-name{
-  color:white;
-  font-family:"Playfair Display",serif;
-  font-size:1rem;
+.cta a:hover {
+    background: var(--blue);
 }
 
-.footer-small{
-  font-size:.7rem;
-}
+/* FOOTER */
 
-.social-links{
-  display:flex;
-  gap:17px;
+footer {
+    border-top: 1px solid var(--line);
+    padding: 23px 6%;
+    text-align: center;
+    color: #858b95;
+    font-size: 11px;
+    background: var(--cream);
 }
 
-.social-links a:hover{
-  color:var(--gold-light);
-}
+/* RESPONSIVE */
 
+@media (max-width: 900px) {
 
-/* =========================
-   RESPONSIVE
-========================= */
+    .snapshot {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-@media(max-width:1000px){
+    .stat:nth-child(2) {
+        border-right: none;
+    }
 
-  .nav-inner{
-    flex-direction:column;
-    padding:12px 0;
-  }
+    .stat:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+    }
 
-  .snapshot-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  .experience-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
 
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
+@media (max-width: 700px) {
 
-@media(max-width:750px){
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
 
-  .page-header-inner{
-    display:block;
-  }
+    .nav-links {
+        gap: 13px;
+    }
 
-  .page-header p{
-    margin-top:7px;
-  }
+    .container {
+        width: 90%;
+    }
 
-  .course-grid,
-  .academic-grid,
-  .education-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    .page-header {
+        padding-top: 32px;
+    }
 
-  .philosophy-grid{
-    grid-template-columns:1fr;
-    gap:25px;
-  }
+    .page-header h1 {
+        font-size: 34px;
+    }
 
-  .cta-inner{
-    display:block;
-  }
+    .course-grid,
+    .trainer {
+        grid-template-columns: 1fr;
+    }
 
-  .buttons{
-    margin-top:15px;
-  }
+    .philosophy {
+        padding: 30px 25px;
+    }
 
+    .cta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
-
 
-@media(max-width:550px){
+@media (max-width: 500px) {
 
-  .snapshot-grid,
-  .course-grid,
-  .academic-grid,
-  .education-grid,
-  .experience-grid{
-    grid-template-columns:1fr;
-  }
+    .snapshot {
+        grid-template-columns: 1fr 1fr;
+    }
 
-  .trainer{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+    .stat {
+        padding: 18px 14px;
+    }
 
-  .trainer-logo{
-    margin:auto;
-  }
+    .stat-number {
+        font-size: 22px;
+    }
 
-  .footer-inner{
-    flex-direction:column;
-    text-align:center;
-  }
+    .stat-label {
+        font-size: 9px;
+    }
 
-  .nav-links{
-    gap:9px 13px;
-    font-size:.74rem;
-  }
+    .logo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 
+    .experience-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
 }
 
 </style>
@@ -674,804 +515,626 @@ footer{
 
 <body>
 
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
 <nav>
 
-<div class="container nav-inner">
+    <a href="index.html" class="nav-name">
+        Dr. Prashant Gupta
+    </a>
 
-<a href="index.html" class="brand">
-Dr. Prashant <span>Gupta</span>
-</a>
+    <div class="nav-links">
 
-<div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html" class="active">Teaching</a>
+        <a href="publications.html">Publications</a>
+        <a href="activities.html">Activities</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
 
-<a href="index.html">Home</a>
-
-<a href="about.html">About</a>
-
-<a href="research.html">Research</a>
-
-<a href="teaching.html" class="active">Teaching</a>
-
-<a href="publications.html">Publications</a>
-
-<a href="activities.html">Activities</a>
-
-<a href="achievements.html">Achievements</a>
-
-<a href="contact.html">Contact</a>
-
-<a href="Prashant Kumar Gupta_CV.pdf" class="cv-button">
-<i class="fa-solid fa-file-pdf"></i> CV
-</a>
-
-</div>
-
-</div>
+    </div>
 
 </nav>
 
 
-<!-- =========================
-     COMPACT HEADER
-========================= -->
+<main class="container">
 
-<header class="page-header">
+    <!-- PAGE HEADER -->
 
-<div class="container page-header-inner">
+    <section class="page-header">
 
-<div>
+        <div class="eyebrow">
+            Teaching & Learning
+        </div>
 
-<div class="eyebrow">
-Teaching
-</div>
+        <h1>
+            Teaching
+        </h1>
 
-<h1>
-Teaching &amp; Learning
-</h1>
+        <p>
+            Practice-oriented teaching in accounting, finance, risk management
+            and financial modelling, supported by experience across management
+            and higher-education institutions.
+        </p>
 
-</div>
+    </section>
 
-<p>
-Teaching across financial accounting, management accounting,
-financial management, risk and financial modelling.
-</p>
 
-</div>
+    <!-- SNAPSHOT -->
 
-</header>
+    <section class="snapshot">
 
+        <div class="stat">
 
-<!-- =========================
-     SNAPSHOT
-========================= -->
+            <div class="stat-number">
+                05
+            </div>
 
-<section class="snapshot">
+            <div class="stat-label">
+                Teaching Areas
+            </div>
 
-<div class="container">
+        </div>
 
-<div class="snapshot-grid">
 
+        <div class="stat">
 
-<div class="snapshot-card">
+            <div class="stat-number">
+                04
+            </div>
 
-<div class="snapshot-icon">
-<i class="fa-solid fa-building-columns"></i>
-</div>
+            <div class="stat-label">
+                Teaching Institutions
+            </div>
 
-<div class="snapshot-number">
-5
-</div>
+        </div>
 
-<div class="snapshot-title">
-Teaching Areas
-</div>
 
-</div>
+        <div class="stat">
 
+            <div class="stat-number">
+                03
+            </div>
 
-<div class="snapshot-card">
+            <div class="stat-label">
+                Other Academic Roles
+            </div>
 
-<div class="snapshot-icon">
-<i class="fa-solid fa-graduation-cap"></i>
-</div>
+        </div>
 
-<div class="snapshot-number">
-4
-</div>
 
-<div class="snapshot-title">
-Teaching Institutions
-</div>
+        <div class="stat">
 
-</div>
+            <div class="stat-number">
+                15+
+            </div>
 
+            <div class="stat-label">
+                Years with Art of Living
+            </div>
 
-<div class="snapshot-card">
+        </div>
 
-<div class="snapshot-icon">
-<i class="fa-solid fa-chalkboard-user"></i>
-</div>
+    </section>
 
-<div class="snapshot-number">
-3
-</div>
 
-<div class="snapshot-title">
-Other Academic Roles
-</div>
+    <!-- COURSES -->
 
-</div>
+    <section class="section">
 
+        <div class="section-top">
 
-<div class="snapshot-card">
+            <span class="section-number">
+                01
+            </span>
 
-<div class="snapshot-icon">
-<i class="fa-solid fa-users"></i>
-</div>
+            <h2>
+                Teaching Areas
+            </h2>
 
-<div class="snapshot-number">
-15+
-</div>
+        </div>
 
-<div class="snapshot-title">
-Years with Art of Living
-</div>
 
-</div>
+        <div class="course-grid">
 
+            <div class="course">
 
-</div>
+                <div class="course-number">
+                    01
+                </div>
 
-</div>
+                <h3>
+                    Financial Accounting
+                </h3>
 
-</section>
+            </div>
 
 
-<!-- =========================
-     COURSES
-========================= -->
+            <div class="course">
 
-<section>
+                <div class="course-number">
+                    02
+                </div>
 
-<div class="container">
+                <h3>
+                    Management Accounting
+                </h3>
 
-<div class="section-heading">
+            </div>
 
-<div class="eyebrow">
-Courses
-</div>
 
-<h2>
-Areas I Teach
-</h2>
+            <div class="course">
 
-<p>
-Courses spanning accounting, finance, risk management and
-applied financial analysis.
-</p>
+                <div class="course-number">
+                    03
+                </div>
 
-</div>
+                <h3>
+                    Financial Management
+                </h3>
 
+            </div>
 
-<div class="course-grid">
 
+            <div class="course">
 
-<div class="course-card">
+                <div class="course-number">
+                    04
+                </div>
 
-<i class="fa-solid fa-calculator"></i>
+                <h3>
+                    Enterprise Risk Management
+                </h3>
 
-<h3>
-Financial Accounting
-</h3>
+            </div>
 
-</div>
 
+            <div class="course">
 
-<div class="course-card">
+                <div class="course-number">
+                    05
+                </div>
 
-<i class="fa-solid fa-chart-column"></i>
+                <h3>
+                    Financial Modelling
+                </h3>
 
-<h3>
-Management Accounting
-</h3>
+            </div>
 
-</div>
+        </div>
 
+    </section>
 
-<div class="course-card">
 
-<i class="fa-solid fa-money-bill-trend-up"></i>
+    <!-- TEACHING EXPERIENCE -->
 
-<h3>
-Financial Management
-</h3>
+    <section class="section">
 
-</div>
+        <div class="section-top">
 
+            <span class="section-number">
+                02
+            </span>
 
-<div class="course-card">
+            <h2>
+                Teaching Experience
+            </h2>
 
-<i class="fa-solid fa-shield-halved"></i>
+        </div>
 
-<h3>
-Enterprise Risk Management
-</h3>
 
-</div>
+        <div class="experience-grid">
 
+            <div class="experience-item">
 
-<div class="course-card">
+                <div class="experience-period">
+                    2022–Present
+                </div>
 
-<i class="fa-solid fa-table-cells"></i>
+                <div>
 
-<h3>
-Financial Modelling
-</h3>
+                    <h3>
+                        Mahindra University
+                    </h3>
 
-</div>
+                    <p>
+                        Assistant Professor
+                    </p>
 
+                </div>
 
-</div>
+            </div>
 
-</div>
 
-</section>
+            <div class="experience-item">
 
+                <div class="experience-period">
+                    Previous
+                </div>
 
-<!-- =========================
-     TEACHING EXPERIENCE
-========================= -->
+                <div>
 
-<section class="experience-section">
+                    <h3>
+                        NALSAR University of Law
+                    </h3>
 
-<div class="container">
+                    <p>
+                        Visiting Professor
+                    </p>
 
-<div class="section-heading">
+                </div>
 
-<div class="eyebrow">
-Teaching Experience
-</div>
+            </div>
 
-<h2>
-Teaching Institutions
-</h2>
 
-</div>
+            <div class="experience-item">
 
+                <div class="experience-period">
+                    Previous
+                </div>
 
-<div class="experience-grid">
+                <div>
 
+                    <h3>
+                        PIBM
+                    </h3>
 
-<div class="experience-card">
+                    <p>
+                        Assistant Professor & Batch In-Charge
+                    </p>
 
-<div class="logo-wrap">
+                </div>
 
-<img src="som-logo.jpg"
-alt="School of Management, Mahindra University">
+            </div>
 
-</div>
 
-<h3>
-Mahindra University
-</h3>
+            <div class="experience-item">
 
-<p>
-Assistant Professor
-</p>
+                <div class="experience-period">
+                    Previous
+                </div>
 
-</div>
+                <div>
 
+                    <h3>
+                        PSIT
+                    </h3>
 
-<div class="experience-card">
+                    <p>
+                        Assistant Professor
+                    </p>
 
-<div class="logo-wrap">
+                </div>
 
-<img src="nalsar-logo.jpg"
-alt="NALSAR University of Law">
+            </div>
 
-</div>
+        </div>
 
-<h3>
-NALSAR University of Law
-</h3>
+    </section>
 
-<p>
-Visiting Professor
-</p>
 
-</div>
+    <!-- TEACHING INSTITUTIONS -->
 
+    <section class="section">
 
-<div class="experience-card">
+        <div class="section-top">
 
-<div class="logo-wrap">
+            <span class="section-number">
+                03
+            </span>
 
-<img src="pibm-logo.png"
-alt="PIBM">
+            <h2>
+                Teaching Institutions
+            </h2>
 
-</div>
+        </div>
 
-<h3>
-PIBM
-</h3>
 
-<p>
-Assistant Professor &amp; Batch In-Charge
-</p>
+        <div class="logo-grid">
 
-</div>
+            <div class="logo-card">
 
+                <img
+                    src="som-logo.jpg"
+                    alt="Mahindra University School of Management">
+                
+                <span>
+                    Mahindra University
+                </span>
 
-<div class="experience-card">
+            </div>
 
-<div class="logo-wrap">
 
-<img src="psit-logo.png"
-alt="PSIT">
+            <div class="logo-card">
 
-</div>
+                <img
+                    src="nalsar-logo.jpg"
+                    alt="NALSAR University of Law">
 
-<h3>
-PSIT
-</h3>
+                <span>
+                    NALSAR University of Law
+                </span>
 
-<p>
-Assistant Professor
-</p>
+            </div>
 
-</div>
 
+            <div class="logo-card">
 
-</div>
+                <img
+                    src="pibm-logo.png"
+                    alt="PIBM">
 
-</div>
+                <span>
+                    PIBM
+                </span>
 
-</section>
+            </div>
 
 
-<!-- =========================
-     OTHER ACADEMIC EXPERIENCE
-========================= -->
+            <div class="logo-card">
 
-<section>
+                <img
+                    src="psit-logo.png"
+                    alt="PSIT">
 
-<div class="container">
+                <span>
+                    PSIT
+                </span>
 
-<div class="section-heading">
+            </div>
 
-<div class="eyebrow">
-Academic Experience
-</div>
+        </div>
 
-<h2>
-Other Academic Roles
-</h2>
+    </section>
 
-</div>
 
+    <!-- OTHER ACADEMIC EXPERIENCE -->
 
-<div class="academic-grid">
+    <section class="section">
 
+        <div class="section-top">
 
-<div class="academic-card">
+            <span class="section-number">
+                04
+            </span>
 
-<div class="academic-logo">
+            <h2>
+                Other Academic Experience
+            </h2>
 
-<img src="iitd-dms-logo.png"
-alt="IIT Delhi">
+        </div>
 
-</div>
 
-<div>
+        <div class="logo-grid">
 
-<h3>
-IIT Delhi
-</h3>
+            <div class="logo-card">
 
-<p>
-Teaching Assistant
-</p>
+                <img
+                    src="iitd-dms-logo.png"
+                    alt="IIT Delhi">
 
-</div>
+                <span>
+                    IIT Delhi
+                </span>
 
-</div>
+            </div>
 
 
-<div class="academic-card">
+            <div class="logo-card">
 
-<div class="academic-logo">
+                <img
+                    src="isb-logo.jpg"
+                    alt="Indian School of Business">
 
-<img src="isb-logo.jpg"
-alt="Indian School of Business">
+                <span>
+                    ISB
+                </span>
 
-</div>
+            </div>
 
-<div>
 
-<h3>
-Indian School of Business
-</h3>
+            <div class="logo-card">
 
-<p>
-Academic Associate
-</p>
+                <img
+                    src="acer-logo.jpg"
+                    alt="Australian Council for Educational Research">
 
-</div>
+                <span>
+                    ACER
+                </span>
 
-</div>
+            </div>
 
 
-<div class="academic-card">
+            <div class="logo-card">
 
-<div class="academic-logo">
+                <img
+                    src="aol-logo.png"
+                    alt="Art of Living">
 
-<img src="acer-logo.jpg"
-alt="Australian Council for Educational Research">
+                <span>
+                    Art of Living
+                </span>
 
-</div>
+            </div>
 
-<div>
+        </div>
 
-<h3>
-ACER
-</h3>
+    </section>
 
-<p>
-Consultant
-</p>
 
-</div>
+    <!-- TEACHING PHILOSOPHY -->
 
-</div>
+    <section class="section">
 
+        <div class="philosophy">
 
-</div>
+            <h2>
+                Teaching Philosophy
+            </h2>
 
-</div>
+            <p>
+                Teaching is approached as a bridge between concepts and
+                application. The emphasis is on helping students understand
+                the logic behind financial decisions and apply concepts
+                through practical examples, problem-solving and structured
+                analysis.
+            </p>
 
-</section>
+            <div class="philosophy-note">
+                Finance education should connect classroom concepts with
+                the decisions students will encounter beyond the classroom.
+            </div>
 
+        </div>
 
-<!-- =========================
-     TEACHING PHILOSOPHY
-========================= -->
+    </section>
 
-<section class="philosophy">
 
-<div class="container philosophy-grid">
+    <!-- TRAINER EXPERIENCE -->
 
-<div>
+    <section class="section">
 
-<div class="eyebrow">
-Teaching Approach
-</div>
+        <div class="section-top">
 
-<h2>
-From Concepts to Application
-</h2>
+            <span class="section-number">
+                05
+            </span>
 
-<p class="philosophy-intro">
-The focus is on helping students understand financial concepts
-and connect them with real-world decisions and applications.
-</p>
+            <h2>
+                Trainer Experience
+            </h2>
 
-</div>
+        </div>
 
 
-<div class="philosophy-points">
+        <div class="trainer">
 
+            <div class="trainer-item">
 
-<div class="philosophy-point">
+                <h3>
+                    Art of Living
+                </h3>
 
-<strong>
-Conceptual Clarity
-</strong>
+                <p>
+                    Teacher with 15+ years of engagement in personal
+                    excellence and youth-focused programmes.
+                </p>
 
-<span>
-Build a strong understanding of the underlying concepts.
-</span>
+            </div>
 
-</div>
 
+            <div class="trainer-item">
 
-<div class="philosophy-point">
+                <h3>
+                    Selected Engagements
+                </h3>
 
-<strong>
-Real-World Examples
-</strong>
+                <p>
+                    Programmes and sessions conducted at institutions
+                    including IIT Delhi, IIT Dhanbad, IIM Ranchi,
+                    NLU Ranchi and BIT Mesra.
+                </p>
 
-<span>
-Connect classroom learning with actual businesses and financial decisions.
-</span>
+            </div>
 
-</div>
+        </div>
 
+    </section>
 
-<div class="philosophy-point">
 
-<strong>
-Practice-Based Learning
-</strong>
+    <!-- EDUCATION -->
 
-<span>
-Use exercises, cases and applied tools to move from theory to practice.
-</span>
+    <section class="section">
 
-</div>
+        <div class="section-top">
 
+            <span class="section-number">
+                06
+            </span>
 
-<div class="philosophy-point">
+            <h2>
+                Education
+            </h2>
 
-<strong>
-Student Engagement
-</strong>
+        </div>
 
-<span>
-Encourage questions, discussion and active participation.
-</span>
 
-</div>
+        <div class="education-grid">
 
+            <div class="education-item">
 
-</div>
+                <h3>
+                    IIT Delhi
+                </h3>
 
-</div>
+                <p>
+                    Ph.D. in Finance · 2022
+                </p>
 
-</section>
+            </div>
 
 
-<!-- =========================
-     TRAINER EXPERIENCE
-========================= -->
+            <div class="education-item">
 
-<section>
+                <h3>
+                    BIT Mesra
+                </h3>
 
-<div class="container">
+                <p>
+                    MBA — Finance · 2013
+                </p>
 
-<div class="section-heading">
+            </div>
 
-<div class="eyebrow">
-Trainer Experience
-</div>
 
-<h2>
-Beyond Formal Academics
-</h2>
+            <div class="education-item">
 
-</div>
+                <h3>
+                    St. Xavier's College, Ranchi
+                </h3>
 
+                <p>
+                    B.Com. — Accounts Hons. · 2011
+                </p>
 
-<div class="trainer">
+            </div>
 
+        </div>
 
-<div class="trainer-logo">
+    </section>
 
-<img src="aol-logo.png"
-alt="Art of Living">
 
-</div>
+    <!-- CTA -->
 
+    <section class="cta">
 
-<div>
+        <div>
 
-<h3>
-Art of Living
-</h3>
+            <h2>
+                Explore the Academic Journey
+            </h2>
 
-<div class="trainer-role">
-Teacher
-</div>
+            <p>
+                Research, publications, institutional work and achievements.
+            </p>
 
-<p>
-Long-standing engagement in programmes focused on personal
-development, youth empowerment and human potential.
-</p>
+        </div>
 
-</div>
+        <a href="research.html">
+            Research →
+        </a>
 
+    </section>
 
-</div>
+</main>
 
-</div>
-
-</section>
-
-
-<!-- =========================
-     EDUCATION
-========================= -->
-
-<section class="education-section">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="eyebrow">
-Education
-</div>
-
-<h2>
-Academic Background
-</h2>
-
-</div>
-
-
-<div class="education-grid">
-
-
-<div class="education-card">
-
-<div class="education-logo">
-
-<img src="iitd-dms-logo.png"
-alt="IIT Delhi">
-
-</div>
-
-<h3>
-Ph.D. in Finance
-</h3>
-
-<p>
-IIT Delhi
-</p>
-
-</div>
-
-
-<div class="education-card">
-
-<div class="education-logo">
-
-<img src="bit-mesra-logo.png"
-alt="BIT Mesra">
-
-</div>
-
-<h3>
-MBA – Finance
-</h3>
-
-<p>
-BIT Mesra
-</p>
-
-</div>
-
-
-<div class="education-card">
-
-<div class="education-logo">
-
-<img src="xaviers-logo.jpg"
-alt="St. Xavier's College, Ranchi">
-
-</div>
-
-<h3>
-B.Com. – Accounts Hons.
-</h3>
-
-<p>
-St. Xavier's College, Ranchi
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     CTA
-========================= -->
-
-<section class="cta">
-
-<div class="container cta-inner">
-
-<div>
-
-<h2>
-Explore More
-</h2>
-
-<p>
-Explore research, publications and academic activities.
-</p>
-
-</div>
-
-<div class="buttons">
-
-<a href="research.html" class="button button-gold">
-<i class="fa-solid fa-microscope"></i>
-Research
-</a>
-
-<a href="publications.html" class="button">
-<i class="fa-solid fa-book"></i>
-Publications
-</a>
-
-<a href="achievements.html" class="button">
-<i class="fa-solid fa-award"></i>
-Achievements
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
-<div class="container footer-inner">
-
-<div>
-
-<div class="footer-name">
-Dr. Prashant Gupta
-</div>
-
-<div class="footer-small">
-Assistant Professor · School of Management · Mahindra University
-</div>
-
-</div>
-
-
-<div class="social-links">
-
-<a href="https://www.linkedin.com/in/kumar-prashantgupta/"
-target="_blank"
-aria-label="LinkedIn">
-
-<i class="fa-brands fa-linkedin"></i>
-
-</a>
-
-
-<a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
-target="_blank"
-aria-label="Google Scholar">
-
-<i class="fa-solid fa-graduation-cap"></i>
-
-</a>
-
-
-<a href="https://orcid.org/0000-0002-6206-6158"
-target="_blank"
-aria-label="ORCID">
-
-<i class="fa-brands fa-orcid"></i>
-
-</a>
-
-</div>
-
-</div>
+    © 2026 Dr. Prashant Gupta · Mahindra University
 
 </footer>
-
 
 </body>
 </html>
