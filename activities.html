@@ -23,7 +23,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255,255,255,0.96);
+    background: rgba(255,255,255,0.97);
     border-bottom: 1px solid #e5e7eb;
     padding: 15px 6%;
     display: flex;
@@ -60,14 +60,15 @@ nav {
     margin: auto;
 }
 
+/* HEADER */
+
 .page-header {
-    padding: 42px 0 28px;
+    padding: 40px 0 25px;
 }
 
 .page-header h1 {
     margin: 0 0 6px;
-    font-size: 34px;
-    letter-spacing: -0.5px;
+    font-size: 32px;
 }
 
 .page-header p {
@@ -82,41 +83,41 @@ nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    margin-bottom: 48px;
+    margin-bottom: 45px;
 }
 
 .snapshot-card {
-    background: white;
+    background: #fff;
     border: 1px solid #e5e7eb;
     border-radius: 14px;
-    padding: 22px;
+    padding: 20px;
 }
 
 .snapshot-number {
     font-size: 27px;
     font-weight: 800;
     color: #172033;
-    margin-bottom: 3px;
 }
 
 .snapshot-label {
     font-size: 13px;
     color: #6b7280;
+    margin-top: 3px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section {
-    margin-bottom: 52px;
+    margin-bottom: 48px;
 }
 
 .section-heading {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .section-heading h2 {
     margin: 0 0 5px;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .section-heading p {
@@ -130,25 +131,25 @@ nav {
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 17px;
 }
 
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    gap: 17px;
 }
 
 .card {
-    background: white;
+    background: #fff;
     border: 1px solid #e5e7eb;
-    border-radius: 15px;
-    padding: 24px;
+    border-radius: 14px;
+    padding: 22px;
 }
 
 .card h3 {
-    margin: 0 0 8px;
-    font-size: 18px;
+    margin: 0 0 7px;
+    font-size: 17px;
 }
 
 .card p {
@@ -157,32 +158,21 @@ nav {
     font-size: 14px;
 }
 
-.card ul {
-    margin: 12px 0 0;
-    padding-left: 18px;
-    color: #5f6877;
-    font-size: 14px;
-}
-
-.card li {
-    margin-bottom: 6px;
-}
-
-/* FEATURE */
+/* NCC FEATURE */
 
 .feature {
     background: #172033;
-    color: white;
-    border-radius: 18px;
-    padding: 30px;
+    color: #fff;
+    border-radius: 17px;
+    padding: 28px;
 }
 
 .feature h2 {
-    margin: 0 0 8px;
-    font-size: 25px;
+    margin: 0 0 7px;
+    font-size: 24px;
 }
 
-.feature p {
+.feature > p {
     margin: 0;
     color: #d5d9e1;
     font-size: 14px;
@@ -190,20 +180,20 @@ nav {
 
 .feature-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 28px;
-    margin-top: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 23px;
 }
 
 .feature-item {
     border-top: 1px solid rgba(255,255,255,0.18);
-    padding-top: 15px;
+    padding-top: 14px;
 }
 
 .feature-item strong {
     display: block;
-    margin-bottom: 4px;
     font-size: 15px;
+    margin-bottom: 3px;
 }
 
 .feature-item span {
@@ -219,7 +209,7 @@ nav {
 }
 
 .timeline-item {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .timeline-item:last-child {
@@ -227,7 +217,7 @@ nav {
 }
 
 .timeline-item h3 {
-    margin: 0 0 3px;
+    margin: 0 0 4px;
     font-size: 17px;
 }
 
@@ -240,21 +230,21 @@ nav {
 /* CTA */
 
 .cta {
-    margin: 55px 0;
+    margin: 50px 0;
     background: #eef2ff;
     border: 1px solid #dbe3ff;
-    border-radius: 18px;
-    padding: 30px;
+    border-radius: 17px;
+    padding: 28px;
     text-align: center;
 }
 
 .cta h2 {
-    margin: 0 0 8px;
-    font-size: 24px;
+    margin: 0 0 7px;
+    font-size: 23px;
 }
 
 .cta p {
-    margin: 0 auto 18px;
+    margin: 0 auto 17px;
     max-width: 650px;
     color: #5f6877;
     font-size: 14px;
@@ -262,10 +252,10 @@ nav {
 
 .cta a {
     display: inline-block;
-    padding: 10px 18px;
+    padding: 9px 17px;
     border-radius: 8px;
     background: #172033;
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 13px;
     font-weight: 700;
@@ -273,16 +263,17 @@ nav {
 
 footer {
     border-top: 1px solid #e5e7eb;
-    padding: 25px 6%;
+    padding: 24px 6%;
     text-align: center;
     color: #7a8290;
     font-size: 12px;
-    background: white;
+    background: #fff;
 }
 
 /* RESPONSIVE */
 
 @media (max-width: 900px) {
+
     .snapshot {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -291,16 +282,14 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .feature-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
+
     nav {
+        flex-direction: column;
         align-items: flex-start;
         gap: 12px;
-        flex-direction: column;
     }
 
     .nav-links {
@@ -311,20 +300,28 @@ footer {
         width: 92%;
     }
 
-    .page-header {
-        padding-top: 30px;
+    .grid-2,
+    .feature-grid {
+        grid-template-columns: 1fr;
     }
 
     .page-header h1 {
         font-size: 28px;
     }
+}
+
+@media (max-width: 500px) {
 
     .snapshot {
         grid-template-columns: 1fr 1fr;
     }
 
-    .grid-2 {
-        grid-template-columns: 1fr;
+    .snapshot-card {
+        padding: 16px;
+    }
+
+    .snapshot-number {
+        font-size: 23px;
     }
 }
 </style>
@@ -333,7 +330,10 @@ footer {
 <body>
 
 <nav>
-    <a href="index.html" class="nav-name">Dr. Prashant Gupta</a>
+
+    <a href="index.html" class="nav-name">
+        Dr. Prashant Gupta
+    </a>
 
     <div class="nav-links">
         <a href="index.html">Home</a>
@@ -345,16 +345,24 @@ footer {
         <a href="achievements.html">Achievements</a>
         <a href="contact.html">Contact</a>
     </div>
+
 </nav>
+
 
 <main class="container">
 
     <!-- HEADER -->
 
     <section class="page-header">
+
         <h1>Activities</h1>
-        <p>Institutional leadership, student development, social engagement and professional service.</p>
+
+        <p>
+            Institutional leadership, student development, NCC and social engagement.
+        </p>
+
     </section>
+
 
     <!-- SNAPSHOT -->
 
@@ -362,88 +370,127 @@ footer {
 
         <div class="snapshot-card">
             <div class="snapshot-number">4+</div>
-            <div class="snapshot-label">Institutional Leadership Roles</div>
+            <div class="snapshot-label">
+                Institutional Leadership Roles
+            </div>
         </div>
 
         <div class="snapshot-card">
             <div class="snapshot-number">55+</div>
-            <div class="snapshot-label">NCC Cadets Onboarded</div>
+            <div class="snapshot-label">
+                NCC Cadets Onboarded
+            </div>
         </div>
 
         <div class="snapshot-card">
             <div class="snapshot-number">15+</div>
-            <div class="snapshot-label">Years with Art of Living</div>
+            <div class="snapshot-label">
+                Years with Art of Living
+            </div>
         </div>
 
         <div class="snapshot-card">
             <div class="snapshot-number">2000+</div>
-            <div class="snapshot-label">Students Supported through Hostel Responsibilities</div>
+            <div class="snapshot-label">
+                Students Supported through Hostel Responsibilities
+            </div>
         </div>
 
     </section>
+
 
     <!-- INSTITUTIONAL LEADERSHIP -->
 
     <section class="section">
 
         <div class="section-heading">
+
             <h2>Institutional Leadership & Service</h2>
-            <p>Contributing beyond the classroom through university-level responsibilities.</p>
+
+            <p>
+                Contributions to university administration, academic processes and student life.
+            </p>
+
         </div>
+
 
         <div class="grid-3">
 
             <div class="card">
+
                 <h3>Ranking & Accreditation</h3>
+
                 <p>
-                    Chairing the School of Management Ranking & Accreditation Committee,
-                    contributing to institutional quality and accreditation initiatives.
+                    Chair — School of Management Ranking & Accreditation Committee,
+                    contributing to quality and accreditation initiatives.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>PhD Selection</h3>
+
                 <p>
-                    Member of the PhD Selection Committee, contributing to doctoral
+                    Member — PhD Selection Committee, contributing to doctoral
                     admissions and academic processes.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Internal Research</h3>
+
                 <p>
-                    Member of the University Internal Research Committee, supporting
+                    Member — University Internal Research Committee, supporting
                     research-related academic initiatives.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>University Discipline</h3>
+
                 <p>
-                    Member of the University Discipline Committee, contributing to
+                    Member — University Discipline Committee, contributing to
                     student discipline and institutional processes.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Anti-Drugs Committee</h3>
+
                 <p>
-                    Member of the Anti-Drugs Committee, supporting awareness and
+                    Member — Anti-Drugs Committee, supporting awareness and
                     student well-being initiatives.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>IQAC</h3>
+
                 <p>
-                    Serving as a point of coordination for quality assurance and
-                    continuous institutional improvement.
+                    SPOC — IQAC, contributing to quality assurance and
+                    institutional improvement processes.
                 </p>
+
             </div>
 
         </div>
 
     </section>
+
 
     <!-- NCC -->
 
@@ -458,35 +505,51 @@ footer {
                 combining student leadership, discipline and structured development.
             </p>
 
+
             <div class="feature-grid">
 
                 <div class="feature-item">
+
                     <strong>Founding Officer In-Charge</strong>
+
                     <span>
-                        Established and led the university's NCC unit from its early stage.
+                        Established and led the university NCC unit from its early stage.
                     </span>
+
                 </div>
 
+
                 <div class="feature-item">
+
                     <strong>55+ Cadets</strong>
+
                     <span>
                         Onboarded more than 55 cadets into the NCC unit.
                     </span>
+
                 </div>
 
+
                 <div class="feature-item">
+
                     <strong>Leadership Development</strong>
+
                     <span>
-                        Supporting discipline, responsibility, teamwork and leadership
-                        development among cadets.
+                        Supporting discipline, responsibility, teamwork and
+                        leadership development among cadets.
                     </span>
+
                 </div>
 
+
                 <div class="feature-item">
+
                     <strong>Commissioned as Lieutenant</strong>
+
                     <span>
                         Serving in a formal leadership capacity within the NCC framework.
                     </span>
+
                 </div>
 
             </div>
@@ -494,235 +557,345 @@ footer {
         </div>
 
     </section>
+
 
     <!-- QUALITY -->
 
     <section class="section">
 
         <div class="section-heading">
+
             <h2>Academic Quality & Institutional Development</h2>
-            <p>Selected responsibilities contributing to academic systems and institutional development.</p>
+
+            <p>
+                Selected responsibilities contributing to academic systems and institutional development.
+            </p>
+
         </div>
+
 
         <div class="timeline">
 
             <div class="timeline-item">
+
                 <h3>Ranking & Accreditation</h3>
+
                 <p>
                     Leading School-level efforts related to ranking and accreditation
                     through the Ranking & Accreditation Committee.
                 </p>
+
             </div>
 
+
             <div class="timeline-item">
+
                 <h3>Quality Assurance</h3>
+
                 <p>
-                    Contributing to IQAC-related activities and institutional quality
-                    assurance processes.
+                    Contributing to IQAC-related activities and institutional
+                    quality assurance processes.
                 </p>
+
             </div>
 
+
             <div class="timeline-item">
+
                 <h3>Research Development</h3>
+
                 <p>
                     Participating in the Internal Research Committee and supporting
                     university research initiatives.
                 </p>
+
             </div>
 
+
             <div class="timeline-item">
+
                 <h3>Doctoral Education</h3>
+
                 <p>
                     Contributing to PhD selection and doctoral academic processes.
                 </p>
+
             </div>
 
         </div>
 
     </section>
+
 
     <!-- STUDENT DEVELOPMENT -->
 
     <section class="section">
 
         <div class="section-heading">
+
             <h2>Student Development & Well-being</h2>
-            <p>Working closely with students beyond formal teaching responsibilities.</p>
+
+            <p>
+                Engagement with students beyond formal classroom responsibilities.
+            </p>
+
         </div>
+
 
         <div class="grid-2">
 
             <div class="card">
+
                 <h3>Faculty In-Charge — Boys' Hostel</h3>
+
                 <p>
                     Supporting the residential student community and handling
                     discipline-related responsibilities for a large student population.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Student Discipline</h3>
+
                 <p>
                     Contributing to university discipline processes and helping
-                    maintain a structured and supportive student environment.
+                    maintain a structured student environment.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Leadership Development</h3>
+
                 <p>
                     Supporting students through NCC, institutional activities,
                     mentoring and leadership-oriented initiatives.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Student Engagement</h3>
+
                 <p>
-                    Encouraging students to participate in activities that develop
+                    Encouraging participation in activities that develop
                     confidence, responsibility and personal effectiveness.
                 </p>
+
             </div>
 
         </div>
 
     </section>
+
 
     <!-- ART OF LIVING -->
 
     <section class="section">
 
         <div class="section-heading">
+
             <h2>Art of Living & Social Engagement</h2>
-            <p>Personal development and community engagement beyond the university.</p>
+
+            <p>
+                Personal development and community engagement beyond the university.
+            </p>
+
         </div>
+
 
         <div class="grid-2">
 
             <div class="card">
+
                 <h3>15+ Years with Art of Living</h3>
+
                 <p>
-                    Teacher with the Art of Living, facilitating personal excellence
-                    and well-being programmes since 2011.
+                    Teacher with the Art of Living, facilitating personal
+                    excellence and well-being programmes since 2011.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Institutional Programmes</h3>
+
                 <p>
                     Conducted programmes and sessions across educational institutions
                     including IITs, IIMs, NLU Ranchi and BIT Mesra.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Student & Youth Development</h3>
+
                 <p>
                     Engaged with young people through programmes focused on
                     personal development, confidence and life skills.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Social Impact</h3>
+
                 <p>
                     Participated in stress-management and rehabilitation initiatives
                     involving correctional institutions.
                 </p>
+
             </div>
 
         </div>
 
     </section>
+
 
     <!-- PROFESSIONAL DEVELOPMENT -->
 
     <section class="section">
 
         <div class="section-heading">
+
             <h2>Professional Development</h2>
-            <p>Continuing engagement with academic and professional communities.</p>
+
+            <p>
+                Continued engagement with academic and professional communities.
+            </p>
+
         </div>
+
 
         <div class="grid-3">
 
             <div class="card">
+
                 <h3>Accreditation & Quality</h3>
+
                 <p>
                     Engagement with accreditation and quality-assurance initiatives
-                    at the institutional and school level.
+                    at institutional and School levels.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Academic Conferences</h3>
+
                 <p>
                     Participation in national and international academic conferences,
                     workshops and professional discussions.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Professional Networks</h3>
+
                 <p>
                     Continued engagement with academic institutions and professional
                     communities in management, finance and higher education.
                 </p>
+
             </div>
 
         </div>
 
     </section>
+
 
     <!-- SELECTED MOMENTS -->
 
     <section class="section">
 
         <div class="section-heading">
+
             <h2>Selected Moments</h2>
+
             <p>
-                A visual record of academic, institutional, NCC and professional
-                engagements will be added here.
+                Photos from academic, institutional, NCC and professional engagements
+                can be added here.
             </p>
+
         </div>
+
 
         <div class="grid-3">
 
             <div class="card">
+
                 <h3>Academic Engagements</h3>
-                <p>Conferences, workshops, invited sessions and institutional events.</p>
+
+                <p>
+                    Conferences, workshops, invited sessions and institutional events.
+                </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>NCC Activities</h3>
-                <p>Cadet activities, training, leadership and university events.</p>
+
+                <p>
+                    Cadet activities, training, leadership and university events.
+                </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Community Engagement</h3>
-                <p>Art of Living programmes and other social-development initiatives.</p>
+
+                <p>
+                    Art of Living programmes and other social-development initiatives.
+                </p>
+
             </div>
 
         </div>
 
     </section>
+
 
     <!-- CTA -->
 
     <section class="cta">
 
-        <h2>More About the Journey</h2>
+        <h2>Achievements & Milestones</h2>
 
         <p>
-            Explore the achievements, recognitions and milestones that have shaped
-            the journey beyond teaching and research.
+            Explore the recognitions, leadership experiences and milestones
+            that have shaped the journey.
         </p>
 
-        <a href="achievements.html">View Achievements →</a>
+        <a href="achievements.html">
+            View Achievements →
+        </a>
 
     </section>
 
 </main>
+
 
 <footer>
     © 2026 Dr. Prashant Gupta · Mahindra University
