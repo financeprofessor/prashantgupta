@@ -1,1005 +1,742 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact | Dr. Prashant Gupta</title>
+<title>Contact | Dr. Prashant Gupta</title>
 
-  <meta name="description"
-        content="Contact Dr. Prashant Gupta, Assistant Professor at Mahindra University, Hyderabad.">
+<style>
+* {
+    box-sizing: border-box;
+}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #f7f8fa;
+    line-height: 1.6;
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+.nav-name {
+    font-weight: 700;
+    color: #172033;
+    text-decoration: none;
+}
 
-  <style>
+.nav-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
 
-    :root {
-      --navy: #0d1b2a;
-      --navy-light: #17314a;
-      --gold: #c6a15b;
-      --gold-light: #dfc78f;
-      --ivory: #f8f6f0;
-      --white: #ffffff;
-      --text: #25313d;
-      --muted: #66727e;
-      --border: #e5e1d8;
-      --soft: #f0ede6;
-      --shadow: 0 12px 35px rgba(13,27,42,0.08);
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #1d4ed8;
+}
+
+.container {
+    width: 88%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.page-header {
+    padding: 42px 0 28px;
+}
+
+.page-header h1 {
+    margin: 0 0 6px;
+    font-size: 34px;
+    letter-spacing: -0.5px;
+}
+
+.page-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+/* SNAPSHOT */
+
+.snapshot {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 48px;
+}
+
+.snapshot-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.snapshot-number {
+    font-size: 20px;
+    font-weight: 800;
+    color: #172033;
+    margin-bottom: 3px;
+}
+
+.snapshot-label {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* SECTIONS */
+
+.section {
+    margin-bottom: 48px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin: 0 0 5px;
+    font-size: 25px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* CONTACT CARDS */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.contact-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 24px;
+}
+
+.contact-card .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1d4ed8;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 7px;
+}
+
+.contact-card h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.contact-card p {
+    margin: 0;
+    color: #5f6877;
+    font-size: 14px;
+}
+
+.contact-card a {
+    color: #172033;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-card a:hover {
+    color: #1d4ed8;
+}
+
+/* LINKS */
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.link-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 22px;
+    text-decoration: none;
+    color: #172033;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+}
+
+.link-card h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+}
+
+.link-card p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* DARK CARD */
+
+.feature {
+    background: #172033;
+    color: white;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.feature h2 {
+    margin: 0 0 8px;
+    font-size: 25px;
+}
+
+.feature p {
+    margin: 0;
+    color: #d5d9e1;
+    font-size: 14px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 24px;
+}
+
+.feature-item {
+    border-top: 1px solid rgba(255,255,255,0.18);
+    padding-top: 15px;
+}
+
+.feature-item strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+.feature-item span {
+    color: #c4cad5;
+    font-size: 13px;
+}
+
+/* CTA */
+
+.cta {
+    margin: 55px 0;
+    background: #eef2ff;
+    border: 1px solid #dbe3ff;
+    border-radius: 18px;
+    padding: 30px;
+    text-align: center;
+}
+
+.cta h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+}
+
+.cta p {
+    margin: 0 auto 18px;
+    max-width: 650px;
+    color: #5f6877;
+    font-size: 14px;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #172033;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 4px;
+}
+
+footer {
+    border-top: 1px solid #e5e7eb;
+    padding: 25px 6%;
+    text-align: center;
+    color: #7a8290;
+    font-size: 12px;
+    background: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .snapshot {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    .links-grid {
+        grid-template-columns: 1fr;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .feature-grid {
+        grid-template-columns: 1fr;
     }
+}
 
-    body {
-      font-family: "DM Sans", sans-serif;
-      background: var(--ivory);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
-
-    /* =========================
-       NAVIGATION
-    ========================= */
+@media (max-width: 650px) {
 
     nav {
-      background: rgba(13,27,42,0.98);
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(198,161,91,0.25);
-    }
-
-    .nav-inner {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .brand {
-      font-family: "Playfair Display", serif;
-      font-size: 1.2rem;
-      color: white;
-      white-space: nowrap;
-    }
-
-    .brand span {
-      color: var(--gold-light);
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
     }
 
     .nav-links {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 19px;
-      font-size: 0.85rem;
-      font-weight: 500;
+        gap: 12px;
     }
 
-    .nav-links a {
-      color: rgba(255,255,255,0.85);
-      white-space: nowrap;
-      transition: 0.2s;
+    .container {
+        width: 92%;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--gold-light);
+    .page-header {
+        padding-top: 30px;
     }
 
-    .cv-button {
-      border: 1px solid var(--gold);
-      padding: 8px 14px;
-      border-radius: 5px;
-      color: var(--gold-light) !important;
+    .page-header h1 {
+        font-size: 28px;
     }
 
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      background:
-        radial-gradient(circle at 85% 20%, rgba(198,161,91,0.13), transparent 30%),
-        linear-gradient(135deg, #0d1b2a, #17314a);
-      color: white;
-      padding: 58px 0 65px;
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 8px;
-    }
-
-    .hero h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2.3rem, 5vw, 4rem);
-      line-height: 1.1;
-      margin-bottom: 12px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      color: rgba(255,255,255,0.76);
-      font-size: 0.97rem;
-    }
-
-    /* =========================
-       CONTACT MAIN
-    ========================= */
-
-    .contact-section {
-      padding: 65px 0;
+    .snapshot {
+        grid-template-columns: 1fr 1fr;
     }
 
     .contact-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 25px;
-      align-items: stretch;
-    }
-
-    /* =========================
-       CONTACT CARD
-    ========================= */
-
-    .contact-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-    }
-
-    .contact-card h2 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.8rem;
-      margin-bottom: 7px;
-    }
-
-    .contact-card > p {
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-bottom: 25px;
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      padding: 17px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contact-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .contact-icon {
-      width: 38px;
-      height: 38px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--soft);
-      color: var(--gold);
-      border-radius: 50%;
-    }
-
-    .contact-label {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 1.1px;
-      font-weight: 700;
-      color: var(--muted);
-      margin-bottom: 2px;
-    }
-
-    .contact-value {
-      color: var(--navy);
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    .contact-value:hover {
-      color: var(--gold);
-    }
-
-    /* =========================
-       PROFESSIONAL PROFILE
-    ========================= */
-
-    .profile-card {
-      background: var(--navy);
-      color: white;
-      border-radius: 9px;
-      padding: 30px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .profile-card::after {
-      content: "";
-      position: absolute;
-      width: 230px;
-      height: 230px;
-      border-radius: 50%;
-      border: 1px solid rgba(198,161,91,0.18);
-      right: -90px;
-      top: -80px;
-    }
-
-    .profile-card h2 {
-      position: relative;
-      z-index: 1;
-      font-family: "Playfair Display", serif;
-      font-size: 1.8rem;
-      margin-bottom: 7px;
-    }
-
-    .profile-card > p {
-      position: relative;
-      z-index: 1;
-      color: rgba(255,255,255,0.7);
-      font-size: 0.85rem;
-      margin-bottom: 27px;
-    }
-
-    .profile-role {
-      position: relative;
-      z-index: 1;
-      border-left: 3px solid var(--gold);
-      padding-left: 16px;
-      margin-bottom: 25px;
-    }
-
-    .profile-role strong {
-      display: block;
-      color: white;
-      font-family: "Playfair Display", serif;
-      font-size: 1.05rem;
-    }
-
-    .profile-role span {
-      color: var(--gold-light);
-      font-size: 0.77rem;
-    }
-
-    .profile-links {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      gap: 10px;
-    }
-
-    .profile-link {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 14px;
-      border: 1px solid rgba(255,255,255,0.13);
-      border-radius: 5px;
-      color: rgba(255,255,255,0.82);
-      font-size: 0.81rem;
-      transition: 0.2s;
-    }
-
-    .profile-link i {
-      width: 18px;
-      color: var(--gold);
-      text-align: center;
-    }
-
-    .profile-link:hover {
-      border-color: var(--gold);
-      color: white;
-      background: rgba(255,255,255,0.035);
-    }
-
-    /* =========================
-       LOCATION / INSTITUTION
-    ========================= */
-
-    .institution-section {
-      background: var(--soft);
-      padding: 55px 0;
-    }
-
-    .institution-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .institution-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 24px;
-    }
-
-    .institution-card i {
-      color: var(--gold);
-      font-size: 1.15rem;
-      margin-bottom: 12px;
-    }
-
-    .institution-card h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.15rem;
-      margin-bottom: 5px;
-    }
-
-    .institution-card p {
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-
-    /* =========================
-       CLOSING
-    ========================= */
-
-    .closing {
-      padding: 65px 20px;
-      text-align: center;
-    }
-
-    .closing h2 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    .closing p {
-      max-width: 680px;
-      margin: auto;
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    .closing-buttons {
-      margin-top: 20px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 17px;
-      border-radius: 5px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      margin: 4px;
-    }
-
-    .button-gold {
-      background: var(--gold);
-      color: var(--navy);
-    }
-
-    .button-dark {
-      background: var(--navy);
-      color: white;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #081521;
-      color: rgba(255,255,255,0.65);
-      padding: 29px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .footer-name {
-      color: white;
-      font-family: "Playfair Display", serif;
-      font-size: 1.02rem;
-    }
-
-    .footer-small {
-      font-size: 0.77rem;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 18px;
-    }
-
-    .social-links a:hover {
-      color: var(--gold-light);
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1050px) {
-
-      .nav-inner {
-        flex-direction: column;
-        padding: 14px 0;
-        gap: 12px;
-      }
-
-      .nav-links {
-        justify-content: center;
-      }
-
-      .contact-grid {
         grid-template-columns: 1fr;
-      }
-
     }
-
-    @media (max-width: 700px) {
-
-      .institution-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-card,
-      .profile-card {
-        padding: 23px;
-      }
-
-    }
-
-    @media (max-width: 550px) {
-
-      .hero {
-        padding: 45px 0 50px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .nav-links {
-        gap: 10px 14px;
-        font-size: 0.77rem;
-      }
-
-      .contact-item {
-        gap: 12px;
-      }
-
-    }
-
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
 <nav>
 
-  <div class="container nav-inner">
-
-    <a href="index.html" class="brand">
-      Dr. Prashant <span>Gupta</span>
+    <a href="index.html" class="nav-name">
+        Dr. Prashant Gupta
     </a>
 
     <div class="nav-links">
-
-      <a href="index.html">Home</a>
-
-      <a href="about.html">About</a>
-
-      <a href="research.html">Research</a>
-
-      <a href="teaching.html">Teaching</a>
-
-      <a href="publications.html">Publications</a>
-
-      <a href="activities.html">Activities</a>
-
-      <a href="achievements.html">Achievements</a>
-
-      <a href="contact.html"
-         class="active"
-         aria-current="page">
-        Contact
-      </a>
-
-      <a href="Prashant Kumar Gupta_CV.pdf"
-         class="cv-button">
-
-        <i class="fa-solid fa-file-pdf"></i>
-        CV
-
-      </a>
-
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="publications.html">Publications</a>
+        <a href="activities.html">Activities</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
     </div>
-
-  </div>
 
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<main class="container">
 
-<header class="hero">
+    <!-- HEADER -->
 
-  <div class="container">
+    <section class="page-header">
 
-    <div class="eyebrow">
-      Contact
-    </div>
-
-    <h1>
-      Let's Connect.
-    </h1>
-
-    <p>
-      For academic discussions, research collaborations, teaching
-      engagements and professional interactions, feel free to get in touch.
-    </p>
-
-  </div>
-
-</header>
-
-
-<!-- =========================
-     CONTACT DETAILS
-========================= -->
-
-<section class="contact-section">
-
-  <div class="container">
-
-    <div class="contact-grid">
-
-
-      <!-- CONTACT INFORMATION -->
-
-      <div class="contact-card">
-
-        <h2>
-          Get in Touch
-        </h2>
+        <h1>Contact</h1>
 
         <p>
-          The best way to reach me is through email.
+            Academic, research and professional enquiries are welcome.
         </p>
 
+    </section>
 
-        <!-- ACADEMIC EMAIL -->
 
-        <div class="contact-item">
+    <!-- SNAPSHOT -->
 
-          <div class="contact-icon">
-            <i class="fa-solid fa-envelope"></i>
-          </div>
+    <section class="snapshot">
 
-          <div>
+        <div class="snapshot-card">
 
-            <div class="contact-label">
-              Academic Email
+            <div class="snapshot-number">
+                Mahindra University
             </div>
 
-            <a href="mailto:prashant.gupta@mahindrauniversity.edu.in"
-               class="contact-value">
+            <div class="snapshot-label">
+                School of Management
+            </div>
 
-              prashant.gupta@mahindrauniversity.edu.in
+        </div>
+
+
+        <div class="snapshot-card">
+
+            <div class="snapshot-number">
+                Hyderabad
+            </div>
+
+            <div class="snapshot-label">
+                Telangana, India
+            </div>
+
+        </div>
+
+
+        <div class="snapshot-card">
+
+            <div class="snapshot-number">
+                Academic
+            </div>
+
+            <div class="snapshot-label">
+                Faculty & Research Enquiries
+            </div>
+
+        </div>
+
+
+        <div class="snapshot-card">
+
+            <div class="snapshot-number">
+                LinkedIn
+            </div>
+
+            <div class="snapshot-label">
+                Professional Networking
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2>Get in Touch</h2>
+
+            <p>
+                For academic, research, teaching or professional enquiries.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <div class="label">
+                    Academic Email
+                </div>
+
+                <h3>
+                    <a href="mailto:prashant.gupta@mahindrauniversity.edu.in">
+                        prashant.gupta@mahindrauniversity.edu.in
+                    </a>
+                </h3>
+
+                <p>
+                    For academic, research and university-related communication.
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="label">
+                    Personal Email
+                </div>
+
+                <h3>
+                    <a href="mailto:kumar.prashantgupta@gmail.com">
+                        kumar.prashantgupta@gmail.com
+                    </a>
+                </h3>
+
+                <p>
+                    For professional and general communication.
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="label">
+                    Institution
+                </div>
+
+                <h3>
+                    Mahindra University
+                </h3>
+
+                <p>
+                    School of Management, Hyderabad, India.
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="label">
+                    Location
+                </div>
+
+                <h3>
+                    Hyderabad, India
+                </h3>
+
+                <p>
+                    School of Management, Mahindra University.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROFESSIONAL LINKS -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2>Professional Profiles</h2>
+
+            <p>
+                Find publications, academic profiles and professional updates online.
+            </p>
+
+        </div>
+
+
+        <div class="links-grid">
+
+            <a
+                href="https://www.linkedin.com/in/kumar-prashantgupta/"
+                target="_blank"
+                class="link-card"
+            >
+
+                <h3>LinkedIn ↗</h3>
+
+                <p>
+                    Professional profile, academic activities and updates.
+                </p>
 
             </a>
 
-          </div>
 
-        </div>
+            <a
+                href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
+                target="_blank"
+                class="link-card"
+            >
 
+                <h3>Google Scholar ↗</h3>
 
-        <!-- PERSONAL EMAIL -->
-
-        <div class="contact-item">
-
-          <div class="contact-icon">
-            <i class="fa-solid fa-envelope-open"></i>
-          </div>
-
-          <div>
-
-            <div class="contact-label">
-              Personal Email
-            </div>
-
-            <a href="mailto:kumar.prashantgupta@gmail.com"
-               class="contact-value">
-
-              kumar.prashantgupta@gmail.com
+                <p>
+                    Publications, citations and academic research profile.
+                </p>
 
             </a>
 
-          </div>
+
+            <a
+                href="https://orcid.org/0000-0002-6206-6158"
+                target="_blank"
+                class="link-card"
+            >
+
+                <h3>ORCID ↗</h3>
+
+                <p>
+                    Researcher identification and publication record.
+                </p>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACADEMIC ENGAGEMENT -->
+
+    <section class="section">
+
+        <div class="feature">
+
+            <h2>Academic & Research Engagement</h2>
+
+            <p>
+                Areas of professional engagement include finance, corporate governance,
+                banking, digital finance, teaching and management education.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-item">
+
+                    <strong>Research</strong>
+
+                    <span>
+                        Corporate governance, banking & asset quality,
+                        CBDCs and digital finance.
+                    </span>
+
+                </div>
+
+
+                <div class="feature-item">
+
+                    <strong>Teaching</strong>
+
+                    <span>
+                        Financial Accounting, Management Accounting,
+                        Financial Management, Enterprise Risk Management
+                        and Financial Modelling.
+                    </span>
+
+                </div>
+
+
+                <div class="feature-item">
+
+                    <strong>Academic Collaboration</strong>
+
+                    <span>
+                        Open to academic discussions, research conversations
+                        and professional engagement.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CV -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2>Academic Profile</h2>
+
+            <p>
+                For a detailed overview of academic qualifications, research,
+                teaching and professional experience.
+            </p>
 
         </div>
 
 
-        <!-- INSTITUTION -->
+        <div class="links-grid">
 
-        <div class="contact-item">
+            <a href="Prashant%20Kumar%20Gupta_CV.pdf" class="link-card">
 
-          <div class="contact-icon">
-            <i class="fa-solid fa-building-columns"></i>
-          </div>
+                <h3>Curriculum Vitae →</h3>
 
-          <div>
+                <p>
+                    View the complete academic and professional CV.
+                </p>
 
-            <div class="contact-label">
-              Institution
-            </div>
-
-            <div class="contact-value">
-              School of Management, Mahindra University
-            </div>
-
-          </div>
-
-        </div>
+            </a>
 
 
-        <!-- LOCATION -->
+            <a href="publications.html" class="link-card">
 
-        <div class="contact-item">
+                <h3>Publications →</h3>
 
-          <div class="contact-icon">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
+                <p>
+                    Explore journal publications, working papers and conference papers.
+                </p>
 
-          <div>
+            </a>
 
-            <div class="contact-label">
-              Location
-            </div>
 
-            <div class="contact-value">
-              Hyderabad, India
-            </div>
+            <a href="research.html" class="link-card">
 
-          </div>
+                <h3>Research →</h3>
+
+                <p>
+                    Explore research areas, projects and academic interests.
+                </p>
+
+            </a>
 
         </div>
 
+    </section>
 
-      </div>
 
+    <!-- CTA -->
 
-      <!-- PROFESSIONAL PROFILES -->
+    <section class="cta">
 
-      <div class="profile-card">
-
-        <h2>
-          Professional Profiles
-        </h2>
+        <h2>Let's Connect</h2>
 
         <p>
-          Connect with my academic and professional work online.
+            For academic and research enquiries, the university email is the
+            preferred point of contact.
         </p>
 
+        <a href="mailto:prashant.gupta@mahindrauniversity.edu.in">
+            Send an Email →
+        </a>
 
-        <div class="profile-role">
+    </section>
 
-          <strong>
-            Dr. Prashant Gupta
-          </strong>
+</main>
 
-          <span>
-            Assistant Professor · Mahindra University
-          </span>
-
-        </div>
-
-
-        <div class="profile-links">
-
-
-          <!-- LINKEDIN -->
-
-          <a href="https://www.linkedin.com/in/kumar-prashantgupta/"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="profile-link">
-
-            <i class="fa-brands fa-linkedin"></i>
-
-            <span>
-              LinkedIn
-            </span>
-
-            <i class="fa-solid fa-arrow-up-right-from-square"
-               style="margin-left:auto;">
-            </i>
-
-          </a>
-
-
-          <!-- GOOGLE SCHOLAR -->
-
-          <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="profile-link">
-
-            <i class="fa-solid fa-graduation-cap"></i>
-
-            <span>
-              Google Scholar
-            </span>
-
-            <i class="fa-solid fa-arrow-up-right-from-square"
-               style="margin-left:auto;">
-            </i>
-
-          </a>
-
-
-          <!-- ORCID -->
-
-          <a href="https://orcid.org/0000-0002-6206-6158"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="profile-link">
-
-            <i class="fa-brands fa-orcid"></i>
-
-            <span>
-              ORCID
-            </span>
-
-            <i class="fa-solid fa-arrow-up-right-from-square"
-               style="margin-left:auto;">
-            </i>
-
-          </a>
-
-
-          <!-- CV -->
-
-          <a href="Prashant Kumar Gupta_CV.pdf"
-             target="_blank"
-             class="profile-link">
-
-            <i class="fa-solid fa-file-pdf"></i>
-
-            <span>
-              Curriculum Vitae
-            </span>
-
-            <i class="fa-solid fa-arrow-up-right-from-square"
-               style="margin-left:auto;">
-            </i>
-
-          </a>
-
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     INSTITUTION
-========================= -->
-
-<section class="institution-section">
-
-  <div class="container">
-
-    <div class="institution-grid">
-
-
-      <div class="institution-card">
-
-        <i class="fa-solid fa-graduation-cap"></i>
-
-        <h3>
-          Academic &amp; Research
-        </h3>
-
-        <p>
-          For research discussions, academic collaborations, conferences,
-          publications and related matters, please use the academic email.
-        </p>
-
-      </div>
-
-
-      <div class="institution-card">
-
-        <i class="fa-solid fa-chalkboard-user"></i>
-
-        <h3>
-          Teaching &amp; Professional Engagements
-        </h3>
-
-        <p>
-          For teaching-related discussions, invited sessions, workshops
-          and professional engagements, please feel free to reach out.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     CLOSING
-========================= -->
-
-<section class="closing">
-
-  <div class="container">
-
-    <h2>
-      Thank You for Visiting
-    </h2>
-
-    <p>
-      Whether you are exploring my research, teaching, academic journey
-      or professional activities, I appreciate your interest and welcome
-      meaningful conversations.
-    </p>
-
-
-    <div class="closing-buttons">
-
-      <a href="research.html"
-         class="button button-gold">
-
-        <i class="fa-solid fa-microscope"></i>
-        Explore Research
-
-      </a>
-
-
-      <a href="publications.html"
-         class="button button-dark">
-
-        <i class="fa-solid fa-book-open"></i>
-        Publications
-
-      </a>
-
-
-      <a href="Prashant Kumar Gupta_CV.pdf"
-         target="_blank"
-         class="button"
-         style="border:1px solid #0d1b2a;">
-
-        <i class="fa-solid fa-file-pdf"></i>
-        View CV
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
-  <div class="container footer-inner">
-
-    <div>
-
-      <div class="footer-name">
-        Dr. Prashant Gupta
-      </div>
-
-      <div class="footer-small">
-        Assistant Professor · School of Management · Mahindra University
-      </div>
-
-    </div>
-
-
-    <div class="social-links">
-
-      <a href="https://www.linkedin.com/in/kumar-prashantgupta/"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="LinkedIn">
-
-        <i class="fa-brands fa-linkedin"></i>
-
-      </a>
-
-
-      <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Google Scholar">
-
-        <i class="fa-solid fa-graduation-cap"></i>
-
-      </a>
-
-
-      <a href="https://orcid.org/0000-0002-6206-6158"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="ORCID">
-
-        <i class="fa-brands fa-orcid"></i>
-
-      </a>
-
-    </div>
-
-  </div>
+    © 2026 Dr. Prashant Gupta · Mahindra University
 
 </footer>
-
 
 </body>
 </html>
