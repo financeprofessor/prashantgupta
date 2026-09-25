@@ -1,1293 +1,866 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Achievements & Engagements | Dr. Prashant Gupta</title>
+<title>Achievements | Dr. Prashant Gupta</title>
 
-  <meta name="description" content="Achievements, leadership experiences, invited sessions and outreach activities of Dr. Prashant Gupta.">
+<style>
+* {
+    box-sizing: border-box;
+}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #f7f8fa;
+    line-height: 1.6;
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+.nav-name {
+    font-weight: 700;
+    color: #172033;
+    text-decoration: none;
+}
 
-  <style>
+.nav-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
 
-    :root {
-      --navy: #0b1f33;
-      --navy2: #102c47;
-      --gold: #c9a227;
-      --gold-light: #e1c766;
-      --ivory: #f7f4ed;
-      --white: #ffffff;
-      --text: #263746;
-      --muted: #667685;
-      --border: #e5e0d6;
-      --shadow: 0 18px 45px rgba(11, 31, 51, 0.08);
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #1d4ed8;
+}
+
+.container {
+    width: 88%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.page-header {
+    padding: 42px 0 28px;
+}
+
+.page-header h1 {
+    margin: 0 0 6px;
+    font-size: 34px;
+    letter-spacing: -0.5px;
+}
+
+.page-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+/* SNAPSHOT */
+
+.snapshot {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 48px;
+}
+
+.snapshot-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.snapshot-number {
+    font-size: 28px;
+    font-weight: 800;
+    color: #172033;
+    margin-bottom: 3px;
+}
+
+.snapshot-label {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* SECTIONS */
+
+.section {
+    margin-bottom: 52px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin: 0 0 5px;
+    font-size: 25px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* CARDS */
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 24px;
+}
+
+.card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 0;
+    color: #5f6877;
+    font-size: 14px;
+}
+
+.card .category {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #1d4ed8;
+}
+
+/* FEATURE */
+
+.feature {
+    background: #172033;
+    color: white;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.feature h2 {
+    margin: 0 0 8px;
+    font-size: 25px;
+}
+
+.feature p {
+    margin: 0;
+    color: #d5d9e1;
+    font-size: 14px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 24px;
+}
+
+.feature-item {
+    border-top: 1px solid rgba(255,255,255,0.18);
+    padding-top: 15px;
+}
+
+.feature-item strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+.feature-item span {
+    color: #c4cad5;
+    font-size: 13px;
+}
+
+/* MILESTONES */
+
+.milestone {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 25px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 23px;
+    margin-bottom: 14px;
+}
+
+.milestone:last-child {
+    margin-bottom: 0;
+}
+
+.milestone-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1d4ed8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.milestone h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+}
+
+.milestone p {
+    margin: 0;
+    color: #5f6877;
+    font-size: 14px;
+}
+
+/* CTA */
+
+.cta {
+    margin: 55px 0;
+    background: #eef2ff;
+    border: 1px solid #dbe3ff;
+    border-radius: 18px;
+    padding: 30px;
+    text-align: center;
+}
+
+.cta h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+}
+
+.cta p {
+    margin: 0 auto 18px;
+    max-width: 650px;
+    color: #5f6877;
+    font-size: 14px;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #172033;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+footer {
+    border-top: 1px solid #e5e7eb;
+    padding: 25px 6%;
+    text-align: center;
+    color: #7a8290;
+    font-size: 12px;
+    background: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .snapshot {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    .grid-3 {
+        grid-template-columns: 1fr;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .feature-grid {
+        grid-template-columns: 1fr;
     }
 
-    body {
-      font-family: "DM Sans", sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.7;
+    .milestone {
+        grid-template-columns: 1fr;
+        gap: 8px;
     }
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* NAVIGATION */
+@media (max-width: 650px) {
 
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(11, 31, 51, 0.97);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav-container {
-      max-width: 1180px;
-      margin: auto;
-      padding: 18px 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand {
-      color: white;
-      font-family: "Playfair Display", serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      white-space: nowrap;
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
     }
 
     .nav-links {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      font-size: 0.88rem;
-    }
-
-    .nav-links a {
-      color: rgba(255,255,255,0.82);
-      transition: 0.25s;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--gold-light);
-    }
-
-    .cv-button {
-      padding: 8px 16px;
-      border: 1px solid var(--gold);
-      color: var(--gold-light) !important;
-      border-radius: 4px;
-    }
-
-    /* HERO */
-
-    .hero {
-      background:
-        linear-gradient(rgba(11,31,51,0.96), rgba(11,31,51,0.96)),
-        radial-gradient(circle at top right, rgba(201,162,39,0.2), transparent 40%);
-      color: white;
-      padding: 110px 25px 100px;
-    }
-
-    .hero-inner {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .eyebrow {
-      color: var(--gold-light);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2.8rem, 7vw, 5.2rem);
-      line-height: 1.05;
-      margin-bottom: 25px;
-    }
-
-    .hero h1 span {
-      color: var(--gold-light);
-    }
-
-    .hero p {
-      max-width: 730px;
-      margin: auto;
-      color: rgba(255,255,255,0.78);
-      font-size: 1.08rem;
-    }
-
-    /* GENERAL */
-
-    .section {
-      padding: 90px 25px;
-    }
-
-    .section.alt {
-      background: var(--ivory);
+        gap: 12px;
     }
 
     .container {
-      max-width: 1120px;
-      margin: auto;
+        width: 92%;
     }
 
-    .section-heading {
-      max-width: 800px;
-      margin-bottom: 48px;
+    .page-header {
+        padding-top: 30px;
     }
 
-    .section-heading.center {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
+    .page-header h1 {
+        font-size: 28px;
     }
 
-    .section-label {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      font-size: 0.76rem;
-      font-weight: 700;
-      margin-bottom: 10px;
+    .snapshot {
+        grid-template-columns: 1fr 1fr;
     }
 
-    h2 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.2;
-      margin-bottom: 15px;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-    }
-
-    /* PHILOSOPHY */
-
-    .philosophy {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .quote-icon {
-      color: var(--gold);
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-    }
-
-    .philosophy blockquote {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      line-height: 1.45;
-      color: var(--navy);
-      margin-bottom: 18px;
-    }
-
-    .philosophy p {
-      color: var(--muted);
-      max-width: 700px;
-      margin: auto;
-    }
-
-    /* FEATURED ACHIEVEMENT */
-
-    .featured {
-      background: var(--navy);
-      color: white;
-      border-radius: 14px;
-      padding: 50px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 35px;
-      align-items: center;
-      box-shadow: var(--shadow);
-      margin-bottom: 25px;
-    }
-
-    .featured-icon {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      border: 1px solid rgba(225,199,102,0.7);
-      color: var(--gold-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-    }
-
-    .featured .section-label {
-      color: var(--gold-light);
-    }
-
-    .featured h2 {
-      color: white;
-      margin-bottom: 8px;
-    }
-
-    .featured p {
-      color: rgba(255,255,255,0.72);
-    }
-
-    /* ACHIEVEMENT CARDS */
-
-    .achievement-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .achievement-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 30px;
-      display: flex;
-      gap: 22px;
-      align-items: flex-start;
-      transition: 0.3s ease;
-    }
-
-    .achievement-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .achievement-icon {
-      width: 50px;
-      height: 50px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      background: var(--navy);
-      color: var(--gold-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .achievement-year {
-      color: var(--gold);
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 5px;
-    }
-
-    .achievement-card h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.2rem;
-      line-height: 1.4;
-      margin-bottom: 7px;
-    }
-
-    .achievement-card p {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    /* LEADERSHIP TIMELINE */
-
-    .timeline {
-      max-width: 900px;
-      margin: auto;
-      position: relative;
-    }
-
-    .timeline::before {
-      content: "";
-      position: absolute;
-      left: 18px;
-      top: 5px;
-      bottom: 5px;
-      width: 1px;
-      background: var(--border);
-    }
-
-    .timeline-item {
-      position: relative;
-      padding-left: 60px;
-      margin-bottom: 38px;
-    }
-
-    .timeline-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: 10px;
-      top: 4px;
-      width: 17px;
-      height: 17px;
-      border-radius: 50%;
-      background: var(--gold);
-      border: 4px solid white;
-      box-shadow: 0 0 0 1px var(--gold);
-    }
-
-    .timeline-period {
-      color: var(--gold);
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 5px;
-    }
-
-    .timeline-item h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.35rem;
-      margin-bottom: 6px;
-    }
-
-    .timeline-item p {
-      color: var(--muted);
-    }
-
-    /* SESSIONS */
-
-    .sessions {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .session-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      padding: 27px;
-      transition: 0.3s ease;
-    }
-
-    .session-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow);
-    }
-
-    .session-icon {
-      color: var(--gold);
-      font-size: 1.25rem;
-      margin-bottom: 15px;
-    }
-
-    .session-card h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.18rem;
-      margin-bottom: 6px;
-    }
-
-    .session-topic {
-      color: var(--text);
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin-bottom: 6px;
-    }
-
-    .session-location {
-      color: var(--muted);
-      font-size: 0.86rem;
-    }
-
-    /* OUTREACH */
-
-    .outreach {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .outreach-card {
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      background: white;
-    }
-
-    .outreach-card i {
-      color: var(--gold);
-      margin-bottom: 14px;
-      font-size: 1.3rem;
-    }
-
-    .outreach-card h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-    }
-
-    .outreach-card p {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    /* CTA */
-
-    .cta {
-      background: var(--navy);
-      color: white;
-      text-align: center;
-      padding: 85px 25px;
-    }
-
-    .cta h2 {
-      color: white;
-    }
-
-    .cta p {
-      color: rgba(255,255,255,0.7);
-      max-width: 680px;
-      margin: 0 auto 30px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 13px 25px;
-      background: var(--gold);
-      color: var(--navy);
-      border-radius: 4px;
-      font-weight: 700;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #071725;
-      color: rgba(255,255,255,0.55);
-      padding: 35px 25px;
-      text-align: center;
-      font-size: 0.85rem;
-    }
-
-    footer strong {
-      color: white;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 900px) {
-
-      .nav-links {
-        gap: 14px;
-        font-size: 0.8rem;
-      }
-
-      .achievement-grid,
-      .sessions,
-      .outreach {
+    .grid-2 {
         grid-template-columns: 1fr;
-      }
-
-      .featured {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .featured-icon {
-        margin: auto;
-      }
-
     }
 
-    @media (max-width: 700px) {
-
-      .nav-container {
-        flex-direction: column;
-        gap: 14px;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 11px;
-      }
-
-      .hero {
-        padding: 75px 20px;
-      }
-
-      .hero h1 {
-        font-size: 2.8rem;
-      }
-
-      .section {
-        padding: 65px 20px;
-      }
-
-      .featured {
-        padding: 35px 25px;
-      }
-
+    .feature {
+        padding: 24px;
     }
-
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
 <nav>
 
-  <div class="nav-container">
-
-    <a href="index.html" class="brand">
-      Dr. Prashant Gupta
+    <a href="index.html" class="nav-name">
+        Dr. Prashant Gupta
     </a>
 
     <div class="nav-links">
-
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="research.html">Research</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="publications.html">Publications</a>
-      <a href="activities.html">Activities</a>
-      <a href="achievements.html" class="active">Achievements</a>
-      <a href="contact.html">Contact</a>
-
-      <a href="Prashant%20Kumar%20Gupta_CV.pdf" class="cv-button">
-        CV
-      </a>
-
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="publications.html">Publications</a>
+        <a href="activities.html">Activities</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
     </div>
-
-  </div>
 
 </nav>
 
 
-<!-- HERO -->
+<main class="container">
 
-<header class="hero">
+    <!-- HEADER -->
 
-  <div class="hero-inner">
+    <section class="page-header">
 
-    <div class="eyebrow">
-      Achievements & Engagements
-    </div>
-
-    <h1>
-      Every Milestone <span>Matters.</span>
-    </h1>
-
-    <p>
-      A collection of achievements, recognitions, leadership experiences,
-      invited sessions and engagements across different stages of my journey.
-    </p>
-
-  </div>
-
-</header>
-
-
-<!-- PHILOSOPHY -->
-
-<section class="section">
-
-  <div class="container">
-
-    <div class="philosophy">
-
-      <div class="quote-icon">
-        <i class="fa-solid fa-quote-left"></i>
-      </div>
-
-      <blockquote>
-        “Every achievement, big or small, becomes a part of the journey —
-        and every journey shapes character.”
-      </blockquote>
-
-      <p>
-        Some milestones may receive an award, while others may simply
-        represent an opportunity, a responsibility or a moment of learning.
-        Each one has contributed in its own way to the person and professional
-        I am today.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- RECOGNITION -->
-
-<section class="section alt">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="section-label">
-        Recognition & Distinction
-      </div>
-
-      <h2>
-        Milestones That Matter
-      </h2>
-
-      <p>
-        A selection of recognitions and measurable milestones from
-        academic, professional and leadership engagements.
-      </p>
-
-    </div>
-
-
-    <!-- OTA -->
-
-    <div class="featured">
-
-      <div class="featured-icon">
-        <i class="fa-solid fa-medal"></i>
-      </div>
-
-      <div>
-
-        <div class="section-label">
-          Officers Training Academy · Kamptee
-        </div>
-
-        <h2>
-          9th Among 475 Academicians
-        </h2>
+        <h1>Achievements & Engagements</h1>
 
         <p>
-          Secured 9th position among 475 academicians during the
-          three-month training and evaluation programme at
-          Officers Training Academy, Kamptee.
+            Milestones, recognitions, leadership experiences and engagements
+            across different stages of the journey.
         </p>
 
-      </div>
-
-    </div>
+    </section>
 
 
-    <div class="achievement-grid">
+    <!-- SNAPSHOT -->
 
+    <section class="snapshot">
 
-      <!-- ANO -->
-
-      <div class="achievement-card">
-
-        <div class="achievement-icon">
-          <i class="fa-solid fa-ranking-star"></i>
+        <div class="snapshot-card">
+            <div class="snapshot-number">2</div>
+            <div class="snapshot-label">
+                Best Paper Awards
+            </div>
         </div>
 
-        <div>
-
-          <div class="achievement-year">
-            NCC Leadership
-          </div>
-
-          <h3>
-            1st Position — ANO Readiness Examination
-          </h3>
-
-          <p>
-            Secured first position at the group level in the
-            ANO Readiness Examination.
-          </p>
-
+        <div class="snapshot-card">
+            <div class="snapshot-number">Top 10</div>
+            <div class="snapshot-label">
+                Finance Track — IIM Visakhapatnam
+            </div>
         </div>
 
-      </div>
-
-
-      <!-- MNIT -->
-
-      <div class="achievement-card">
-
-        <div class="achievement-icon">
-          <i class="fa-solid fa-trophy"></i>
+        <div class="snapshot-card">
+            <div class="snapshot-number">9th</div>
+            <div class="snapshot-label">
+                Among 475 Academicians — OTA Kamptee
+            </div>
         </div>
 
-        <div>
+        <div class="snapshot-card">
+            <div class="snapshot-number">1st</div>
+            <div class="snapshot-label">
+                ANO Readiness Examination
+            </div>
+        </div>
 
-          <div class="achievement-year">
-            Research Recognition
-          </div>
+    </section>
 
-          <h3>
-            Best Paper Award — MNIT Jaipur
-          </h3>
 
-          <p>
-            Best Paper Award at the ICSSR-sponsored conference on
-            FinTech Innovation & Digital Practices.
-          </p>
+    <!-- RECOGNITION -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2>Recognition & Distinction</h2>
+
+            <p>
+                Selected recognitions across academic, professional and leadership settings.
+            </p>
 
         </div>
 
-      </div>
+
+        <div class="grid-3">
+
+            <div class="card">
+
+                <span class="category">Recognition</span>
+
+                <h3>9th Among 475 Academicians</h3>
+
+                <p>
+                    Secured 9th position among 475 academicians at
+                    OTA Kamptee.
+                </p>
+
+            </div>
 
 
-      <!-- AGBA -->
+            <div class="card">
 
-      <div class="achievement-card">
+                <span class="category">Leadership</span>
 
-        <div class="achievement-icon">
-          <i class="fa-solid fa-award"></i>
+                <h3>1st Position — ANO Readiness Examination</h3>
+
+                <p>
+                    Secured first position in the ANO Readiness Examination.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="category">Research</span>
+
+                <h3>Best Paper Award — MNIT Jaipur</h3>
+
+                <p>
+                    Best Paper Award at the ICSSR Sponsored Conference on
+                    FinTech Innovation & Digital Practices at MNIT Jaipur.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="category">Research</span>
+
+                <h3>Best Paper Award — AGBA Conference</h3>
+
+                <p>
+                    Best Paper Award at AGBA's 16th World Conference
+                    at IIT Delhi.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="category">Research</span>
+
+                <h3>Top 10 — Finance Track</h3>
+
+                <p>
+                    Recognised among the Top 10 papers in the Finance Track
+                    at the IIM Visakhapatnam Doctoral Colloquium.
+                </p>
+
+            </div>
+
         </div>
 
-        <div>
-
-          <div class="achievement-year">
-            Research Recognition
-          </div>
-
-          <h3>
-            Best Paper Award — AGBA Conference
-          </h3>
-
-          <p>
-            Best Paper Award at the 16th AGBA World Conference
-            held at IIT Delhi.
-          </p>
-
-        </div>
-
-      </div>
+    </section>
 
 
-      <!-- IIM V -->
+    <!-- LEADERSHIP -->
 
-      <div class="achievement-card">
+    <section class="section">
 
-        <div class="achievement-icon">
-          <i class="fa-solid fa-star"></i>
-        </div>
+        <div class="section-heading">
 
-        <div>
+            <h2>Leadership Across the Years</h2>
 
-          <div class="achievement-year">
-            Research Recognition
-          </div>
-
-          <h3>
-            Top 10 — Finance Track
-          </h3>
-
-          <p>
-            Selected among the Top 10 articles in the Finance Track
-            at the Management Doctoral Colloquium, IIM Visakhapatnam.
-          </p>
+            <p>
+                Leadership experiences from school, doctoral education and academic life.
+            </p>
 
         </div>
 
-      </div>
 
+        <div class="milestone">
 
-    </div>
+            <div class="milestone-label">
+                School Years
+            </div>
 
-  </div>
+            <div>
 
-</section>
+                <h3>CBSE MHRAT National-Level Basketball Competition</h3>
 
+                <p>
+                    Selected for the CBSE MHRAT National-Level Basketball
+                    Competition as the only student from the school selected
+                    for the competition. The team went on to win the competition.
+                </p>
 
-<!-- LEADERSHIP ACROSS THE YEARS -->
+            </div>
 
-<section class="section">
-
-  <div class="container">
-
-    <div class="section-heading center">
-
-      <div class="section-label">
-        Leadership Across the Years
-      </div>
-
-      <h2>
-        Experiences That Shaped the Journey
-      </h2>
-
-      <p>
-        Not every meaningful achievement comes with a certificate.
-        Some are experiences that build confidence, responsibility,
-        teamwork and leadership.
-      </p>
-
-    </div>
-
-
-    <div class="timeline">
-
-
-      <!-- SCHOOL NATIONAL BASKETBALL -->
-
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-period">
-          School Years · Basketball
         </div>
 
-        <h3>
-          Selected for CBSE MHRAT National-Level Basketball Competition
-        </h3>
+
+        <div class="milestone">
+
+            <div class="milestone-label">
+                School Years
+            </div>
+
+            <div>
+
+                <h3>School Basketball Team & Captain</h3>
+
+                <p>
+                    Member of the school basketball team and subsequently
+                    served as team captain.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="milestone">
+
+            <div class="milestone-label">
+                School Years
+            </div>
+
+            <div>
+
+                <h3>School Student Council</h3>
+
+                <p>
+                    Served as a member of the school student council,
+                    contributing to student leadership and representation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="milestone">
+
+            <div class="milestone-label">
+                IIT Delhi
+            </div>
+
+            <div>
+
+                <h3>PhD Representative</h3>
+
+                <p>
+                    Served as PhD Representative during doctoral studies
+                    at IIT Delhi.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="milestone">
+
+            <div class="milestone-label">
+                IIT Delhi
+            </div>
+
+            <div>
+
+                <h3>Member — Syllabus Review Committee</h3>
+
+                <p>
+                    Contributed to academic discussions and syllabus review
+                    during doctoral studies at IIT Delhi.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INVITED SESSIONS -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2>Invited Sessions</h2>
+
+            <p>
+                Selected sessions and academic engagements with students and institutions.
+            </p>
+
+        </div>
+
+
+        <div class="grid-2">
+
+            <div class="card">
+
+                <span class="category">MNIT Jaipur</span>
+
+                <h3>Management Careers for Engineering Graduates</h3>
+
+                <p>
+                    Invited session focused on management careers and
+                    opportunities for engineering graduates.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="category">NALSAR University of Law</span>
+
+                <h3>Guiding MBA Students for Career</h3>
+
+                <p>
+                    Session focused on career guidance and professional
+                    development for MBA students.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="category">University of Delhi</span>
+
+                <h3>FinTech — Janki Devi Memorial College</h3>
+
+                <p>
+                    Invited academic session on FinTech for students
+                    at Janki Devi Memorial College.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="category">University of Delhi</span>
+
+                <h3>Handling Cases — Shaheed Bhagat Singh College</h3>
+
+                <p>
+                    Academic session on case handling and analysis
+                    for students.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCHOOL & YOUTH OUTREACH -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2>School & Youth Outreach</h2>
+
+            <p>
+                Engagement with students beyond formal university education.
+            </p>
+
+        </div>
+
+
+        <div class="grid-3">
+
+            <div class="card">
+
+                <span class="category">School Outreach</span>
+
+                <h3>Sharda Mandir School</h3>
+
+                <p>
+                    Session on Skills for the Future.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="category">School Outreach</span>
+
+                <h3>Kings School</h3>
+
+                <p>
+                    Session on How Management Works.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="category">Youth Outreach</span>
+
+                <h3>Coaching Institutes</h3>
+
+                <p>
+                    Student engagement sessions conducted across
+                    Surat, Ranchi and Patna.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PHILOSOPHY -->
+
+    <section class="section">
+
+        <div class="feature">
+
+            <h2>Every Milestone Matters</h2>
+
+            <p>
+                Every achievement, big or small, becomes a part of the journey —
+                and every journey shapes character.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-item">
+
+                    <strong>Academic</strong>
+
+                    <span>
+                        Research, conferences, awards and academic contributions.
+                    </span>
+
+                </div>
+
+
+                <div class="feature-item">
+
+                    <strong>Leadership</strong>
+
+                    <span>
+                        Responsibilities that create opportunities to learn,
+                        contribute and serve.
+                    </span>
+
+                </div>
+
+
+                <div class="feature-item">
+
+                    <strong>Student Engagement</strong>
+
+                    <span>
+                        Experiences that involve mentoring, guiding and developing students.
+                    </span>
+
+                </div>
+
+
+                <div class="feature-item">
+
+                    <strong>Personal Journey</strong>
+
+                    <span>
+                        Small milestones that collectively shape a professional
+                        and personal journey.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <h2>Beyond the Milestones</h2>
 
         <p>
-          Selected as the only student from my school to participate
-          in the CBSE MHRAT national-level basketball competition.
-          The school team went on to win the competition.
+            Explore the broader institutional, leadership and social activities
+            that continue alongside teaching and research.
         </p>
 
-      </div>
+        <a href="activities.html">
+            View Activities →
+        </a>
 
+    </section>
 
-      <!-- BASKETBALL TEAM -->
+</main>
 
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-period">
-          School Years · Sports Leadership
-        </div>
-
-        <h3>
-          School Basketball Team & Captain
-        </h3>
-
-        <p>
-          Member of the school basketball team and later entrusted
-          with the responsibility of serving as team captain.
-        </p>
-
-      </div>
-
-
-      <!-- STUDENT COUNCIL -->
-
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-period">
-          School Years · Student Leadership
-        </div>
-
-        <h3>
-          Member of the School Student Council
-        </h3>
-
-        <p>
-          Participated in student leadership and represented the
-          student community as a member of the school Student Council.
-        </p>
-
-      </div>
-
-
-      <!-- PHD REPRESENTATIVE -->
-
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-period">
-          Doctoral Years · IIT Delhi
-        </div>
-
-        <h3>
-          PhD Representative
-        </h3>
-
-        <p>
-          Served as a PhD representative during the doctoral programme,
-          contributing to communication and representation of doctoral
-          scholars.
-        </p>
-
-      </div>
-
-
-      <!-- SYLLABUS -->
-
-      <div class="timeline-item">
-
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-period">
-          Doctoral Years · IIT Delhi
-        </div>
-
-        <h3>
-          Member — Syllabus Review Committee
-        </h3>
-
-        <p>
-          Served as a member of the Syllabus Review Committee during
-          the doctoral programme.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- INVITED SESSIONS -->
-
-<section class="section alt">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="section-label">
-        Invited Sessions
-      </div>
-
-      <h2>
-        Sharing Knowledge Beyond the Classroom
-      </h2>
-
-      <p>
-        Opportunities to interact with students and learners across
-        universities, colleges, schools and professional learning communities.
-      </p>
-
-    </div>
-
-
-    <div class="sessions">
-
-
-      <!-- MNIT -->
-
-      <div class="session-card">
-
-        <div class="session-icon">
-          <i class="fa-solid fa-microphone"></i>
-        </div>
-
-        <h3>
-          MNIT Jaipur
-        </h3>
-
-        <div class="session-topic">
-          Management Careers for Engineering Graduates
-        </div>
-
-        <div class="session-location">
-          Invited Session · Jaipur, India
-        </div>
-
-      </div>
-
-
-      <!-- NALSAR -->
-
-      <div class="session-card">
-
-        <div class="session-icon">
-          <i class="fa-solid fa-comments"></i>
-        </div>
-
-        <h3>
-          NALSAR University of Law
-        </h3>
-
-        <div class="session-topic">
-          Guiding MBA Students for Career
-        </div>
-
-        <div class="session-location">
-          Invited Session · Hyderabad, India
-        </div>
-
-      </div>
-
-
-      <!-- JANKI DEVI -->
-
-      <div class="session-card">
-
-        <div class="session-icon">
-          <i class="fa-solid fa-chart-line"></i>
-        </div>
-
-        <h3>
-          Janki Devi Memorial College
-        </h3>
-
-        <div class="session-topic">
-          FinTech
-        </div>
-
-        <div class="session-location">
-          University of Delhi · New Delhi
-        </div>
-
-      </div>
-
-
-      <!-- SBS -->
-
-      <div class="session-card">
-
-        <div class="session-icon">
-          <i class="fa-solid fa-briefcase"></i>
-        </div>
-
-        <h3>
-          Shaheed Bhagat Singh College
-        </h3>
-
-        <div class="session-topic">
-          Handling Cases
-        </div>
-
-        <div class="session-location">
-          University of Delhi · New Delhi
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- SCHOOL & YOUTH OUTREACH -->
-
-<section class="section">
-
-  <div class="container">
-
-    <div class="section-heading center">
-
-      <div class="section-label">
-        School & Youth Outreach
-      </div>
-
-      <h2>
-        Engaging with Future Learners
-      </h2>
-
-      <p>
-        Taking conversations around management, careers and future skills
-        beyond university classrooms.
-      </p>
-
-    </div>
-
-
-    <div class="outreach">
-
-
-      <!-- SHARDA -->
-
-      <div class="outreach-card">
-
-        <i class="fa-solid fa-school"></i>
-
-        <h3>
-          Sharda Mandir School
-        </h3>
-
-        <p>
-          Sessions on <strong>Skills for the Future</strong>,
-          focusing on capabilities and skills relevant to students
-          preparing for a changing world.
-        </p>
-
-      </div>
-
-
-      <!-- KINGS -->
-
-      <div class="outreach-card">
-
-        <i class="fa-solid fa-school-flag"></i>
-
-        <h3>
-          Kings School
-        </h3>
-
-        <p>
-          Sessions on <strong>How Management Works</strong>,
-          introducing students to management concepts through
-          accessible and practical discussions.
-        </p>
-
-      </div>
-
-
-      <!-- SURAT -->
-
-      <div class="outreach-card">
-
-        <i class="fa-solid fa-location-dot"></i>
-
-        <h3>
-          Coaching Institutes — Surat
-        </h3>
-
-        <p>
-          Multiple sessions at coaching institutes of national
-          repute, engaging with students on academic and
-          career-related themes.
-        </p>
-
-      </div>
-
-
-      <!-- RANCHI -->
-
-      <div class="outreach-card">
-
-        <i class="fa-solid fa-location-dot"></i>
-
-        <h3>
-          Coaching Institutes — Ranchi
-        </h3>
-
-        <p>
-          Multiple sessions at coaching institutes of national
-          repute with students and aspiring learners.
-        </p>
-
-      </div>
-
-
-      <!-- PATNA -->
-
-      <div class="outreach-card">
-
-        <i class="fa-solid fa-location-dot"></i>
-
-        <h3>
-          Coaching Institutes — Patna
-        </h3>
-
-        <p>
-          Multiple sessions at coaching institutes of national
-          repute with students and aspiring learners.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CLOSING -->
-
-<section class="section alt">
-
-  <div class="container">
-
-    <div class="philosophy">
-
-      <div class="quote-icon">
-        <i class="fa-solid fa-compass"></i>
-      </div>
-
-      <blockquote>
-        The journey is made up of many small milestones.
-      </blockquote>
-
-      <p>
-        Some are celebrated publicly, some are remembered personally,
-        and some simply teach us something valuable. Together, they
-        shape the character behind the professional profile.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-  <div class="container">
-
-    <h2>
-      Explore the Journey Further
-    </h2>
-
-    <p>
-      Discover my research, teaching, publications and wider
-      institutional activities.
-    </p>
-
-    <a href="activities.html" class="cta-button">
-      Explore Activities
-      <i class="fa-solid fa-arrow-right"></i>
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- FOOTER -->
 
 <footer>
 
-  <p>
-    © 2026 <strong>Dr. Prashant Gupta</strong> · Assistant Professor ·
-    School of Management, Mahindra University, Hyderabad
-  </p>
+    © 2026 Dr. Prashant Gupta · Mahindra University
 
 </footer>
 
