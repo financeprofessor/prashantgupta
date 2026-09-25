@@ -1,32 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>About Dr. Prashant Gupta | Mahindra University</title>
+  <title>About | Dr. Prashant Gupta</title>
+  <meta name="description" content="Academic background, professional journey and personal perspective of Dr. Prashant Gupta, Assistant Professor at Mahindra University.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
-
     :root {
       --navy: #0d1b2a;
       --navy-light: #14283d;
       --gold: #c6a15b;
       --gold-light: #dfc78f;
       --ivory: #f8f6f0;
-      --white: #ffffff;
       --text: #25313d;
-      --muted: #6d7782;
+      --muted: #64717d;
       --border: #e6e2d9;
-      --shadow: 0 12px 35px rgba(13,27,42,0.08);
     }
 
     * {
@@ -35,16 +31,20 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: "DM Sans", sans-serif;
       background: var(--ivory);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     .container {
@@ -55,25 +55,25 @@
     /* NAVIGATION */
 
     nav {
-      background: rgba(13,27,42,0.97);
-      color: white;
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(198,161,91,0.25);
+      background: rgba(13, 27, 42, 0.98);
+      border-bottom: 1px solid rgba(198, 161, 91, 0.3);
     }
 
     .nav-inner {
       min-height: 72px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      align-items: center;
+      gap: 25px;
     }
 
     .brand {
       font-family: "Playfair Display", serif;
       font-size: 1.2rem;
+      color: white;
       white-space: nowrap;
     }
 
@@ -84,14 +84,16 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
-      font-size: 0.88rem;
+      flex-wrap: wrap;
+      gap: 19px;
+      font-size: 0.85rem;
       font-weight: 500;
     }
 
     .nav-links a {
-      color: rgba(255,255,255,0.86);
+      color: rgba(255,255,255,0.85);
       white-space: nowrap;
+      transition: color 0.2s;
     }
 
     .nav-links a:hover,
@@ -101,329 +103,229 @@
 
     .cv-button {
       border: 1px solid var(--gold);
-      padding: 8px 15px;
       border-radius: 5px;
+      padding: 8px 14px;
       color: var(--gold-light) !important;
     }
 
-    .cv-button:hover {
-      background: var(--gold);
-      color: var(--navy) !important;
-    }
+    /* COMPACT PAGE HEADER */
 
-    /* HERO */
-
-    .hero {
-      background:
-        radial-gradient(circle at 85% 20%, rgba(198,161,91,0.12), transparent 30%),
-        linear-gradient(135deg, #0d1b2a, #132b42);
+    .page-header {
+      background: linear-gradient(125deg, #0d1b2a, #17314a);
       color: white;
-      padding: 58px 0 55px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 38px;
-      align-items: center;
-    }
-
-    .profile-image {
-      width: 170px;
-      height: 170px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid rgba(198,161,91,0.85);
+      padding: 45px 0 48px;
     }
 
     .eyebrow {
-      text-transform: uppercase;
+      font-size: 0.72rem;
+      font-weight: 700;
       letter-spacing: 2px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--gold-light);
-      margin-bottom: 8px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Playfair Display", serif;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.3rem, 5vw, 4rem);
-      line-height: 1.1;
-      margin-bottom: 8px;
-    }
-
-    .hero-role {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .hero-affiliation {
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 15px;
-    }
-
-    .hero-text {
-      max-width: 760px;
-      color: rgba(255,255,255,0.84);
-      font-size: 0.95rem;
-    }
-
-    /* QUICK FACTS */
-
-    .quick {
-      margin-top: -25px;
-      position: relative;
-      z-index: 5;
-    }
-
-    .quick-grid {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      background: var(--border);
-      gap: 1px;
-      border-radius: 9px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .quick-card {
-      background: white;
-      padding: 23px 15px;
-      text-align: center;
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .quick-icon {
+      text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 7px;
+      margin-bottom: 9px;
     }
 
-    .quick-title {
-      color: var(--navy);
+    .page-header h1 {
       font-family: "Playfair Display", serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      line-height: 1.2;
-    }
-
-    .quick-detail {
-      color: var(--muted);
-      font-size: 0.76rem;
-      margin-top: 4px;
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 65px 0;
-    }
-
-    .section-heading {
-      margin-bottom: 28px;
-    }
-
-    .section-heading .eyebrow {
-      color: var(--gold);
-    }
-
-    .section-heading h2 {
-      color: var(--navy);
-      font-size: 2rem;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      max-width: 720px;
-      margin-top: 7px;
-    }
-
-    /* PROFILE */
-
-    .profile-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 25px;
-    }
-
-    .profile-box {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 28px;
-    }
-
-    .profile-box h3 {
-      color: var(--navy);
-      font-size: 1.4rem;
-      margin-bottom: 13px;
-    }
-
-    .profile-box p {
-      color: var(--muted);
-      font-size: 0.91rem;
+      font-size: clamp(2.1rem, 4vw, 3.3rem);
+      line-height: 1.15;
       margin-bottom: 12px;
     }
 
-    .profile-box p:last-child {
+    .page-header p {
+      max-width: 760px;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.98rem;
+    }
+
+    /* BIOGRAPHY */
+
+    section {
+      padding: 58px 0;
+    }
+
+    .bio-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .section-heading {
+      font-family: "Playfair Display", serif;
+      font-size: 1.9rem;
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 22px;
+    }
+
+    .bio-text p {
+      margin-bottom: 16px;
+      font-size: 0.96rem;
+    }
+
+    .bio-text p:last-child {
       margin-bottom: 0;
+    }
+
+    .bio-image {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 9px;
+      border: 4px solid white;
+      box-shadow: 0 12px 32px rgba(13,27,42,0.12);
+    }
+
+    .bio-caption {
+      margin-top: 10px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.8rem;
     }
 
     /* JOURNEY */
 
-    .journey {
-      background: #f1eee7;
+    .journey-section {
+      background: #f0ede6;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 740px;
+      margin-top: -8px;
+      margin-bottom: 26px;
+      font-size: 0.93rem;
     }
 
     .journey-grid {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 17px;
     }
 
     .journey-card {
       background: white;
       border: 1px solid var(--border);
-      border-radius: 7px;
-      padding: 21px;
       border-top: 3px solid var(--gold);
+      border-radius: 7px;
+      padding: 23px;
     }
 
-    .journey-card .period {
-      color: var(--gold);
-      text-transform: uppercase;
+    .journey-card .category {
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 1px;
-      margin-bottom: 7px;
+      text-transform: uppercase;
+      color: #a47d35;
+      margin-bottom: 8px;
     }
 
     .journey-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.17rem;
       color: var(--navy);
-      font-size: 1.15rem;
-      margin-bottom: 4px;
+      line-height: 1.3;
+      margin-bottom: 7px;
     }
 
     .journey-card p {
+      font-size: 0.84rem;
       color: var(--muted);
-      font-size: 0.82rem;
     }
 
     /* EDUCATION */
 
-    .education-grid {
+    .education-list {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
-    .education-card {
+    .education-item {
+      padding: 23px;
       background: white;
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 24px;
-      text-align: center;
+      border-radius: 7px;
     }
 
-    .education-card i {
+    .education-item i {
       color: var(--gold);
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       margin-bottom: 12px;
     }
 
-    .education-card h3 {
+    .education-item h3 {
+      font-family: "Playfair Display", serif;
       color: var(--navy);
-      font-size: 1.15rem;
+      font-size: 1.17rem;
       margin-bottom: 5px;
     }
 
-    .education-card p {
+    .education-item p {
       color: var(--muted);
-      font-size: 0.83rem;
+      font-size: 0.86rem;
     }
 
-    /* PERSPECTIVE */
+    /* PERSONAL PERSPECTIVE */
 
     .perspective {
       background: var(--navy);
       color: white;
     }
 
-    .perspective-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
+    .perspective .section-heading {
+      color: white;
     }
 
-    .perspective h2 {
-      color: white;
-      font-size: 2rem;
+    .perspective-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 45px;
+      align-items: start;
     }
 
     .perspective p {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.9rem;
-      margin-top: 12px;
+      color: rgba(255,255,255,0.77);
+      margin-bottom: 14px;
+      font-size: 0.95rem;
     }
 
-    .perspective-box {
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 25px;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.035);
-    }
-
-    .perspective-box h3 {
-      color: var(--gold-light);
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-    }
-
-    /* CTA */
-
-    .cta {
-      text-align: center;
-      padding: 58px 20px;
-    }
-
-    .cta h2 {
-      color: var(--navy);
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-
-    .cta p {
-      color: var(--muted);
-      margin-bottom: 20px;
+    .perspective-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 23px;
     }
 
     .button {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 10px 17px;
-      border-radius: 5px;
-      font-size: 0.84rem;
+      gap: 9px;
+      padding: 11px 18px;
       font-weight: 600;
-      margin: 4px;
+      font-size: 0.85rem;
+      border-radius: 5px;
+      transition: 0.2s;
     }
 
-    .button-primary {
+    .button-gold {
       background: var(--gold);
       color: var(--navy);
     }
 
-    .button-dark {
-      background: var(--navy);
+    .button-gold:hover {
+      background: var(--gold-light);
+    }
+
+    .button-outline {
+      border: 1px solid rgba(255,255,255,0.45);
       color: white;
+    }
+
+    .button-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
     }
 
     /* FOOTER */
@@ -431,715 +333,388 @@
     footer {
       background: #081521;
       color: rgba(255,255,255,0.65);
-      padding: 28px 0;
+      padding: 30px 0;
     }
 
     .footer-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
     }
 
     .footer-name {
       color: white;
       font-family: "Playfair Display", serif;
+      font-size: 1.05rem;
     }
 
-    .footer-links {
+    .footer-small {
+      font-size: 0.78rem;
+    }
+
+    .social-links {
       display: flex;
-      gap: 17px;
+      gap: 19px;
+      font-size: 1.1rem;
     }
 
-    .footer-links a:hover {
+    .social-links a:hover {
       color: var(--gold-light);
     }
 
     /* RESPONSIVE */
 
-    @media (max-width: 950px) {
-
+    @media (max-width: 1050px) {
       .nav-inner {
         flex-direction: column;
-        padding: 15px 0;
+        padding: 14px 0;
+        gap: 12px;
       }
 
       .nav-links {
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 12px 16px;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .profile-image {
-        margin: auto;
-      }
-
-      .hero-text {
-        margin: auto;
-      }
-
-      .quick-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .profile-grid,
-      .perspective-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .journey-grid,
-      .education-grid {
-        grid-template-columns: 1fr 1fr;
+        gap: 12px 17px;
       }
     }
 
-    @media (max-width: 650px) {
-
-      section {
-        padding: 50px 0;
+    @media (max-width: 800px) {
+      .bio-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
       }
 
-      .hero {
-        padding: 45px 0;
-      }
-
-      .hero h1 {
-        font-size: 2.3rem;
+      .bio-photo {
+        grid-row: 1;
+        max-width: 210px;
       }
 
       .journey-grid,
-      .education-grid {
-        grid-template-columns: 1fr;
+      .education-list {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .quick-card {
-        min-height: 110px;
+      .perspective-layout {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      section {
+        padding: 42px 0;
+      }
+
+      .page-header {
+        padding: 35px 0;
+      }
+
+      .journey-grid,
+      .education-list {
+        grid-template-columns: 1fr;
       }
 
       .footer-inner {
         flex-direction: column;
-        gap: 12px;
         text-align: center;
-      }
-    }
-
-    @media (max-width: 430px) {
-
-      .quick-title {
-        font-size: 0.9rem;
-      }
-
-      .quick-detail {
-        font-size: 0.7rem;
       }
 
       .nav-links {
-        font-size: 0.76rem;
+        font-size: 0.77rem;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+  <!-- NAVIGATION -->
 
-<nav>
+  <nav>
+    <div class="container nav-inner">
 
-  <div class="container nav-inner">
-
-    <a href="index.html" class="brand">
-      Dr. Prashant <span>Gupta</span>
-    </a>
-
-    <div class="nav-links">
-
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="research.html">Research</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="publications.html">Publications</a>
-      <a href="activities.html">Activities</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="contact.html">Contact</a>
-
-      <a href="Prashant Kumar Gupta_CV.pdf"
-         class="cv-button">
-        <i class="fa-solid fa-file-pdf"></i>
-        CV
+      <a href="index.html" class="brand">
+        Dr. Prashant <span>Gupta</span>
       </a>
 
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="publications.html">Publications</a>
+        <a href="activities.html">Activities</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+        <a href="Prashant Kumar Gupta_CV.pdf" class="cv-button">
+          <i class="fa-solid fa-file-pdf"></i> CV
+        </a>
+      </div>
+
     </div>
+  </nav>
 
-  </div>
+  <!-- COMPACT INTRODUCTION -->
 
-</nav>
+  <header class="page-header">
+    <div class="container">
+      <div class="eyebrow">About Me</div>
+      <h1>The Journey Behind the Profile</h1>
+      <p>
+        From studying finance to teaching, research and institutional
+        leadership — a closer look at my academic and professional journey.
+      </p>
+    </div>
+  </header>
 
+  <!-- BIOGRAPHY -->
 
-<!-- HERO -->
+  <section>
+    <div class="container bio-layout">
 
-<header class="hero">
+      <div class="bio-text">
 
-  <div class="container hero-grid">
+        <div class="eyebrow">My Story</div>
+        <h2 class="section-heading">A Journey in Academia</h2>
 
-    <img
-      src="profile.jpeg"
-      alt="Dr. Prashant Gupta"
-      class="profile-image">
+        <p>
+          My academic journey began with a B.Com. in Accounts Honours
+          from St. Xavier's College, Ranchi, followed by an MBA in
+          Finance from BIT Mesra. I subsequently pursued a Ph.D. in
+          Finance at IIT Delhi, where my doctoral research focused on
+          corporate governance and asset quality in the banking sector.
+        </p>
 
-    <div>
+        <p>
+          Over the years, I have worked across teaching, research and
+          academic administration. My professional experience spans
+          institutions including PIBM, PSIT, IIT Delhi, the Indian School
+          of Business and NALSAR University of Law.
+        </p>
 
-      <div class="eyebrow">
-        About
+        <p>
+          Since July 2022, I have been an Assistant Professor at the
+          School of Management, Mahindra University, Hyderabad.
+          Alongside teaching and research, I contribute to academic
+          quality, institutional development and student initiatives.
+        </p>
+
+        <p>
+          My interests extend beyond conventional academic work.
+          Through NCC and my long-standing association with Art of
+          Living, I remain engaged in leadership, youth development
+          and personal excellence.
+        </p>
+
       </div>
 
-      <h1>
-        Dr. Prashant Gupta
-      </h1>
-
-      <div class="hero-role">
-        Assistant Professor
+      <div class="bio-photo">
+        <img
+          src="profile.jpeg"
+          alt="Dr. Prashant Gupta"
+          class="bio-image"
+        >
+        <div class="bio-caption">
+          Dr. Prashant Gupta
+        </div>
       </div>
 
-      <div class="hero-affiliation">
-        School of Management · Mahindra University, Hyderabad
-      </div>
+    </div>
+  </section>
 
-      <p class="hero-text">
-        A finance academic and educator with interests spanning corporate
-        governance, banking, asset quality, central bank digital currencies
-        and digital finance, alongside a strong engagement in student
-        development and institutional initiatives.
+  <!-- PROFESSIONAL JOURNEY -->
+
+  <section class="journey-section">
+    <div class="container">
+
+      <div class="eyebrow">Career</div>
+      <h2 class="section-heading">Professional Journey</h2>
+
+      <p class="section-intro">
+        Academic and professional roles that have shaped my experience
+        in higher education.
       </p>
 
-    </div>
+      <div class="journey-grid">
 
-  </div>
-
-</header>
-
-
-<!-- QUICK FACTS -->
-
-<div class="quick">
-
-  <div class="container">
-
-    <div class="quick-grid">
-
-      <div class="quick-card">
-
-        <div class="quick-icon">
-          <i class="fa-solid fa-building-columns"></i>
+        <div class="journey-card">
+          <div class="category">Current · Since July 2022</div>
+          <h3>Mahindra University</h3>
+          <p>Assistant Professor, School of Management</p>
         </div>
 
-        <div class="quick-title">
-          Mahindra University
+        <div class="journey-card">
+          <div class="category">Teaching</div>
+          <h3>NALSAR University of Law</h3>
+          <p>Visiting Professor</p>
         </div>
 
-        <div class="quick-detail">
-          Assistant Professor
+        <div class="journey-card">
+          <div class="category">Teaching</div>
+          <h3>PIBM, Pune</h3>
+          <p>Assistant Professor &amp; Batch In-Charge</p>
+        </div>
+
+        <div class="journey-card">
+          <div class="category">Teaching</div>
+          <h3>PSIT, Kanpur</h3>
+          <p>Assistant Professor</p>
+        </div>
+
+        <div class="journey-card">
+          <div class="category">Academic Experience</div>
+          <h3>IIT Delhi</h3>
+          <p>Teaching Assistant</p>
+        </div>
+
+        <div class="journey-card">
+          <div class="category">Academic Experience</div>
+          <h3>Indian School of Business</h3>
+          <p>Academic Associate</p>
+        </div>
+
+        <div class="journey-card">
+          <div class="category">Professional Experience</div>
+          <h3>Australian Council for Educational Research</h3>
+          <p>Consultant</p>
         </div>
 
       </div>
 
+    </div>
+  </section>
 
-      <div class="quick-card">
+  <!-- EDUCATION -->
 
-        <div class="quick-icon">
+  <section>
+    <div class="container">
+
+      <div class="eyebrow">Academic Background</div>
+      <h2 class="section-heading">Education</h2>
+
+      <div class="education-list">
+
+        <div class="education-item">
           <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Ph.D. in Finance</h3>
+          <p>IIT Delhi · 2022</p>
         </div>
 
-        <div class="quick-title">
-          Ph.D. in Finance
+        <div class="education-item">
+          <i class="fa-solid fa-building-columns"></i>
+          <h3>MBA in Finance</h3>
+          <p>BIT Mesra · 2013</p>
         </div>
 
-        <div class="quick-detail">
-          IIT Delhi
-        </div>
-
-      </div>
-
-
-      <div class="quick-card">
-
-        <div class="quick-icon">
+        <div class="education-item">
           <i class="fa-solid fa-book-open"></i>
-        </div>
-
-        <div class="quick-title">
-          Research
-        </div>
-
-        <div class="quick-detail">
-          Finance · Banking · Digital Finance
-        </div>
-
-      </div>
-
-
-      <div class="quick-card">
-
-        <div class="quick-icon">
-          <i class="fa-solid fa-hands-holding-circle"></i>
-        </div>
-
-        <div class="quick-title">
-          Art of Living
-        </div>
-
-        <div class="quick-detail">
-          15+ Years of Engagement
+          <h3>B.Com. (Accounts Hons.)</h3>
+          <p>St. Xavier's College, Ranchi · 2011</p>
         </div>
 
       </div>
 
     </div>
+  </section>
 
-  </div>
+  <!-- PERSONAL PERSPECTIVE -->
 
-</div>
+  <section class="perspective">
+    <div class="container perspective-layout">
 
-
-<!-- PROFILE -->
-
-<section>
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        Profile
+      <div>
+        <div class="eyebrow">Beyond Academia</div>
+        <h2 class="section-heading">
+          Learning, Leadership &amp; Service
+        </h2>
       </div>
 
-      <h2>
-        Academic & Professional Profile
-      </h2>
-
-    </div>
-
-
-    <div class="profile-grid">
-
-      <div class="profile-box">
-
-        <h3>
-          Academic Journey
-        </h3>
-
+      <div>
         <p>
-          Dr. Prashant Gupta is an Assistant Professor at the School of
-          Management, Mahindra University, Hyderabad.
+          My professional journey has reinforced my interest in
+          connecting academic learning with practical experience,
+          institutional responsibility and student development.
         </p>
 
         <p>
-          His academic background is rooted in finance, with a Ph.D. in
-          Finance from IIT Delhi, an MBA in Finance from BIT Mesra and a
-          B.Com. in Accounts Honours from St. Xavier's College, Ranchi.
+          In addition to my academic responsibilities, I serve in
+          institutional leadership roles and work with NCC cadets.
+          I have also been associated with Art of Living since 2011,
+          facilitating programmes focused on personal development
+          and youth empowerment.
         </p>
 
         <p>
-          His professional journey includes academic and teaching roles
-          at institutions including Mahindra University, NALSAR University
-          of Law, PSIT and PIBM, along with academic experience at IIT Delhi
-          and the Indian School of Business.
+          These experiences form an important part of my journey,
+          complementing my work as a teacher and researcher.
         </p>
 
-      </div>
+        <div class="perspective-links">
 
+          <a href="activities.html" class="button button-gold">
+            <i class="fa-solid fa-compass"></i>
+            Explore Activities
+          </a>
 
-      <div class="profile-box">
+          <a href="achievements.html" class="button button-outline">
+            <i class="fa-solid fa-award"></i>
+            Achievements
+          </a>
 
-        <h3>
-          Areas of Work
-        </h3>
+          <a href="Prashant Kumar Gupta_CV.pdf"
+             class="button button-outline">
+            <i class="fa-solid fa-file-pdf"></i>
+            Full CV
+          </a>
 
-        <p>
-          <strong>Research</strong><br>
-          Corporate governance, banking and asset quality, CBDCs,
-          FinTech and digital finance.
-        </p>
-
-        <p>
-          <strong>Teaching</strong><br>
-          Financial Accounting, Management Accounting, Financial Management,
-          Advanced Financial Management and Financial Modelling.
-        </p>
-
-        <p>
-          <strong>Institutional Engagement</strong><br>
-          Student development, NCC, academic quality and institutional
-          initiatives.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PROFESSIONAL JOURNEY -->
-
-<section class="journey">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        Experience
-      </div>
-
-      <h2>
-        Professional Journey
-      </h2>
-
-      <p>
-        Selected academic and professional experiences across teaching,
-        higher education and academic support roles.
-      </p>
-
-    </div>
-
-
-    <div class="journey-grid">
-
-
-      <div class="journey-card">
-
-        <div class="period">
-          Current
         </div>
-
-        <h3>
-          Mahindra University
-        </h3>
-
-        <p>
-          Assistant Professor · School of Management
-        </p>
-
       </div>
 
+    </div>
+  </section>
 
-      <div class="journey-card">
+  <!-- FOOTER -->
 
-        <div class="period">
-          Academic
+  <footer>
+    <div class="container footer-inner">
+
+      <div>
+        <div class="footer-name">Dr. Prashant Gupta</div>
+        <div class="footer-small">
+          Assistant Professor · School of Management · Mahindra University
         </div>
-
-        <h3>
-          NALSAR University of Law
-        </h3>
-
-        <p>
-          Visiting Professor
-        </p>
-
       </div>
 
+      <div class="social-links">
+
+        <a
+          href="https://www.linkedin.com/in/kumar-prashantgupta/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a
+          href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google Scholar">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </a>
+
+        <a
+          href="https://orcid.org/0000-0002-6206-6158"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="ORCID">
+          <i class="fa-brands fa-orcid"></i>
+        </a>
 
-      <div class="journey-card">
-
-        <div class="period">
-          Academic
-        </div>
-
-        <h3>
-          PSIT
-        </h3>
-
-        <p>
-          Assistant Professor
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="period">
-          Academic
-        </div>
-
-        <h3>
-          PIBM
-        </h3>
-
-        <p>
-          Assistant Professor & Batch In-Charge
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="period">
-          Academic Experience
-        </div>
-
-        <h3>
-          IIT Delhi
-        </h3>
-
-        <p>
-          Teaching Assistant
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="period">
-          Academic Experience
-        </div>
-
-        <h3>
-          Indian School of Business
-        </h3>
-
-        <p>
-          Academic Associate
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="period">
-          Professional
-        </div>
-
-        <h3>
-          Australian Council for Educational Research
-        </h3>
-
-        <p>
-          Consultant
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- EDUCATION -->
-
-<section>
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        Education
-      </div>
-
-      <h2>
-        Academic Qualifications
-      </h2>
-
-    </div>
-
-
-    <div class="education-grid">
-
-
-      <div class="education-card">
-
-        <i class="fa-solid fa-graduation-cap"></i>
-
-        <h3>
-          Ph.D. in Finance
-        </h3>
-
-        <p>
-          IIT Delhi
-        </p>
-
-      </div>
-
-
-      <div class="education-card">
-
-        <i class="fa-solid fa-graduation-cap"></i>
-
-        <h3>
-          MBA – Finance
-        </h3>
-
-        <p>
-          BIT Mesra
-        </p>
-
-      </div>
-
-
-      <div class="education-card">
-
-        <i class="fa-solid fa-graduation-cap"></i>
-
-        <h3>
-          B.Com. – Accounts Hons.
-        </h3>
-
-        <p>
-          St. Xavier's College, Ranchi
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PROFESSIONAL PERSPECTIVE -->
-
-<section class="perspective">
-
-  <div class="container perspective-grid">
-
-    <div>
-
-      <div class="eyebrow">
-        Perspective
-      </div>
-
-      <h2>
-        Beyond the Classroom
-      </h2>
-
-      <p>
-        Academic work is complemented by engagement in institutional
-        development, student leadership, mentoring and activities beyond
-        conventional teaching and research.
-      </p>
-
-    </div>
-
-
-    <div class="perspective-box">
-
-      <h3>
-        Teaching, Research & Service
-      </h3>
-
-      <p>
-        The academic journey brings together teaching finance, conducting
-        research, contributing to institutional initiatives and creating
-        opportunities for student development.
-      </p>
-
-      <p>
-        Beyond the university, long-term engagement with Art of Living
-        reflects an interest in personal development, youth engagement
-        and social contribution.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-  <div class="container">
-
-    <h2>
-      Explore the Full Profile
-    </h2>
-
-    <p>
-      Discover research, teaching, publications, activities and achievements.
-    </p>
-
-    <a href="research.html"
-       class="button button-primary">
-      Research
-    </a>
-
-    <a href="achievements.html"
-       class="button button-dark">
-      Achievements
-    </a>
-
-    <a href="contact.html"
-       class="button"
-       style="border:1px solid #0d1b2a;">
-      Contact
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="container footer-inner">
-
-    <div>
-
-      <div class="footer-name">
-        Dr. Prashant Gupta
-      </div>
-
-      <div style="font-size:0.78rem;">
-        Assistant Professor · School of Management · Mahindra University
       </div>
 
     </div>
-
-
-    <div class="footer-links">
-
-      <a href="https://www.linkedin.com/in/kumar-prashantgupta/"
-         target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-
-      <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=8q3LrwoAAAAJ"
-         target="_blank">
-        <i class="fa-solid fa-graduation-cap"></i>
-      </a>
-
-      <a href="https://orcid.org/0000-0002-6206-6158"
-         target="_blank">
-        <i class="fa-brands fa-orcid"></i>
-      </a>
-
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
 
 </body>
 </html>
